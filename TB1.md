@@ -186,12 +186,11 @@ En el siguiente cuadro se describen las acciones realizadas y enunciados de conc
 
 ### 1.1.1. Descripción de la Startup
 
-[DESCRIPION]
+Aventis es una startup innovadora creada por estudiantes de la Facultad de Ingeniería de la Universidad Privada de Ciencias Aplicadas (UPC), la cual ha desarrollado la aplicación móvil Scholr con el propósito de conectar a los apoderados o representantes de alumnos con oportunidades de becas ofrecidas por empresas privadas líderes. Bajo el contexto actual, donde el acceso a educación de calidad sigue siendo un desafío para muchas familias en el Perú y a nivel global, Scholr busca ser la plataforma que facilite el proceso de búsqueda y postulación a becas para estudiantes, además de brindar una herramienta de vanguardia para asi ayudar a las instituciones privadas que brindan las becas a gestionar las postulaciones y asi agilizar el proceso de estas.
 
-Misión:
+Misión: Nuesta misión es democratizar el acceso a la educación, ofreciendo a las familias herramientas que faciliten la conexión con becas y programas educativos de empresas privadas. A través de Scholr, buscamos empoderar a los apoderados para que puedan tomar decisiones informadas sobre el futuro académico de sus hijos, apoyando el desarrollo profesional de jóvenes talentosos y contribuyendo a una sociedad más inclusiva.
 
-
-Visión:
+Visión: Aspiramos a ser la principal plataforma de conexión entre apoderados y becas educativas ofrecidas por empresas privadas, siendo reconocidos por nuestra capacidad de facilitar el acceso a oportunidades educativas de calidad. Queremos convertirnos en el aliado estratégico de las familias que buscan asegurar el futuro académico de sus hijos, con soluciones innovadoras que respondan a las necesidades actuales y anticipen las tendencias del sector educativo. A través de Scholr, queremos crear un impacto positivo en la sociedad, mejorando las posibilidades de éxito y desarrollo de los jóvenes mediante el acceso a una educación superior accesible y apoyada por el sector privado.
 
 
 ### 1.1.2. Perfiles de integrantes del equipo
@@ -199,86 +198,79 @@ Visión:
 - Estefano Oscar Jaque Peña - U202225466
 
 | <p align="center"><img width="180" height="180" src="assets/images/estefanoprofile.jpg"></p> | Soy Estefano Oscar Jaque Peña, tengo 23 años y soy estudiante de la carrera de Ingeniería de Software,<br> una disciplina enfocada en el diseño, desarrollo y gestión de software para solucionar problemas <br>complejos. Desde temprana edad, he sentido fascinación por la tecnología y he buscado aprender <br>constantemente sobre las últimas tendencias en programación. He ampliado mis conocimientos a <br>través de cursos en Python, SQL, y C++, así como también explorando otros lenguajes de programación <br>por mi cuenta. Además, tengo habilidades en el uso avanzado de Excel para análisis de datos y gestión<br> de información. Mi experiencia trabajando en equipos me ha brindado habilidades de comunicación y <br>colaboración que considero fundamentales para contribuir de manera efectiva a proyectos innovadores<br> en el área de la Ingeniería de Software. |
-| --------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|-|:-|
 
 - John Telésforo Arévalo Meza - U202117377
 
 | <p align="center"><img width="300" src="assets/images/johnprofile.jpg"> </p> | Soy John Arévalo, tengo 20 años y soy estudiante de la carrera de Ingeniería de Software. Tengo conocimiento en lenguajes de programación como python y c++, y bases de datos como SQLServer y MongoDB. Desde pequeño me sentí atraído por la tecnología, por lo que me decidí a estudiar la carrera, además disfruto de jugar videojuegos con amigos en mi tiempo libre. |
-| :---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|:-|-|
 
 - Sebastián Omar Real Calderón - U20221D964
 
 | <p align="center"><img width="1000" src="assets/images/Sebastianprofile.jpg"> </p> | Soy Sebastián Real Calderón, tengo 19 años y soy estudiante de la carrera de Ingeniería de Software. Tengo conocimientos sobre lenguajes de programación como C++, C# y Java. Principalmente me dedico al desarrollo de proyectos que me permitan desarrollar mis habilidades de programación, tales como videojuegos o programas sencillos, ya que apunto a volverme desarrollador. Dentro de mis hobbies están los videojuegos, las series, el baile y el fútbol.
-|--|:--|
+|-|:-|
 
 
 ### 1.2. Solution Profile
 
 ### 1.2.1. Antecedentes y problemática
 
-Las empresas de desarrollo de software operan en un entorno de alta competencia e incertidumbre, donde es fundamental cumplir con proyectos que apoyen sus objetivos estratégicos. La gestión eficaz de estos proyectos requiere tanto habilidades especializadas como herramientas que permitan un seguimiento adecuado. Sin embargo, incluso los project managers más capacitados carecen a menudo de herramientas que les proporcionen una visibilidad clara del progreso. Esta falta de control incrementa el riesgo de fracaso en los proyectos y afecta negativamente el rendimiento y la capacidad de la organización para alcanzar sus objetivos.
+Los apoderados de estudiantes o posibles estudiantes enfrentan grandes desafíos cuando se trata de acceder a oportunidades educativas y de apoyo financiero. En particular, las familias tienen dificultades para encontrar información clara y actualizada sobre las becas ofrecidas por empresas privadas, lo que puede generar estrés y confusión durante el proceso de postulación. Por otro lado la mayoria de empresas privadas que brindan este tipo de ayudas, no cuentan con un sistema moderno, lo que puede ralentizar el proceso de postulación. Esta falta de una plataforma centralizada y fácil de usar para gestionar las becas agrava el problema, limitando las oportunidades para los estudiantes que necesitan apoyo financiero. Sin una herramienta eficaz que conecte a los apoderados con las becas disponibles, muchas oportunidades se pierden, y los estudiantes no logran acceder a los recursos que podrían mejorar su educación y futuro profesional.
 
 **What?**
 
 **¿Qué problema hay?**  
-El principal problema radica en la falta de herramientas especializadas diseñadas para gestionar de manera eficaz proyectos de software que siguen metodologías ágiles como Scrum. Estas herramientas deben ser capaces de dar soporte a las dinámicas rápidas y cambiantes de estos proyectos, así como de ofrecer visibilidad en tiempo real sobre el progreso y los posibles obstáculos. La ausencia de estas soluciones lleva a una gestión ineficiente de proyectos, lo que se traduce en:
-
-Retrasos en las entregas: Dificultad para cumplir con los plazos establecidos en cada sprint.
-Baja calidad del producto: Mayor probabilidad de errores y defectos en el software desarrollado.
-Desmotivación del equipo: La falta de herramientas adecuadas puede generar frustración y reducir la productividad del equipo de desarrollo.
-Dificultad para tomar decisiones basadas en datos: La falta de visibilidad sobre el progreso del proyecto impide una toma de decisiones informada.
+El principal problema radica en la falta de una plataforma centralizada y eficiente que permita a los apoderados gestionar de manera adecuada la búsqueda y postulación a becas ofrecidas por empresas privadas. A pesar de la creciente disponibilidad de becas, muchos apoderados tienen dificultades para encontrar información relevante, seguir plazos de inscripción y gestionar todas las etapas del proceso de postulación. Esta falta de organización y visibilidad incrementa el riesgo de perder oportunidades educativas y genera un alto nivel de estrés en las familias.
 
 **¿Qué relación tiene el problema con el usuario/cliente?**  
-Para las startups de desarrollo de software que utilizan Scrum, este problema se traduce en una pérdida de competitividad, mayor riesgo de fracaso de los proyectos y disminución de la satisfacción del cliente. Los equipos de desarrollo se ven afectados por la sobrecarga de trabajo, la falta de claridad en las tareas y la dificultad para adaptarse a los cambios constantes. Por otro lado, los clientes experimentan retrasos en la entrega del producto, una menor calidad del software y una comunicación poco efectiva con el equipo de desarrollo.
+Para los apoderados y estudiantes, este problema se traduce en una experiencia frustrante y desorganizada al intentar acceder a becas educativas. La falta de una plataforma unificada obliga a los apoderados a recorrer múltiples sitios web y fuentes de información, lo que genera una pérdida de tiempo valioso y aumenta el riesgo de no postular a las becas adecuadas o de perder fechas importantes.
 
 **When?**
 
 **¿Cuándo sucede el problema?**  
-El problema se manifiesta a lo largo de todo el ciclo de vida de un proyecto Scrum. Desde la planificación inicial, pasando por la ejecución de los sprints, hasta la revisión y adaptación del producto. La falta de herramientas adecuadas dificulta la gestión de cada una de estas etapas, generando cuellos de botella y retrasos.
+El problema se presenta durante todo el proceso de búsqueda, selección y postulación a becas. Desde el momento en que los apoderados comienzan a buscar opciones, hasta el seguimiento de los plazos y la gestión de los documentos necesarios. La falta de una plataforma centralizada y de fácil acceso agrava estos desafíos en cada fase del proceso.
 
 **¿Cuándo utiliza el cliente el producto?**  
-Los clientes utilizarán ManageWise a lo largo de todo el ciclo de vida de sus proyectos, desde la fase de planificación inicial hasta la implementación y revisión de tareas.
+Los clientes utilizarán Scholr desde el momento en que comienzan a buscar oportunidades de becas, pasando por la postulación y hasta el seguimiento de los plazos y el estado de las solicitudes.
 
 **Where?**
 
 **¿Dónde ocurre el problema?**  
-El problema se presenta en todos los entornos de trabajo donde se desarrollan proyectos de software, tanto en oficinas físicas como en entornos de trabajo remoto. La falta de una plataforma centralizada para la gestión del proyecto dificulta la colaboración entre los miembros del equipo y la visibilidad del progreso.
+Este problema ocurre en cualquier lugar donde los apoderados buscan y gestionan becas, como en sus hogares, oficinas o durante desplazamientos. La falta de una plataforma eficiente hace que los usuarios deban consultar múltiples fuentes de información dispersas, lo que provoca desorganización y pérdida de tiempo.
 
 **¿Dónde está el cliente cuando usa el producto?**  
-Los clientes pueden usar ManageWise en sus oficinas, espacios de trabajo remoto o durante reuniones virtuales de equipo.
+Los clientes pueden usar Scholr en cualquier lugar con acceso a internet, como en casa, en el trabajo o durante viajes, utilizando dispositivos móviles que les permitan acceder a la plataforma de manera rápida y sencilla.
 
 **Who?**
 
 **¿Quiénes son los involucrados en este problema?**  
-Los principales actores involucrados son los equipos de desarrollo de software, los product owners y los scrum masters. También se ven afectados los inversores y los clientes, ya que los problemas en la gestión del proyecto pueden impactar directamente en el éxito del producto y la satisfacción del cliente.
+Los principales involucrados son los apoderados que buscan oportunidades educativas para sus hijos, así como los estudiantes que desean acceder a becas. También se ven afectadas las empresas privadas que ofrecen becas, ya que una plataforma más eficiente incrementaría su visibilidad y participación en los programas.
 
 **¿Quiénes están afectados por el problema?**  
-Los equipos de desarrollo de software y los líderes de empresas de software son los principales afectados. Los desarrolladores enfrentan dificultades para completar tareas a tiempo y gestionar recursos, mientras que los líderes sufren por la falta de control, planificación ineficaz y dificultades para cumplir con los plazos.
+Los apoderados y los estudiantes son los principales afectados, ya que enfrentan dificultades para encontrar y gestionar becas. Las empresas que ofrecen becas también se ven afectadas, ya que una menor visibilidad de las oportunidades limita su alcance.
 
 **Why?**
 
 **¿Por qué ocurre el problema?**  
-El problema surge principalmente debido a la falta de adaptación de las herramientas de gestión de proyectos tradicionales a las necesidades específicas de los proyectos Scrum. Estas herramientas suelen estar diseñadas para proyectos más grandes y complejos, y no ofrecen las funcionalidades necesarias para gestionar de manera ágil y eficiente los proyectos de software.
+El problema ocurre debido a la dispersión de la información sobre becas a través de múltiples plataformas y la falta de una solución que centralice todas las oportunidades disponibles. Además, la gestión del proceso de postulación es ineficiente sin herramientas que organicen plazos, requisitos y estado de las solicitudes de manera clara y accesible.
 
 **How?**
 
 **¿En qué condiciones los clientes usan nuestro producto?**  
- Los ususarios-clientes utilizan el software en condiciones de alta demanda, donde la eficiencia y la capacidad de adaptación son cruciales para la gestión de proyectos. Además, los clientes lo emplearán durante todas las fases del ciclo de vida de un proyecto: planificación, ejecución, monitoreo y revisión.
+Los usuarios utilizan Scholr en un contexto de alta demanda, cuando necesitan organizar y gestionar múltiples solicitudes de becas. Los apoderados emplean la app durante todo el proceso de búsqueda, postulación y seguimiento de becas, lo que les permite mantenerse organizados y aprovechar al máximo las oportunidades disponibles.
 
 **¿Cómo nos conocieron los compradores?**  
-Los compradores potenciales conocen ManageWise a través de diversos canales, como recomendaciones de colegas en la industria del software, marketing digital, eventos de tecnología y conferencias, y a través de contenido relevante publicado en blogs y redes sociales.
+Los compradores potenciales conocen Scholr a través de recomendaciones de otros apoderados, marketing digital, colaboraciones con universidades y empresas que ofrecen becas, y contenidos informativos en redes sociales o blogs relacionados con el acceso a la educación.
 
 **¿Qué llevó a la persona a llegar a esta situación?**  
-Las personas llegaron a la situación de buscar una solución como ManageWise debido a los desafíos enfrentados con las herramientas de gestión de proyectos actuales, que no satisfacen las necesidades específicas de las startups de desarrollo de software. Estos desafíos incluyen la falta de características avanzadas, como análisis predictivos, automatización de tareas, y personalización. Los clientes buscan una solución que les permita mejorar la eficiencia, la colaboración y la gestión de proyectos para poder competir eficazmente en el mercado.
+Las personas llegaron a la situación de buscar una solución como Scholr debido a la falta de plataformas que centralicen de manera eficiente las becas disponibles, especialmente en el contexto de becas ofrecidas por empresas privadas. Muchos apoderados han enfrentado frustración por la dificultad de encontrar información actualizada, los plazos vencidos y la escasa organización del proceso de postulación. Buscan una herramienta que les permita acceder a todas las becas en un solo lugar, simplificar la gestión de los documentos y plazos, y garantizar que sus hijos no pierdan oportunidades educativas clave debido a la falta de una estructura clara.
 
 **How much?**
 
 **¿Cuánto cuesta este problema?**  
-La carencia de herramientas avanzadas para la gestión de proyectos en startups de desarrollo de software conlleva graves consecuencias.El Standish Group CHAOS Report 2020 revela que el 45% de los proyectos de software se retrasan significativamente, y aproximadamente el 19% se consideran fracasos completos debido a problemas en la gestión y falta de herramientas adecuadas.
+La falta de acceso eficiente a becas puede resultar en una oportunidad educativa perdida. En América Latina, un 60% de los estudiantes no están al tanto de las becas disponibles, lo que les impide aprovechar oportunidades clave para su desarrollo académico. Además, los apoderados pueden invertir hasta 10-15 horas mensuales buscando y gestionando becas, lo que se traduce en una pérdida significativa de tiempo y recursos.
 
-![alt text](assets/images/2_H_estadistica.png)
-
-Los costos operativos también se ven incrementados significativamente. Un análisis de Gartner indica que las empresas que no cuentan con herramientas adecuadas pueden enfrentar un aumento del 25% en sus costos operativos debido a ineficiencias. La insatisfacción con las herramientas actuales es alta, con un 40% de los equipos de desarrollo reportando descontento, según un estudio de Atlassian. Finalmente, un informe de Forrester revela que el 50% de las decisiones en proyectos de software se basan en datos insuficientes, lo que afecta la calidad de la toma de decisiones y el éxito general de los proyectos.
+Los costos operativos también se ven incrementados significativamente. Sin una herramienta adecuada para gestionar las becas, las familias pueden enfrentar gastos adicionales asociados con la búsqueda de información, la recopilación de documentación y el seguimiento manual de las fechas límite. Un análisis de estudios sobre el tema indica que, en promedio, las personas que no utilizan plataformas de gestión adecuadas pierden hasta un 30% de oportunidades debido a la falta de seguimiento eficiente.
 
 ### 1.2.2. Lean UX Process
 
