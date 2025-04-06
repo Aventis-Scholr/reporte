@@ -282,13 +282,13 @@ Los costos operativos también se ven incrementados significativamente. Un anál
 
 ### 1.2.2. Lean UX Process
 
-El proceso Lean UX se adapta especialmente bien a startups como Horizon que buscan crear soluciones innovadoras y efectivas en el mercado. Este enfoque se caracteriza por su agilidad y centrado en el usuario, lo que significa que estamos constantemente buscando validar nuestras ideas y prototipos con los usuarios para garantizar que estamos abordando sus necesidades de manera adecuada.
+El proceso Lean UX se adapta especialmente bien a startups como Aventis que buscan crear soluciones innovadoras y efectivas en el mercado. Este enfoque se caracteriza por su agilidad y centrado en el usuario, lo que significa que estamos constantemente buscando validar nuestras ideas y prototipos con los usuarios para garantizar que estamos abordando sus necesidades de manera adecuada.
 
 ### 1.2.2.1. Lean UX Problem Statements
 
-El objetivo es gestionar proyectos de software de manera eficiente, mejorando la planificación, la asignación de recursos y el monitoreo del progreso en tiempo real.
-Actualmente, la falta de herramientas especializadas para la gestión de proyectos en el desarrollo de software está afectando la eficiencia y la capacidad de cumplir con los plazos. Las soluciones genéricas no abordan las complejidades particulares de este tipo de proyectos, lo que resulta en retrasos, recursos mal asignados y problemas no resueltos a tiempo.
-Se requiere una mejora en la gestión de proyectos que permita optimizar la planificación y supervisión, brindando una mayor visibilidad del progreso y una asignación más eficiente de recursos, sin imponer una solución específica.
+El aplicativo móvil Scholr busca centralizar y simplificar el proceso de postulación a becas educativas ofrecidas por empresas privadas y ONGs en Perú, permitiendo a los usuarios acceder a oportunidades de financiamiento educativo de manera ágil y transparente.
+Hemos identificado que los postulantes a becas enfrentan dificultades para encontrar, comparar y aplicar a convocatorias debido a la dispersión de información, requisitos complejos y plazos poco claros, lo que reduce sus posibilidades de acceder a beneficios educativos.
+¿Cómo podríamos optimizar el proceso de búsqueda y postulación a becas para aumentar las oportunidades de los usuarios y reducir las barreras de acceso a la información?
 
 ### 1.2.2.2. Lean UX Assumptions
 
