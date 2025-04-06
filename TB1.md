@@ -282,113 +282,93 @@ Los costos operativos también se ven incrementados significativamente. Un anál
 
 ### 1.2.2. Lean UX Process
 
-El proceso Lean UX se adapta especialmente bien a startups como Horizon que buscan crear soluciones innovadoras y efectivas en el mercado. Este enfoque se caracteriza por su agilidad y centrado en el usuario, lo que significa que estamos constantemente buscando validar nuestras ideas y prototipos con los usuarios para garantizar que estamos abordando sus necesidades de manera adecuada.
+El proceso Lean UX se adapta especialmente bien a startups como Aventis que buscan crear soluciones innovadoras y efectivas en el mercado. Este enfoque se caracteriza por su agilidad y centrado en el usuario, lo que significa que estamos constantemente buscando validar nuestras ideas y prototipos con los usuarios para garantizar que estamos abordando sus necesidades de manera adecuada.
 
 ### 1.2.2.1. Lean UX Problem Statements
 
-El objetivo es gestionar proyectos de software de manera eficiente, mejorando la planificación, la asignación de recursos y el monitoreo del progreso en tiempo real.
-Actualmente, la falta de herramientas especializadas para la gestión de proyectos en el desarrollo de software está afectando la eficiencia y la capacidad de cumplir con los plazos. Las soluciones genéricas no abordan las complejidades particulares de este tipo de proyectos, lo que resulta en retrasos, recursos mal asignados y problemas no resueltos a tiempo.
-Se requiere una mejora en la gestión de proyectos que permita optimizar la planificación y supervisión, brindando una mayor visibilidad del progreso y una asignación más eficiente de recursos, sin imponer una solución específica.
+El aplicativo móvil Scholr busca centralizar y simplificar el proceso de postulación a becas educativas ofrecidas por empresas privadas y ONGs en Perú, permitiendo a los usuarios acceder a oportunidades de financiamiento educativo de manera ágil y transparente.
+Hemos identificado que los postulantes a becas enfrentan dificultades para encontrar, comparar y aplicar a convocatorias debido a la dispersión de información, requisitos complejos y plazos poco claros, lo que reduce sus posibilidades de acceder a beneficios educativos.
+¿Cómo podríamos optimizar el proceso de búsqueda y postulación a becas para aumentar las oportunidades de los usuarios y reducir las barreras de acceso a la información?
 
 ### 1.2.2.2. Lean UX Assumptions
 
 Assumptions:
 
-1. Creo que mis clientes necesitan una forma más eficiente de gestionar proyectos e iniciativas dentro de sus empresas emergentes de desarrollo de software.
+1. Creo que mis clientes necesitan un acceso centralizado y simplificado a convocatorias de becas educativas en Perú.
 
-2. Estas necesidades se pueden resolver con una herramienta de gestión de proyectos ágil(metologia Scrum) y adaptable que se integre fácilmente con los flujos de trabajo existentes.
+2. Estas necesidades se pueden resolver con una plataforma móvil que agrupe, filtre y notifique oportunidades de becas según el perfil del usuario.
 
-3. Mis clientes iniciales serán startups emergentes de tecnología que buscan mejorar la eficiencia y la colaboración en sus equipos de desarrollo.
+3. Mis clientes iniciales son (o serán) estudiantes universitarios, egresados recientes y jóvenes profesionales en busca de financiamiento educativo.
 
-4. El valor que un cliente quiere de mi servicio que requieren los usuarios es una plataforma intuitiva que les permita planificar, seguir y adaptarse rápidamente a los cambios en sus proyectos.
+4. El valor #1 que un cliente quiere de mi servicio es ahorrar tiempo en la búsqueda y postulación a becas, aumentando sus oportunidades de ser seleccionado.
 
-5. El cliente también puede obtener estos beneficios adicionales en donde implementaremos integraciones con herramientas populares de desarrollo de software.
+5. El cliente también puede obtener estos beneficios adicionales: asesoría personalizada, recordatorios de plazos y comparación de beneficios entre becas.
 
-6. Voy a adquirir la mayoría de mis clientes a través de estrategias de marketing digital dirigidas a startups de tecnología y a través de referencias de clientes satisfechos.
+6. Voy a adquirir la mayoría de mis clientes a través de alianzas con universidades, redes sociales (Facebook, Instagram, LinkedIn) y recomendaciones de usuarios satisfechos.
 
-7. Haré dinero a través de un modelo de suscripción mensual o anual, ofreciendo diferentes niveles de funcionalidad según las necesidades del cliente y mediante publicidad dentro de nuestra plataforma .
+7. Haré dinero a través de comisiones por becas gestionadas con éxito, publicidad de instituciones educativas y suscripciones premium para funciones avanzadas.
 
-8. Mi competencia principal en el mercado serán Trello, Wrike y ClickUp.
+8. Mi competencia principal en el mercado será portales educativos genéricos y plataformas de empleo que incluyen secciones de becas.
 
-9. Los venceremos debido a nuestra facilidad de uso, integraciones flexibles y enfoque en las necesidades específicas de las empresas emergentes de desarrollo de software.
+9. Los venceremos debido a nuestra especialización en becas peruanas, interfaz intuitiva y herramientas de seguimiento de postulaciones.
 
-10. Mi mayor riesgo de producto es la falta de adopción por parte de los equipos de desarrollo, debido a la resistencia al cambio o a la preferencia por soluciones existentes.
+10. Mi mayor riesgo de producto es que las instituciones no actualicen sus convocatorias a tiempo o que los usuarios no confíen en la veracidad de la información.
 
-11. ¿Quién es el usuario?  
-    Los usuarios son lideres o gerentes de proyectos de software en los que se encuetran el Product Owner y el Scrum master .Ademas, los equipos de desarrollo de software.
+11. Resolveremos esto a través de alianzas formales con las empresas y ONGs oferentes, además de un sistema de verificación en tiempo real.
 
-12. ¿Dónde encaja nuestra empresa en su trabajo o vida?  
-    Nuestra empresa se posiciona como proveedora de herramientas de gestión de proyectos e iniciativas para facilitar el desarrollo de software en empresas emergentes.
+12. ¿Quién es el usuario?
+Los usuarios principales son estudiantes universitarios, egresados recientes y jóvenes profesionales peruanos que buscan oportunidades de financiamiento educativo a través de becas ofrecidas por empresas e instituciones.
 
-13. ¿Qué problemas tiene nuestra empresa?  
-    Nos enfrentamos a la falta de herramientas especializadas que se adapten a las necesidades únicas de las empresas emergentes de desarrollo de software, lo que dificulta la gestión eficiente de proyectos y recursos.
+13. ¿Dónde encaja nuestro producto en su trabajo o vida?
+Scholr se integra en la vida académica y profesional de los usuarios, facilitando su acceso a oportunidades educativas y eliminando las barreras de tiempo y complejidad en el proceso de postulación a becas.
 
-14. ¿Cuándo y cómo es nuestra empresa?  
-    Nuestra empresa está en una etapa inicial, ofreciendo soluciones ágiles y flexibles que se ajustan a las demandas cambiantes del mercado de desarrollo de software.
+14. ¿Qué problemas tiene nuestro producto y cómo se pueden resolver?
+El principal problema es la dispersión de información sobre convocatorias y los requisitos complejos para postular. Esto se resuelve centralizando toda la información en una plataforma intuitiva, con recordatorios y asesoría personalizada para cada beca.
 
-15. ¿Qué características son importantes?  
-    Las características importantes incluyen una interfaz intuitiva y fácil de usar, capacidades para la gestión de tareas y asignación de recursos, así como integraciones con herramientas populares de desarrollo de software.
+15. ¿Cuándo y cómo es usado nuestro producto?
+El producto se usa principalmente durante períodos de búsqueda activa de becas (inicios de semestre, fin de año) y durante el proceso de postulación. Los usuarios acceden a través de la app móvil para consultar oportunidades, subir documentos y recibir notificaciones.
 
-16. ¿Cómo debe verse nuestra empresa y comportarse?  
-    Nuestra empresa debe presentarse como un aliado confiable que simplifica y optimiza la gestión de proyectos de desarrollo de software, siendo receptiva a las sugerencias de los usuarios y comprometida con la innovación y la mejora continua.
+16. ¿Qué características son importantes?
+Las características clave incluyen: un buscador inteligente de becas filtradas por perfil, alertas personalizadas, seguimiento de postulaciones, tutoriales para completar requisitos y una sección de becas destacadas con plazos críticos.
+
+17. ¿Cómo debe verse nuestro producto y cómo debe comportarse?
+Scholr debe tener un diseño limpio y profesional, con colores institucionales (azules/blancos) que inspiren confianza. Debe ser rápido en cargar información actualizada, con una navegación intuitiva y funciones claras para postular en pocos pasos. El comportamiento debe ser proactivo (notificaciones útiles) pero no intrusivo.
 
 Business Outcomes:
 
-- Incrementar la base de usuarios activos en un 12% durante el primer semestre, enfocado principalmente en startups de desarrollo de software.
-- Reducir los costos operativos relacionados con la gestión de proyectos en un 18% en los primeros 9 meses mediante la implementación de automatización de tareas y análisis predictivos.
-- Aumentar la tasa de éxito de proyectos en un 25% en el primer año, optimizando la planificación y el monitoreo de avances en tiempo real.
-- Mejorar la retención de clientes en un 20% dentro de los primeros 6 meses, proporcionando herramientas especializadas que aborden las necesidades únicas de los desarrolladores de software.
-- Lograr que el 30% de los nuevos clientes provengan de recomendaciones de usuarios existentes mediante la creación de una experiencia positiva y diferenciada en la gestión de proyectos de software.
+- Incrementar en un 40% el número de postulaciones exitosas a becas mediante la plataforma en el primer año.
+
+- Lograr que el 70% de los usuarios recurran a Scholr como principal fuente de información sobre becas educativas en Perú.
+
+- Establecer alianzas con al menos 6 empresas y ONGs para integrar sus convocatorias de manera exclusiva.
+
+- Posicionar la app entre las 3 plataformas más descargadas en educación en Perú durante los primeros 18 meses.
 
 User Outcomes:
 
-- Aumentar la eficiencia de los equipos de desarrollo, reduciendo el tiempo perdido en tareas repetitivas mediante la automatización de procesos.
-- Mejorar la coordinación y visibilidad del proyecto al brindar reportes en tiempo real sobre el progreso y asignación de recursos.
-- Facilitar la toma de decisiones estratégicas mediante análisis predictivos y reportes de avance automatizados.
-- Proporcionar una plataforma intuitiva que permita a los usuarios planificar, ejecutar y monitorear proyectos sin depender de múltiples herramientas genéricas.
-- Reducir los retrasos en los proyectos al facilitar la comunicación directa de problemas y necesidades del equipo a los líderes de software.
+- Encontrar todas las becas disponibles que coincidan con mi perfil académico en un solo lugar.
+
+- Simplificar el proceso de postulación con guías paso a paso y recordatorios de plazos importantes.
+
+- Recibir alertas personalizadas sobre nuevas convocatorias que se ajusten a mis intereses y necesidades.
+
+- Ahorrar tiempo y esfuerzo al gestionar múltiples postulaciones de manera centralizada y organizada.
+
+- Aumentar mis posibilidades de obtener una beca gracias a información actualizada y herramientas de seguimiento.
 
 ### 1.2.2.3. Lean UX Hypothesis Statements
 
-- Hypothesis 1:
+- Hipótesis 1 (Enfoque: Postulaciones exitosas)
+Creemos que al centralizar y simplificar el proceso de postulación a becas en una sola plataforma .Sabremos que hemos tenido éxito cuando el 40% de los usuarios complete postulaciones exitosas a través de la app en el primer año.
 
-Creemos que brindar herramientas adecuadas para la gestión eficaz de proyectos e iniciativas en startups de desarrollo de software permitirá superar obstáculos y dificultades relacionados con plazos y recursos limitados.
-Sabremos que hemos tenido exito cuando los usuarios informen un incremento del 35% en la claridad y seguimiento de tareas, junto con una mejora del 18% en la satisfacción del equipo respecto a la gestión de proyectos.
+- Hipótesis 2 (Enfoque: Fuente principal de información)
+Creemos que ofrecer información verificada y actualizada sobre becas en tiempo real.Sabremos que hemos tenido éxito Cuando el 70% de los usuarios encuestados declare que Scholr es su principal fuente de consulta.
 
-- Hypothesis 2:
+- Hipótesis 3 (Enfoque: Alianzas estratégicas)
+Creemos que al formalizar alianzas con empresas y ONGs para integrar sus convocatorias de manera exclusiva. Sabremos que hemos tenido éxito cuando al menos 6 instituciones publiquen sus becas directamente en Scholr.
 
-Creemos que la implementacion de un software integral que simplifique el seguimiento y la gestión de proyectos en startups de desarrollo de software mejorará el trabajo en equipo y la suficiencia de entrega de productos a tiempo.
-Sabremos que estamos en lo cierto cuando veamos con una reducción del 25% en los costos asociados a retrasos y una mejora del 15% en la capacidad de adaptación a cambios en los requisitos.
-
-- Hypothesis 3:
-
-Creemos que al brindar una herramienta tecnológica que favorezca la gestión de proyectos en startups de desarrollo de software, incrementaremos la capacidad de produccion del equipo y la capacidad de adaptarse rápidamente a cambios en los requisitos del proyecto.
-Sabremos que hemos tenido éxito cuando veamos un aumento del 22% en la agilidad y una reduccion del 10% de tiempo de respuesta del equipo ante nuevas solicitudes y una reducción del 10% en los tiempos de comunicación y coordinación entre equipos.
-
-- Hypothesis 4:
-
-Creemos que la integración de herramientas de seguimiento y análisis de datos en nuestro software aumentará la transparencia y visibilidad del desarrollo de los proyectos para los líderes de equipo y supervisores en startups de desarrollo de software.
-Sabremos que estamos en lo cierto cuando veamos un aumento del 25% en la capacidad de los líderes para tomar decisiones informadas basadas en datos y una mejora del 20% en la precisión de los estimados de tiempo y optimizacion de recursos.
-
-- Hypothesis 5:
-
-Creemos que al ofrecer una plataforma de facil uso y acceso desde múltiples dispositivos, aumentaremos la aceptacion y la eficacia del software por parte de los equipos de trabajo en startups de desarrollo de software.
-Sabremos que hemos tenido exito cuando observemos en un incremento del 30% en la tasa de aceptacion del software y una mejora del 20% en la colaboración y participación entre equipos.
-
-- Hypothesis 6:
-
-Creemos que la implementación de un sistema automatizado de seguimiento de proyectos disminuira la carga administrativa y permitirá que los equipos se concentren en actividades más productivas durante el desarrollo de software.
-Sabremos que hemos tenido exito cuando veamos una reducción del 10% en el tiempo destinado a tareas administrativas y una mejora del 22% en el tiempo invertido en actividades de desarrollo y despliegue de software.
-
-- Hypothesis 7:
-
-Creemos que al proveer herramientas de análisis predictivo para la gestionar riesgos, ayudaremos a aminorizar problemas potenciales y a mejorar la capacidad de anticipación en startups de desarrollo de software.
-Sabremos que hemos tenido éxito cuando veamos una reducción del 12% en los riesgos identificados durante los proyectos y un incremento del 30% en la capacidad de respuesta ante riesgos críticos.
-
-- Hypothesis 8:
-
-Creemos que posibilitar la colaboración remota y la comunicación en tiempo real entre los equipo de trabajo incrementará la eficiencia operativa y la flexibilidad laboral en startups de desarrollo de software.
-Sabremos que hemos tenido exito cuando veamos un aumento del 35% en la productividad de los equipos de trabajo y una reducción del 15% en los tiempos de respuesta al solucionar problemas y organizar actividades entre ubicaciones distantes.
+- Hipótesis 4 (Enfoque: Posicionamiento en el mercado)
+Creemos que al optimizar la experiencia del usuario con funciones intuitivas y notificaciones personalizadas. Sabremos que hemos tenido éxito cuando Scholr se ubique entre las 3 apps más descargadas en educación en Perú en 18 meses.
 
 ### 1.2.2.4. Lean UX Canvas
 
