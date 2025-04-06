@@ -358,45 +358,17 @@ User Outcomes:
 
 ### 1.2.2.3. Lean UX Hypothesis Statements
 
-- Hypothesis 1:
+- Hipótesis 1 (Enfoque: Postulaciones exitosas)
+Creemos que al centralizar y simplificar el proceso de postulación a becas en una sola plataforma .Sabremos que hemos tenido éxito cuando el 40% de los usuarios complete postulaciones exitosas a través de la app en el primer año.
 
-Creemos que brindar herramientas adecuadas para la gestión eficaz de proyectos e iniciativas en startups de desarrollo de software permitirá superar obstáculos y dificultades relacionados con plazos y recursos limitados.
-Sabremos que hemos tenido exito cuando los usuarios informen un incremento del 35% en la claridad y seguimiento de tareas, junto con una mejora del 18% en la satisfacción del equipo respecto a la gestión de proyectos.
+- Hipótesis 2 (Enfoque: Fuente principal de información)
+Creemos que ofrecer información verificada y actualizada sobre becas en tiempo real.Sabremos que hemos tenido éxito Cuando el 70% de los usuarios encuestados declare que Scholr es su principal fuente de consulta.
 
-- Hypothesis 2:
+- Hipótesis 3 (Enfoque: Alianzas estratégicas)
+Creemos que al formalizar alianzas con empresas y ONGs para integrar sus convocatorias de manera exclusiva. Sabremos que hemos tenido éxito cuando al menos 6 instituciones publiquen sus becas directamente en Scholr.
 
-Creemos que la implementacion de un software integral que simplifique el seguimiento y la gestión de proyectos en startups de desarrollo de software mejorará el trabajo en equipo y la suficiencia de entrega de productos a tiempo.
-Sabremos que estamos en lo cierto cuando veamos con una reducción del 25% en los costos asociados a retrasos y una mejora del 15% en la capacidad de adaptación a cambios en los requisitos.
-
-- Hypothesis 3:
-
-Creemos que al brindar una herramienta tecnológica que favorezca la gestión de proyectos en startups de desarrollo de software, incrementaremos la capacidad de produccion del equipo y la capacidad de adaptarse rápidamente a cambios en los requisitos del proyecto.
-Sabremos que hemos tenido éxito cuando veamos un aumento del 22% en la agilidad y una reduccion del 10% de tiempo de respuesta del equipo ante nuevas solicitudes y una reducción del 10% en los tiempos de comunicación y coordinación entre equipos.
-
-- Hypothesis 4:
-
-Creemos que la integración de herramientas de seguimiento y análisis de datos en nuestro software aumentará la transparencia y visibilidad del desarrollo de los proyectos para los líderes de equipo y supervisores en startups de desarrollo de software.
-Sabremos que estamos en lo cierto cuando veamos un aumento del 25% en la capacidad de los líderes para tomar decisiones informadas basadas en datos y una mejora del 20% en la precisión de los estimados de tiempo y optimizacion de recursos.
-
-- Hypothesis 5:
-
-Creemos que al ofrecer una plataforma de facil uso y acceso desde múltiples dispositivos, aumentaremos la aceptacion y la eficacia del software por parte de los equipos de trabajo en startups de desarrollo de software.
-Sabremos que hemos tenido exito cuando observemos en un incremento del 30% en la tasa de aceptacion del software y una mejora del 20% en la colaboración y participación entre equipos.
-
-- Hypothesis 6:
-
-Creemos que la implementación de un sistema automatizado de seguimiento de proyectos disminuira la carga administrativa y permitirá que los equipos se concentren en actividades más productivas durante el desarrollo de software.
-Sabremos que hemos tenido exito cuando veamos una reducción del 10% en el tiempo destinado a tareas administrativas y una mejora del 22% en el tiempo invertido en actividades de desarrollo y despliegue de software.
-
-- Hypothesis 7:
-
-Creemos que al proveer herramientas de análisis predictivo para la gestionar riesgos, ayudaremos a aminorizar problemas potenciales y a mejorar la capacidad de anticipación en startups de desarrollo de software.
-Sabremos que hemos tenido éxito cuando veamos una reducción del 12% en los riesgos identificados durante los proyectos y un incremento del 30% en la capacidad de respuesta ante riesgos críticos.
-
-- Hypothesis 8:
-
-Creemos que posibilitar la colaboración remota y la comunicación en tiempo real entre los equipo de trabajo incrementará la eficiencia operativa y la flexibilidad laboral en startups de desarrollo de software.
-Sabremos que hemos tenido exito cuando veamos un aumento del 35% en la productividad de los equipos de trabajo y una reducción del 15% en los tiempos de respuesta al solucionar problemas y organizar actividades entre ubicaciones distantes.
+- Hipótesis 4 (Enfoque: Posicionamiento en el mercado)
+Creemos que al optimizar la experiencia del usuario con funciones intuitivas y notificaciones personalizadas. Sabremos que hemos tenido éxito cuando Scholr se ubique entre las 3 apps más descargadas en educación en Perú en 18 meses.
 
 ### 1.2.2.4. Lean UX Canvas
 
