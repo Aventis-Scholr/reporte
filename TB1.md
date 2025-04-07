@@ -1,6 +1,6 @@
-# Horizon
+# Aventis
 
-Product: "Nombre_proyecto"
+Product: "Scholr"
 
 # UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS
 
@@ -20,9 +20,9 @@ Product: "Nombre_proyecto"
 
 ### Informe de Trabajo Final
 
-### "nombre_startup"
+### "Aventis"
 
-### "nombre_proyecto"
+### "Scholr"
 
 ### **Integrantes:**
 
@@ -38,12 +38,12 @@ Product: "Nombre_proyecto"
 
 | Version | Fecha      | Autor                    | Descripcion                                                                                                                                                                                                                                                                                 |
 | ------- | ---------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| TB1     | 26/08/2024 | Estefano Jaque  | Desarrollé el Lean UX Problem Statements,Lean UX Assumptions,Diseño de entrevistas,Coompetidores y Estrategias y tácticas frente a competidores|
-| TB1     | 05/09/2024 | Estefano Jaque | Desarrollé las User Stories,Product Backlog, Class Diagrams, Class Dictionary, Database Diagram, Sprint Planning 1, Sprint Backlog 1|
-| TB1     | 29/08/2024 | Sebastian Real Calderón | Desarrollé la Descripción de la Startup, Solution Profile, el regitro de una entrevista a un usuario del segmento 1 y 2, y realicé una entrevista.|
-| TB1     | 05/09/2024 | Sebastian Real Calderón | Desarrollé el Empathy Mapping, User Task Matrix, Style Guidelines y Software configuration Management |
-| TB1     | 29/08/2024 | John Arévalo | Desarrolle los as-is y to-be scenarios, además del registro de 1 entrevista por segmento objetivo. |
-| TB1     | 6/09/2024  | John Arévalo | Desarrolle los wireframes y mockups de la landing page, además de los wireframes, mockups, wireflows y user flows diagrams para la aplicación web.|
+| TB1     | 06/04/2025 | Estefano Jaque  | Desarrollé el Lean UX Problem Statements,Lean UX Assumptions,Diseño de entrevistas,Coompetidores y Estrategias y tácticas frente a competidores|
+| TB1     | 06/04/2025 | Estefano Jaque | Desarrollé las User Stories,Product Backlog, Class Diagrams, Class Dictionary, Database Diagram, Sprint Planning 1, Sprint Backlog 1|
+| TB1     | 06/04/2025 | Sebastian Real Calderón | Desarrollé la Descripción de la Startup, Solution Profile, el regitro de una entrevista a un usuario del segmento 1 y 2, y realicé una entrevista.|
+| TB1     | 06/04/2025 | Sebastian Real Calderón | Desarrollé el Empathy Mapping, User Task Matrix, Style Guidelines y Software configuration Management |
+| TB1     | 06/04/2025 | John Arévalo | Desarrolle los as-is y to-be scenarios, además del registro de 1 entrevista por segmento objetivo. |
+| TB1     | 06/04/2025  | John Arévalo | Desarrolle los wireframes y mockups de la landing page, además de los wireframes, mockups, wireflows y user flows diagrams para la aplicación web.|
 
 ## Project Report Collaboration Insights
 
@@ -364,16 +364,16 @@ Creemos que al optimizar la experiencia del usuario con funciones intuitivas y n
 
 ### 1.2.2.4. Lean UX Canvas
 
-| Seccion| Contenido|
-| -- | -- |
-| **Business Problem** | La falta de herramientas especializadas para la gestión de proyectos de software resulta en demoras en las entregas, sobrepaso de presupuestos y disminución de la satisfacción del cliente. Las soluciones genéricas no abordan las complejidades específicas de los proyectos de desarrollo de software, lo que lleva a una gestión ineficiente, retrasos en la entrega, recursos mal asignados y problemas no resueltos a tiempo.|
-| **Business Outcomes**| Aumentar la productividad de la empresa. <br> Reducir el tiempo desde la planificación del proyecto hasta el lanzamiento del producto final.|
-| **Users and Customers**| Identificación de los diferentes tipos de usuarios y clientes que interactuarán con el producto, sus necesidades, comportamientos y características.|
-| **User Benefits**| Optimización del tiempo y recursos <br> Comunicación mejorada <br> Productos y servicios de excelente calidad.|
-| **Solution Ideas**| Integrar herramientas de comunicación para facilitar la comunicación y colaboración entre equipos mediante la integración de herramientas de mensajería instantánea, como Slack o Microsoft Teams, directamente en la plataforma de gestión de proyectos. <br> Permitir planificar y monitorear funcionalidades específicas para la planificación detallada, la asignación de recursos y el monitoreo en tiempo real, adaptadas a las particularidades del desarrollo de software. <br> Implementar un dashboard que proporcione visibilidad clara del progreso del proyecto y permita la identificación rápida de problemas y desviaciones.<br>|
-| **Hypotheses**| Creemos que brindar herramientas adecuadas para la gestión eficaz de proyectos e iniciativas en startups de desarrollo de software permitirá superar obstáculos y dificultades relacionados con plazos y recursos limitados.Sabremos que hemos tenido exito cuando los usuarios informen un incremento del 35% en la claridad y seguimiento de tareas, junto con una mejora del 18% en la satisfacción del equipo respecto a la gestión de proyectos. <br> Creemos que brindar herramientas adecuadas para la gestión eficaz de proyectos e iniciativas en startups de desarrollo de software permitirá superar obstáculos <br> y dificultades relacionados con plazos y recursos limitados. Sabremos que hemos tenido exito cuando los usuarios informen un incremento del 35% en la claridad y seguimiento de tareas, junto con una mejora del 18% en la satisfacción del equipo respecto a la gestión de proyectos. |
-| **What's the most important <br> thing we need to learn first?**| Conocer las expectativas y deseos de los clientes. <br> Identificar los problemas que los clientes puedan enfrentar. <br> Descubrir qué actualizaciones esperan los futuros usuarios para mejorar la app.|
-| **What's the least amount of <br> work we need to do to learn <br> the next most important thing?** | Realizar entrevistas para explorar cómo abordar el tema. <br> Tener como referencia una app similar que tenga algunas funciones, pero no idénticas. <br> Realizar encuestas a personas con experiencia y conocimientos.|
+| Sección | Contenido |
+|---------|-----------|
+| **Business Problem** | Los postulantes a becas enfrentan dificultades para encontrar, comparar y aplicar a convocatorias debido a la dispersión de información, requisitos complejos y plazos poco claros, lo que reduce sus posibilidades de acceder a beneficios educativos. |
+| **Business Outcomes** | - Incrementar en 40% las postulaciones exitosas mediante la plataforma en el primer año<br>- Lograr que 70% de usuarios usen Scholr como principal fuente de información<br>- Establecer alianzas con al menos 6 empresas/ONGs<br>- Posicionarse entre las 3 apps más descargadas en educación en 18 meses |
+| **Users and Customers** | Estudiantes universitarios, egresados recientes y jóvenes profesionales peruanos que buscan financiamiento educativo a través de becas ofrecidas por empresas e instituciones. |
+| **User Benefits** | - Encontrar todas las becas relevantes en un solo lugar<br>- Simplificar el proceso de postulación<br>- Recibir alertas personalizadas<br>- Ahorrar tiempo en gestión de postulaciones<br>- Aumentar posibilidades de obtener becas |
+| **Solution Ideas** | - Plataforma centralizada con buscador inteligente<br>- Sistema de alertas y recordatorios personalizados<br>- Herramientas de seguimiento de postulaciones<br>- Tutoriales para completar requisitos<br>- Integración con instituciones educativas |
+| **Hypotheses** | 1. Centralizar postulaciones aumentará éxito en 40%<br>2. Información verificada hará que 70% la prefieran<br>3. Alianzas exclusivas con 6 instituciones<br>4. Experiencia intuitiva la posicionará top 3 en descargas |
+| **What's the most important thing we need to learn first?** | - Expectativas y necesidades reales de los postulantes<br>- Problemas específicos en el proceso actual de búsqueda/postulación<br>- Funcionalidades más valoradas por los usuarios potenciales |
+| **What's the least amount of work we need to do to learn the next most important thing?** | - Entrevistas con estudiantes y egresados<br>- Benchmarking de plataformas similares<br>- Encuestas a usuarios potenciales<br>- Pruebas de concepto con instituciones aliadas |
 
 ### 1.3. Segmentos objetivo
 
