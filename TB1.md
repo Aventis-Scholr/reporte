@@ -170,15 +170,15 @@ TB1:<br>
 
 ## Student Outcome
 
-_ABET – EAC - Student Outcome 7_  
-**Criterio:** La capacidad de adquirir y aplicar nuevos conocimientos según sea necesario, utilizando estrategias de aprendizaje apropiadas..
+_ABET – EAC - Student Outcome 3_  
+**Criterio:** Capacidad de comunicarse efectivamente con un rango de audiencias.
 
-En el siguiente cuadro se describen las acciones realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET - EAC - Student Outcome 7.
+En el siguiente cuadro se describen las acciones realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET - EAC - Student Outcome 3.
 
 | Criterio especifico | Acciones Realizadas| Conclusiones|
 | :-- | :-- | -- |
-| 1.  Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de ingeniería de software   | TB1:<br>**Estefano Oscar Jaque Peña**<br>TB1: Investigué y apliqué el enfoque Lean UX, desarrollando los Problem Statements, Assumptions, Hypothesis Statements y el Lean UX Canvas. Esta metodología la integré por primera vez en un proyecto, lo que exigió una actualización significativa de mis conocimientos sobre diseño centrado en el usuario. <br>**John Arévalo Meza** <br>TB1: Elaboré la descripción de la startup, perfiles del equipo y antecedentes del problema. Para esto, reforcé conocimientos sobre estructuras de negocio, metodologías ágiles y herramientas de validación de ideas, como el Solution Profile.<br>**Sebastian Omar Real Calderón**<br>TB1:Estudié e implementé herramientas para el análisis competitivo, identificando a los principales actores del mercado y sus estrategias. Me apoyé en frameworks actuales para comparar ventajas competitivas y plantear estrategias diferenciadoras.|**Estefano Oscar Jaque Peña**<br>TB1:Actualizarme en Lean UX me permitió trabajar desde etapas tempranas con un enfoque centrado en los usuarios. Este aprendizaje fue clave para estructurar hipótesis y diseñar entrevistas efectivas. <br>**John Arevalo Meza**<br> TB1:<br> La aplicación de conocimientos nuevos sobre validación de ideas y segmentación de usuarios me permitió conectar mejor con las necesidades reales del mercado y proponer soluciones coherentes.<br>**Sebastian Omar Real Calderón**<br> TB1: El análisis de competidores me obligó a salir de mi zona de confort y estudiar nuevos enfoques del mercado tecnológico. Esto me ayudó a fundamentar decisiones con base en datos reales y actuales|
-| 2. . Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de tecnologías de ingeniería de software | TB1:<br> **Estefano Oscar Jaque Peña**<br>TB1: Durante el desarrollo del Lean UX Canvas y el análisis de hipótesis, identifiqué vacíos de conocimiento que me motivaron a seguir investigando sobre diseño UX y metodologías ágiles. Esta experiencia me dejó claro que el aprendizaje continuo es fundamental en el desarrollo de software. <br>**John Arevalo Meza**<br> Al trabajar en los antecedentes y el perfil de la solución, comprendí que el entorno de negocios cambia constantemente, por lo que es necesario seguir aprendiendo sobre tendencias tecnológicas y metodologías de innovación.<br>**Sebastian Omar Real Calderón** <br>TB1: El análisis competitivo me mostró lo dinámico que es el mercado, y cómo el conocimiento sobre herramientas y estrategias debe renovarse constantemente. Reconocí la importancia de seguir formándome para mantenerme vigente en el campo tecnológico.| <br> **Sebastian Omar Real Calderón**<br> TB1:<br> Este proyecto me enseñó que el aprendizaje permanente no es opcional. Es una necesidad para adaptarse a un entorno tecnológico en constante evolución y brindar soluciones eficaces. <br>**Estefano Oscar Jaque Peña**<br>TB1:Esta entrega me dejó claro que para ofrecer soluciones reales, debo mantenerme actualizado y ser proactivo en la búsqueda de nuevas herramientas y enfoques de desarrollo. <br> **John Arevalo Meza**<br> TB1:<br> La necesidad de comprender el contexto del problema y el mercado me demostró que el aprendizaje no termina en las aulas. Para ser competitivo, debo seguir aprendiendo constantemente.|
+| 1. Comunica oralmente con efectividad a diferentes rangos de audiencia   | TB1:<br>**Estefano Oscar Jaque Peña**<br>TB1: Realice el Lean UX Prolem statements y los assumptions luego de ello apoye con el diseño de la pregunta para las entrevistas .Para los siguientes capitulos realice el diagrama de base de dato y de diagrama de clase, asi como el database dictionary.Para finalizar con mi aporte en el grupo realice el Sprint planning y el Sprint Backlog<br>**Diego Rolin Acuña Tomas**<br> TB1: Durante mi participación en la creación del TB1, tuvimos muchas reuniones por Dioscord para separar tareas, elegir los user stories que implementaremos, además de elegir que herramientas usaremos en la jornada. Tuve que hablar claro y demostrar mis ideas. Además de practicar la comunicación para ayudar en la exposición del trabajo.**Valentino Sandoval Paiva** <br>TB1: Para esta entrega, realicé una matriz de tareas de usuario para entender mejor las necesidades y prioridades de nuestros usuarios. También desarrollé un mapa de empatía para identificar sus emociones y comportamientos clave. Establecí directrices de estilo generales y específicas para la web para garantizar una presentación coherente y efectiva. Configuré el entorno de desarrollo, gestioné el código fuente y definí normas para su estilo y convenciones. Finalmente, preparé la configuración para el despliegue del software, asegurando una implementación fluida y exitosa. <br>**John Arévalo Meza** <br>TB1: Para esta entrega realicé los segmentos objetivos, asis scenario mapping, tobe scenario mapping, landing page wireframes y mockups, web application wireframes, mockups, wireflow and user flow diagrams y el registro de 1 entrevista por cada segmento objetivo.<br>**Sergio André Gómez Vallejos**<br>TB1:Presenté de manera clara y adaptada los avances y resultados del proyecto, asegurándome de que todos los miembros del equipo y las audiencias externas comprendieran los aspectos técnicos y estratégicos, lo que facilitó la toma de decisiones informadas.|**Estefano Oscar Jaque Peña**<br>TB1:Durante mi participación, comuniqué de manera clara los aspectos técnicos y estratégicos en reuniones y planificación. Presenté los diagramas y el Sprint Backlog adaptando mi lenguaje a audiencias con diferentes niveles de experiencia, asegurando que todos comprendieran la lógica del proyecto. <br>**John Telesforo Arevalo Meza**<br> TB1:<br> A lo largo de la TB1, la comnunicación oral fue de suma importancia, ya que gracias a esta pudimos empatizar con los segmentos objetivos, así como dar a conocer de manera correcta nuestras ideas, además logramos compenetrar mejor como equipo y así realizar un trabajo exitoso.<br>**Sergio André Gómez Vallejos**<br>TB1:Durante mi participación desarrollé de manera puntual y clara con algunas secciones del documento, como los Mockoups, testing, etc. Me asegure de cumplir y transmitir los avances del documento del TB1.<br>**Valentino Sandoval Paiva**<br>TB1:En esta TB1, durante la exposición de los resultados del desarrollo de Lean UX Hypothesis Statements, Lean UX Canvas, y el análisis de entrevistas, se demostró una habilidad sólida para comunicar oralmente con efectividad a diferentes audiencias. Para los líderes, se presentó el impacto estratégico del To-Be Scenario Mapping y el Impact Mapping, destacando cómo estos instrumentos contribuyen al éxito del proyecto. Con el equipo de desarrollo, se hizo énfasis en las User Stories y la Information Architecture, explicando su relevancia en términos técnicos y prácticos para la ejecución del proyecto.<br>**Diego Rolin Acuña Tomas**<br> TB1: Durante mi participación en la creación del TB1, tuvimos muchas reuniones por Dioscord para separar tareas, elegir los user stories que implementaremos, además de elegir que herramientas usaremos en la jornada. Tuve que hablar claro y demostrar mis ideas. Además de practicar la comunicación para ayudar en la exposición del trabajo.|
+| 2. Comunica por escrito con efectividad a diferentes rangos de audiencia | TB1:<br> **Estefano Oscar Jaque Peña**<br>TB1: Realice el Lean UX Prolem statements y los assumptions luego de ello apoye con el diseño de la pregunta para las entrevistas .Para los siguientes capitulos realice el diagrama de base de dato y de diagrama de clase, asi como el database dictionary.Para finalizar con mi aporte en el grupo realice el Sprint planning y el Sprint Backlog<br>**Diego Rolin Acuña Tomas**<br> TB1: Durante mi participación comprendí la importancia de dejar un documento con las pruebas de tu trabajo en el primer sprint, también aprendí a usar herramienta para crear los modelos C4. Escribirlo para mis compañeros ayudara a una comunicación menos repetitiva, pues podrán conocer sin necesidad de esperar a las reuniones.<br>**Sergio André Gómez Vallejos**<br>TB1:Redacté el informe sobre el proyecto, ajustando el lenguaje y la estructura para que fueran accesibles tanto para compañeros técnicos como para audiencias no técnicas, garantizando la comprensión y utilidad de la información compartida.<br>**John Telesforo Arevalo Meza**<br> Para esta entrega realicé los segmentos objetivos, asis scenario mapping, tobe scenario mapping, landing page wireframes y mockups, web application wireframes, mockups, wireflow and user flow diagrams y el registro de 1 entrevista por cada segmento objetivo. Además de la creación de la landgin page en base a el us asignado<br>**Valentino Sandoval Paiva** <br>TB1: "Al abordar esta entrega, analicé las tareas y necesidades de los usuarios para optimizar la experiencia del software. Desarrollé directrices de estilo para asegurar una presentación coherente, configuré el entorno de desarrollo y gestioné el código fuente. Además, preparé la configuración necesaria para un despliegue exitoso del software.| <br> **Valentino Sandoval Paiva**<br> TB1:<br> En esta TB1, la comunicación escrita ha sido clave para asegurar que todas las partes involucradas, desde líderes hasta miembros del equipo, comprendan claramente los objetivos, estrategias y decisiones tomadas. Se utilizó un lenguaje claro y conciso en la planificación y documentación, ajustando el nivel de detalle según la audiencia: proporcionando explicaciones estratégicas para los líderes y directrices más técnicas para el equipo de desarrollo. Esto garantizó una alineación efectiva entre todos los participantes, fomentando la colaboración y facilitando la toma de decisiones informadas basadas en datos compartidos y análisis grupales.<br>**Estefano Oscar Jaque Peña**<br>TB1:A lo largo del proyecto, redacté documentación clara y precisa, como los problem statements, assumptions, y el database dictionary, ajustando el nivel de detalle según la audiencia. Esto garantizó la comprensión y alineación de todo el equipo para una ejecución eficiente del proyecto. <br>**Sergio André Gómez Vallejos**<br>TB1:Durante el proyecto coloque y redacté documentación de manera clara y efectiva, como el testing, landing page, entre muchas otras secciones. Con el fin de mejorar y asegurar al documento para un proceso garantizado del proyecto. <br> **John Telesforo Arevalo Meza**<br> TB1:<br> Durante la Tb1, la comunicación escrita ha se de suma importancia, puesto que gracias a esta pudimos reconocer las necesidades de nuestros segmentos objetivos ,además de mejorar el trabajo en grupo y la organización en general<br>**Diego Rolin Acuña Tomas**<br> TB1: Durante mi participación comprendí la importancia de dejar un documento con las pruebas de tu trabajo en el primer sprint, también aprendí a usar herramienta para crear los modelos C4. Escribirlo para mis compañeros ayudara a una comunicación menos repetitiva, pues podrán conocer sin necesidad de esperar a las reuniones.<br>|
 
 ## Capítulo I: Introducción
 
@@ -278,9 +278,9 @@ El proceso Lean UX se adapta especialmente bien a startups como Aventis que busc
 
 ### 1.2.2.1. Lean UX Problem Statements
 
-El aplicativo móvil Scholr busca centralizar y simplificar el proceso de postulación a becas educativas ofrecidas por empresas privadas y ONGs en Perú, permitiendo a los usuarios acceder a oportunidades de financiamiento educativo de manera ágil y transparente.
-Hemos identificado que los postulantes a becas enfrentan dificultades para encontrar, comparar y aplicar a convocatorias debido a la dispersión de información, requisitos complejos y plazos poco claros, lo que reduce sus posibilidades de acceder a beneficios educativos.
-¿Cómo podríamos optimizar el proceso de búsqueda y postulación a becas para aumentar las oportunidades de los usuarios y reducir las barreras de acceso a la información?
+El aplicativo móvil Scholr busca centralizar y simplificar el proceso de postulación a becas educativas ofrecidas por empresas privadas y ONGs en Perú, permitiendo a los trabajadores de estas acceder a oportunidades de financiamiento educativo de manera ágil y transparente.
+Hemos identificado que Los trabajadores de empresas privadas u ONGs enfrentan dificultades para encontrar, comparar y aplicar a convocatorias de becas para sus hijos debido a la dispersión de información, requisitos complejos y plazos poco claros, lo que reduce sus posibilidades de acceder a beneficios educativos para su familia.
+¿Cómo podríamos optimizar el proceso de búsqueda y postulación a becas dirigidas a hijos de trabajadores, para que los padres/apoderados aumenten sus oportunidades de éxito y reduzcan las barreras de acceso a la información?
 
 ### 1.2.2.2. Lean UX Assumptions
 
@@ -290,15 +290,15 @@ Assumptions:
 
 2. Estas necesidades se pueden resolver con una plataforma móvil que agrupe, filtre y notifique oportunidades de becas según el perfil del usuario.
 
-3. Mis clientes iniciales son (o serán) estudiantes universitarios, egresados recientes y jóvenes profesionales en busca de financiamiento educativo.
+3. Mis clientes iniciales son padres o apoderados (trabajadores de empresas/ONGs) que buscan becas educativas para sus hijos en edad escolar o universitaria.
 
-4. El valor #1 que un cliente quiere de mi servicio es ahorrar tiempo en la búsqueda y postulación a becas, aumentando sus oportunidades de ser seleccionado.
+4. El valor #1 es garantizar que los padres encuentren becas compatibles con el perfil académico de sus hijos y postulen a tiempo, sin perder oportunidades por desconocimiento o trámites engorrosos.
 
-5. El cliente también puede obtener estos beneficios adicionales: asesoría personalizada, recordatorios de plazos y comparación de beneficios entre becas.
+5. El cliente también puede obtener estos beneficios adicionales: asesoría personalizada(atencion al cliente) y recordatorios de plazos(notificaciones).
 
-6. Voy a adquirir la mayoría de mis clientes a través de alianzas con universidades, redes sociales (Facebook, Instagram, LinkedIn) y recomendaciones de usuarios satisfechos.
+6. Voy a adquirir la mayoría de mis clientes a través de alianzas con Empresas Privadas y ONGs, redes sociales (Facebook, Instagram, LinkedIn) y recomendaciones de usuarios satisfechos.
 
-7. Haré dinero a través de comisiones por becas gestionadas con éxito, publicidad de instituciones educativas y suscripciones premium para funciones avanzadas.
+7. Haré dinero a través de comisiones por becas gestionadas con éxito y publicidad.
 
 8. Mi competencia principal en el mercado será portales educativos genéricos y plataformas de empleo que incluyen secciones de becas.
 
@@ -309,19 +309,19 @@ Assumptions:
 11. Resolveremos esto a través de alianzas formales con las empresas y ONGs oferentes, además de un sistema de verificación en tiempo real.
 
 12. ¿Quién es el usuario?
-Los usuarios principales son estudiantes universitarios, egresados recientes y jóvenes profesionales peruanos que buscan oportunidades de financiamiento educativo a través de becas ofrecidas por empresas e instituciones.
+Los usuarios principales son padres/apoderados (trabajadores de empresas/ONGs) que gestionan becas para sus hijos. Los usuarios secundarios son administradores de becas en esas instituciones.
 
 13. ¿Dónde encaja nuestro producto en su trabajo o vida?
-Scholr se integra en la vida académica y profesional de los usuarios, facilitando su acceso a oportunidades educativas y eliminando las barreras de tiempo y complejidad en el proceso de postulación a becas.
+Scholr se integra en la vida de , facilitando su acceso a oportunidades educativas y eliminando las barreras de tiempo y complejidad en el proceso de postulación a becas.
 
 14. ¿Qué problemas tiene nuestro producto y cómo se pueden resolver?
-El principal problema es la dispersión de información sobre convocatorias y los requisitos complejos para postular. Esto se resuelve centralizando toda la información en una plataforma intuitiva, con recordatorios y asesoría personalizada para cada beca.
+Falta de claridad sobre qué becas son exclusivas para hijos de trabajadores, y dificultad para comprobar el vínculo padre-empresa/hijo-estudiante.
 
 15. ¿Cuándo y cómo es usado nuestro producto?
 El producto se usa principalmente durante períodos de búsqueda activa de becas (inicios de semestre, fin de año) y durante el proceso de postulación. Los usuarios acceden a través de la app móvil para consultar oportunidades, subir documentos y recibir notificaciones.
 
 16. ¿Qué características son importantes?
-Las características clave incluyen: un buscador inteligente de becas filtradas por perfil, alertas personalizadas, seguimiento de postulaciones, tutoriales para completar requisitos y una sección de becas destacadas con plazos críticos.
+Las características clave incluyen: un buscador inteligente de becas que puedan ser filtradas, alertas personalizadas respecto a la beca que buscas, seguimiento de postulaciones y tutoriales para completar requisitos. 
 
 17. ¿Cómo debe verse nuestro producto y cómo debe comportarse?
 Scholr debe tener un diseño limpio y profesional, con colores institucionales (azules/blancos) que inspiren confianza. Debe ser rápido en cargar información actualizada, con una navegación intuitiva y funciones claras para postular en pocos pasos. El comportamiento debe ser proactivo (notificaciones útiles) pero no intrusivo.
@@ -350,46 +350,71 @@ User Outcomes:
 
 ### 1.2.2.3. Lean UX Hypothesis Statements
 
-- Hipótesis 1 (Enfoque: Postulaciones exitosas)  
-Creemos que al centralizar y simplificar el proceso de postulación a becas en una sola plataforma .Sabremos que hemos tenido éxito cuando el 40% de los usuarios complete postulaciones exitosas a través de la app en el primer año.
+- **Hipótesis 1 (Enfoque: Postulaciones exitosas)**  
+  *Creemos que* al centralizar y simplificar el proceso de postulación a becas en una sola plataforma *Sabremos que hemos tenido éxito cuando* el 40% de padres/trabajadores que usan Scholr logren postular a becas para sus hijos (vs. 10% en el método tradicional) en el primer año.
 
-- Hipótesis 2 (Enfoque: Fuente principal de información)  
-Creemos que ofrecer información verificada y actualizada sobre becas en tiempo real.Sabremos que hemos tenido éxito Cuando el 70% de los usuarios encuestados declare que Scholr es su principal fuente de consulta.
+- **Hipótesis 2 (Enfoque: Fuente principal de información)**  
+  *Creemos que* ofrecer información verificada y actualizada sobre becas en tiempo real *Sabremos que hemos tenido éxito cuando* el 70% de trabajadores de empresas aliadas usen Scholr como canal oficial para becas familiares.
 
-- Hipótesis 3 (Enfoque: Alianzas estratégicas)  
-Creemos que al formalizar alianzas con empresas y ONGs para integrar sus convocatorias de manera exclusiva. Sabremos que hemos tenido éxito cuando al menos 6 instituciones publiquen sus becas directamente en Scholr.
+- **Hipótesis 3 (Enfoque: Alianzas estratégicas)**  
+  *Creemos que* al formalizar alianzas con empresas y ONGs para integrar sus convocatorias de manera exclusiva *Sabremos que hemos tenido éxito cuando* al menos 6 empresas/ONGs integren sus programas de becas familiares en Scholr con validación automática de empleados.
 
-- Hipótesis 4 (Enfoque: Posicionamiento en el mercado)  
-Creemos que al optimizar la experiencia del usuario con funciones intuitivas y notificaciones personalizadas. Sabremos que hemos tenido éxito cuando Scholr se ubique entre las 3 apps más descargadas en educación en Perú en 18 meses.
+- **Hipótesis 4 (Enfoque: Posicionamiento en el mercado)**  
+  *Creemos que* al optimizar la experiencia del usuario con funciones intuitivas y notificaciones personalizadas *Sabremos que hemos tenido éxito cuando* Scholr se ubique como App #1 en becas corporativas/familiares en Perú.
 
 ### 1.2.2.4. Lean UX Canvas
 
 | Sección | Contenido |
 |---------|-----------|
-| **Business Problem** | Los postulantes a becas enfrentan dificultades para encontrar, comparar y aplicar a convocatorias debido a la dispersión de información, requisitos complejos y plazos poco claros, lo que reduce sus posibilidades de acceder a beneficios educativos. |
-| **Business Outcomes** | - Incrementar en 40% las postulaciones exitosas mediante la plataforma en el primer año<br>- Lograr que 70% de usuarios usen Scholr como principal fuente de información<br>- Establecer alianzas con al menos 6 empresas/ONGs<br>- Posicionarse entre las 3 apps más descargadas en educación en 18 meses |
-| **Users and Customers** | Estudiantes universitarios, egresados recientes y jóvenes profesionales peruanos que buscan financiamiento educativo a través de becas ofrecidas por empresas e instituciones. |
-| **User Benefits** | - Encontrar todas las becas relevantes en un solo lugar<br>- Simplificar el proceso de postulación<br>- Recibir alertas personalizadas<br>- Ahorrar tiempo en gestión de postulaciones<br>- Aumentar posibilidades de obtener becas |
-| **Solution Ideas** | - Plataforma centralizada con buscador inteligente<br>- Sistema de alertas y recordatorios personalizados<br>- Herramientas de seguimiento de postulaciones<br>- Tutoriales para completar requisitos<br>- Integración con instituciones educativas |
-| **Hypotheses** | 1. Centralizar postulaciones aumentará éxito en 40%<br>2. Información verificada hará que 70% la prefieran<br>3. Alianzas exclusivas con 6 instituciones<br>4. Experiencia intuitiva la posicionará top 3 en descargas |
-| **What's the most important thing we need to learn first?** | - Expectativas y necesidades reales de los postulantes<br>- Problemas específicos en el proceso actual de búsqueda/postulación<br>- Funcionalidades más valoradas por los usuarios potenciales |
-| **What's the least amount of work we need to do to learn the next most important thing?** | - Entrevistas con estudiantes y egresados<br>- Benchmarking de plataformas similares<br>- Encuestas a usuarios potenciales<br>- Pruebas de concepto con instituciones aliadas |
+| **Business Problem** | Padres/trabajadores de empresas/ONGs no encuentran becas educativas para sus hijos de manera ágil, o pierden oportunidades por trámites complejos y falta de información centralizada. |
+| **Business Outcomes** | - 40% de padres/trabajadores logran postular exitosamente para sus hijos<br>- 70% de trabajadores de empresas aliadas usan Scholr como canal principal<br>- 6+ empresas/ONGs integran sus becas familiares<br>- Posicionarse como app líder en becas corporativas |
+| **Users and Customers** | Trabajadores de empresas privadas y ONGs (padres/apoderados) que buscan becas para sus hijos en edad escolar/universitaria. |
+| **User Benefits** | - Acceso a becas exclusivas para hijos de colaboradores<br>- Validación automática del vínculo padre-empresa<br>- Postulación simplificada con documentos prevalidados (credencial laboral + notas del hijo) |
+| **Solution Ideas** | - Filtro "Becas para hijos de trabajadores de [tu empresa]"<br>- Integración con RRHH para verificación de empleo<br>- Sección de "Becas patrocinadas por tu empleador"<br>- Alertas personalizadas por perfil académico del hijo |
+| **Hypotheses** | 1. Postulaciones exitosas aumentarán 40%<br>2. 70% adoptarán Scholr como canal principal<br>3. 6+ alianzas con instituciones<br>4. Liderazgo en becas familiares |
+| **What's the most important thing we need to learn first?** | - Necesidades reales de padres/trabajadores<br>- Barreras actuales en postulaciones familiares<br>- Requisitos de empresas/ONGs para integrar sus programas |
+| **What's the least amount of work we need to do to learn the next most important thing?** | - Entrevistas con padres trabajadores<br>- Reuniones piloto con departamentos de RRHH<br>- Pruebas de concepto con 1-2 empresas aliadas |
 
 ### 1.3. Segmentos objetivo
 
-**Lider o gerente de empresa de desarrollo de software en crecimiento(Product Owner y Scrum Master):**  
-Descripción: Líderes y gerentes de empresas de desarrollo de software que buscan adoptar o mejorar sus prácticas ágiles. Están comprometidos con la transformación digital y buscan herramientas y metodologías que les permitan entregar valor al cliente de manera más rápida y eficiente.
+**Segmento objetivo 1: Padres trabajadores (empleados/colaboradores de empresas y ONGs):**  
+Descripción:  
+Trabajadores formales de empresas medianas/grandes o ONGs en Perú, con hijos en edad escolar o universitaria, que buscan acceder a becas educativas exclusivas para familiares de empleados.  
 
-Necesidades: Requieren soluciones que les ayuden a implementar y escalar Scrum, Kanban o otras metodologías ágiles en sus organizaciones. Buscan herramientas que faciliten la gestión del backlog, la planificación de sprints, el seguimiento del progreso y la colaboración entre equipos distribuidos.
+Necesidades:  
+- Encontrar información confiable y actualizada sobre becas disponibles para sus hijos.
 
-Aspiraciones: Desean convertirse en referentes en la adopción de metodologías ágiles en su sector, mejorar la productividad y la calidad de sus productos, y fomentar una cultura de innovación y mejora continua en sus equipos.
+- Simplificar el proceso de postulación (especialmente para acreditar su vínculo laboral).
 
-**Equipo de Desarrollo de Software:**  
-Descripción: Profesionales técnicos que trabajan en equipos ágiles y colaborativos, dedicados a la creación y mantenimiento de software.
+- Evitar perder oportunidades por plazos desconocidos o requisitos poco claros.
 
-Necesidades: Buscan herramientas que les permitan optimizar su flujo de trabajo, mejorar la comunicación y aumentar su productividad. Necesitan plataformas que integren diversas herramientas de desarrollo y que les proporcionen una visión unificada de su trabajo.
+Aspiraciones:
 
-Aspiraciones: Desean entregar software de alta calidad de manera más rápida y eficiente, reducir el tiempo dedicado a tareas repetitivas y aumentar su satisfacción laboral.
+- Garantizar la mejor educación posible para sus hijos sin asumir costos elevados.
+
+- Sentir que su empleador les ofrece beneficios valiosos y fáciles de usar.
+
+- Reducir el estrés y tiempo invertido en trámites burocráticos.
+
+**Segmento objetivo 2: Coordinadores de bienestar laboral/RSE (en empresas y ONGs):**    
+Descripción:  
+Profesionales en departamentos de RRHH, Bienestar o Responsabilidad Social, encargados de gestionar programas de becas educativas para hijos de empleados.  
+
+Necesidades:  
+
+- Reducir la carga administrativa de validar postulantes manualmente.   
+
+- Mejorar la comunicación interna sobre beneficios disponibles.  
+
+- Generar métricas claras sobre el impacto de los programas de becas.  
+
+Aspiraciones:  
+
+- Posicionar a su organización como un empleador socialmente responsable.  
+
+- Implementar soluciones escalables que ahorren tiempo y recursos.  
+
+- Demostrar el valor de los programas de bienestar a la alta dirección.  
 
 ## Capítulo II: Requirements Elicitation & Analysis
 
@@ -715,13 +740,43 @@ Este recorrido muestra el proceso completo que experimenta un integrante del equ
 
 ### 2.3.4. Empathy Mapping
 
-**Segmento 1: Carlos (Trabajador apoderado/padre de familia)**
+**Segmento 1: María (Líder/Gerente de Proyecto)**
 
-![EmpathyMap-Apoderado](./assets/images/EmpathyMap-Apoderado.png)
+| **¿Qué Piensa y Siente?**                                                                                                | **¿Qué Ve?**                                                                             |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
+| Necesita garantizar que todos los proyectos se gestionen eficazmente y que el equipo alcance los objetivos establecidos. | Observa un entorno empresarial donde muchas empresas aún usan herramientas anticuadas.   |
+| Está interesada en nuevas tecnologías y en cómo pueden mejorar la gestión de proyectos.                                  | Ve que la competencia está adoptando nuevas tecnologías y herramientas más avanzadas.    |
+| Quiere un software intuitivo y adaptable que mejore la eficiencia del equipo y proteja los datos de la empresa.          | Nota una creciente integración de las tecnologias emergentes en la gestión de proyectos. |
+| Lidiar con herramientas obsoletas y encontrar soluciones que se adapten a las necesidades cambiantes de la empresa.      |                                                                                          |
 
-**Segmento 2: Luis (Administrador de becas de una empresa privada)**
+| **¿Qué Dice y Hace?**                                                                                     | **¿Qué Oye?**                                                                                                                   |
+| --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| Habla sobre la necesidad de modernizar el software y la importancia de la seguridad de los datos.         | Recibe comentarios de su equipo sobre la falta de funcionalidad en las herramientas actuales y las necesidades de capacitación. |
+| Busca constantemente nuevas soluciones y herramientas que puedan integrarse y ser útiles para la empresa. | Escucha sobre nuevas tecnologías y herramientas que podrían ser beneficiosas para su empresa.                                   |
 
-![EmpathyMap-Administrador](./assets/images/EmpathyMap-Administrador.png)
+| **Dolores**                                                                                                                  | **Ganancias**                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Experimenta frustraciones con las herramientas obsoletas y la falta de opciones intuitivas que se adapten a sus necesidades. | Una solución moderna y segura que facilite la gestión de proyectos y mejore la colaboración del equipo.          |
+| Preocupada por la seguridad de los datos y la posible falta de protección que puedan ofrecer las herramientas actuales.      | La implementación exitosa de un software eficiente que permita al equipo alcanzar sus metas con mayor facilidad. |
+
+**Segmento 2: Fabricio (Equipo de Desarrollo de Software)**
+
+| **¿Qué Piensa y Siente?**                                                                                                                 | **¿Qué Ve?**                                                                                                                 |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Le preocupa que las herramientas actuales limiten la colaboración efectiva y el flujo de trabajo del equipo.                              | Observa que muchas herramientas están desactualizadas y no cumplen con las expectativas actuales del desarrollo de software. |
+| Está interesado en herramientas que mejoren la eficiencia y precisión en el desarrollo de software.                                       | Ve que otras empresas están usando herramientas más avanzadas y adaptativas.                                                 |
+| Desea trabajar con herramientas innovadoras que faciliten la colaboración y permitan un mejor seguimiento del progreso.                   | Nota una necesidad creciente de herramientas que promuevan una colaboración más efectiva y un registro preciso del trabajo.  |
+| Enfrenta desafíos al trabajar con herramientas que no se adaptan bien a las necesidades del equipo y a la falta de capacitación adecuada. |                                                                                                                              |
+
+| **¿Qué Dice y Hace?**                                                                                                   | **¿Qué Oye?**                                                                                                                        |
+| ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Habla sobre la importancia de la precisión y fiabilidad de las herramientas y cómo estas impactan en su trabajo diario. | Escucha a sus compañeros expresar la necesidad de herramientas más actualizadas y la falta de eficacia de las herramientas actuales. |
+| Participa en capacitaciones y busca herramientas que mejoren la colaboración y el seguimiento del progreso del equipo.  | Oye sobre nuevas soluciones y tecnologías que podrían ayudar a resolver problemas de colaboración y precisión.                       |
+
+| **Dolores**                                                                                                                               | **Ganancias**                                                                                                    |
+| ----------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| **Frustraciones:** Frustrado por la falta de herramientas innovadoras que limiten la colaboración y el seguimiento del progreso.          | Herramientas de desarrollo que sean precisas, fiables, y que faciliten una colaboración efectiva.                |
+| **Riesgos:** Preocupado por la falta de adaptación de las herramientas a los modelos de negocio y las necesidades específicas del equipo. | Un entorno de trabajo más colaborativo y eficiente con herramientas que se adaptan a las necesidades del equipo. |
 
 ### 2.3.5. As-is Scenario Mapping
 
