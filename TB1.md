@@ -692,42 +692,13 @@ Al observar la matriz, podemos destacar que tanto Oscar como Leonardo consideran
 
 ### 2.3.3. User Journey Mapping
 
-**User Journey Mapping - Líder de Empresa de Desarrollo de Software(Product Owner y Scrum Master)**
+**Segmento 1: Carlos (Trabajador apoderado/padre de familia)** 
 
-1. End-to-End Journey: Líder o Gerente de Empresa() <br>
+![Journey-Mapping-Apoderado](./assets/images/journey-mapping-apoderado.png) 
 
-   El siguiente recorrido detalla el proceso completo que atraviesa un líder o gerente de empresa, desde la planificación inicial del proyecto hasta la evaluación y cierre. Este viaje abarca la supervisión estratégica y la toma de decisiones críticas para asegurar el éxito del proyecto y la alineación con los objetivos del negocio.
+**Segmento 2: Luis (Administrador de becas de una empresa privada)** 
 
-   1. Planificación del Proyecto:<br>
-
-   El líder comienza identificando nuevas ideas para proyectos y definiendo objetivos claros para el equipo. Durante esta fase, se asegura de que los recursos sean asignados adecuadamente, pero también enfrenta ansiedad por la falta de visibilidad sobre los recursos disponibles y posibles retrasos en la planificación.
-
-   2. Ejecución del Proyecto:<br>
-
-   A medida que avanza el proyecto, el líder supervisa el progreso, revisa los reportes de rendimiento y participa en reuniones clave. Aquí, enfrenta estrés por la gestión de múltiples canales de información y frustración si los reportes de desempeño no son precisos. Es crucial que las herramientas de seguimiento sean automáticas y accesibles para evitar la incertidumbre sobre si el equipo está alineado con los plazos y presupuestos.
-
-   3. Evaluación y Cierre:<br>
-
-   En la etapa final, el líder revisa el rendimiento del proyecto en comparación con los objetivos y evalúa áreas de mejora para futuros proyectos. El cierre puede generar motivación si el proyecto es exitoso, pero también puede haber inseguridad si los informes de desempeño no fueron claros. El feedback del cliente es esencial para asegurar mejoras continuas en futuros proyectos.
-
-![Anexo F](./assets/images/User%20Journey%20Mapping%20Lider.png)
-
-**User Journey Mapping - Equipo de Desarrollo de Software**
-
-1. End-to-End Journey: Integrante del Equipo de Desarrollo de Software<br>
-
-Este recorrido muestra el proceso completo que experimenta un integrante del equipo de desarrollo de software, desde la recepción de tareas hasta la entrega final del proyecto. A lo largo del ciclo, el equipo de desarrollo enfrenta diversos retos, ajustes y expectativas, donde la eficiencia y la colaboración son claves para el éxito.
-
-1.  Recibo de Tareas:<br>
-    En esta fase inicial, el integrante recibe las asignaciones del proyecto y revisa los requerimientos. Su principal preocupación es obtener toda la información y los recursos necesarios para realizar su trabajo sin complicaciones. La confusión o la falta de acceso a estos recursos puede causar frustración y retrasos.
-
-2.  Desarrollo y progreso:<br>
-    Una vez que tiene las tareas claras, comienza el trabajo en las asignaciones. El desarrollador participa en reuniones de seguimiento para asegurar que su progreso esté alineado con las expectativas del cliente. Durante esta fase, la presión por cumplir con los plazos es constante, y la colaboración eficaz con herramientas adecuadas es fundamental para mantener el flujo de trabajo.
-
-3.  Revisión y Entrega<br>
-    En la fase final, el integrante revisa su código o entregables desarrollados y prueba las funcionalidades para asegurarse de que cumplen con los requisitos del cliente. Al finalizar la entrega, se siente alivio, aunque puede haber incertidumbre sobre si el resultado cumplirá con las expectativas del cliente o si surgirán problemas técnicos cerca del cierre.
-
-![Anexo G](./assets/images/User%20Journey%20Mapping%20Integrante%20Equipo.png)
+![Journey-Mapping-Administrador](./assets/images/journey-mapping-coordinador.png) 
 
 ### 2.3.4. Empathy Mapping
 
