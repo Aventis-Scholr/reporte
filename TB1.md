@@ -580,7 +580,7 @@ La entrevista con Nora reveló aspectos importantes sobre la gestión y flujo de
     Nombre: Lourdes <br>
     Apellidos: Huamani Vasquez<br>
     Cargo: Coordinadora de RSE y Bienestar Laboral<br>
-    Experiencia: 3 años gestionando becas para 300 colaboradores
+    Experiencia: 3 años gestionando becas para 300 colaboradores<br>
     Edad: 27 <br>
     Distrito: Los Olivos <br>
 
