@@ -87,7 +87,7 @@ TB1:<br>
 ### Tabla de contenidos
 
   - [Student Outcome](#student-outcome)
-  - [Capítulo I: Introducción](#capítulo-i-introducción)
+  - [Capítulo I: Presentación](#capítulo-i-presentación)
     - [1.1. Startup Profile](#11-startup-profile)
     - [1.1.1. Descripción de la Startup](#111-descripción-de-la-startup)
     - [1.1.2. Perfiles de integrantes del equipo](#112-perfiles-de-integrantes-del-equipo)
@@ -120,53 +120,30 @@ TB1:<br>
     - [3.3. Impact Mapping](#33-impact-mapping)
     - [3.4. Product Backlog](#34-product-backlog)
   - [Capítulo IV: Product Design](#capítulo-iv-product-design)
-    - [4.1. Style Guidelines.](#41-style-guidelines)
-    - [4.1.1. General Style Guidelines.](#411-general-style-guidelines)
-    - [4.1.2. Web Style Guidelines.](#412-web-style-guidelines)
-    - [4.2. Information Architecture](#42-information-architecture)
-      - [4.2.1. Organization Systems](#421-organization-systems)
-      - [4.2.2. Labeling Systems](#422-labeling-systems)
-      - [4.2.3. SEO Tags and Meta Tags](#423-seo-tags-and-meta-tags)
-      - [4.2.4. Searching Systems](#424-searching-systems)
-      - [4.2.5. Navigation Systems](#425-navigation-systems)
-    - [4.3. Landing Page UI Design](#43-landing-page-ui-design)
-      - [4.3.1. Landing Page Wireframe](#431-landing-page-wireframe)
-        - [Desktop Web Browser:](#desktop-web-browser)
-        - [Mobile Web Browser:](#mobile-web-browser)
-      - [4.3.2. Landing Page Mock-up](#432-landing-page-mock-up)
-        - [Desktop Web Browser:](#desktop-web-browser-1)
-        - [Mobile Web Browser:](#mobile-web-browser-1)
-    - [4.4. Web Applications UX/UI Design](#44-web-applications-uxui-design)
-      - [4.4.1. Web Applications Wireframes](#441-web-applications-wireframes)
-      - [4.4.2. Web Applications Wireflow Diagrams](#442-web-applications-wireflow-diagrams)
-      - [4.4.3. Web Applications Mock-ups](#443-web-applications-mock-ups)
-      - [4.4.4. Web Applications User Flow Diagrams](#444-web-applications-user-flow-diagrams)
-    - [4.5. Web Applications Prototyping](#45-web-applications-prototyping)
-    - [4.6. Domain-Driven Software Architecture](#46-domain-driven-software-architecture)
-    - [4.6.1. Software Architecture Context Diagram](#461-software-architecture-context-diagram)
-    - [4.6.2. Software Architecture Container Diagrams](#462-software-architecture-container-diagrams)
-    - [4.6.3. Software Architecture Components Diagrams](#463-software-architecture-components-diagrams)
-    - [4.7. Software Object-Oriented Design](#47-software-object-oriented-design)
-      - [4.7.1. Class Diagrams](#471-class-diagrams)
-    - [4.8. Database Design](#48-database-design)
-    - [4.7.2. Database Dictionary](#472-database-dictionary)
-      - [4.8.1. Database Diagram](#481-database-diagram)
-  - [Capítulo V: Product Implementation, Validation \& Deploymentt](#capítulo-v-product-implementation-validation--deploymentt)
-    - [5.1. Software Configuration Management.](#51-software-configuration-management)
-    - [5.1.1. Software Development Environment Configuration.](#511-software-development-environment-configuration)
-  - [Diseño y Desarrollo](#diseño-y-desarrollo)
-    - [5.1.2. Source Code Management.](#512-source-code-management)
-    - [5.1.3. Source Code Style Guide \& Conventions.](#513-source-code-style-guide--conventions)
-    - [5.1.4. Software Deployment Configuration.](#514-software-deployment-configuration)
-    - [5.2 Landing Page, Services \& Applications Implementation.](#52-landing-page-services--applications-implementation)
-    - [5.2.1 . Sprint 1](#521--sprint-1)
-      - [5.2.1.1 Sprint Planning 1.](#5211-sprint-planning-1)
-      - [5.2.1.2 Sprint Backlog 1.](#5212-sprint-backlog-1)
-      - [5.2.1.3 Development Evidence for Sprint Review](#5213-development-evidence-for-sprint-review)
-      - [5.2.1.4 Testing Suite Evidence for Sprint Review.](#5214-testing-suite-evidence-for-sprint-review)
-      - [5.2.1.5 Execution Evidence for Sprint Review.](#5215-execution-evidence-for-sprint-review)
-      - [5.2.1.7 Software Deployment Evidence for Sprint Review.](#5217-software-deployment-evidence-for-sprint-review)
-      - [5.2.1.8 Team Collaboration Insights during Sprint.](#5218-team-collaboration-insights-during-sprint)
+    - [4.1. Strategic-Level Domain-Driven Design.](#41strategic-level-domain-driven-design)
+    - [4.1.1. EventStorming.](#411eventstorming)
+    - [4.1.1.1. Candidate Context Discovery.](#4111candidate-context-discovery)
+    - [4.1.1.2. Domain Message Flows Modeling.](#4112domain-message-flows-modeling)
+    - [4.1.1.3. Bounded Context Canvases.](#4113boundedcontext-canvases)
+    - [4.1.2. Context Mapping.](#412context-mapping)
+    - [4.1.3. Software Architecture.](#413software-architecture)
+    - [4.1.3.1. Software Architecture Context Level Diagrams.](#4131software-architecture-context-level-diagrams)
+    - [4.1.3.2. Software Architecture Container Level Diagrams.](#4132software-architecture-container-level-diagrams)
+    - [4.1.3.3. Software Architecture Deploymnet Diagrams.](#4133software-architecture-deployment-diagrams)
+
+    - [4.2. Tactical-Level Domain-Driven Design.](#42tactical-level-domain-driven-design)
+    
+    - [4.2.X. Bounded Context: Bounded Context Name.](#42Xbounded-context:-bounded-context-name)
+    - [4.2.X.1 Domain Layer.](#42X1domain-layer)
+    - [4.2.X.2 Interface Layer.](#42X2interface-layer)
+    - [4.2.X.3 Application Layer.](#42X3application-layer)
+    - [4.2.X.4 Infrastructure Layer.](#42X4infrastructure-layer)
+    - [4.2.X.5 Bounded Context Software Architecture Component Level Diagrams.](#42X5bounded-context-software-architecture-component-level-diagrams)
+    - [4.2.X.6 Bounded Context Software Architecture Code Level Diagrams.](#42X6bounded-context-software-architecture-code-level-diagrams)
+    - [4.2.X.6.1  Bounded Context Domain Layer Class Diagrams.](#42X61bounded-context-domain-layer-class-diagrams)
+    - [4.2.X.6.2  Bounded Context Database Design Diagram.](#42X61bounded-context-database-design-diagram)
+
+
     - [Conclusiones](#conclusiones)
     - [Bibliografia](#bibliografia)
     - [Anexos](#anexos)
@@ -183,7 +160,7 @@ En el siguiente cuadro se describen las acciones realizadas y enunciados de conc
 | 1. Comunica oralmente con efectividad a diferentes rangos de audiencia   | TB1:<br>**Estefano Oscar Jaque Peña**<br>TB1: Realice el Lean UX Prolem statements y los assumptions luego de ello apoye con el diseño de la pregunta para las entrevistas .Para los siguientes capitulos realice el diagrama de base de dato y de diagrama de clase, asi como el database dictionary.Para finalizar con mi aporte en el grupo realice el Sprint planning y el Sprint Backlog<br>**Diego Rolin Acuña Tomas**<br> TB1: Durante mi participación en la creación del TB1, tuvimos muchas reuniones por Dioscord para separar tareas, elegir los user stories que implementaremos, además de elegir que herramientas usaremos en la jornada. Tuve que hablar claro y demostrar mis ideas. Además de practicar la comunicación para ayudar en la exposición del trabajo.**Valentino Sandoval Paiva** <br>TB1: Para esta entrega, realicé una matriz de tareas de usuario para entender mejor las necesidades y prioridades de nuestros usuarios. También desarrollé un mapa de empatía para identificar sus emociones y comportamientos clave. Establecí directrices de estilo generales y específicas para la web para garantizar una presentación coherente y efectiva. Configuré el entorno de desarrollo, gestioné el código fuente y definí normas para su estilo y convenciones. Finalmente, preparé la configuración para el despliegue del software, asegurando una implementación fluida y exitosa. <br>**John Arévalo Meza** <br>TB1: Para esta entrega realicé los segmentos objetivos, asis scenario mapping, tobe scenario mapping, landing page wireframes y mockups, web application wireframes, mockups, wireflow and user flow diagrams y el registro de 1 entrevista por cada segmento objetivo.<br>**Sergio André Gómez Vallejos**<br>TB1:Presenté de manera clara y adaptada los avances y resultados del proyecto, asegurándome de que todos los miembros del equipo y las audiencias externas comprendieran los aspectos técnicos y estratégicos, lo que facilitó la toma de decisiones informadas.|**Estefano Oscar Jaque Peña**<br>TB1:Durante mi participación, comuniqué de manera clara los aspectos técnicos y estratégicos en reuniones y planificación. Presenté los diagramas y el Sprint Backlog adaptando mi lenguaje a audiencias con diferentes niveles de experiencia, asegurando que todos comprendieran la lógica del proyecto. <br>**John Telesforo Arevalo Meza**<br> TB1:<br> A lo largo de la TB1, la comnunicación oral fue de suma importancia, ya que gracias a esta pudimos empatizar con los segmentos objetivos, así como dar a conocer de manera correcta nuestras ideas, además logramos compenetrar mejor como equipo y así realizar un trabajo exitoso.<br>**Sergio André Gómez Vallejos**<br>TB1:Durante mi participación desarrollé de manera puntual y clara con algunas secciones del documento, como los Mockoups, testing, etc. Me asegure de cumplir y transmitir los avances del documento del TB1.<br>**Valentino Sandoval Paiva**<br>TB1:En esta TB1, durante la exposición de los resultados del desarrollo de Lean UX Hypothesis Statements, Lean UX Canvas, y el análisis de entrevistas, se demostró una habilidad sólida para comunicar oralmente con efectividad a diferentes audiencias. Para los líderes, se presentó el impacto estratégico del To-Be Scenario Mapping y el Impact Mapping, destacando cómo estos instrumentos contribuyen al éxito del proyecto. Con el equipo de desarrollo, se hizo énfasis en las User Stories y la Information Architecture, explicando su relevancia en términos técnicos y prácticos para la ejecución del proyecto.<br>**Diego Rolin Acuña Tomas**<br> TB1: Durante mi participación en la creación del TB1, tuvimos muchas reuniones por Dioscord para separar tareas, elegir los user stories que implementaremos, además de elegir que herramientas usaremos en la jornada. Tuve que hablar claro y demostrar mis ideas. Además de practicar la comunicación para ayudar en la exposición del trabajo.|
 | 2. Comunica por escrito con efectividad a diferentes rangos de audiencia | TB1:<br> **Estefano Oscar Jaque Peña**<br>TB1: Realice el Lean UX Prolem statements y los assumptions luego de ello apoye con el diseño de la pregunta para las entrevistas .Para los siguientes capitulos realice el diagrama de base de dato y de diagrama de clase, asi como el database dictionary.Para finalizar con mi aporte en el grupo realice el Sprint planning y el Sprint Backlog<br>**Diego Rolin Acuña Tomas**<br> TB1: Durante mi participación comprendí la importancia de dejar un documento con las pruebas de tu trabajo en el primer sprint, también aprendí a usar herramienta para crear los modelos C4. Escribirlo para mis compañeros ayudara a una comunicación menos repetitiva, pues podrán conocer sin necesidad de esperar a las reuniones.<br>**Sergio André Gómez Vallejos**<br>TB1:Redacté el informe sobre el proyecto, ajustando el lenguaje y la estructura para que fueran accesibles tanto para compañeros técnicos como para audiencias no técnicas, garantizando la comprensión y utilidad de la información compartida.<br>**John Telesforo Arevalo Meza**<br> Para esta entrega realicé los segmentos objetivos, asis scenario mapping, tobe scenario mapping, landing page wireframes y mockups, web application wireframes, mockups, wireflow and user flow diagrams y el registro de 1 entrevista por cada segmento objetivo. Además de la creación de la landgin page en base a el us asignado<br>**Valentino Sandoval Paiva** <br>TB1: "Al abordar esta entrega, analicé las tareas y necesidades de los usuarios para optimizar la experiencia del software. Desarrollé directrices de estilo para asegurar una presentación coherente, configuré el entorno de desarrollo y gestioné el código fuente. Además, preparé la configuración necesaria para un despliegue exitoso del software.| <br> **Valentino Sandoval Paiva**<br> TB1:<br> En esta TB1, la comunicación escrita ha sido clave para asegurar que todas las partes involucradas, desde líderes hasta miembros del equipo, comprendan claramente los objetivos, estrategias y decisiones tomadas. Se utilizó un lenguaje claro y conciso en la planificación y documentación, ajustando el nivel de detalle según la audiencia: proporcionando explicaciones estratégicas para los líderes y directrices más técnicas para el equipo de desarrollo. Esto garantizó una alineación efectiva entre todos los participantes, fomentando la colaboración y facilitando la toma de decisiones informadas basadas en datos compartidos y análisis grupales.<br>**Estefano Oscar Jaque Peña**<br>TB1:A lo largo del proyecto, redacté documentación clara y precisa, como los problem statements, assumptions, y el database dictionary, ajustando el nivel de detalle según la audiencia. Esto garantizó la comprensión y alineación de todo el equipo para una ejecución eficiente del proyecto. <br>**Sergio André Gómez Vallejos**<br>TB1:Durante el proyecto coloque y redacté documentación de manera clara y efectiva, como el testing, landing page, entre muchas otras secciones. Con el fin de mejorar y asegurar al documento para un proceso garantizado del proyecto. <br> **John Telesforo Arevalo Meza**<br> TB1:<br> Durante la Tb1, la comunicación escrita ha se de suma importancia, puesto que gracias a esta pudimos reconocer las necesidades de nuestros segmentos objetivos ,además de mejorar el trabajo en grupo y la organización en general<br>**Diego Rolin Acuña Tomas**<br> TB1: Durante mi participación comprendí la importancia de dejar un documento con las pruebas de tu trabajo en el primer sprint, también aprendí a usar herramienta para crear los modelos C4. Escribirlo para mis compañeros ayudara a una comunicación menos repetitiva, pues podrán conocer sin necesidad de esperar a las reuniones.<br>|
 
-## Capítulo I: Introducción
+## Capítulo I: Presentación
 
 ### 1.1. Startup Profile
 
@@ -752,3 +729,55 @@ Anexo A
 
 ![Anexo B](./assets/images/To%20-Be%20Integrante%20Equipo.jpg)
 Anexo B
+
+### 3.2. User Stories
+### 3.3. Impact Mapping
+### 3.4. Product Backlog
+
+## Capítulo IV: Product Design
+
+### 4.1. Strategic-Level Domain-Driven Design
+
+### 4.1.1. EventStorming
+
+### 4.1.1.1. Candidate Context Discovery
+
+### 4.1.1.2. Domain Message Flows Modeling
+
+### 4.1.1.3. Bounded Context Canvases
+
+### 4.1.2. Context Mapping
+
+### 4.1.3. Software Architecture
+
+### 4.1.3.1. Software Architecture Context Level Diagrams
+
+### 4.1.3.2. Software Architecture Container Level Diagrams
+
+### 4.1.3.3. Software Architecture Deploymnet Diagrams
+
+### 4.2. Tactical-Level Domain-Driven Design
+
+### 4.2.X. Bounded Context: Bounded Context Name
+
+### 4.2.X.1 Domain Layer
+
+### 4.2.X.2 Interface Layer
+
+### 4.2.X.3 Application Layer
+
+### 4.2.X.4 Infrastructure Layer
+
+### 4.2.X.5 Bounded Context Software Architecture Component Level Diagrams
+
+### 4.2.X.6 Bounded Context Software Architecture Code Level Diagrams
+
+### 4.2.X.6.1  Bounded Context Domain Layer Class Diagrams
+
+### 4.2.X.6.2  Bounded Context Database Design Diagram
+
+## Conclusiones
+
+## Bibliografia
+
+## Anexos
