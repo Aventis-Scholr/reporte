@@ -120,30 +120,26 @@ TB1:<br>
     - [3.3. Impact Mapping](#33-impact-mapping)
     - [3.4. Product Backlog](#34-product-backlog)
   - [Capítulo IV: Product Design](#capítulo-iv-product-design)
-    - [4.1. Strategic-Level Domain-Driven Design.](#41strategic-level-domain-driven-design)
-    - [4.1.1. EventStorming.](#411eventstorming)
-    - [4.1.1.1. Candidate Context Discovery.](#4111candidate-context-discovery)
-    - [4.1.1.2. Domain Message Flows Modeling.](#4112domain-message-flows-modeling)
-    - [4.1.1.3. Bounded Context Canvases.](#4113boundedcontext-canvases)
-    - [4.1.2. Context Mapping.](#412context-mapping)
-    - [4.1.3. Software Architecture.](#413software-architecture)
-    - [4.1.3.1. Software Architecture Context Level Diagrams.](#4131software-architecture-context-level-diagrams)
-    - [4.1.3.2. Software Architecture Container Level Diagrams.](#4132software-architecture-container-level-diagrams)
-    - [4.1.3.3. Software Architecture Deploymnet Diagrams.](#4133software-architecture-deployment-diagrams)
-
-    - [4.2. Tactical-Level Domain-Driven Design.](#42tactical-level-domain-driven-design)
-    
-    - [4.2.X. Bounded Context: Bounded Context Name.](#42Xbounded-context:-bounded-context-name)
-    - [4.2.X.1 Domain Layer.](#42X1domain-layer)
-    - [4.2.X.2 Interface Layer.](#42X2interface-layer)
-    - [4.2.X.3 Application Layer.](#42X3application-layer)
-    - [4.2.X.4 Infrastructure Layer.](#42X4infrastructure-layer)
-    - [4.2.X.5 Bounded Context Software Architecture Component Level Diagrams.](#42X5bounded-context-software-architecture-component-level-diagrams)
-    - [4.2.X.6 Bounded Context Software Architecture Code Level Diagrams.](#42X6bounded-context-software-architecture-code-level-diagrams)
-    - [4.2.X.6.1  Bounded Context Domain Layer Class Diagrams.](#42X61bounded-context-domain-layer-class-diagrams)
-    - [4.2.X.6.2  Bounded Context Database Design Diagram.](#42X61bounded-context-database-design-diagram)
-
-
+    - [4.1. Strategic-Level Domain-Driven Design.](#41-strategic-level-domain-driven-design)
+    - [4.1.1. EventStorming.](#411-eventstorming)
+    - [4.1.1.1. Candidate Context Discovery.](#4111-candidate-context-discovery)
+    - [4.1.1.2. Domain Message Flows Modeling.](#4112-domain-message-flows-modeling)
+    - [4.1.1.3. Bounded Context Canvases.](#4113-bounded-context-canvases)
+    - [4.1.2. Context Mapping.](#412-context-mapping)
+    - [4.1.3. Software Architecture.](#413-software-architecture)
+    - [4.1.3.1. Software Architecture Context Level Diagrams.](#4131-software-architecture-context-level-diagrams)
+    - [4.1.3.2. Software Architecture Container Level Diagrams.](#4131-software-architecture-context-level-diagrams)
+    - [4.1.3.3. Software Architecture Deploymnet Diagrams.](#4133-software-architecture-deploymnet-diagrams)
+    - [4.2. Tactical-Level Domain-Driven Design.](#42-tactical-level-domain-driven-design)
+    - [4.2.1. Bounded Context: Bounded Context Name.](#421-bounded-context-bounded-context-name)
+    - [4.2.1.1 Domain Layer.](#4211-domain-layer)
+    - [4.2.1.2 Interface Layer.](#4212-interface-layer)
+    - [4.2.1.3 Application Layer.](#4213-application-layer)
+    - [4.2.1.4 Infrastructure Layer.](#4214-infrastructure-layer)
+    - [4.2.1.5 Bounded Context Software Architecture Component Level Diagrams.](#4215-bounded-context-software-architecture-component-level-diagrams)
+    - [4.2.1.6 Bounded Context Software Architecture Code Level Diagrams.](#4216-bounded-context-software-architecture-code-level-diagrams)
+    - [4.2.1.6.1  Bounded Context Domain Layer Class Diagrams.](#42161-bounded-context-domain-layer-class-diagrams)
+    - [4.2.1.6.2  Bounded Context Database Design Diagram.](#42162-bounded-context-database-design-diagram)
     - [Conclusiones](#conclusiones)
     - [Bibliografia](#bibliografia)
     - [Anexos](#anexos)
@@ -758,23 +754,23 @@ Anexo B
 
 ### 4.2. Tactical-Level Domain-Driven Design
 
-### 4.2.X. Bounded Context: Bounded Context Name
+### 4.2.1. Bounded Context: Bounded Context Name
 
-### 4.2.X.1 Domain Layer
+### 4.2.1.1 Domain Layer
 
-### 4.2.X.2 Interface Layer
+### 4.2.1.2 Interface Layer
 
-### 4.2.X.3 Application Layer
+### 4.2.1.3 Application Layer
 
-### 4.2.X.4 Infrastructure Layer
+### 4.2.1.4 Infrastructure Layer
 
-### 4.2.X.5 Bounded Context Software Architecture Component Level Diagrams
+### 4.2.1.5 Bounded Context Software Architecture Component Level Diagrams
 
-### 4.2.X.6 Bounded Context Software Architecture Code Level Diagrams
+### 4.2.1.6 Bounded Context Software Architecture Code Level Diagrams
 
-### 4.2.X.6.1  Bounded Context Domain Layer Class Diagrams
+### 4.2.1.6.1 Bounded Context Domain Layer Class Diagrams
 
-### 4.2.X.6.2  Bounded Context Database Design Diagram
+### 4.2.1.6.2 Bounded Context Database Design Diagram
 
 ## Conclusiones
 
