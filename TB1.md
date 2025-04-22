@@ -451,7 +451,13 @@ Para poder tener un análisis completo sobre nuestro modelo de negocio además d
 
 ### 2.1.2. Estrategias y tácticas frente a competidores
 
-Para enfrentarnos a la competencia, nuestra estrategia se centrará en maximizar nuestra ventaja competitiva mediante la oferta de una interfaz intuitiva que optimice la colaboración en tiempo real, dirigida a startups tecnológicas. Aprovecharemos tácticas de marketing digital segmentadas, destacando nuestras pruebas gratuitas y estableciendo asociaciones estratégicas con comunidades tecnológicas clave. Para competir con empresas como Wrike y ClickUp, que ofrecen herramientas robustas y personalizables, nos enfocaremos en nuestra simplicidad y eficiencia, adaptando nuestros precios de manera flexible para atraer a equipos en crecimiento. Además, desarrollaremos integraciones con plataformas populares como Slack y Google Workspace, facilitando la conectividad y colaboración entre equipos. Nuestro compromiso con la mejora continua incluirá no solo la automatización de tareas, sino también la incorporación de funcionalidades innovadoras basadas en la retroalimentación de los usuarios. Este enfoque proactivo nos permitirá no solo diferenciarnos en el mercado, sino también garantizar que nuestra propuesta evolucione y se mantenga relevante, ofreciendo un valor excepcional que responda a las necesidades cambiantes de nuestros clientes y fomente una experiencia de usuario excepcional.
+### Estrategias y Tácticas frente a Competidores
+#### Enfoque en Apoderados
+Nuestra plataforma tiene un enfoque  en los apoderados de los estudiantes que se benefician de las becas, promocionándose principalmente en charlas en las empresas en las que laboran.
+#### Simplificación para empresas
+La plataforma pretende ofrecer el servicio para que las empresas privadas puedan publicar sus becas y filtrar postulantes de forma sencilla, y sin verse obstaculizadas por procesos democráticos.
+#### Cercanía y Confianza
+Planeamos crear colaboraciones con Asociaciones de Madres y Padres para un mayor alcance, para una difusión más orgánica de nuestro servicio. Asimismo, planeamos usar las redes sociales como un principal método de difusión.
 
 ### 2.2. Entrevistas
 
