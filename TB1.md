@@ -817,6 +817,9 @@ Pivotal Tracker:
 
 LINK: https://www.pivotaltracker.com/n/projects/2740632  
 ### 3.3. Impact Mapping
+
+![Impact Mapping Scholr](/assets/images/impactmappingscholr.png)
+
 ### 3.4. Product Backlog
 
 | #Orden | User Story ID | Título                                                  | Descripción                                                                                                 | Story Points <br> (1/2/3/5/8) |
