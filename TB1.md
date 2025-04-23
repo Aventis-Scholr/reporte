@@ -832,7 +832,59 @@ Segmento administrador de becas:
 
 ### 4.1.1.1. Candidate Context Discovery
 
+Luego de realizar el EventStorming inicial, el equipo organizó una sesión específica de Candidate Context Discovery con el objetivo de identificar los posibles Bounded Contexts que conforman el sistema.
+
+Partimos identificando los elementos que representan el mayor valor para los usuarios clave: Padres trabajadores y coordinadores de RSE. A partir de los eventos más significativos en el flujo (como “Se verifica trabajador activo”, “Padre envía postulación”, “Postulación es revisada” y “Se comunica estado de beca”), reconocimos claramente cambios de estado que justificaban la separación de responsabilidades en contextos distintos.
+
+Durante la sesión se identificaron los siguientes Bounded Contexts:
+
+- Gestión de Identidad y Acceso (IAM)
+
+Focalizado en validar la identidad del usuario, verificar si efectivamente trabaja en la empresa (consulta con RRHH), y gestionar su acceso según el rol (padre, administrador, comité).
+
+- Postulaciones a Becas
+
+Encargado de todo el proceso de aplicación por parte de los padres, desde el llenado del formulario, carga de documentos y revisión del estado hasta la posibilidad de reenviar postulaciones corregidas.
+
+- Administración de Becas
+
+Manejado por el área de RSE o comités internos, quienes definen los tipos de becas disponibles, evalúan las solicitudes y generan reportes de impacto.
+
+A lo largo de la sesión, se refinaron los límites de cada contexto, se identificaron interacciones entre ellos y se marcaron transiciones relevantes, lo cual permitió avanzar con una base sólida hacia la fase de modelado de mensajes y diseño de los Bounded Context Canvas.
+
 ### 4.1.1.2. Domain Message Flows Modeling
+
+Con los Bounded Contexts definidos en la etapa anterior, el equipo procedió a realizar una sesión de Domain Storytelling para modelar cómo estos contextos colaboran entre sí para resolver los distintos escenarios del negocio. Esta técnica nos permitió visualizar de forma clara los flujos de comunicación entre contextos y entender mejor el comportamiento esperado del sistema desde la perspectiva de los usuarios.
+
+Durante la sesión, se analizaron principalmente dos casos de uso relevantes:
+
+**Caso 1: Postulación de un padre trabajador a una beca para su hijo** 
+
+1. El Padre Trabajador accede a la plataforma y se autentica a través del Contexto IAM.
+
+2. El sistema verifica con RRHH que el padre esté activo en la empresa.
+
+3. Una vez validado, el Contexto de Postulaciones presenta el formulario de aplicación.
+
+4. El padre completa y envía la solicitud.
+
+5. El Contexto de Administración de Becas recibe la postulación para revisión.
+
+6. Una vez evaluada, se actualiza el estado y se notifica al padre.
+
+**Caso 2: Gestión interna de solicitudes por parte del comité de RSE**
+
+1. El Coordinador de RSE accede mediante el Contexto IAM.
+
+2. Desde el Contexto de Administración, consulta todas las postulaciones activas.
+
+3. Revisa los documentos adjuntos, aplica filtros (por tipo de beca, empresa, nivel académico, etc.).
+
+4. Acepta o rechaza postulaciones, adjuntando retroalimentación si corresponde.
+
+5. La información es devuelta al Contexto de Postulaciones, que actualiza el estado y notifica al padre.
+
+Esta visualización permitió entender no solo los puntos de integración entre los contextos, sino también los límites de responsabilidad de cada uno, asegurando una arquitectura desacoplada pero coherente. El resultado fue un conjunto de diagramas de Domain Storytelling que reflejan claramente cómo fluyen los mensajes entre usuarios y contextos del sistema.
 
 ### 4.1.1.3. Bounded Context Canvases
 
@@ -851,13 +903,52 @@ Applications:
 
 ### 4.1.2. Context Mapping
 
+Se identificaron los siguientes bounded contexts en el sistema:
+
+- IAM: manejo de autenticación y autorización
+- Postulación: contiene el flujo completo de postulación, formularios y documentos
+- Gestión: involucra revisión, validación y generación de reportes
+- Backend: centraliza y expone la lógica de negocio mediante API
+
+**Mapa de Contextos Inicial**
+
+![Context-initial](assets/images/context_1.png)
+
+**Mapa de Contexto Final**
+
+![Context-final](assets/images/Context_2.png)
+
+Este diseño final refleja la autonomía de contextos y prepara el sistema para evolucionar modularmente.
+
 ### 4.1.3. Software Architecture
 
 ### 4.1.3.1. Software Architecture Context Level Diagrams
 
+![Context-diagram](assets/images/structurizr-Contexto.png)
+
+
 ### 4.1.3.2. Software Architecture Container Level Diagrams
 
-### 4.1.3.3. Software Architecture Deploymnet Diagrams
+![Container-diagram](assets/images/structurizr-Arquitectura.png)
+
+
+### 4.1.3.3. Software Architecture Deployment Diagrams
+
+**Componente de gestión:**
+
+![Component-Gestion](assets/images/structurizr-Componentes_Gestion.png)
+
+**Componente Backend:**
+
+![Component-Backend](assets/images/structurizr-Componentes_Backend.png)
+
+**Componente de postulación:**
+
+![Component-Postulacion](assets/images/structurizr-Componentes_Postulacion.png)
+
+**Componente de autenticación:**
+
+![Component-IAM](assets/images/structurizr-ComponentesIAM.png)
 
 ### 4.2. Tactical-Level Domain-Driven Design
 
