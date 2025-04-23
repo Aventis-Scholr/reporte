@@ -45,7 +45,8 @@ Product: "Scholr"
 | TB1     | 06/04/2025 | Sebastian Real Calderón | Desarrollé el Empathy Mapping, User Task Matrix, Style Guidelines y Software configuration Management |
 | TB1     | 06/04/2025 | John Arévalo | Desarrolle los as-is y to-be scenarios, además del registro de 1 entrevista por segmento objetivo. |
 | TB1     | 06/04/2025  | John Arévalo | Desarrolle los wireframes y mockups de la landing page, además de los wireframes, mockups, wireflows y user flows diagrams para la aplicación web.|
-| TB1     | 18/04/2025  | Diego Rosado | Desarrolle las preguntas para los segmentos objetivos e hice una entrevista.|
+| TB1     | 18/04/2025  | Diego Rosado | Desarrolle las preguntas para los segmentos objetivos e hice una entrevista, As-is Scenario Mapping, To-Be Scenario Mapping, EventStorming
+, Software Architecture |
 
 ## Project Report Collaboration Insights
 
@@ -80,7 +81,7 @@ TB1:<br>
 |Jaque Peña, Estefano Oscar|Lean UX Problem Statements,Lean UX Assumptions,Diseño de entrevistas,Coompetidores,Estrategias y tácticas frente a competidores,User Stories,Product Backlog, Class Diagrams, Class Dictionary, Database Diagram, Sprint Planning 1, Sprint Backlog 1|
 | Sebastian Omar Real Calderón | Análisis de entrevistas, Registro de entrevista, Ubiquitous Language, Impact Mapping, Bounded Context Management |
 | Arévalo Meza John | Segmentos objetivos, registro de entrevistas, as-is scenario mapping, to-be scenario mapping, landing page wireframes, landing page mockups, web application wireframes, web application mockups, web applications wireflow diagrams, web applications user flow diagrams, desarrollo de la landing page. |
-| Rosado Iporre, Diego | Diseño de entrevistas, web application wireframes, desarrollo de la landing page. |
+| Rosado Iporre, Diego | Diseño de entrevistas, web application wireframes, desarrollo de la landing page, As-is Scenario Mapping, To-Be Scenario Mapping, EventStorming , Software Architecture |
 
 ## Contenido
 
@@ -171,8 +172,8 @@ En el siguiente cuadro se describen las acciones realizadas y enunciados de conc
 
 | Criterio especifico | Acciones Realizadas| Conclusiones|
 | :-- | :-- | -- |
-| 1. Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | <br>**Estefano Oscar Jaque Peña**<br>TB1: <br>**Diego Rolin Acuña Tomas**<br> TB1: <br>**John Arévalo Meza** <br>TB1: <br>**Sebastián Omar Real Calderón**<br>TB1: Apliqué análisis de entrevistas y modelado de dominios para entender las necesidades reales del proyecto. Mi contribución ayudó a traducir problemas complejos en requisitos claros para la solución de software.| **TB1:** El equipo demostró capacidad para integrar aprendizajes técnicos y metodologías ágiles en el desarrollo del proyecto. A través de la investigación y colaboración, se identificaron oportunidades clave para optimizar procesos mediante tecnología, reforzando la importancia de adaptarse continuamente a los requerimientos del contexto profesional.|
-| 2. Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | TB1:<br> **Estefano Oscar Jaque Peña**<br>TB1: <br>**Diego Rolin Acuña Tomas**<br> TB1: <br>**Sebastián Omar Real Calderón**<br>TB1: Reconozco que mantenerme actualizado con metodologías ágiles y técnicas de análisis es clave para desarrollar soluciones efectivas. Este proyecto reforzó mi compromiso con el aprendizaje continuo para abordar desafíos técnicos y de negocio.<br>**John Telesforo Arevalo Meza**<br>TB1: <br>| **TB1:** El equipo evidenció la importancia de la formación continua en el ámbito profesional, aplicando nuevos conocimientos directamente al desarrollo del proyecto. Esta experiencia destacó cómo la adaptabilidad y la mejora constante son esenciales para entregar soluciones de software alineadas con las necesidades reales del mercado. |
+| 1. Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | <br>**Estefano Oscar Jaque Peña**<br>TB1: <br>**Diego Alonso Rosado Iporre**<br> TB1: Apliqué herramientas como entrevistas, wireframes y escenarios para identificar oportunidades clave del proyecto. Contribuí al diseño de la solución desde la comprensión del dominio hasta la arquitectura del software. <br>**John Arévalo Meza** <br>TB1: <br>**Sebastián Omar Real Calderón**<br>TB1: Apliqué análisis de entrevistas y modelado de dominios para entender las necesidades reales del proyecto. Mi contribución ayudó a traducir problemas complejos en requisitos claros para la solución de software.| **TB1:** El equipo demostró capacidad para integrar aprendizajes técnicos y metodologías ágiles en el desarrollo del proyecto. A través de la investigación y colaboración, se identificaron oportunidades clave para optimizar procesos mediante tecnología, reforzando la importancia de adaptarse continuamente a los requerimientos del contexto profesional.|
+| 2. Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | TB1:<br> **Estefano Oscar Jaque Peña**<br>TB1: <br>**Diego Alonso Rosado Iporre**<br> TB1: Entendí que el aprendizaje constante es esencial para enfrentar retos cambiantes. Este proyecto fortaleció mi motivación por seguir explorando enfoques modernos en desarrollo de software. <br>**Sebastián Omar Real Calderón**<br>TB1: Reconozco que mantenerme actualizado con metodologías ágiles y técnicas de análisis es clave para desarrollar soluciones efectivas. Este proyecto reforzó mi compromiso con el aprendizaje continuo para abordar desafíos técnicos y de negocio.<br>**John Telesforo Arevalo Meza**<br>TB1: <br>| **TB1:** El equipo evidenció la importancia de la formación continua en el ámbito profesional, aplicando nuevos conocimientos directamente al desarrollo del proyecto. Esta experiencia destacó cómo la adaptabilidad y la mejora constante son esenciales para entregar soluciones de software alineadas con las necesidades reales del mercado. |
 
 ## Capítulo I: Presentación
 
@@ -1007,6 +1008,8 @@ Este diseño final refleja la autonomía de contextos y prepara el sistema para 
 ### 4.2.3.6.2 Bounded Context Database Design Diagram
 
 ## Conclusiones
+
+En esta entrega, aplicamos diversas técnicas de análisis y diseño como entrevistas, mapeo de escenarios, EventStorming y wireframes para comprender el dominio del problema y proponer una solución coherente. Modelamos la arquitectura del sistema utilizando context maps y diagramas estructurados, lo que nos permitió visualizar los límites y responsabilidades de cada módulo. Este proceso fortaleció nuestras habilidades en diseño centrado en el usuario y resaltó la importancia del aprendizaje continuo en el desarrollo de soluciones de software efectivas.
 
 ## Bibliografia
 
