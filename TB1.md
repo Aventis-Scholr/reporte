@@ -519,20 +519,20 @@ Estas preguntas están diseñadas para llevar la conversación de manera lógica
 
 1. Entrevista 1: <br>
    Datos del entrevistado <br>
-   Nombre: Juan <br>
-   Apellidos: de la Cruz<br>
-   Edad: 23 <br>
-   Distrito: San Martin de Porres <br>
+   Nombre: Oscar <br>
+   Apellidos: Jaque Peña<br>
+   Edad: 49 <br>
+   Distrito: Los Olivos <br>
 
-![Foto de entrevista](assets/images/S.png)
+![alt text](assets/images/EntrevistaEstefano.png)
 
-URL: [Link de entrevista](https://drive.google.com/file/d/1WrxFb_8KqRk6mWSrgUbvFpkfpjyIU0vI/view?usp=sharing)
+Link de entrevista : https://drive.google.com/file/d/1z7yWYeRh9HBRBOg6GvJrI5mW5n_ghVA9/view?usp=sharing
 
 Inicio: 0:00<br>
-Duracion: 8:24
+Duracion: 8:48
 
 Resumen:<br>
-La entrevista con Juan de la Cruz, lidel del Grupo JPSP, reveló aspectos clave sobre la gestión de proyectos y el impacto de las herramientas que existen actualmente. El destacó que su principal responsabilidad es supervisar al equipo de desarrollo para cumplir con los plazos y estándares de calidad, mientras maneja el crecimiento rápido y los desafíos de integración tecnológica. Aunque también menciono que ha tenido experiencias mixtas con las herramientas actuales, principalmente debido a problemas de integración y personalización, considera esencial que las nuevas soluciones ofrezcan flexibilidad, integración fluida y capacidades avanzadas. La incorporación de tecnologías emergentes es vista como crucial para mejorar la eficiencia y la toma de decisiones. Además, se busca una solución que facilite la colaboración y la comunicación centralizada, y que esté dispuesta a adaptarse a las necesidades cambiantes del equipo. El entrevistado enfatiza la importancia de la seguridad y prioriza a los proveedores que brindan soporte confiable y pueden adaptar sus soluciones a los requisitos individuales. En el futuro, se espera una evolución hacia mayor automatización y herramientas que se adapten rápidamente a los cambios en los proyectos.
+Oscar Jaque Huerta, trabajador de 49 años en Backus, compartió su vivencia como padre al gestionar las becas por excelencia académica que la empresa ofrece para sus hijos. Destacó que uno de los principales retos es la dispersión de la información, así como la poca claridad en los requisitos y fechas límite del proceso. Mencionó que la postulación puede volverse complicada debido a la repetición de trámites, como acreditar su vínculo laboral en diferentes plataformas, además de la carga manual de documentos. En varias ocasiones ha perdido la oportunidad de postular por no conocer ciertos requisitos específicos o por desconocer las fechas clave. Si bien valora mucho este beneficio, considera que sería más accesible si existiera una herramienta digital que centralice el proceso, permita subir documentos desde el celular, envíe recordatorios automáticos y cuente con un canal de soporte eficiente.
 
 2.  Entrevista 2: <br>
     Datos del entrevistado <br>
@@ -644,48 +644,78 @@ En resumen, los equipos de desarrollo buscan soluciones que mejoren la eficienci
 
 ### 2.3.1. User Personas
 
-**Segmento 1: Líder o Gerente de Empresa de Desarrollo de Software en Crecimiento(Product Owner y Scrum Master)**
+**Segmento 1: Carlos (Trabajador apoderado/padre de familia)** 
 
-<p align="center">
+![alt text](assets/images/userpersona1.png)
 
-  <img src="assets/images/User-persona-1.png">
+**Segmento 2: Luis (Administrador de becas de una empresa privada)** 
 
-</p>
+![assets/images/userpersona2.png](assets/images/userpersona2.png)
 
-**Segmento 2: Equipo de Desarrollo de Software**
-
-<p align="center">
-
-<img src="assets/images/User-persona-2.png">
-
-</p>
+Link: https://app.mural.co/t/estudiando0947/m/estudiando0947/1745390656723/0835c036e3645e7898d5d12592570047f4e910c5?sender=uc4343c08b6b097f4a42e5558 
 
 ### 2.3.2. User Task Matrix
 
-En este apartado de la User Task Matrix se va a hacer un análisis de las tareas realizadas por dos perfiles clave en el ámbito del desarrollo de software: Líder o Gerente de Empresa de Desarrollo de Software (Leonardo) y Equipo de Desarrollo de Software (Oscar). A través de esta matriz, se identificarán las tareas críticas y su frecuencia e importancia según cada User Persona, lo que permitirá comprender mejor sus necesidades y aspiraciones en la gestión de proyectos.
-| **Tarea** | **Leonardo Frecuencia** | **Leonardo Importancia** | **Oscar Frecuencia** | **Oscar Importancia** |
-| ---------------------------------------------------------------------------- | ----------------------- | ------------------------ | -------------------- | --------------------- |
-| Monitorear operaciones y gestionar proyectos | A menudo | Alta | A menudo | Alta |
-| Evaluar y seleccionar software de gestión de proyectos | A menudo | Alta | A menudo | Alta |
-| Verificar la adaptabilidad y facilidad de uso del software | A veces | Alta | A veces | Alta |
-| Asegurarse de que el software tenga seguridad de datos | A veces | Alta | A veces | Alta |
-| Investigar sobre nuevas tecnologías e IA aplicadas a la gestión de proyectos | Mensual | Media | Mensual | Media |
-| Utilizar herramientas de desarrollo para colaboración | A menudo | Alta | A menudo | Alta |
-| Conducir capacitaciones sobre nuevas herramientas | A veces | Media | A veces | Media |
-| Evaluar la precisión y fiabilidad de las herramientas usadas | Mensual | Alta | Mensual | Alta |
-| Adaptar herramientas a los modelos de negocio específicos | A veces | Alta | A veces | Alta |
-| Mantener un registro del avance de cada miembro del equipo | A menudo | Alta | A menudo | Alta |
-|
+**Perfiles Analizados**  
+1. **Carlos Mendoza (Padre Trabajador)**  
+2. **Luis Torres (Coordinador de RSE/Bienestar Laboral)**  
 
-**Análisis de Tareas**
+| **Tarea** | **Carlos Frecuencia** | **Carlos Importancia** | **Luis Frecuencia** | **Luis Importancia** |  
+|-----------|----------------------|----------------------|---------------------|---------------------|  
+| **Buscar becas compatibles con el perfil de su hijo** | Semanal | Alta | Mensual | Media |  
+| **Postular a becas (cargar documentos, completar formularios)** | Mensual (en períodos de convocatorias) | Alta | A veces (revisa procesos) | Alta |  
+| **Recibir notificaciones sobre plazos y requisitos** | Semanal | Alta | Mensual | Media |  
+| **Validar vínculo laboral para becas exclusivas** | Por postulación | Alta | A menudo (gestiona validaciones) | Alta |  
+| **Consultar el estado de postulaciones** | Semanal | Alta | Mensual | Media |  
+| **Comparar becas disponibles (beneficios, requisitos)** | Mensual | Alta | A veces (para informar a empleados) | Media |  
+| **Gestionar alertas personalizadas por perfil académico** | Semanal | Alta | A veces (configura para empleados) | Media |  
+| **Generar reportes de postulaciones (solo Luis)** | - | - | Mensual | Alta |  
+| **Comunicar becas disponibles a empleados (solo Luis)** | - | - | Mensual | Alta |  
+| **Validar datos de empleados para becas (solo Luis)** | - | - | Semanal | Alta |  
 
-Al observar la matriz, podemos destacar que tanto Oscar como Leonardo consideran como tareas de alta frecuencia e importancia las siguientes:
+**Análisis de Tareas Críticas**  
 
-**Monitorear operaciones y gestionar proyectos**: Es fundamental para garantizar el desarrollo óptimo y la coordinación del equipo.
+ **Para Carlos (Padre Trabajador)**  
+- **Tareas de Alta Frecuencia e Importancia:**  
+  - **Buscar becas** y **recibir notificaciones** (semanal).  
+  - **Validar vínculo laboral** (cada postulación).  
+  - **Consultar estado de postulaciones** (semanal).  
+  - **Gestionar alertas personalizadas** (para no perder oportunidades).  
 
-**Evaluar y seleccionar software de gestión de proyectos**: Ambas User Personas están alineadas en la necesidad de herramientas efectivas que les ayuden a optimizar su flujo de trabajo.
+- **Dolor Principal:**  
+  - Pérdida de tiempo en trámites manuales (ej.: validar empleo en cada postulación).  
+  - Falta de claridad en requisitos y plazos.  
 
-**Utilizar herramientas de desarrollo para colaboración**: La colaboración efectiva es vital, especialmente para Leonardo, quien enfatiza que la falta de herramientas innovadoras limita el trabajo en equipo.
+**Para Luis (Coordinador RSE)**  
+- **Tareas de Alta Frecuencia e Importancia:**  
+  - **Validar datos de empleados** (semanal).  
+  - **Generar reportes** (mensual, para alta dirección).  
+  - **Comunicar becas a empleados** (evitar subutilización de beneficios).  
+
+- **Dolor Principal:**  
+  - Procesos manuales de verificación (ej.: cruzar datos RRHH con postulaciones).  
+  - Falta de métricas para demostrar el impacto de los programas.  
+
+ **Prioridades para Scholr**  
+1. **Funcionalidades Clave para Padres:**  
+   - **Buscador inteligente** con filtros por perfil académico y vínculo laboral.  
+   - **Validación automática** del empleo (integración con RRHH).  
+   - **Notificaciones proactivas** (plazos, documentos pendientes).  
+
+2. **Funcionalidades Clave para Coordinadores:**  
+   - **Dashboard de métricas** (participación, ahorro de tiempo, ROI).  
+   - **Herramientas de comunicación masiva** (ej.: push notifications para empleados).  
+   - **Automatización de validaciones** (ej.: sincronización con bases de datos de RRHH).  
+
+ **Conclusión**  
+La matriz revela que:  
+- **Carlos** necesita **simplicidad y automatización** para no perder oportunidades.  
+- **Luis** requiere **herramientas de gestión y analítica** para optimizar programas.  
+
+**Scholr debe enfocarse en:**  
+✔ **Automatizar** tareas repetitivas (validaciones, notificaciones).  
+✔ **Centralizar información** para ambos perfiles (transparencia).  
+✔ **Generar datos accionables** (ej.: reportes para empresas).  
 
 ### 2.3.3. User Journey Mapping
 
@@ -788,6 +818,9 @@ EPICS:
 |EP04|Gestión de Postulaciones por Empresas/ONGs|Como coordinador de bienestar laboral, quiero gestionar las postulaciones a becas de los colaboradores de mi empresa, para garantizar transparencia y eficiencia en el proceso.|
 |EP05|Soporte y Educación|Como padre/trabajador, quiero acceder a recursos de ayuda y asesoría, para entender mejor el proceso de postulación y requisitos.|
 |EP06|Landing Page Informativa|Como visitante (padre/trabajador o representante de empresa), quiero acceder a una landing page clara que me explique los beneficios de Scholr, para decidir si registrarme o contactar al equipo.|
+| EP-TECH-01 | Infraestructura Backend | Como desarrollador, necesito implementar APIs y servicios críticos para soportar las funcionalidades del sistema. |
+| EP-TECH-02 | Seguridad y Compliance | Como desarrollador, necesito garantizar que el sistema cumpla con estándares de seguridad y protección de datos. |
+| EP-TECH-03 | Performance y Escalabilidad | Como desarrollador, necesito optimizar el rendimiento del sistema para manejar alta demanda. |
 
 | User Storiy ID | Título| Descripción| Criterios de Aceptación| Relacionado con(Epic ID) |     
 | -- | -- | -- | -- | -- |
@@ -810,12 +843,13 @@ EPICS:
 | US17 |Acceso a recursos demostrativos | Como visitante escéptico, quiero descargar un folleto PDF o ver casos de éxito, para validar la confiabilidad de Scholr.|Escenario 1, Título: Visualización directa de recursos<br>Dado que el visitante selecciona "Ver casos de éxito"cuando no ha iniciado sesión,entonces muestra 2 opciones:"Ver online" (abre carrusel interactivo),"Enviar a mi correo" (solo pide email, sin registro completo)   |EP06 |
 | US18 | Formulario de contacto para empresas | Como representante de RRHH, quiero enviar una solicitud de información sin registrarme, para evaluar una posible alianza con Scholr.|Escenario 1: Envío exitoso<br>Dado que el representante completa: Nombre, Empresa, Email y Consulta.Cuando hace clic en "Enviar".Entonces el sistema valida el formato de email y muestra "Gracias, te contactaremos en 48h",Escenario 2:, Titulo: Campos obligatorios<br>Dado que el usuario deja vacío el campo Email.Cuando intenta enviar.Entonces el sistema resalta el campo en rojo y muestra "Email es requerido"|EP06|
 | US19 |Adaptabilidad móvil | Como usuario móvil, quiero navegar la landing page sin problemas, para acceder a la información desde cualquier dispositivo.| Escenario 1, Tituloo:Menú responsive<br>Dado que el usuario accede desde móvil.Cuando hace clic en el ícono de menú.Entonces se despliegan las opciones principales y el fondo se oscurece para mejor contraste|EP06|
+| TS01 | API de Verificación de Código de Colaborador | Como desarrollador, necesito una API REST que valide el código de colaborador con la base de datos de la empresa (Backus). | Escenario 1: Validación exitosa de código.<br>Dado que se recibe una solicitud POST a /api/verify-employee con { "codigo": "EMP123", "empresa": "Backus" }.Cuando el código existe en la base de datos de Backus.Entonces la API responde con 200 OK y { "valido": true, "nombre": "Juan Pérez" }.Escenario 2: Código inválido o empresa no soportada.Dado que se recibe una solicitud con { "codigo": "INVALIDO", "empresa": "Backus" }.Cuando el código no existe.Entonces la API responde con 404 Not Found y { "valido": false, "error": "Código no registrado" }.| EP-TECH-01 |
+| TS02 | Sincronización de Documentos con Google Cloud Storage | Como desarrollador, necesito que los documentos subidos se almacenen en Google Cloud Storage con encriptación AES-256. | Escenario 1: Subida exitosa de documento.<br>Dado que un usuario sube un archivo credencial.pdf (≤5MB).Cuando el sistema valida que es un PDF.Entonces se guarda en gs://scholr-docs/[user_id]/[timestamp].pdf con metadatos { "hash_sha256": "abc123", "empresa": "Backus" }.<br>Escenario 2: Intento de subida con formato no permitido.<br>Dado que un usuario sube virus.exe.Cuando el sistema detecta la extensión .exe.,entonces rechaza la operación con error 415 Unsupported Media Type.| EP-TECH-02 |
+| TS03 | Notificaciones Push con Firebase Cloud Messaging | Como desarrollador, necesito integrar FCM para enviar notificaciones push cuando una postulación cambia de estado. | Escenario 1: Notificación de cambio de estado.<br>Dado que una postulación pasa a "Aprobado",cuando FCM recibe la solicitud con { "token": "device123", "estado": "Aprobado" }.Entonces el dispositivo recibe la notificación en ≤2 segundos.<br>Escenario 2: Caída de conexión del dispositivo.<br>Dado que el dispositivo está offline por >1 hora,cuando FCM intenta enviar la notificación,entonces el mensaje se encola y se reenvía al reconectar.| EP-TECH-01 |
+| TS04 | Generación de Reportes en Excel para Empresas | Como desarrollador, necesito un endpoint que genere reportes en Excel con postulaciones filtradas por empresa. | Escenario 1: Descarga de reporte básico.<br>Dado que un coordinador solicita /api/report?empresa=Backus&formato=excel.Cuando hay 50 postulaciones en la BBDD.Entonces la API responde con un archivo .xlsx que contiene las columnas: ID, Nombre, Hijos, Estado.Escenario 2: Filtrado por fecha.<br>Dado que se agrega el parámetro ?fecha_inicio=2024-01-01.Cuando solo 10 postulaciones coinciden.Entonces el Excel generado tiene exactamente 10 filas.| EP-TECH-01 |
+| TS05 | Cacheo de Landing Page con Cloudflare | Como desarrollador, necesito configurar Cloudflare para cachear la landing page por 24 horas. |Escenario 1: Primera visita sin cache.<br>Dado que un usuario accede a scholr.com.Cuando es la primera visita en 48 horas.Entonces el TTFB (Time To First Byte) es ≤600ms.<br>Escenario 2: Visita recurrente.<br>Dado que el usuario recarga la página.Cuando Cloudflare sirve la versión cacheada.Entonces el TTFB es ≤100ms.| EP-TECH-03 |
+| TS06 | Migración de Datos desde Legacy System | Como desarrollador, necesito un script ETL que migre postulaciones antiguas desde SQL Server a Firestore. | Escenario 1: Dado 1000 registros, entonces loguea errores y migra 800 limpios.<br>Escenario 2, Titulo:Validación de integridad.<br> Dado que la migración finaliza.Cuando se compara COUNT(*) entre SQL Server y Firestore.Entonces las diferencias son ≤1% (tolerancia para registros corruptos). | EP-TECH-01 |
 
-Pivotal Tracker:
-
-![assets/images/pivotaltracker.png ](assets/images/pivotaltracker.png)
-
-LINK: https://www.pivotaltracker.com/n/projects/2740632  
 ### 3.3. Impact Mapping
 ### 3.4. Product Backlog
 
@@ -840,6 +874,18 @@ LINK: https://www.pivotaltracker.com/n/projects/2740632
 |17| US17 |Acceso a recursos demostrativos | Como visitante escéptico, quiero descargar un folleto PDF o ver casos de éxito, para validar la confiabilidad de Scholr.|X |
 |18| US18 | Formulario de contacto para empresas | Como representante de RRHH, quiero enviar una solicitud de información sin registrarme, para evaluar una posible alianza con Scholr.|X|
 |19| US19 |Adaptabilidad móvil | Como usuario móvil, quiero navegar la landing page sin problemas, para acceder a la información desde cualquier dispositivo.| X|
+|20| TS01 | API de Verificación de Código de Colaborador | Como desarrollador, necesito una API REST que valide el código de colaborador con la base de datos de la empresa (Backus). |X|
+|21| TS02 | Sincronización de Documentos con Google Cloud Storage | Como desarrollador, necesito que los documentos subidos se almacenen en Google Cloud Storage con encriptación AES-256. |X |
+|22| TS03 | Notificaciones Push con Firebase Cloud Messaging | Como desarrollador, necesito integrar FCM para enviar notificaciones push cuando una postulación cambia de estado. |X |
+|23| TS04 | Generación de Reportes en Excel para Empresas | Como desarrollador, necesito un endpoint que genere reportes en Excel con postulaciones filtradas por empresa. | X |
+|24| TS05 | Cacheo de Landing Page con Cloudflare | Como desarrollador, necesito configurar Cloudflare para cachear la landing page por 24 horas. |X|
+|25| TS06 | Migración de Datos desde Legacy System | Como desarrollador, necesito un script ETL que migre postulaciones antiguas desde SQL Server a Firestore. |X|
+
+Pivotal Tracker:
+
+![assets/images/pivotaltracker.png ](assets/images/pivotaltracker.png)
+
+LINK: https://www.pivotaltracker.com/n/projects/2740632  
 
 ## Capítulo IV: Product Design
 
