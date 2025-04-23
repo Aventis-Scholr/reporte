@@ -45,7 +45,7 @@ Product: "Scholr"
 | TB1     | 06/04/2025 | Sebastian Real Calderón | Desarrollé el Empathy Mapping, User Task Matrix, Style Guidelines y Software configuration Management |
 | TB1     | 06/04/2025 | John Arévalo | Desarrolle los as-is y to-be scenarios, además del registro de 1 entrevista por segmento objetivo. |
 | TB1     | 06/04/2025  | John Arévalo | Desarrolle los wireframes y mockups de la landing page, además de los wireframes, mockups, wireflows y user flows diagrams para la aplicación web.|
-| TB1     | 18/04/2025  | Diego Rosado | Desarrolle las preguntas para los segmentos objetivos e hice una entrevista.|
+| TB1     | 18/04/2025  | Diego Rosado | Desarrolle las preguntas para los segmentos objetivos e hice una entrevista, As-is Scenario Mapping, To-Be Scenario Mapping, EventStorming, Software Architecture.|
 
 ## Project Report Collaboration Insights
 
@@ -78,9 +78,9 @@ TB1:<br>
 |Integrante|Tarea Asignada|
 |-|-|
 |Jaque Peña, Estefano Oscar|Lean UX Problem Statements,Lean UX Assumptions,Diseño de entrevistas,Coompetidores,Estrategias y tácticas frente a competidores,User Stories,Product Backlog, Class Diagrams, Class Dictionary, Database Diagram, Sprint Planning 1, Sprint Backlog 1|
-| Sebastian Omar Real Calderón | Startup Profile, Descripción de la Startup, Antecedentes y problemática, Entrevistas, Registro de entrevistas, User Personas, Ubiquitous Language, Domain-Driven Software Architecture, Software Architecture Context Diagram, Software Architecture Container Diagrams, Software Architecture Components Diagrams, Sprint 1, Sprint Planning 1, Testing Suite Evidence for Sprint Review, Execution Evidence for Sprint Review, Services Documentation Evidence for Sprint Review, Software Deployment Evidence for Sprint Review, Team Collaboration Insights during Sprint. |
+| Sebastian Omar Real Calderón | Análisis de entrevistas, Registro de entrevista, Ubiquitous Language, Impact Mapping, Bounded Context Management |
 | Arévalo Meza John | Segmentos objetivos, registro de entrevistas, as-is scenario mapping, to-be scenario mapping, landing page wireframes, landing page mockups, web application wireframes, web application mockups, web applications wireflow diagrams, web applications user flow diagrams, desarrollo de la landing page. |
-| Rosado Iporre, Diego | Diseño de entrevistas, web application wireframes, desarrollo de la landing page. |
+| Rosado Iporre, Diego | Diseño de entrevistas, web application wireframes, desarrollo de la landing page, As-is Scenario Mapping, To-Be Scenario Mapping, EventStorming , Software Architecture |
 
 ## Contenido
 
@@ -167,12 +167,12 @@ TB1:<br>
 _ABET – EAC - Student Outcome 3_  
 **Criterio:** Capacidad de comunicarse efectivamente con un rango de audiencias.
 
-En el siguiente cuadro se describen las acciones realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET - EAC - Student Outcome 3.
+En el siguiente cuadro se describen las acciones realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET - EAC - Student Outcome 7.
 
 | Criterio especifico | Acciones Realizadas| Conclusiones|
 | :-- | :-- | -- |
-| 1. Comunica oralmente con efectividad a diferentes rangos de audiencia   | TB1:<br>**Estefano Oscar Jaque Peña**<br>TB1: Realice el Lean UX Prolem statements y los assumptions luego de ello apoye con el diseño de la pregunta para las entrevistas .Para los siguientes capitulos realice el diagrama de base de dato y de diagrama de clase, asi como el database dictionary.Para finalizar con mi aporte en el grupo realice el Sprint planning y el Sprint Backlog<br>**Diego Rolin Acuña Tomas**<br> TB1: Durante mi participación en la creación del TB1, tuvimos muchas reuniones por Dioscord para separar tareas, elegir los user stories que implementaremos, además de elegir que herramientas usaremos en la jornada. Tuve que hablar claro y demostrar mis ideas. Además de practicar la comunicación para ayudar en la exposición del trabajo.**Valentino Sandoval Paiva** <br>TB1: Para esta entrega, realicé una matriz de tareas de usuario para entender mejor las necesidades y prioridades de nuestros usuarios. También desarrollé un mapa de empatía para identificar sus emociones y comportamientos clave. Establecí directrices de estilo generales y específicas para la web para garantizar una presentación coherente y efectiva. Configuré el entorno de desarrollo, gestioné el código fuente y definí normas para su estilo y convenciones. Finalmente, preparé la configuración para el despliegue del software, asegurando una implementación fluida y exitosa. <br>**John Arévalo Meza** <br>TB1: Para esta entrega realicé los segmentos objetivos, asis scenario mapping, tobe scenario mapping, landing page wireframes y mockups, web application wireframes, mockups, wireflow and user flow diagrams y el registro de 1 entrevista por cada segmento objetivo.<br>**Sergio André Gómez Vallejos**<br>TB1:Presenté de manera clara y adaptada los avances y resultados del proyecto, asegurándome de que todos los miembros del equipo y las audiencias externas comprendieran los aspectos técnicos y estratégicos, lo que facilitó la toma de decisiones informadas.|**Estefano Oscar Jaque Peña**<br>TB1:Durante mi participación, comuniqué de manera clara los aspectos técnicos y estratégicos en reuniones y planificación. Presenté los diagramas y el Sprint Backlog adaptando mi lenguaje a audiencias con diferentes niveles de experiencia, asegurando que todos comprendieran la lógica del proyecto. <br>**John Telesforo Arevalo Meza**<br> TB1:<br> A lo largo de la TB1, la comnunicación oral fue de suma importancia, ya que gracias a esta pudimos empatizar con los segmentos objetivos, así como dar a conocer de manera correcta nuestras ideas, además logramos compenetrar mejor como equipo y así realizar un trabajo exitoso.<br>**Sergio André Gómez Vallejos**<br>TB1:Durante mi participación desarrollé de manera puntual y clara con algunas secciones del documento, como los Mockoups, testing, etc. Me asegure de cumplir y transmitir los avances del documento del TB1.<br>**Valentino Sandoval Paiva**<br>TB1:En esta TB1, durante la exposición de los resultados del desarrollo de Lean UX Hypothesis Statements, Lean UX Canvas, y el análisis de entrevistas, se demostró una habilidad sólida para comunicar oralmente con efectividad a diferentes audiencias. Para los líderes, se presentó el impacto estratégico del To-Be Scenario Mapping y el Impact Mapping, destacando cómo estos instrumentos contribuyen al éxito del proyecto. Con el equipo de desarrollo, se hizo énfasis en las User Stories y la Information Architecture, explicando su relevancia en términos técnicos y prácticos para la ejecución del proyecto.<br>**Diego Rolin Acuña Tomas**<br> TB1: Durante mi participación en la creación del TB1, tuvimos muchas reuniones por Dioscord para separar tareas, elegir los user stories que implementaremos, además de elegir que herramientas usaremos en la jornada. Tuve que hablar claro y demostrar mis ideas. Además de practicar la comunicación para ayudar en la exposición del trabajo.|
-| 2. Comunica por escrito con efectividad a diferentes rangos de audiencia | TB1:<br> **Estefano Oscar Jaque Peña**<br>TB1: Realice el Lean UX Prolem statements y los assumptions luego de ello apoye con el diseño de la pregunta para las entrevistas .Para los siguientes capitulos realice el diagrama de base de dato y de diagrama de clase, asi como el database dictionary.Para finalizar con mi aporte en el grupo realice el Sprint planning y el Sprint Backlog<br>**Diego Rolin Acuña Tomas**<br> TB1: Durante mi participación comprendí la importancia de dejar un documento con las pruebas de tu trabajo en el primer sprint, también aprendí a usar herramienta para crear los modelos C4. Escribirlo para mis compañeros ayudara a una comunicación menos repetitiva, pues podrán conocer sin necesidad de esperar a las reuniones.<br>**Sergio André Gómez Vallejos**<br>TB1:Redacté el informe sobre el proyecto, ajustando el lenguaje y la estructura para que fueran accesibles tanto para compañeros técnicos como para audiencias no técnicas, garantizando la comprensión y utilidad de la información compartida.<br>**John Telesforo Arevalo Meza**<br> Para esta entrega realicé los segmentos objetivos, asis scenario mapping, tobe scenario mapping, landing page wireframes y mockups, web application wireframes, mockups, wireflow and user flow diagrams y el registro de 1 entrevista por cada segmento objetivo. Además de la creación de la landgin page en base a el us asignado<br>**Valentino Sandoval Paiva** <br>TB1: "Al abordar esta entrega, analicé las tareas y necesidades de los usuarios para optimizar la experiencia del software. Desarrollé directrices de estilo para asegurar una presentación coherente, configuré el entorno de desarrollo y gestioné el código fuente. Además, preparé la configuración necesaria para un despliegue exitoso del software.| <br> **Valentino Sandoval Paiva**<br> TB1:<br> En esta TB1, la comunicación escrita ha sido clave para asegurar que todas las partes involucradas, desde líderes hasta miembros del equipo, comprendan claramente los objetivos, estrategias y decisiones tomadas. Se utilizó un lenguaje claro y conciso en la planificación y documentación, ajustando el nivel de detalle según la audiencia: proporcionando explicaciones estratégicas para los líderes y directrices más técnicas para el equipo de desarrollo. Esto garantizó una alineación efectiva entre todos los participantes, fomentando la colaboración y facilitando la toma de decisiones informadas basadas en datos compartidos y análisis grupales.<br>**Estefano Oscar Jaque Peña**<br>TB1:A lo largo del proyecto, redacté documentación clara y precisa, como los problem statements, assumptions, y el database dictionary, ajustando el nivel de detalle según la audiencia. Esto garantizó la comprensión y alineación de todo el equipo para una ejecución eficiente del proyecto. <br>**Sergio André Gómez Vallejos**<br>TB1:Durante el proyecto coloque y redacté documentación de manera clara y efectiva, como el testing, landing page, entre muchas otras secciones. Con el fin de mejorar y asegurar al documento para un proceso garantizado del proyecto. <br> **John Telesforo Arevalo Meza**<br> TB1:<br> Durante la Tb1, la comunicación escrita ha se de suma importancia, puesto que gracias a esta pudimos reconocer las necesidades de nuestros segmentos objetivos ,además de mejorar el trabajo en grupo y la organización en general<br>**Diego Rolin Acuña Tomas**<br> TB1: Durante mi participación comprendí la importancia de dejar un documento con las pruebas de tu trabajo en el primer sprint, también aprendí a usar herramienta para crear los modelos C4. Escribirlo para mis compañeros ayudara a una comunicación menos repetitiva, pues podrán conocer sin necesidad de esperar a las reuniones.<br>|
+| 1. Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | <br>**Estefano Oscar Jaque Peña**<br>TB1: <br>**Diego Alonso Rosado Iporre**<br> TB1: Apliqué herramientas como entrevistas, wireframes y escenarios para identificar oportunidades clave del proyecto. Contribuí al diseño de la solución desde la comprensión del dominio hasta la arquitectura del software. <br>**John Arévalo Meza** <br>TB1: <br>**Sebastián Omar Real Calderón**<br>TB1: Apliqué análisis de entrevistas y modelado de dominios para entender las necesidades reales del proyecto. Mi contribución ayudó a traducir problemas complejos en requisitos claros para la solución de software.| **TB1:** El equipo demostró capacidad para integrar aprendizajes técnicos y metodologías ágiles en el desarrollo del proyecto. A través de la investigación y colaboración, se identificaron oportunidades clave para optimizar procesos mediante tecnología, reforzando la importancia de adaptarse continuamente a los requerimientos del contexto profesional.|
+| 2. Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | TB1:<br> **Estefano Oscar Jaque Peña**<br>TB1: <br>**Diego Alonso Rosado Iporre**<br> TB1: Entendí que el aprendizaje constante es esencial para enfrentar retos cambiantes. Este proyecto fortaleció mi motivación por seguir explorando enfoques modernos en desarrollo de software. <br>**Sebastián Omar Real Calderón**<br>TB1: Reconozco que mantenerme actualizado con metodologías ágiles y técnicas de análisis es clave para desarrollar soluciones efectivas. Este proyecto reforzó mi compromiso con el aprendizaje continuo para abordar desafíos técnicos y de negocio.<br>**John Telesforo Arevalo Meza**<br>TB1: <br>| **TB1:** El equipo evidenció la importancia de la formación continua en el ámbito profesional, aplicando nuevos conocimientos directamente al desarrollo del proyecto. Esta experiencia destacó cómo la adaptabilidad y la mejora constante son esenciales para entregar soluciones de software alineadas con las necesidades reales del mercado. |
 
 ## Capítulo I: Presentación
 
@@ -553,20 +553,20 @@ La entrevista con María nos comenta que en su trabajo como líder de proyecto s
 
 3.  Entrevista 3: <br>
     Datos del entrevistado <br>
-    Nombre: Nora <br>
-    Apellidos: Castro Manrique<br>
-    Edad: 42 <br>
+    Nombre: Isabel<br>
+    Apellidos: Ríos<br>
+    Edad: 37 <br>
     Distrito: Pueblo Libre <br>
 
-![Entrevista Nora](assets/images/entrevista_Nora.png)
+![Foto de entrevista](assets/images/interviews/Entrevista_3.png)
 
-URL: [Link de entrevista](https://drive.google.com/file/d/11xswJuEZQy51WRqAmZDu0KfjyF-6rV-F/view?usp=sharing "Entrevista 3")
+URL: [Link de entrevista](https://drive.google.com/file/d/19c-xodTnZrWXuZNAd_Uqw-bGU5h_Yy0a/view?usp=drive_link)
 
-Inicio: 0:40<br>
-Duracion: 5:39
+Inicio: 0:00<br>
+Duracion: 5:28
 
 Resumen:<br>
-La entrevista con Nora reveló aspectos importantes sobre la gestión y flujo de trabajo. Se destacó que el trabajo en equipo es fundamental para el éxito de un proyecto, y que contar con herramientas de gestión y seguimiento efectivas es crucial para mantener la coordinación y el progreso del equipo. Además, se considera que, tecnologías emergentes serían de mucha ayuda. En un futuro, se espera que este tipo de tecnologías sumadas a herramientas existentes puedan ayudar a su adaptación para diferentes modelos de negocio y a agilizar el trabajo.
+Isabel asistente administrativa en Industrias Andinas S.A., compartió su experiencia como madre trabajadora en la gestión de becas educativas para su hijo. Identificó como principal dificultad la dispersión de la información y la falta de claridad en los requisitos y plazos. El proceso de postulación resulta complejo por la necesidad de repetir trámites como la acreditación de vínculo laboral en distintas plataformas, así como por la carga manual de documentos. Ha perdido oportunidades por no conocer fechas límite o requisitos específicos. Señaló que los beneficios son valorados, pero difíciles de usar debido a la falta de una herramienta centralizada. Considera que una plataforma digital podría agilizar el proceso si incluye recordatorios automáticos, posibilidad de cargar documentos desde el celular y un canal de soporte.
 
 **Segmento 2: Coordinadores de Bienestar Laboral/RSE**
 
@@ -581,7 +581,7 @@ La entrevista con Nora reveló aspectos importantes sobre la gestión y flujo de
 
 ![Foto de entrevista](./assets/images/interviews/Entrevista_1.png)
 
-URL: [Link de entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201620127_upc_edu_pe/EdCIElww9upKlSrPXrGgZRUBaQvkrSH7Z1YTp-uDTQ0v8w?e=ZzARVD&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D "Entrevista 1-segmento 2")
+URL: [Link de entrevista](https://drive.google.com/file/d/1Z55__pbvuMZ4kC79pfcWfCwCs8alKu8k/view?usp=sharing "Entrevista 1-segmento 2")
 
 Inicio: 0:12<br>
 Duracion: 11:45
@@ -593,52 +593,28 @@ Lourdes Huamani, Coordinadora de RSE y Bienestar Laboral en Grupo Horizonte, com
     Datos del entrevistado <br>
     Nombre: Maria Pía<br>
     Apellidos: Tejada<br>
-    Edad: xx <br>
-    Distrito: xx <br>
+    Edad: 38 <br>
+    Distrito: Miraflores <br>
 
 ![Entrevista2](assets/images/interviews/Entrevista_2.png)
 
-URL:
+URL: [Link de Entrevista](https://drive.google.com/file/d/1sjZi95xLPCam7giprGC7reAFExzH_G5E/view?usp=sharing)
 
-Inicio: 0:10<br>
-Duracion: 6:45
-
-Resumen:<br>
-Durante la entrevista con María, Directora de Programas Educativos de "Futuros Brillantes Perú", quedó claro que la ONG enfrenta desafíos únicos en la gestión de becas: procesos manuales caóticos (con postulaciones vía WhatsApp y fotos de documentos), falta de acceso estable a internet en comunidades vulnerables, y dificultad para verificar datos socioeconómicos. "El 70% de nuestro tiempo se va en verificar documentos uno por uno, y aun así, el 30% de postulaciones se rechazan por errores evitables", explicó María. La ONG necesita urgentemente una solución tecnológica simple y accesible —funcional sin conexión estable, que acepte documentos desde móviles básicos y priorice la protección de datos sensibles—, pero con un costo adaptado a su limitado presupuesto ($2,000 USD anuales). El éxito para ellos se mediría en aumentar el alcance sin complicar el proceso, manteniendo el enfoque humano que caracteriza su labor. Esta conversación refuerza la necesidad de que Scholr desarrolle herramientas inclusivas, pensadas para realidades donde la tecnología es un puente, no una barrera.
-
-3.  Entrevista 3: <br>
-    Datos del entrevistado <br>
-    Nombre: Rodrigo <br>
-    Apellidos: Acosa Ramirez<br>
-    Edad: 22 <br>
-    Distrito: San Miguel <br>
-
-![alt text](assets/images/entrevista_Rodrigo.png)
-
-URL: [Link de entrevista](https://drive.google.com/file/d/1aZ94C1wixcfQNa_dZCZSkIKiBnpPf91i/view?usp=sharing "Entrevista 3")
-
-Inicio: 0:50<br>
-Duracion: 10:19
+Inicio: 0:05<br>
+Duracion: 7:41
 
 Resumen:<br>
-La entrevista con Rodrigo, reveló aspectos clave sobre cómo percibe su entorno de trabajo y los desafíos que enfrenta. Se destacó que herramientas poco intuitivas y sin seguimiente constante pueden ralentizar el trabajo, además que la flexiblidad y adaptabilidad son muy importantes a la hora de acelerar el mismo. Aunque ha logrado adaptarse a las herramientas disponibles, considera que lo detallado con aterioridad limita su eficiencia. Rodrigo espera que en el futuro se desarrollen herramientas que también ofrezcan la flexibilidad necesaria para ajustarse a diferentes entornos y metodologías de trabajo, y que implementen tecnologías emergentes.
+Durante la entrevista con María, Directora del Programa de Becas de "Futuros Brillantes Perú", quedó claro que la ONG enfrenta desafíos únicos en la gestión de becas: procesos manuales caóticos (con postulaciones vía WhatsApp y fotos de documentos), falta de acceso estable a internet en comunidades vulnerables, y dificultad para verificar datos socioeconómicos. "El 70% de nuestro tiempo se va en verificar documentos uno por uno, y aun así, el 30% de postulaciones se rechazan por errores evitables", explicó María. La ONG necesita urgentemente una solución tecnológica simple y accesible —funcional sin conexión estable, que acepte documentos desde móviles básicos y priorice la protección de datos sensibles—, pero con un costo adaptado a su limitado presupuesto. El éxito para ellos se mediría en aumentar el alcance sin complicar el proceso, manteniendo el enfoque humano que caracteriza su labor. Esta conversación refuerza la necesidad de que Scholr desarrolle herramientas inclusivas, pensadas para realidades donde la tecnología es un puente, no una barrera.
 
 ### 2.2.3. Análisis de entrevistas
 
 **Análisis Segmento 1: Padres Trabajadores (Empleados/Colaboradores)**
 
-Las entrevistas con líderes de empresas de desarrollo de software destacan una urgente necesidad de modernizar las herramientas de gestión de proyectos. Un 75% de los entrevistados enfatiza la importancia de integrar tecnologías emergentes, mientras que 85% considera que estas herramientas deben ser intuitivas y adaptables a diversos dispositivos.
-
-La mayoría de los líderes, aproximadamente 67%, ha tenido experiencias mixtas con las soluciones actuales, citando problemas de integración y personalización. La flexibilidad y una buena relación costo-beneficio son cruciales, con un 70% de los encuestados indicando que las nuevas soluciones deben adaptarse a las necesidades del equipo. Además, la seguridad de los datos es prioritaria para el 80%, quienes buscan proveedores confiables.
-
-Los líderes están enfocados en encontrar herramientas modernas que no solo mejoren la eficiencia y la colaboración, sino que también respondan a las cambiantes demandas de los proyectos. La integración de la IA y la personalización de las herramientas son vistas como esenciales para el éxito futuro en sus organizaciones.
+Las entrevistas con empleados como Isabel evidencian que los principales desafíos en la gestión de becas son la información dispersa que genera confusiones y pérdida de oportunidades, los trámites repetitivos como la acreditación laboral múltiple, y los procesos manuales que consumen tiempo valioso. A pesar de valorar estos beneficios, la ausencia de una plataforma centralizada dificulta su aprovechamiento. Los padres requieren urgentemente un sistema digital intuitivo con recordatorios automáticos, capacidad para subir documentos desde celulares y un canal de soporte ágil. Estos hallazgos reflejan directamente las necesidades identificadas por los coordinadores de bienestar, demostrando que la solución ideal debe simplificar el proceso tanto para los empleados como para los administradores. La clave del éxito radicará en crear una herramienta que elimine la burocracia innecesaria sin sacrificar la accesibilidad para usuarios con distintos niveles de habilidad digital.
 
 **Análisis Segmento 2: Coordinadores de Bienestar Laboral/RSE**
 
-Las entrevistas con integrantes de equipos de desarrollo de software revelan desafíos significativos con las herramientas de gestión actuales. Un 78% menciona la falta de flexibilidad y adaptabilidad, lo que limita la colaboración y la eficiencia. Estas herramientas son a menudo percibidas como poco intuitivas y difíciles de personalizar.
-Los entrevistados coinciden en que es crucial contar con herramientas innovadoras con una interfaz de usuario mejorada y seguimiento constante del progreso. Un 70% sostiene que las soluciones ideales deben ser precisas y adaptables a distintos modelos de negocio.
-Fabricio destaca que la falta de herramientas innovadoras afecta la colaboración. Agustín señala que herramientas como GitHub son poco intuitivas y que la comunicación podría mejorar con mejores programas de gestión. Rodrigo menciona que la falta de seguimiento y flexibilidad ralentiza el trabajo y espera que futuras herramientas integren tecnologías emergentes.
-En resumen, los equipos de desarrollo buscan soluciones que mejoren la eficiencia y la colaboración, priorizando la adaptabilidad y la facilidad de uso.
+Las entrevistas con Lourdes Huamani (Grupo Horizonte) y María Pía Tejada (Futuros Brillantes Perú) revelan que, aunque operan en contextos distintos (corporativo vs. ONG), ambos enfrentan desafíos similares por su dependencia de procesos manuales: pérdida de tiempo (70% en tareas repetitivas), altas tasas de rechazo (30-50% por errores) y falta de canales claros de comunicación. En el ámbito corporativo, los principales obstáculos son la resistencia al cambio y preocupaciones sobre privacidad, mientras que la ONG lucha con limitaciones tecnológicas en comunidades vulnerables (conexión inestable, dispositivos básicos). Sin embargo, coinciden en que una solución digital podría transformar sus operaciones si prioriza la usabilidad: Grupo Horizonte necesita automatización de validaciones e integración con RR.HH, y la ONG requiere funcionalidad offline y bajo costo. Esto plantea una oportunidad clave para Scholr: desarrollar una plataforma modular que ofrezca versiones adaptadas a cada realidad, comenzando con pilotos que demuestren reducción de tiempo (corporativo) y mayor alcance (ONG), acompañados de capacitación para garantizar adopción. La viabilidad del proyecto dependerá de su capacidad para balancear sofisticación técnica con simplicidad, sin perder de vista las brechas digitales existentes.
 
 ### 2.3. Needfinding
 
@@ -765,18 +741,16 @@ La matriz revela que:
 
 ### 2.4. Ubiquitous Language
 
-| Término              | Definición                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Proyecto**         | En el contexto del ciclo de vida de desarrollo de software, un proyecto es el uso de la mano de obra de programadores de manera estructurada y con planificación para el desarrollo de un producto de software especifico, para cumplir con objetivos, marco de tiempo y presupuesto definidos en reuniones con expertos en otras áreas.                                                                                                                                                                                                     |
-| **Herramienta**      | En este contexto, una herramienta se refiere a un software, aplicación o recurso que se especializa en facilitar o automatizar aspectos de la gestión, desarrollo o comunicación en el proceso de desarrollo de un software especifico.                                                                                                                                                                                                                                                                                                      |
-| **Opciones**         | En este contexto, las opciones son las diferentes características, funcionalidades, configuraciones que las herramientas que ayudan en la gestión de desarrollo de software ofrecen.                                                                                                                                                                                                                                                                                                                                                         |
-| **Scrum**            | Scrum es un marco de gestión de proyectos de mitología ágil que es popular entre los desarrolladores de software. Facilita la gestión y ejecución de proyectos mediante reuniones recurrentes y tiempos específicos de entrega de avances, una ventaja significativa es su predisposición a ser flexible y permitir adaptarse a los cambios.                                                                                                                                                                                                 |
-| **Product owner**    | Es un rol dentro del Scrum y miembro del Scrum Team, su función es ser el contacto entre los desarrolladores del proyecto y los clientes internos. Los últimos conocen las características que los clientes finales buscan, necesitan y utilizan, sin embargo, el Product owner debe filtrar por razones económicas, limitaciones tecnológicas o falta de experiencia del equipo de desarrollo para decidir qué características son aceptadas. Recordando que el Scrum pide la mayor cantidad de funcionalidades en el menor tiempo posible. |
-| **Scrum Master**     | Es un rol dentro del Scrum y miembro del Scrum Team, sin embargo, no es un líder, él es un personal encargado en facilitar y corroborar el cumplimiento del Scrum de parte de todos los miembros del equipo de desarrollo. Entre sus responsabilidades esta la planificación de reuniones en todo el ciclo de tiempo de cada Sprint y estimar el tiempo para completar cada objetivo.                                                                                                                                                        |
-| **Development Team** | En el Scrum se refiere al equipo de desarrollo del producto de software conformado por profesionales como los programadores, Frontends o Backends, y miembros del Scrum Team. Aquí se encuentran también los lideres del proyecto o los Project mánager, pues aquí se encuentran todos los que no tienen un rol especifico dentro del Scrum.                                                                                                                                                                                                 |
-| **Customers**        | Es un rol en Scrum pero no son miembros del Scrum Team, son los clientes internos de la organización, ellos reconocen y comunican las características, apariencias o facilidades debe tener el software desarrollado. Aquí se encuentran los equipos de marketing, contabilidad, ventas todas las personas que pueden dar una opinión informada de otros campos, sin embargo, aquí no se encuentran los usuarios finales.                                                                                                                    |
-| **Backlog**          | Dentro del Scrum es una lista de historias de usuario de donde se pueden sacar una o varias tareas filtradas por el Product owner y aprobadas por los Customers, pero solo el Development Team decide el orden y cantidad de objetivos desarrollados en cada sprint.                                                                                                                                                                                                                                                                         |
-| **Sprint**           | El tiempo de desarrollo con Scrum se divide en Sprints, generalmente duran entre 1 y 4 semanas y se caracterizan en que terminado el tiempo estimado se espera que una parte funcional del proyecto este ya desarrollado.                                                                                                                                                                                                                                                                                                                    |
+| Término | Descripción |
+|-----------------------|------------|
+| *Colaborador* | Padre, madre o tutor legal de un estudiante que utiliza Scholr para gestionar becas educativas. |
+| *Beca privada* | Beneficio financiero ofrecido por empresas para cubrir costos educativos (parcial o total). |
+| *Postulación* | Proceso donde el apoderado aplica a una beca a través de la plataforma. |
+| *Dashboard empresarial* | Panel donde empresas crean convocatorias y evalúan postulantes. |
+| *Charla corporativa* | Evento presencial/virtual en empresas para promocionar becas entre colaboradores-apoderados. |
+| *Perfil del estudiante* | Datos académicos y socioeconómicos del alumno usados para postular. |
+| *Filtros de búsqueda* | Herramientas para encontrar becas por: institución, monto o requisitos. |
+| *Pre-aprobación* | Verificación automática de requisitos básicos para una beca. |
 
 ## Capítulo III: Requirements Specification
 
@@ -851,6 +825,9 @@ EPICS:
 | TS06 | Migración de Datos desde Legacy System | Como desarrollador, necesito un script ETL que migre postulaciones antiguas desde SQL Server a Firestore. | Escenario 1: Dado 1000 registros, entonces loguea errores y migra 800 limpios.<br>Escenario 2, Titulo:Validación de integridad.<br> Dado que la migración finaliza.Cuando se compara COUNT(*) entre SQL Server y Firestore.Entonces las diferencias son ≤1% (tolerancia para registros corruptos). | EP-TECH-01 |
 
 ### 3.3. Impact Mapping
+
+![Impact Mapping Scholr](/assets/images/impactmappingscholr.png)
+
 ### 3.4. Product Backlog
 
 | #Orden | User Story ID | Título                                                  | Descripción                                                                                                 | Story Points <br> (1/2/3/5/8) |
@@ -929,22 +906,134 @@ Novena/Décima etapa:
 
 ![EventStorming-etapa9-10](./assets/images/EventStorming-etapa9-10.jpg) 
 
+Segmento administrador de becas:
+
+![EventStorming-admin](./assets/images/eventstorming-admin.jpg) 
 
 ### 4.1.1.1. Candidate Context Discovery
 
+Luego de realizar el EventStorming inicial, el equipo organizó una sesión específica de Candidate Context Discovery con el objetivo de identificar los posibles Bounded Contexts que conforman el sistema.
+
+Partimos identificando los elementos que representan el mayor valor para los usuarios clave: Padres trabajadores y coordinadores de RSE. A partir de los eventos más significativos en el flujo (como “Se verifica trabajador activo”, “Padre envía postulación”, “Postulación es revisada” y “Se comunica estado de beca”), reconocimos claramente cambios de estado que justificaban la separación de responsabilidades en contextos distintos.
+
+Durante la sesión se identificaron los siguientes Bounded Contexts:
+
+- Gestión de Identidad y Acceso (IAM)
+
+Focalizado en validar la identidad del usuario, verificar si efectivamente trabaja en la empresa (consulta con RRHH), y gestionar su acceso según el rol (padre, administrador, comité).
+
+- Postulaciones a Becas
+
+Encargado de todo el proceso de aplicación por parte de los padres, desde el llenado del formulario, carga de documentos y revisión del estado hasta la posibilidad de reenviar postulaciones corregidas.
+
+- Administración de Becas
+
+Manejado por el área de RSE o comités internos, quienes definen los tipos de becas disponibles, evalúan las solicitudes y generan reportes de impacto.
+
+A lo largo de la sesión, se refinaron los límites de cada contexto, se identificaron interacciones entre ellos y se marcaron transiciones relevantes, lo cual permitió avanzar con una base sólida hacia la fase de modelado de mensajes y diseño de los Bounded Context Canvas.
+
 ### 4.1.1.2. Domain Message Flows Modeling
+
+Con los Bounded Contexts definidos en la etapa anterior, el equipo procedió a realizar una sesión de Domain Storytelling para modelar cómo estos contextos colaboran entre sí para resolver los distintos escenarios del negocio. Esta técnica nos permitió visualizar de forma clara los flujos de comunicación entre contextos y entender mejor el comportamiento esperado del sistema desde la perspectiva de los usuarios.
+
+Durante la sesión, se analizaron principalmente dos casos de uso relevantes:
+
+**Caso 1: Postulación de un padre trabajador a una beca para su hijo** 
+
+1. El Padre Trabajador accede a la plataforma y se autentica a través del Contexto IAM.
+
+2. El sistema verifica con RRHH que el padre esté activo en la empresa.
+
+3. Una vez validado, el Contexto de Postulaciones presenta el formulario de aplicación.
+
+4. El padre completa y envía la solicitud.
+
+5. El Contexto de Administración de Becas recibe la postulación para revisión.
+
+6. Una vez evaluada, se actualiza el estado y se notifica al padre.
+
+**Caso 2: Gestión interna de solicitudes por parte del comité de RSE**
+
+1. El Coordinador de RSE accede mediante el Contexto IAM.
+
+2. Desde el Contexto de Administración, consulta todas las postulaciones activas.
+
+3. Revisa los documentos adjuntos, aplica filtros (por tipo de beca, empresa, nivel académico, etc.).
+
+4. Acepta o rechaza postulaciones, adjuntando retroalimentación si corresponde.
+
+5. La información es devuelta al Contexto de Postulaciones, que actualiza el estado y notifica al padre.
+
+Esta visualización permitió entender no solo los puntos de integración entre los contextos, sino también los límites de responsabilidad de cada uno, asegurando una arquitectura desacoplada pero coherente. El resultado fue un conjunto de diagramas de Domain Storytelling que reflejan claramente cómo fluyen los mensajes entre usuarios y contextos del sistema.
+
+![message-flow1](./assets/images/Domain-message-flow-modelling-1.jpg) 
+![message-flow2](./assets/images/Domain-message-flow-modelling-2.jpg) 
+![message-flow3](./assets/images/Domain-message-flow-modelling-3.jpg)
+
 
 ### 4.1.1.3. Bounded Context Canvases
 
+IAM:
+
+![IAM-canvas](./assets/images/iam-canvas.jpg) 
+
+Management:
+
+![Management-canvas](./assets/images/management-canvas.jpg) 
+
+Applications:
+
+![Applications-canvas](./assets/images/applications-canvas.jpg) 
+
+
 ### 4.1.2. Context Mapping
+
+Se identificaron los siguientes bounded contexts en el sistema:
+
+- IAM: manejo de autenticación y autorización
+- Postulación: contiene el flujo completo de postulación, formularios y documentos
+- Gestión: involucra revisión, validación y generación de reportes
+- Backend: centraliza y expone la lógica de negocio mediante API
+
+**Mapa de Contextos Inicial**
+
+![Context-initial](assets/images/context_1.png)
+
+**Mapa de Contexto Final**
+
+![Context-final](assets/images/Context_2.png)
+
+Este diseño final refleja la autonomía de contextos y prepara el sistema para evolucionar modularmente.
 
 ### 4.1.3. Software Architecture
 
 ### 4.1.3.1. Software Architecture Context Level Diagrams
 
+![Context-diagram](assets/images/structurizr-Contexto.png)
+
+
 ### 4.1.3.2. Software Architecture Container Level Diagrams
 
-### 4.1.3.3. Software Architecture Deploymnet Diagrams
+![Container-diagram](assets/images/structurizr-Arquitectura.png)
+
+
+### 4.1.3.3. Software Architecture Deployment Diagrams
+
+**Componente de gestión:**
+
+![Component-Gestion](assets/images/structurizr-Componentes_Gestion.png)
+
+**Componente Backend:**
+
+![Component-Backend](assets/images/structurizr-Componentes_Backend.png)
+
+**Componente de postulación:**
+
+![Component-Postulacion](assets/images/structurizr-Componentes_Postulacion.png)
+
+**Componente de autenticación:**
+
+![Component-IAM](assets/images/structurizr-ComponentesIAM.png)
 
 ### 4.2. Tactical-Level Domain-Driven Design
 
@@ -1003,6 +1092,8 @@ Novena/Décima etapa:
 ### 4.2.3.6.2 Bounded Context Database Design Diagram
 
 ## Conclusiones
+
+En esta entrega, aplicamos diversas técnicas de análisis y diseño como entrevistas, mapeo de escenarios, EventStorming y wireframes para comprender el dominio del problema y proponer una solución coherente. Modelamos la arquitectura del sistema utilizando context maps y diagramas estructurados, lo que nos permitió visualizar los límites y responsabilidades de cada módulo. Este proceso fortaleció nuestras habilidades en diseño centrado en el usuario y resaltó la importancia del aprendizaje continuo en el desarrollo de soluciones de software efectivas.
 
 ## Bibliografia
 
