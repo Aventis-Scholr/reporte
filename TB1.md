@@ -517,56 +517,7 @@ Estas preguntas están diseñadas para llevar la conversación de manera lógica
 
 **Segmento 1: Padres Trabajadores (Empleados/Colaboradores)**
 
-1. Entrevista 1: <br>
-   Datos del entrevistado <br>
-   Nombre: Juan <br>
-   Apellidos: de la Cruz<br>
-   Edad: 23 <br>
-   Distrito: San Martin de Porres <br>
 
-![Foto de entrevista](assets/images/S.png)
-
-URL: [Link de entrevista](https://drive.google.com/file/d/1WrxFb_8KqRk6mWSrgUbvFpkfpjyIU0vI/view?usp=sharing)
-
-Inicio: 0:00<br>
-Duracion: 8:24
-
-Resumen:<br>
-La entrevista con Juan de la Cruz, lidel del Grupo JPSP, reveló aspectos clave sobre la gestión de proyectos y el impacto de las herramientas que existen actualmente. El destacó que su principal responsabilidad es supervisar al equipo de desarrollo para cumplir con los plazos y estándares de calidad, mientras maneja el crecimiento rápido y los desafíos de integración tecnológica. Aunque también menciono que ha tenido experiencias mixtas con las herramientas actuales, principalmente debido a problemas de integración y personalización, considera esencial que las nuevas soluciones ofrezcan flexibilidad, integración fluida y capacidades avanzadas. La incorporación de tecnologías emergentes es vista como crucial para mejorar la eficiencia y la toma de decisiones. Además, se busca una solución que facilite la colaboración y la comunicación centralizada, y que esté dispuesta a adaptarse a las necesidades cambiantes del equipo. El entrevistado enfatiza la importancia de la seguridad y prioriza a los proveedores que brindan soporte confiable y pueden adaptar sus soluciones a los requisitos individuales. En el futuro, se espera una evolución hacia mayor automatización y herramientas que se adapten rápidamente a los cambios en los proyectos.
-
-2.  Entrevista 2: <br>
-    Datos del entrevistado <br>
-    Nombre: María<br>
-    Apellidos: Gutiérrez<br>
-    Edad: 26 <br>
-    Distrito: San Isidro <br>
-
-![Foto de entrevista](assets/images/Entrevista-Maria.png)
-
-URL: [Link de entrevista](https://drive.google.com/file/d/1URH3QIgHteG1cNFRdPeFrunflBu3zA8j/view?usp=sharing "Entrevista 2")
-
-Inicio: 0:18<br>
-Duracion: 6:17
-
-Resumen:<br>
-La entrevista con María nos comenta que en su trabajo como líder de proyecto su principal responsabilidad es monitorear todas las operaciones y gestionarlas para lograr el óptimo desarrollo. Considera que las empresas deben empezar a utilizar nuevos programas para la gestión de proyecto, pues las que usan están quedando obsoletas. También nos cuenta de la importancia de que este nuevo programa debe ser intuitiva y fácil de usar, además de ser adaptable para cualquier dispositivo con acceso a internet. Nos comenta su interés de la IA en estos programas está relacionada con todos los logros que han logrado y que ella misma también usa cuando trabaja. Con su experiencia resalta que debe ser poner atención cuando busques una empresa que te ofrezca este producto, es importante que el software pueda adaptarse a sus necesidades y tenga la seguridad de que protegerá sus datos.
-
-3.  Entrevista 3: <br>
-    Datos del entrevistado <br>
-    Nombre: Nora <br>
-    Apellidos: Castro Manrique<br>
-    Edad: 42 <br>
-    Distrito: Pueblo Libre <br>
-
-![Entrevista Nora](assets/images/entrevista_Nora.png)
-
-URL: [Link de entrevista](https://drive.google.com/file/d/11xswJuEZQy51WRqAmZDu0KfjyF-6rV-F/view?usp=sharing "Entrevista 3")
-
-Inicio: 0:40<br>
-Duracion: 5:39
-
-Resumen:<br>
-La entrevista con Nora reveló aspectos importantes sobre la gestión y flujo de trabajo. Se destacó que el trabajo en equipo es fundamental para el éxito de un proyecto, y que contar con herramientas de gestión y seguimiento efectivas es crucial para mantener la coordinación y el progreso del equipo. Además, se considera que, tecnologías emergentes serían de mucha ayuda. En un futuro, se espera que este tipo de tecnologías sumadas a herramientas existentes puedan ayudar a su adaptación para diferentes modelos de negocio y a agilizar el trabajo.
 
 **Segmento 2: Coordinadores de Bienestar Laboral/RSE**
 
