@@ -886,6 +886,9 @@ Novena/Décima etapa:
 
 ![EventStorming-etapa9-10](./assets/images/EventStorming-etapa9-10.jpg) 
 
+Segmento administrador de becas:
+
+![EventStorming-admin](./assets/images/eventstorming-admin.jpg) 
 
 ### 4.1.1.1. Candidate Context Discovery
 
@@ -945,6 +948,17 @@ Esta visualización permitió entender no solo los puntos de integración entre 
 
 ### 4.1.1.3. Bounded Context Canvases
 
+IAM:
+
+![IAM-canvas](./assets/images/iam-canvas.jpg) 
+
+Management:
+
+![Management-canvas](./assets/images/management-canvas.jpg) 
+
+Applications:
+
+![Applications-canvas](./assets/images/applications-canvas.jpg) 
 
 
 ### 4.1.2. Context Mapping
