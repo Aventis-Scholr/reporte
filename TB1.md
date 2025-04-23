@@ -593,20 +593,20 @@ Lourdes Huamani, Coordinadora de RSE y Bienestar Laboral en Grupo Horizonte, com
 
 2.  Entrevista 2: <br>
     Datos del entrevistado <br>
-    Nombre: Agustín<br>
-    Apellidos: Aguilar Lindo<br>
-    Edad: 21 <br>
-    Distrito: San Borja <br>
+    Nombre: Maria Pía<br>
+    Apellidos: Tejada<br>
+    Edad: xx <br>
+    Distrito: xx <br>
 
-![alt text](assets/images/Entrevista-Agustin.png)
+![Entrevista2](assets/images/interviews/Entrevista_2.png)
 
-URL: [Link de entrevista](https://drive.google.com/file/d/1GgzFpXSX2uaFr_GiZCo5utxRtd5Z-t24/view?usp=sharing "Entrevista 2")
+URL:
 
 Inicio: 0:10<br>
 Duracion: 6:45
 
 Resumen:<br>
-La entrevista a Agustín nos cuenta de primera mano la experiencia como practicante y como las herramientas de gestión actuales influyen. Nos cuenta que su líder de proyecto, para seguir las metodologías Agiles, programa muchas reuniones donde en muchas se redunda en los mismos temas, y el preferiría otra forma de comunicación, problema que podría solucionarse con un programa de gestión. Menciona que una herramienta habitual es GitHub, pero lo considera poco intuitivo y difícil de dominar. Cree firmemente que es necesario una herramienta que ponga más atención en la interfaz de usuario, y a la facilidad de personalizarla.
+Durante la entrevista con María, Directora de Programas Educativos de "Futuros Brillantes Perú", quedó claro que la ONG enfrenta desafíos únicos en la gestión de becas: procesos manuales caóticos (con postulaciones vía WhatsApp y fotos de documentos), falta de acceso estable a internet en comunidades vulnerables, y dificultad para verificar datos socioeconómicos. "El 70% de nuestro tiempo se va en verificar documentos uno por uno, y aun así, el 30% de postulaciones se rechazan por errores evitables", explicó María. La ONG necesita urgentemente una solución tecnológica simple y accesible —funcional sin conexión estable, que acepte documentos desde móviles básicos y priorice la protección de datos sensibles—, pero con un costo adaptado a su limitado presupuesto ($2,000 USD anuales). El éxito para ellos se mediría en aumentar el alcance sin complicar el proceso, manteniendo el enfoque humano que caracteriza su labor. Esta conversación refuerza la necesidad de que Scholr desarrolle herramientas inclusivas, pensadas para realidades donde la tecnología es un puente, no una barrera.
 
 3.  Entrevista 3: <br>
     Datos del entrevistado <br>
