@@ -886,6 +886,11 @@ Durante la sesión, se analizaron principalmente dos casos de uso relevantes:
 
 Esta visualización permitió entender no solo los puntos de integración entre los contextos, sino también los límites de responsabilidad de cada uno, asegurando una arquitectura desacoplada pero coherente. El resultado fue un conjunto de diagramas de Domain Storytelling que reflejan claramente cómo fluyen los mensajes entre usuarios y contextos del sistema.
 
+![message-flow1](./assets/images/Domain-message-flow-modelling-1.jpg) 
+![message-flow2](./assets/images/Domain-message-flow-modelling-2.jpg) 
+![message-flow3](./assets/images/Domain-message-flow-modelling-3.jpg)
+
+
 ### 4.1.1.3. Bounded Context Canvases
 
 IAM:
