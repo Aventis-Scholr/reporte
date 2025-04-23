@@ -811,8 +811,35 @@ EPICS:
 | US18 | Formulario de contacto para empresas | Como representante de RRHH, quiero enviar una solicitud de información sin registrarme, para evaluar una posible alianza con Scholr.|Escenario 1: Envío exitoso<br>Dado que el representante completa: Nombre, Empresa, Email y Consulta.Cuando hace clic en "Enviar".Entonces el sistema valida el formato de email y muestra "Gracias, te contactaremos en 48h",Escenario 2:, Titulo: Campos obligatorios<br>Dado que el usuario deja vacío el campo Email.Cuando intenta enviar.Entonces el sistema resalta el campo en rojo y muestra "Email es requerido"|EP06|
 | US19 |Adaptabilidad móvil | Como usuario móvil, quiero navegar la landing page sin problemas, para acceder a la información desde cualquier dispositivo.| Escenario 1, Tituloo:Menú responsive<br>Dado que el usuario accede desde móvil.Cuando hace clic en el ícono de menú.Entonces se despliegan las opciones principales y el fondo se oscurece para mejor contraste|EP06|
 
+Pivotal Tracker:
+
+![assets/images/pivotaltracker.png ](assets/images/pivotaltracker.png)
+
+LINK: https://www.pivotaltracker.com/n/projects/2740632  
 ### 3.3. Impact Mapping
 ### 3.4. Product Backlog
+
+| #Orden | User Story ID | Título                                                  | Descripción                                                                                                 | Story Points <br> (1/2/3/5/8) |
+| ------ | ------------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | :---------------------------: |
+|1| US01|Selección de empresa durante el registro|Como padre/trabajador,quiero subir documentos (credencial laboral, notas de mi hijo) directamente en la app,para evitar trámites presenciales y acelerar mi postulación.| X|
+|2| US02| Validación automática de datos laborales|Como trabajador, quiero que el sistema verifique automáticamente mi código de colaborador con la base de datos de mi empresa, para confirmar mi elegibilidad en 24 horas.|X|
+|3| US03| Notificación de verificación exitosa| Como padre/trabajador,quiero recibir confirmación con un código único al enviar mi postulación,para tener un comprobante digital de mi solicitud.| X|
+|4| US04|Subir documentos de postulación|Como padre/trabajador,quiero subir documentos (credencial laboral, notas de mi hijo) directamente en la app,para evitar trámites presenciales y acelerar mi postulación.| X|
+|5| US05| Guardar postulación como borrador| Como padre/trabajador,quiero guardar una postulación como borrador antes de enviarla,para completar los requisitos más tarde sin perder el progreso.| X|
+|6| US06| Confirmación con código único| Como padre/trabajador,quiero recibir confirmación con un código único al enviar mi postulación,para tener un comprobante digital de mi solicitud.| X|
+|7| US07| Visualizacion de postulaciones| Como padre/trabajador,quiero ver todas mis postulaciones (enviadas, en revisión, aprobadas, rechazadas),para poder gestionarlas desde un solo lugar.| X|
+|8| US08| Notificaciones de cambios de estado| Como padre/trabajador,quiero recibir notificaciones push cuando mi postulación cambie de estado,para actuar rápidamente en caso de requerirse más información.| X|
+|9| US09| Reenvío de postulación rechazada| Como padre/trabajador,quiero reenviar una postulación rechazada (si el plazo lo permite),para corregir errores sin empezar desde cero.|X|
+|10| US10|Listado de postulaciones para coordinador | Como coordinador de bienestar,quiero ver un listado de todas las postulaciones recibidas filtradas por tipo de beca,para priorizar revisiones según urgencia.|X|
+|11| US11| Aprobar/rechazar con comentarios|Como coordinador de bienestar,quiero aprobar/rechazar postulaciones con comentarios personalizados,para mantener informados a los padres/trabajadores.|X|
+|12| US12 | Publicación de nuevas becas| Como coordinador de bienestar,quiero publicar fechas límite y requisitos de nuevas becas en la app,para evitar consultas masivas al departamento de RRHH. | X|
+|13| US13 | Tutoriales en video| Como padre/trabajador,quiero ver tutoriales en video sobre cómo completar una postulación,para evitar errores comunes. | X|
+|14| US14 |Acceso a cartilla de instrucciones | Como padre/trabajador, quiero acceder a una cartilla de instrucciones descargable en PDF, para consultar los pasos de postulación sin conexión a internet.| X|
+|15| US15 | Visualizar información de contacto de soporte | Como padre/trabajador, quiero poder ver el correo electrónico y número telefónico de soporte dentro de la app, para contactar directamente al equipo de Scholr en caso de problemas urgentes. | X |
+|16| US16 | Visualización de información clave | Como visitante, quiero ver una explicación breve de cómo funciona Scholr, para entender rápidamente si cubre mis necesidades.|X|
+|17| US17 |Acceso a recursos demostrativos | Como visitante escéptico, quiero descargar un folleto PDF o ver casos de éxito, para validar la confiabilidad de Scholr.|X |
+|18| US18 | Formulario de contacto para empresas | Como representante de RRHH, quiero enviar una solicitud de información sin registrarme, para evaluar una posible alianza con Scholr.|X|
+|19| US19 |Adaptabilidad móvil | Como usuario móvil, quiero navegar la landing page sin problemas, para acceder a la información desde cualquier dispositivo.| X|
 
 ## Capítulo IV: Product Design
 
