@@ -787,6 +787,43 @@ Al observar la matriz, podemos destacar que tanto Oscar como Leonardo consideran
 
 ### 4.1.1. EventStorming
 
+Primera etapa:
+
+![EventStorming-etapa1](./assets/images/EventStorming-etapa1.jpg) 
+
+Segunda etapa:
+
+![EventStorming-etapa2](./assets/images/EventStorming-etapa2.jpg) 
+
+Tercera etapa:
+
+![EventStorming-etapa3](./assets/images/EventStorming-etapa3.jpg) 
+
+Cuarta etapa:
+
+![EventStorming-etapa4](./assets/images/EventStorming-etapa4.jpg) 
+
+Quinta etapa:
+
+![EventStorming-etapa5](./assets/images/EventStorming-etapa5.jpg) 
+
+Sexta etapa:
+
+![EventStorming-etapa6](./assets/images/EventStorming-etapa6.jpg) 
+
+Séptima etapa:
+
+![EventStorming-etapa7](./assets/images/EventStorming-etapa7.jpg) 
+
+Octava etapa:
+
+![EventStorming-etapa8](./assets/images/EventStorming-etapa8.jpg) 
+
+Novena/Décima etapa:
+
+![EventStorming-etapa9-10](./assets/images/EventStorming-etapa9-10.jpg) 
+
+
 ### 4.1.1.1. Candidate Context Discovery
 
 ### 4.1.1.2. Domain Message Flows Modeling
