@@ -518,7 +518,7 @@ Estas preguntas están diseñadas para llevar la conversación de manera lógica
 
 **Segmento 1: Padres Trabajadores (Empleados/Colaboradores)**
 
-2.  Entrevista 2: <br>
+1.  Entrevista 1: <br>
     Datos del entrevistado <br>
     Nombre: Isabel<br>
     Apellidos: Ríos<br>
@@ -548,7 +548,7 @@ Isabel asistente administrativa en Industrias Andinas S.A., compartió su experi
 
 ![Foto de entrevista](./assets/images/interviews/Entrevista_1.png)
 
-URL: [Link de entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u201620127_upc_edu_pe/EdCIElww9upKlSrPXrGgZRUBaQvkrSH7Z1YTp-uDTQ0v8w?e=ZzARVD&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D "Entrevista 1-segmento 2")
+URL: [Link de entrevista](https://drive.google.com/file/d/1Z55__pbvuMZ4kC79pfcWfCwCs8alKu8k/view?usp=sharing "Entrevista 1-segmento 2")
 
 Inicio: 0:12<br>
 Duracion: 11:45
