@@ -526,7 +526,7 @@ Estas preguntas están diseñadas para llevar la conversación de manera lógica
 
 ![Foto de entrevista](assets/images/interviews/Entrevista_3.png)
 
-URL: [Link de entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202117377_upc_edu_pe/ERoWYhSIil9AkvHNyNQQ2mMB71W7f4VO3MN1epKxiWWOjg?e=fsrKTp&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D "Entrevista 3")
+URL: [Link de entrevista](https://drive.google.com/file/d/19c-xodTnZrWXuZNAd_Uqw-bGU5h_Yy0a/view?usp=drive_link)
 
 Inicio: 0:00<br>
 Duracion: 5:28
