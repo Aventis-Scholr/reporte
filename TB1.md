@@ -536,23 +536,6 @@ Oscar Jaque Huerta, trabajador de 49 años en Backus, compartió su vivencia com
 
 2.  Entrevista 2: <br>
     Datos del entrevistado <br>
-    Nombre: María<br>
-    Apellidos: Gutiérrez<br>
-    Edad: 26 <br>
-    Distrito: San Isidro <br>
-
-![Foto de entrevista](assets/images/Entrevista-Maria.png)
-
-URL: [Link de entrevista](https://drive.google.com/file/d/1URH3QIgHteG1cNFRdPeFrunflBu3zA8j/view?usp=sharing "Entrevista 2")
-
-Inicio: 0:18<br>
-Duracion: 6:17
-
-Resumen:<br>
-La entrevista con María nos comenta que en su trabajo como líder de proyecto su principal responsabilidad es monitorear todas las operaciones y gestionarlas para lograr el óptimo desarrollo. Considera que las empresas deben empezar a utilizar nuevos programas para la gestión de proyecto, pues las que usan están quedando obsoletas. También nos cuenta de la importancia de que este nuevo programa debe ser intuitiva y fácil de usar, además de ser adaptable para cualquier dispositivo con acceso a internet. Nos comenta su interés de la IA en estos programas está relacionada con todos los logros que han logrado y que ella misma también usa cuando trabaja. Con su experiencia resalta que debe ser poner atención cuando busques una empresa que te ofrezca este producto, es importante que el software pueda adaptarse a sus necesidades y tenga la seguridad de que protegerá sus datos.
-
-3.  Entrevista 3: <br>
-    Datos del entrevistado <br>
     Nombre: Isabel<br>
     Apellidos: Ríos<br>
     Edad: 37 <br>
