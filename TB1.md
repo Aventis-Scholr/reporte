@@ -517,7 +517,22 @@ Estas preguntas están diseñadas para llevar la conversación de manera lógica
 
 **Segmento 1: Padres Trabajadores (Empleados/Colaboradores)**
 
+2.  Entrevista 2: <br>
+    Datos del entrevistado <br>
+    Nombre: Isabel<br>
+    Apellidos: Ríos<br>
+    Edad: 37 <br>
+    Distrito: Pueblo Libre <br>
 
+![Foto de entrevista](assets/images/interviews/Entrevista_3.png)
+
+URL: [Link de entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202117377_upc_edu_pe/ERoWYhSIil9AkvHNyNQQ2mMB71W7f4VO3MN1epKxiWWOjg?e=fsrKTp&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D "Entrevista 3")
+
+Inicio: 0:00<br>
+Duracion: 5:28
+
+Resumen:<br>
+Isabel asistente administrativa en Industrias Andinas S.A., compartió su experiencia como madre trabajadora en la gestión de becas educativas para su hijo. Identificó como principal dificultad la dispersión de la información y la falta de claridad en los requisitos y plazos. El proceso de postulación resulta complejo por la necesidad de repetir trámites como la acreditación de vínculo laboral en distintas plataformas, así como por la carga manual de documentos. Ha perdido oportunidades por no conocer fechas límite o requisitos específicos. Señaló que los beneficios son valorados, pero difíciles de usar debido a la falta de una herramienta centralizada. Considera que una plataforma digital podría agilizar el proceso si incluye recordatorios automáticos, posibilidad de cargar documentos desde el celular y un canal de soporte.
 
 **Segmento 2: Coordinadores de Bienestar Laboral/RSE**
 
