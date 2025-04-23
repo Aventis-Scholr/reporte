@@ -78,7 +78,7 @@ TB1:<br>
 |Integrante|Tarea Asignada|
 |-|-|
 |Jaque Peña, Estefano Oscar|Lean UX Problem Statements,Lean UX Assumptions,Diseño de entrevistas,Coompetidores,Estrategias y tácticas frente a competidores,User Stories,Product Backlog, Class Diagrams, Class Dictionary, Database Diagram, Sprint Planning 1, Sprint Backlog 1|
-| Sebastian Omar Real Calderón | Entrevista, Registro de entrevista, Ubiquitous Language, Impact Mapping, Bounded Context Management |
+| Sebastian Omar Real Calderón | Análisis de entrevistas, Registro de entrevista, Ubiquitous Language, Impact Mapping, Bounded Context Management |
 | Arévalo Meza John | Segmentos objetivos, registro de entrevistas, as-is scenario mapping, to-be scenario mapping, landing page wireframes, landing page mockups, web application wireframes, web application mockups, web applications wireflow diagrams, web applications user flow diagrams, desarrollo de la landing page. |
 | Rosado Iporre, Diego | Diseño de entrevistas, web application wireframes, desarrollo de la landing page. |
 
@@ -576,7 +576,7 @@ Durante la entrevista con María, Directora del Programa de Becas de "Futuros Br
 
 **Análisis Segmento 1: Padres Trabajadores (Empleados/Colaboradores)**
 
-
+Las entrevistas con empleados como Isabel evidencian que los principales desafíos en la gestión de becas son la información dispersa que genera confusiones y pérdida de oportunidades, los trámites repetitivos como la acreditación laboral múltiple, y los procesos manuales que consumen tiempo valioso. A pesar de valorar estos beneficios, la ausencia de una plataforma centralizada dificulta su aprovechamiento. Los padres requieren urgentemente un sistema digital intuitivo con recordatorios automáticos, capacidad para subir documentos desde celulares y un canal de soporte ágil. Estos hallazgos reflejan directamente las necesidades identificadas por los coordinadores de bienestar, demostrando que la solución ideal debe simplificar el proceso tanto para los empleados como para los administradores. La clave del éxito radicará en crear una herramienta que elimine la burocracia innecesaria sin sacrificar la accesibilidad para usuarios con distintos niveles de habilidad digital.
 
 **Análisis Segmento 2: Coordinadores de Bienestar Laboral/RSE**
 
