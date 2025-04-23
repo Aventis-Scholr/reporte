@@ -595,18 +595,18 @@ Lourdes Huamani, Coordinadora de RSE y Bienestar Laboral en Grupo Horizonte, com
     Datos del entrevistado <br>
     Nombre: Maria Pía<br>
     Apellidos: Tejada<br>
-    Edad: xx <br>
-    Distrito: xx <br>
+    Edad: 38 <br>
+    Distrito: Miraflores <br>
 
 ![Entrevista2](assets/images/interviews/Entrevista_2.png)
 
-URL:
+URL: [Link de Entrevista](https://drive.google.com/file/d/1sjZi95xLPCam7giprGC7reAFExzH_G5E/view?usp=sharing)
 
-Inicio: 0:10<br>
-Duracion: 6:45
+Inicio: 0:05<br>
+Duracion: 7:41
 
 Resumen:<br>
-Durante la entrevista con María, Directora de Programas Educativos de "Futuros Brillantes Perú", quedó claro que la ONG enfrenta desafíos únicos en la gestión de becas: procesos manuales caóticos (con postulaciones vía WhatsApp y fotos de documentos), falta de acceso estable a internet en comunidades vulnerables, y dificultad para verificar datos socioeconómicos. "El 70% de nuestro tiempo se va en verificar documentos uno por uno, y aun así, el 30% de postulaciones se rechazan por errores evitables", explicó María. La ONG necesita urgentemente una solución tecnológica simple y accesible —funcional sin conexión estable, que acepte documentos desde móviles básicos y priorice la protección de datos sensibles—, pero con un costo adaptado a su limitado presupuesto ($2,000 USD anuales). El éxito para ellos se mediría en aumentar el alcance sin complicar el proceso, manteniendo el enfoque humano que caracteriza su labor. Esta conversación refuerza la necesidad de que Scholr desarrolle herramientas inclusivas, pensadas para realidades donde la tecnología es un puente, no una barrera.
+Durante la entrevista con María, Directora del Programa de Becas de "Futuros Brillantes Perú", quedó claro que la ONG enfrenta desafíos únicos en la gestión de becas: procesos manuales caóticos (con postulaciones vía WhatsApp y fotos de documentos), falta de acceso estable a internet en comunidades vulnerables, y dificultad para verificar datos socioeconómicos. "El 70% de nuestro tiempo se va en verificar documentos uno por uno, y aun así, el 30% de postulaciones se rechazan por errores evitables", explicó María. La ONG necesita urgentemente una solución tecnológica simple y accesible —funcional sin conexión estable, que acepte documentos desde móviles básicos y priorice la protección de datos sensibles—, pero con un costo adaptado a su limitado presupuesto. El éxito para ellos se mediría en aumentar el alcance sin complicar el proceso, manteniendo el enfoque humano que caracteriza su labor. Esta conversación refuerza la necesidad de que Scholr desarrolle herramientas inclusivas, pensadas para realidades donde la tecnología es un puente, no una barrera.
 
 3.  Entrevista 3: <br>
     Datos del entrevistado <br>
