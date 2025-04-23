@@ -520,7 +520,7 @@ Estas preguntas están diseñadas para llevar la conversación de manera lógica
 1. Entrevista 1: <br>
    Datos del entrevistado <br>
    Nombre: Oscar <br>
-   Apellidos: Jaque Peña<br>
+   Apellidos: Jaque Huerta<br>
    Edad: 49 <br>
    Distrito: Los Olivos <br>
 
