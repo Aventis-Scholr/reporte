@@ -987,6 +987,38 @@ Este diseño final refleja la autonomía de contextos y prepara el sistema para 
 
 ![Component-IAM](assets/images/structurizr-ComponentesIAM.png)
 
+### 4.2. Tactical-Level Domain-Driven Design
+
+## 4.2.1. Bounded Context: IAM
+### 4.2.1.1. Domain Layer
+### 4.2.1.2. Interface Layer
+### 4.2.1.3. Application Layer
+### 4.2.1.4. Infrastructure Layer
+### 4.2.1.5. Bounded Context Software Architecture Component Level Diagrams
+### 4.2.1.6. Bounded Context Software Architecture Code Level Diagrams
+#### 4.2.1.6.1. Bounded Context Domain Layer Class Diagrams
+#### 4.2.1.6.2. Bounded Context Database Design Diagram
+
+## 4.2.2. Bounded Context: Application
+### 4.2.2.1. Domain Layer
+### 4.2.2.2. Interface Layer
+### 4.2.2.3. Application Layer
+### 4.2.2.4. Infrastructure Layer
+### 4.2.2.5. Bounded Context Software Architecture Component Level Diagrams
+### 4.2.2.6. Bounded Context Software Architecture Code Level Diagrams
+#### 4.2.2.6.1. Bounded Context Domain Layer Class Diagrams
+#### 4.2.2.6.2. Bounded Context Database Design Diagram
+
+## 4.2.3. Bounded Context: Management
+### 4.2.3.1. Domain Layer
+### 4.2.3.2. Interface Layer
+### 4.2.3.3. Application Layer
+### 4.2.3.4. Infrastructure Layer
+### 4.2.3.5. Bounded Context Software Architecture Component Level Diagrams
+### 4.2.3.6. Bounded Context Software Architecture Code Level Diagrams
+#### 4.2.3.6.1. Bounded Context Domain Layer Class Diagrams
+#### 4.2.3.6.2. Bounded Context Database Design Diagram
+
 ## Conclusiones
 
 En esta entrega, aplicamos diversas técnicas de análisis y diseño como entrevistas, mapeo de escenarios, EventStorming y wireframes para comprender el dominio del problema y proponer una solución coherente. Modelamos la arquitectura del sistema utilizando context maps y diagramas estructurados, lo que nos permitió visualizar los límites y responsabilidades de cada módulo. Este proceso fortaleció nuestras habilidades en diseño centrado en el usuario y resaltó la importancia del aprendizaje continuo en el desarrollo de soluciones de software efectivas.
