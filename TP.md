@@ -37,12 +37,12 @@ Product: "Scholr"
 
 ## Registro de Versiones del Informe
 
-| Version | Fecha      | Autor                    | Descripcion                                                                                                                                                                                                                                                                                 |
+| Version | Fecha      | Autor                    | Descripcion|
 | ------- | ---------- | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| TB1     | 06/04/2025 | Estefano Jaque  | Desarrollé el Lean UX Problem Statements,Lean UX Assumptions,Diseño de entrevistas,Coompetidores y Estrategias y tácticas frente a competidores|
+| TB1     | 06/04/2025 | Estefano Jaque  | Desarrollé el Lean UX Problem Statements,Lean UX Assumptions,Diseño de entrevistas,Coompetidores y Estrategias y tácticas frente a competidores, User Stories , Product Backlog |
 | TB1     | 06/04/2025 | Sebastian Real Calderón | Desarrollé la Descripción de la Startup, Solution Profile, el regitro de una entrevista a un usuario del segmento 1 y 2, y realicé una entrevista.|
-| TB1     | 23/04/2025 | John Arévalo |  Desarrollé el Event Storming, antecedentes y problemática, startup profile, Domain Message Flows Modeling, Bounded Context Canvases, empathy mapping, User journey mapping y el registro de 1 entrevista para el segmento 1. 
-| TB1     | 18/04/2025  | Diego Rosado | Desarrolle las preguntas para los segmentos objetivos e hice una entrevista, As-is Scenario Mapping, To-Be Scenario Mapping, EventStorming, Software Architecture.|
+| TB1     | 23/04/2025 | John Arévalo |  Desarrollé el Event Storming, antecedentes y problemática, startup profile, Domain Message Flows Modeling, Bounded Context Canvases, empathy mapping, User journey mapping y el registro de 1 entrevista para el segmento 1. |
+| TB1     | 18/04/2025  | Diego Rosado | Desarrolle las preguntas para los segmentos objetivos e hice una entrevista, As-is Scenario Mapping, To-Be Scenario Mapping, EventStorming, Software Architecture.Ademas el diagrama C4 ,as is ,to be , context mapping y  candidate context dicovery|
 
 ## Project Report Collaboration Insights
 
@@ -50,40 +50,28 @@ Product: "Scholr"
 | :-----------------------------------: | :-----------------------------------------------: |
 | https://github.com/Aventis-Scholr | https://github.com/Aventis-Scholr/reporte |
 
-<br>**Vista de commits: Landing page:**  
-
-[IMAGENES]
-- Estefano Oscar Jaque Peña: X
-- Sebastian Omar Real Calderón: X
-- John Telesforo Arevalo Meza: X
-- Diego Alonso Rosado Iporre: X
-
-<br>**Issues**
-
-[IMAGENES]
-
 <br>**Report:**
 
-[IMAGENES]
+![alt text](assets/images/contributors.png)
 
-- Estefano Oscar Jaque Peña: X
-- Sebastian Omar Real Calderón: X
-- John Telesforo Arevalo Meza: X
-- Diego Alonso Rosado Iporre: X
+- Estefano Oscar Jaque Peña: 14
+- Sebastian Omar Real Calderón:16
+- John Telesforo Arevalo Meza: 13
+- Diego Alonso Rosado Iporre: 11
 
 TB1:<br>
 |Integrante|Tarea Asignada|
 |-|-|
-|Jaque Peña, Estefano Oscar|Lean UX Problem Statements,Lean UX Assumptions,Diseño de entrevistas,Coompetidores,Estrategias y tácticas frente a competidores,User Stories,Product Backlog, Class Diagrams, Class Dictionary, Database Diagram, Sprint Planning 1, Sprint Backlog 1|
+|Jaque Peña, Estefano Oscar|Desarrollé el Lean UX Problem Statements,Lean UX Assumptions,Diseño de entrevistas,Coompetidores y Estrategias y tácticas frente a competidores, User Stories , Product Backlog|
 | Sebastian Omar Real Calderón | Análisis de entrevistas, Registro de entrevista, Ubiquitous Language, Impact Mapping, Bounded Context Management |
-| Arévalo Meza John | Segmentos objetivos, registro de entrevistas, as-is scenario mapping, to-be scenario mapping, landing page wireframes, landing page mockups, web application wireframes, web application mockups, web applications wireflow diagrams, web applications user flow diagrams, desarrollo de la landing page. |
-| Rosado Iporre, Diego | Diseño de entrevistas, web application wireframes, desarrollo de la landing page, As-is Scenario Mapping, To-Be Scenario Mapping, EventStorming , Software Architecture |
+| Arévalo Meza John | Desarrollé el Event Storming, antecedentes y problemática, startup profile, Domain Message Flows Modeling, Bounded Context Canvases, empathy mapping, User journey mapping y el registro de 1 entrevista para el segmento 1. |
+| Rosado Iporre, Diego | Entrevistas, diagrama C4 ,as is ,to be , context mapping y  candidate context dicovery |
 
 ## Contenido
 
 ### Tabla de contenidos
 
-- [Student Outcome](#student-outcome)
+  - [Student Outcome](#student-outcome)
   - [Capítulo I: Presentación](#capítulo-i-presentación)
     - [1.1. Startup Profile](#11-startup-profile)
       - [1.1.1. Descripción de la Startup](#111-descripción-de-la-startup)
@@ -96,7 +84,7 @@ TB1:<br>
         - [1.2.2.3. Lean UX Hypothesis Statements](#1223-lean-ux-hypothesis-statements)
         - [1.2.2.4. Lean UX Canvas](#1224-lean-ux-canvas)
     - [1.3. Segmentos objetivo](#13-segmentos-objetivo)
-  - [Capítulo II: Requirements Elicitation & Analysis](#capítulo-ii-requirements-elicitation--analysis)
+  - [Capítulo II: Requirements Elicitation \& Analysis](#capítulo-ii-requirements-elicitation--analysis)
     - [2.1. Competidores](#21-competidores)
       - [2.1.1. Análisis competitivo](#211-análisis-competitivo)
       - [2.1.2. Estrategias y tácticas frente a competidores](#212-estrategias-y-tácticas-frente-a-competidores)
@@ -117,16 +105,16 @@ TB1:<br>
     - [3.3. Impact Mapping](#33-impact-mapping)
     - [3.4. Product Backlog](#34-product-backlog)
   - [Capítulo IV: Product Design](#capítulo-iv-product-design)
-    - [4.1. Strategic-Level Domain-Driven Design](#41-strategic-level-domain-driven-design)
-      - [4.1.1. EventStorming](#411-eventstorming)
-        - [4.1.1.1. Candidate Context Discovery](#4111-candidate-context-discovery)
-        - [4.1.1.2. Domain Message Flows Modeling](#4112-domain-message-flows-modeling)
-        - [4.1.1.3. Bounded Context Canvases](#4113-bounded-context-canvases)
-      - [4.1.2. Context Mapping](#412-context-mapping)
-      - [4.1.3. Software Architecture](#413-software-architecture)
-        - [4.1.3.1. Software Architecture Context Level Diagrams](#4131-software-architecture-context-level-diagrams)
-        - [4.1.3.2. Software Architecture Container Level Diagrams](#4132-software-architecture-container-level-diagrams)
-        - [4.1.3.3. Software Architecture Deployment Diagrams](#4133-software-architecture-deployment-diagrams)
+    - [4.1. Strategic-Level Domain-Driven Design.](#41-strategic-level-domain-driven-design)
+      - [4.1.1. EventStorming.](#411-eventstorming)
+        - [4.1.1.1. Candidate Context Discovery.](#4111-candidate-context-discovery)
+        - [4.1.1.2. Domain Message Flows Modeling.](#4112-domain-message-flows-modeling)
+        - [4.1.1.3. Bounded Context Canvases.](#4113-bounded-context-canvases)
+      - [4.1.2. Context Mapping.](#412-context-mapping)
+      - [4.1.3. Software Architecture.](#413-software-architecture)
+        - [4.1.3.1. Software Architecture Context Level Diagrams.](#4131-software-architecture-context-level-diagrams)
+        - [4.1.3.2. Software Architecture Container Level Diagrams.](#4131-software-architecture-context-level-diagrams)
+        - [4.1.3.3. Software Architecture Deploymnet Diagrams.](#4133-software-architecture-deploymnet-diagrams)
     - [4.2. Tactical-Level Domain-Driven Design](#42-tactical-level-domain-driven-design)
       - [4.2.1. Bounded Context: IAM](#421-bounded-context-iam)
         - [4.2.1.1. Domain Layer](#4211-domain-layer)
@@ -190,8 +178,8 @@ En el siguiente cuadro se describen las acciones realizadas y enunciados de conc
 
 | Criterio especifico | Acciones Realizadas| Conclusiones|
 | :-- | :-- | -- |
-| 1. Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | <br>**Estefano Oscar Jaque Peña**<br>TB1: <br>**Diego Alonso Rosado Iporre**<br> TB1: Apliqué herramientas como entrevistas, wireframes y escenarios para identificar oportunidades clave del proyecto. Contribuí al diseño de la solución desde la comprensión del dominio hasta la arquitectura del software. <br>**John Arévalo Meza** <br>TB1: Realicé el registro de entrevistas, empathy mapping, user journey mapping, event storming y bounded context canvases, lo que permitió identificar claramente los bounded contexts, además de una mayor comprensión del dominio. <br>**Sebastián Omar Real Calderón**<br>TB1: Apliqué análisis de entrevistas y modelado de dominios para entender las necesidades reales del proyecto. Mi contribución ayudó a traducir problemas complejos en requisitos claros para la solución de software.| **TB1:** El equipo demostró capacidad para integrar aprendizajes técnicos y metodologías ágiles en el desarrollo del proyecto. A través de la investigación y colaboración, se identificaron oportunidades clave para optimizar procesos mediante tecnología, reforzando la importancia de adaptarse continuamente a los requerimientos del contexto profesional.|
-| 2. Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | TB1:<br> **Estefano Oscar Jaque Peña**<br>TB1: <br>**Diego Alonso Rosado Iporre**<br> TB1: Entendí que el aprendizaje constante es esencial para enfrentar retos cambiantes. Este proyecto fortaleció mi motivación por seguir explorando enfoques modernos en desarrollo de software. <br>**Sebastián Omar Real Calderón**<br>TB1: Reconozco que mantenerme actualizado con metodologías ágiles y técnicas de análisis es clave para desarrollar soluciones efectivas. Este proyecto reforzó mi compromiso con el aprendizaje continuo para abordar desafíos técnicos y de negocio.<br>**John Telesforo Arevalo Meza**<br>TB1: Comprendí que mantenerse a la vanguardía con metodologías y flujos de trabajos es importante, ya que nos permite eliminar posibles retrasos y aplicar conceptos anteriormente sabidos con el fin de mejorar el proyecto. <br>| **TB1:** El equipo evidenció la importancia de la formación continua en el ámbito profesional, aplicando nuevos conocimientos directamente al desarrollo del proyecto. Esta experiencia destacó cómo la adaptabilidad y la mejora constante son esenciales para entregar soluciones de software alineadas con las necesidades reales del mercado. |
+| 1. Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | <br>**Estefano Oscar Jaque Peña**<br>TB1: Al realizar las user stories pude aprender a profundidad la funcionalidad del aplicativo pensar a hacer a futuro , pude conocer mas a los segementos objetivos con las entrevistas y realizando el user persona , ademas con el lean UX procees puede ver las necesidades y beneficios del aplicativo<br>**Diego Alonso Rosado Iporre**<br> TB1: Apliqué herramientas como entrevistas, wireframes y escenarios para identificar oportunidades clave del proyecto. Contribuí al diseño de la solución desde la comprensión del dominio hasta la arquitectura del software. <br>**John Arévalo Meza** <br>TB1: Realicé el registro de entrevistas, empathy mapping, user journey mapping, event storming y bounded context canvases, lo que permitió identificar claramente los bounded contexts, además de una mayor comprensión del dominio. <br>**Sebastián Omar Real Calderón**<br>TB1: Apliqué análisis de entrevistas y modelado de dominios para entender las necesidades reales del proyecto. Mi contribución ayudó a traducir problemas complejos en requisitos claros para la solución de software.| **TB1:** El equipo demostró capacidad para integrar aprendizajes técnicos y metodologías ágiles en el desarrollo del proyecto. A través de la investigación y colaboración, se identificaron oportunidades clave para optimizar procesos mediante tecnología, reforzando la importancia de adaptarse continuamente a los requerimientos del contexto profesional.|
+| 2. Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | TB1:<br> **Estefano Oscar Jaque Peña**<br>TB1:  Al realizar las user stories pude aprender a profundidad la funcionalidad del aplicativo pensar a hacer a futuro , pude conocer mas a los segementos objetivos con las entrevistas y realizando el user persona , ademas con el lean UX procees puede ver las necesidades y beneficios del aplicativo<br>**Diego Alonso Rosado Iporre**<br> TB1: Entendí que el aprendizaje constante es esencial para enfrentar retos cambiantes. Este proyecto fortaleció mi motivación por seguir explorando enfoques modernos en desarrollo de software. <br>**Sebastián Omar Real Calderón**<br>TB1: Reconozco que mantenerme actualizado con metodologías ágiles y técnicas de análisis es clave para desarrollar soluciones efectivas. Este proyecto reforzó mi compromiso con el aprendizaje continuo para abordar desafíos técnicos y de negocio.<br>**John Telesforo Arevalo Meza**<br>TB1: Comprendí que mantenerse a la vanguardía con metodologías y flujos de trabajos es importante, ya que nos permite eliminar posibles retrasos y aplicar conceptos anteriormente sabidos con el fin de mejorar el proyecto. <br>| **TB1:** El equipo evidenció la importancia de la formación continua en el ámbito profesional, aplicando nuevos conocimientos directamente al desarrollo del proyecto. Esta experiencia destacó cómo la adaptabilidad y la mejora constante son esenciales para entregar soluciones de software alineadas con las necesidades reales del mercado. |
 
 ## Capítulo I: Presentación
 
@@ -545,7 +533,7 @@ Estas preguntas están diseñadas para llevar la conversación de manera lógica
 
 ![alt text](assets/images/EntrevistaEstefano.png)
 
-Link de entrevista : https://drive.google.com/file/d/1z7yWYeRh9HBRBOg6GvJrI5mW5n_ghVA9/view?usp=sharing
+Link de entrevista : [https://drive.google.com/file/d/1z7yWYeRh9HBRBOg6GvJrI5mW5n_ghVA9/view?usp=sharing](https://drive.google.com/file/d/1z7yWYeRh9HBRBOg6GvJrI5mW5n_ghVA9/view?usp=sharing)
 
 Inicio: 0:00<br>
 Duracion: 8:48
@@ -562,7 +550,7 @@ Oscar Jaque Huerta, trabajador de 49 años en Backus, compartió su vivencia com
 
 ![Foto de entrevista](assets/images/interviews/Entrevista_3.png)
 
-URL: [Link de entrevista](https://drive.google.com/file/d/19c-xodTnZrWXuZNAd_Uqw-bGU5h_Yy0a/view?usp=drive_link)
+Link de entrevista : [https://drive.google.com/file/d/19c-xodTnZrWXuZNAd_Uqw-bGU5h_Yy0a/view?usp=drive_link](https://drive.google.com/file/d/19c-xodTnZrWXuZNAd_Uqw-bGU5h_Yy0a/view?usp=drive_link)
 
 Inicio: 0:00<br>
 Duracion: 5:28
@@ -583,7 +571,7 @@ Isabel asistente administrativa en Industrias Andinas S.A., compartió su experi
 
 ![Foto de entrevista](./assets/images/interviews/Entrevista_1.png)
 
-URL: [Link de entrevista](https://drive.google.com/file/d/1Z55__pbvuMZ4kC79pfcWfCwCs8alKu8k/view?usp=sharing "Entrevista 1-segmento 2")
+Link de entrevista : [https://drive.google.com/file/d/1Z55__pbvuMZ4kC79pfcWfCwCs8alKu8k/view?usp=sharing](https://drive.google.com/file/d/1Z55__pbvuMZ4kC79pfcWfCwCs8alKu8k/view?usp=sharing)
 
 Inicio: 0:12<br>
 Duracion: 11:45
@@ -600,7 +588,7 @@ Lourdes Huamani, Coordinadora de RSE y Bienestar Laboral en Grupo Horizonte, com
 
 ![Entrevista2](assets/images/interviews/Entrevista_2.png)
 
-URL: [Link de Entrevista](https://drive.google.com/file/d/1sjZi95xLPCam7giprGC7reAFExzH_G5E/view?usp=sharing)
+Link de entrevista : [https://drive.google.com/file/d/1sjZi95xLPCam7giprGC7reAFExzH_G5E/view?usp=sharing](https://drive.google.com/file/d/1sjZi95xLPCam7giprGC7reAFExzH_G5E/view?usp=sharing)
 
 Inicio: 0:05<br>
 Duracion: 7:41
@@ -630,7 +618,7 @@ Las entrevistas con Lourdes Huamani (Grupo Horizonte) y María Pía Tejada (Futu
 
 ![assets/images/userpersona2.png](assets/images/userpersona2.png)
 
-Link: https://app.mural.co/t/estudiando0947/m/estudiando0947/1745390656723/0835c036e3645e7898d5d12592570047f4e910c5?sender=uc4343c08b6b097f4a42e5558 
+ANEXO A
 
 ### 2.3.2. User Task Matrix
 
@@ -828,43 +816,43 @@ EPICS:
 
 ### 3.3. Impact Mapping
 
-![Impact Mapping Scholr](/assets/images/impactmappingscholr.png)
+![assets/images/imsc.png](assets/images/imsc.png)
 
 ### 3.4. Product Backlog
 
 | #Orden | User Story ID | Título                                                  | Descripción                                                                                                 | Story Points <br> (1/2/3/5/8) |
 | ------ | ------------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | :---------------------------: |
-|1| US01|Selección de empresa durante el registro|Como padre/trabajador,quiero subir documentos (credencial laboral, notas de mi hijo) directamente en la app,para evitar trámites presenciales y acelerar mi postulación.| X|
-|2| US02| Validación automática de datos laborales|Como trabajador, quiero que el sistema verifique automáticamente mi código de colaborador con la base de datos de mi empresa, para confirmar mi elegibilidad en 24 horas.|X|
-|3| US03| Notificación de verificación exitosa| Como padre/trabajador,quiero recibir confirmación con un código único al enviar mi postulación,para tener un comprobante digital de mi solicitud.| X|
-|4| US04|Subir documentos de postulación|Como padre/trabajador,quiero subir documentos (credencial laboral, notas de mi hijo) directamente en la app,para evitar trámites presenciales y acelerar mi postulación.| X|
-|5| US05| Guardar postulación como borrador| Como padre/trabajador,quiero guardar una postulación como borrador antes de enviarla,para completar los requisitos más tarde sin perder el progreso.| X|
-|6| US06| Confirmación con código único| Como padre/trabajador,quiero recibir confirmación con un código único al enviar mi postulación,para tener un comprobante digital de mi solicitud.| X|
-|7| US07| Visualizacion de postulaciones| Como padre/trabajador,quiero ver todas mis postulaciones (enviadas, en revisión, aprobadas, rechazadas),para poder gestionarlas desde un solo lugar.| X|
-|8| US08| Notificaciones de cambios de estado| Como padre/trabajador,quiero recibir notificaciones push cuando mi postulación cambie de estado,para actuar rápidamente en caso de requerirse más información.| X|
-|9| US09| Reenvío de postulación rechazada| Como padre/trabajador,quiero reenviar una postulación rechazada (si el plazo lo permite),para corregir errores sin empezar desde cero.|X|
-|10| US10|Listado de postulaciones para coordinador | Como coordinador de bienestar,quiero ver un listado de todas las postulaciones recibidas filtradas por tipo de beca,para priorizar revisiones según urgencia.|X|
-|11| US11| Aprobar/rechazar con comentarios|Como coordinador de bienestar,quiero aprobar/rechazar postulaciones con comentarios personalizados,para mantener informados a los padres/trabajadores.|X|
-|12| US12 | Publicación de nuevas becas| Como coordinador de bienestar,quiero publicar fechas límite y requisitos de nuevas becas en la app,para evitar consultas masivas al departamento de RRHH. | X|
-|13| US13 | Tutoriales en video| Como padre/trabajador,quiero ver tutoriales en video sobre cómo completar una postulación,para evitar errores comunes. | X|
-|14| US14 |Acceso a cartilla de instrucciones | Como padre/trabajador, quiero acceder a una cartilla de instrucciones descargable en PDF, para consultar los pasos de postulación sin conexión a internet.| X|
-|15| US15 | Visualizar información de contacto de soporte | Como padre/trabajador, quiero poder ver el correo electrónico y número telefónico de soporte dentro de la app, para contactar directamente al equipo de Scholr en caso de problemas urgentes. | X |
-|16| US16 | Visualización de información clave | Como visitante, quiero ver una explicación breve de cómo funciona Scholr, para entender rápidamente si cubre mis necesidades.|X|
-|17| US17 |Acceso a recursos demostrativos | Como visitante escéptico, quiero descargar un folleto PDF o ver casos de éxito, para validar la confiabilidad de Scholr.|X |
-|18| US18 | Formulario de contacto para empresas | Como representante de RRHH, quiero enviar una solicitud de información sin registrarme, para evaluar una posible alianza con Scholr.|X|
-|19| US19 |Adaptabilidad móvil | Como usuario móvil, quiero navegar la landing page sin problemas, para acceder a la información desde cualquier dispositivo.| X|
-|20| TS01 | API de Verificación de Código de Colaborador | Como desarrollador, necesito una API REST que valide el código de colaborador con la base de datos de la empresa (Backus). |X|
-|21| TS02 | Sincronización de Documentos con Google Cloud Storage | Como desarrollador, necesito que los documentos subidos se almacenen en Google Cloud Storage con encriptación AES-256. |X |
-|22| TS03 | Notificaciones Push con Firebase Cloud Messaging | Como desarrollador, necesito integrar FCM para enviar notificaciones push cuando una postulación cambia de estado. |X |
-|23| TS04 | Generación de Reportes en Excel para Empresas | Como desarrollador, necesito un endpoint que genere reportes en Excel con postulaciones filtradas por empresa. | X |
-|24| TS05 | Cacheo de Landing Page con Cloudflare | Como desarrollador, necesito configurar Cloudflare para cachear la landing page por 24 horas. |X|
-|25| TS06 | Migración de Datos desde Legacy System | Como desarrollador, necesito un script ETL que migre postulaciones antiguas desde SQL Server a Firestore. |X|
+|1| US01|Selección de empresa durante el registro|Como padre/trabajador,quiero subir documentos (credencial laboral, notas de mi hijo) directamente en la app,para evitar trámites presenciales y acelerar mi postulación.| 2|
+|2| US02| Validación automática de datos laborales|Como trabajador, quiero que el sistema verifique automáticamente mi código de colaborador con la base de datos de mi empresa, para confirmar mi elegibilidad en 24 horas.|3|
+|3| US03| Notificación de verificación exitosa| Como padre/trabajador,quiero recibir confirmación con un código único al enviar mi postulación,para tener un comprobante digital de mi solicitud.| 3|
+|4| US04|Subir documentos de postulación|Como padre/trabajador,quiero subir documentos (credencial laboral, notas de mi hijo) directamente en la app,para evitar trámites presenciales y acelerar mi postulación.| 3|
+|5| US05| Guardar postulación como borrador| Como padre/trabajador,quiero guardar una postulación como borrador antes de enviarla,para completar los requisitos más tarde sin perder el progreso.| 3|
+|6| US06| Confirmación con código único| Como padre/trabajador,quiero recibir confirmación con un código único al enviar mi postulación,para tener un comprobante digital de mi solicitud.| 3|
+|7| US07| Visualizacion de postulaciones| Como padre/trabajador,quiero ver todas mis postulaciones (enviadas, en revisión, aprobadas, rechazadas),para poder gestionarlas desde un solo lugar.|5|
+|8| US08| Notificaciones de cambios de estado| Como padre/trabajador,quiero recibir notificaciones push cuando mi postulación cambie de estado,para actuar rápidamente en caso de requerirse más información.| 5|
+|9| US09| Reenvío de postulación rechazada| Como padre/trabajador,quiero reenviar una postulación rechazada (si el plazo lo permite),para corregir errores sin empezar desde cero.|5|
+|10| US10|Listado de postulaciones para coordinador | Como coordinador de bienestar,quiero ver un listado de todas las postulaciones recibidas filtradas por tipo de beca,para priorizar revisiones según urgencia.|5|
+|11| US11| Aprobar/rechazar con comentarios|Como coordinador de bienestar,quiero aprobar/rechazar postulaciones con comentarios personalizados,para mantener informados a los padres/trabajadores.|3|
+|12| US12 | Publicación de nuevas becas| Como coordinador de bienestar,quiero publicar fechas límite y requisitos de nuevas becas en la app,para evitar consultas masivas al departamento de RRHH. | 5|
+|13| US13 | Tutoriales en video| Como padre/trabajador,quiero ver tutoriales en video sobre cómo completar una postulación,para evitar errores comunes. | 2|
+|14| US14 |Acceso a cartilla de instrucciones | Como padre/trabajador, quiero acceder a una cartilla de instrucciones descargable en PDF, para consultar los pasos de postulación sin conexión a internet.| 3|
+|15| US15 | Visualizar información de contacto de soporte | Como padre/trabajador, quiero poder ver el correo electrónico y número telefónico de soporte dentro de la app, para contactar directamente al equipo de Scholr en caso de problemas urgentes. | 3 |
+|16| US16 | Visualización de información clave | Como visitante, quiero ver una explicación breve de cómo funciona Scholr, para entender rápidamente si cubre mis necesidades.|3|
+|17| US17 |Acceso a recursos demostrativos | Como visitante escéptico, quiero descargar un folleto PDF o ver casos de éxito, para validar la confiabilidad de Scholr.|3|
+|18| US18 | Formulario de contacto para empresas | Como representante de RRHH, quiero enviar una solicitud de información sin registrarme, para evaluar una posible alianza con Scholr.|5|
+|19| US19 |Adaptabilidad móvil | Como usuario móvil, quiero navegar la landing page sin problemas, para acceder a la información desde cualquier dispositivo.| 3|
+|20| TS01 | API de Verificación de Código de Colaborador | Como desarrollador, necesito una API REST que valide el código de colaborador con la base de datos de la empresa (Backus). |5|
+|21| TS02 | Sincronización de Documentos con Google Cloud Storage | Como desarrollador, necesito que los documentos subidos se almacenen en Google Cloud Storage con encriptación AES-256. |5 |
+|22| TS03 | Notificaciones Push con Firebase Cloud Messaging | Como desarrollador, necesito integrar FCM para enviar notificaciones push cuando una postulación cambia de estado. |5|
+|23| TS04 | Generación de Reportes en Excel para Empresas | Como desarrollador, necesito un endpoint que genere reportes en Excel con postulaciones filtradas por empresa. | 5|
+|24| TS05 | Cacheo de Landing Page con Cloudflare | Como desarrollador, necesito configurar Cloudflare para cachear la landing page por 24 horas. |5|
+|25| TS06 | Migración de Datos desde Legacy System | Como desarrollador, necesito un script ETL que migre postulaciones antiguas desde SQL Server a Firestore. |5|
 
 Pivotal Tracker:
 
 ![assets/images/pivotaltracker.png ](assets/images/pivotaltracker.png)
 
-LINK: https://www.pivotaltracker.com/n/projects/2740632  
+ANEXO B
 
 ## Capítulo IV: Product Design
 
@@ -911,6 +899,8 @@ Novena/Décima etapa:
 Segmento administrador de becas:
 
 ![EventStorming-admin](./assets/images/eventstorming-admin.jpg) 
+
+ANEXO C
 
 ### 4.1.1.1. Candidate Context Discovery
 
@@ -972,6 +962,7 @@ Esta visualización permitió entender no solo los puntos de integración entre 
 ![message-flow2](./assets/images/Domain-message-flow-modelling-2.jpg) 
 ![message-flow3](./assets/images/Domain-message-flow-modelling-3.jpg)
 
+ANEXO D  
 
 ### 4.1.1.3. Bounded Context Canvases
 
@@ -987,7 +978,7 @@ Applications:
 
 ![Applications-canvas](./assets/images/applications-canvas.jpg) 
 
-
+ANEXO E  
 ### 4.1.2. Context Mapping
 
 Se identificaron los siguientes bounded contexts en el sistema:
@@ -1006,6 +997,8 @@ Se identificaron los siguientes bounded contexts en el sistema:
 ![Context-final](assets/images/Context_2.png)
 
 Este diseño final refleja la autonomía de contextos y prepara el sistema para evolucionar modularmente.
+
+ANEXO F  
 
 ### 4.1.3. Software Architecture
 
@@ -1069,6 +1062,7 @@ Este diseño final refleja la autonomía de contextos y prepara el sistema para 
 #### 4.2.3.6.1. Bounded Context Domain Layer Class Diagrams
 #### 4.2.3.6.2. Bounded Context Database Design Diagram
 
+
 ## Capítulo V: Solution UI/UX Design
 
 ### 5.1. Product Design
@@ -1107,4 +1101,21 @@ En esta entrega, aplicamos diversas técnicas de análisis y diseño como entrev
 
 ## Bibliografia
 
+- Biblioteca UPC. (2024). _Biblioteca virtual de la Universidad Peruana de Ciencias Aplicadas_. https://biblioteca.upc.edu.pe
+- Miro. (2024). _Miro_. Miro Corporation. https://miro.com
+- Cohn, M. (2006). Historias de usuario: Un enfoque ágil. Pearson Educación.https://www.scrummanager.com/files/scrum_manager_historias_usuario.pdf
+- Pressman, R. S. (2010). Ingeniería de Software: Un enfoque práctico. McGraw-Hill.https://www.javier8a.com/itc/bd1/ld-Ingenieria.de.software.enfoque.practico.7ed.Pressman.PDF
+- The C4 model for visualising software architecture. (2024). https://c4model.com/
+- Structurizr. (2024). https://www.structurizr.com/
+- mURAL (2024). https://www.mural.co/
+
 ## Anexos
+ANEXO A : [https://app.mural.co/t/estudiando0947/m/estudiando0947/1745390656723/0835c036e3645e7898d5d12592570047f4e910c5?sender=uc4343c08b6b097f4a42e5558 ](https://app.mural.co/t/estudiando0947/m/estudiando0947/1745390656723/0835c036e3645e7898d5d12592570047f4e910c5?sender=uc4343c08b6b097f4a42e5558 )
+
+ANEXO B : [https://www.pivotaltracker.com/n/projects/2740632](https://www.pivotaltracker.com/n/projects/2740632)
+
+ANEXO C : [https://miro.com/app/board/uXjVI_MtKqA=/?share_link_id=604688149286](https://miro.com/app/board/uXjVI_MtKqA=/?share_link_id=604688149286)
+
+ANEXO D Y F: [https://miro.com/app/board/uXjVI_S5wR4=/?share_link_id=431433146229](https://miro.com/app/board/uXjVI_S5wR4=/?share_link_id=431433146229)
+
+ANEXO E : [https://miro.com/app/board/uXjVI_R_wiU=/?share_link_id=439952899853](https://miro.com/app/board/uXjVI_R_wiU=/?share_link_id=439952899853)
