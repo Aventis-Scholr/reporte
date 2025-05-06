@@ -1085,7 +1085,49 @@ Este diseño final refleja la autonomía de contextos y prepara el sistema para 
 
 #### 5.1.3. Landing Page UI Design
 ##### 5.1.3.1. Landing Page Wireframe
+
+![Container-diagram](assets/images/landing-page/wireframe-landing-page.png)
+
+<br>
+
+Vista móvil
+
+<br>
+
+![Container-diagram](assets/images/landing-page/wireframe-vista-movil.png)
+
+<br>
+
+Menu hamburguesa
+
+<br>
+
+![Container-diagram](assets/images/landing-page/wireframe-menu.png)
+
+<br>
+
 ##### 5.1.3.2. Landing Page Mock-up
+
+
+![Container-diagram](assets/images/landing-page/mockup.png)
+
+<br>
+
+Vista móvil
+
+<br>
+
+![Container-diagram](assets/images/landing-page/mockup-vista-movil.png)
+
+<br>
+
+Menu hamburguesa
+
+<br>
+
+![Container-diagram](assets/images/landing-page/mockup-menu.png)
+
+<br>
 
 #### 5.1.4. Mobile Applications UX/UI Design
 ##### 5.1.4.1. Mobile Applications Wireframes
