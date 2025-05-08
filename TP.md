@@ -1199,6 +1199,28 @@ Menu hamburguesa
   - ![Rechazo Enviado](/assets/images/wireframes-mobile-app/Rechazo%20Enviado.png)
 
 ##### 5.1.4.2. Mobile Applications Wireflow Diagrams
+
+- User Goal: Registrarse
+  - ![User Goal: Registrarse](/assets/images/wireflows-mobile-application/Registro.png)
+
+- User Goal: Iniciar Sesión
+  - ![User Goal: Iniciar Sesión](/assets/images/wireflows-mobile-application/IniciarSesión.png)
+
+- User Goal: Ver Tutoriales
+  - ![User Goal: Ver Tutoriales](/assets/images/wireflows-mobile-application/VerTutoriales.png)
+
+- User Goal: Crear Postulación
+  - ![User Goal: Crear Postulación](/assets/images/wireflows-mobile-application/CrearPostulación.png)
+
+- User Goal: Editar Postulación Rechazada
+  - ![User Goal: Editar Postulación Rechazada](/assets/images/wireflows-mobile-application/ReenviarPostulacionEditada.png)
+
+- User Goal: Ver Postulación como Administrador
+  - ![User Goal: Ver Postulación como Administrador](/assets/images/wireflows-mobile-application/AdminVerPostulación.png)
+
+- User Goal: Rechazar postulación como Administrador
+  - ![User Goal: Rechazar postulación como Administrador](/assets/images/wireflows-mobile-application/AdminRechazarPostulación.png)
+
 ##### 5.1.4.3. Mobile Applications Mock-ups
 ##### 5.1.4.4. Mobile Applications User Flow Diagrams
 ##### 5.1.4.5. Mobile Applications Prototyping
