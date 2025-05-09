@@ -1067,6 +1067,11 @@ Justificación: La entidad Application representa las postulaciones a becas en e
         <td>Identificador único de la postulación (autogenerado).</td>
     </tr>
     <tr>
+        <td>apoderadoId</td>
+        <td>Long</td>
+        <td>Identificador único del apoderado.</td>
+    </tr>
+    <tr>
         <td>tipoBeca</td>
         <td>TipoBeca (Value Object)</td>
         <td>Tipo de beca a postular.</td>
@@ -1077,9 +1082,9 @@ Justificación: La entidad Application representa las postulaciones a becas en e
         <td>Estado en el que se encuentra la postulación.</td>
     </tr>
     <tr>
-        <td>apoderado</td>
-        <td>Apoderado</td>
-        <td>Relación con el apoderado que realizó la postulación.</td>
+        <td>dataApoderado</td>
+        <td>DataApoderado</td>
+        <td>Información adicional sobre el apoderado.</td>
     </tr>
     <tr>
         <td>postulante</td>
@@ -1154,10 +1159,10 @@ Justificación: La entidad Application representa las postulaciones a becas en e
 
 <table border="1">
     <tr style="text-align: center;">
-        <td colspan="3"><b>Entidad: Apoderado</b></td>
+        <td colspan="3"><b>Aggregate: DataApoderado</b></td>
     </tr>
     <tr>
-        <td colspan="3"><b>Descripción:</b> Representa la entidad de un apoderado, incluyendo su información personal y laboral.</td>
+        <td colspan="3"><b>Descripción:</b> Representa datos extra de un apoderado</td>
     </tr>
     <tr>
         <td><b>Atributo</b></td>
@@ -1166,6 +1171,11 @@ Justificación: La entidad Application representa las postulaciones a becas en e
     </tr>
     <tr>
         <td>id</td>
+        <td>Long</td>
+        <td>Identificador único de la informacion extra del apoderado.</td>
+    </tr>
+    <tr>
+        <td>apoderadoId</td>
         <td>Long</td>
         <td>Identificador único del apoderado.</td>
     </tr>
@@ -1873,6 +1883,77 @@ Justificación: ApplicationController maneja las solicitudes relacionadas con la
     </tr>
 </table>
 
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="2"><b>Controlador: DataApoderadoController</b></td>
+    </tr>
+    <tr>
+        <td colspan="2"><b>Descripcion:</b> Controlador que gestiona las operaciones relacionadas con la información adicional de los apoderados.</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>createDataApoderado(CreateDataApoderadoResource resource)</td>
+        <td>Crea una nueva entrada de información adicional para un apoderado.</td>
+    </tr>
+    <tr>
+        <td>updateDataApoderado(long dataApoderadoId, UpdateDataApoderadoResource resource)</td>
+        <td>Actualiza la información adicional de un apoderado.</td>
+    </tr>
+    <tr>
+        <td>deleteDataApoderado(long dataApoderadoId)</td>
+        <td>Elimina una entrada de información adicional de un apoderado.</td>
+    </tr>
+    <tr>
+        <td>getAllDataApoderados()</td>
+        <td>Recupera una lista de todas las entradas de información adicional de apoderados registradas.</td>
+    </tr>
+    <tr>
+        <td>getDataApoderadoById(long dataApoderadoId)</td>
+        <td>Recupera la información adicional de un apoderado por su ID.</td>
+    </tr>
+    <tr>
+        <td>getDataApoderadosByApoderadoId(long apoderadoId)</td>
+        <td>Recupera todas las entradas de información adicional asociadas a un apoderado específico.</td>
+    </tr>
+    <tr>
+        <td><b>Dependencias</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>DataApoderadoQueryService</td>
+        <td>Servicio para manejar consultas relacionadas con la información adicional de apoderados.</td>
+    </tr>
+    <tr>
+        <td>DataApoderadoCommandService</td>
+        <td>Servicio para manejar comandos relacionados con la información adicional de apoderados.</td>
+    </tr>
+    <tr>
+        <td>CreateDataApoderadoCommandFromResourceAssembler</td>
+        <td>Ensamblador para convertir un recurso de información adicional en un comando.</td>
+    </tr>
+    <tr>
+        <td>DataApoderadoResourceFromEntityAssembler</td>
+        <td>Ensamblador para convertir una entidad de información adicional en un recurso para la API.</td>
+    </tr>
+    <tr>
+        <td>CreateDataApoderadoResource</td>
+        <td>Recurso que representa la solicitud para crear una entrada de información adicional.</td>
+    </tr>
+    <tr>
+        <td>DataApoderadoResource</td>
+        <td>Recurso que representa la respuesta de una entrada de información adicional en la API.</td>
+    </tr>
+    <tr>
+        <td>UpdateDataApoderadoResource</td>
+        <td>Recurso que representa la solicitud para actualizar una entrada de información adicional.</td>
+    </tr>
+</table>
+
 ### 4.2.2.3. Application Layer
 
 Descripción: El Application Layer orquesta las operaciones que deben ejecutarse para cumplir con las necesidades del usuario, coordinando diferentes servicios y repositorios del sistema. Contiene la lógica específica de las acciones que no necesariamente forman parte del dominio principal pero son esenciales para el funcionamiento.
@@ -1987,6 +2068,100 @@ Justificación: En este contexto, los servicios ApplicationCommandService y Appl
     </tr>
 </table>
 
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="2"><b>Servicio: DataApoderadoCommandServiceImpl</b></td>
+    </tr>
+    <tr>
+        <td colspan="2"><b>Descripcion:</b> Implementación de la interfaz DataApoderadoCommandService, encargada de gestionar las operaciones relacionadas con la información adicional de los apoderados.</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>handle(CreateDataApoderadoCommand command)</td>
+        <td>Maneja la creación de una nueva entrada de información adicional para un apoderado.</td>
+    </tr>
+    <tr>
+        <td>handle(UpdateDataApoderadoCommand command)</td>
+        <td>Maneja la actualización de la información adicional de un apoderado.</td>
+    </tr>
+    <tr>
+        <td>deleteDataApoderado(long dataApoderadoId)</td>
+        <td>Elimina una entrada de información adicional de un apoderado por su ID.</td>
+    </tr>
+    <tr>
+        <td><b>Dependencias</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>DataApoderadoRepository</td>
+        <td>Repositorio para manejar la persistencia de la información adicional de los apoderados.</td>
+    </tr>
+    <tr>
+        <td>CreateDataApoderadoCommand</td>
+        <td>Comando que encapsula los datos necesarios para crear una nueva entrada de información adicional.</td>
+    </tr>
+    <tr>
+        <td>UpdateDataApoderadoCommand</td>
+        <td>Comando que encapsula los datos necesarios para actualizar una entrada de información adicional.</td>
+    </tr>
+    <tr>
+        <td>DataApoderado</td>
+        <td>Entidad que representa la información adicional de un apoderado en el dominio.</td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="2"><b>Servicio: DataApoderadoQueryServiceImpl</b></td>
+    </tr>
+    <tr>
+        <td colspan="2"><b>Descripcion:</b> Implementación de la interfaz DataApoderadoQueryService, encargada de manejar las consultas relacionadas con la información adicional de los apoderados.</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>handle(GetDataApoderadoByIdQuery query)</td>
+        <td>Maneja la consulta para obtener la información adicional de un apoderado por su ID.</td>
+    </tr>
+    <tr>
+        <td>handle(GetAllDataApoderadosQuery query)</td>
+        <td>Maneja la consulta para obtener todas las entradas de información adicional de apoderados registradas.</td>
+    </tr>
+    <tr>
+        <td>handle(GetDataApoderadosByApoderadoIdQuery query)</td>
+        <td>Maneja la consulta para obtener todas las entradas de información adicional asociadas a un apoderado específico.</td>
+    </tr>
+    <tr>
+        <td><b>Dependencias</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>DataApoderadoRepository</td>
+        <td>Repositorio para manejar la persistencia de la información adicional de los apoderados.</td>
+    </tr>
+    <tr>
+        <td>GetDataApoderadoByIdQuery</td>
+        <td>Consulta que encapsula el ID de la información adicional que se desea obtener.</td>
+    </tr>
+    <tr>
+        <td>GetAllDataApoderadosQuery</td>
+        <td>Consulta que no requiere parámetros y busca todas las entradas de información adicional.</td>
+    </tr>
+    <tr>
+        <td>GetDataApoderadosByApoderadoIdQuery</td>
+        <td>Consulta que encapsula el ID del apoderado para buscar las entradas de información adicional asociadas.</td>
+    </tr>
+</table>
+
 ### 4.2.2.4. Infrastructure Layer
 
 Descripción: El Infrastructure Layer se encarga de proporcionar acceso a la base de datos, servicios externos y otros detalles técnicos que no forman
@@ -2017,6 +2192,33 @@ interactuar directamente con la base de datos. Este layer asegura que los datos 
     </tr>
 </table>
 
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="2"><b>Repositorio: DataApoderadoRepository</b></td>
+    </tr>
+    <tr>
+        <td colspan="2"><b>Descripcion:</b> Repositorio de acceso a datos para la entidad DataApoderado, utilizando JPA para realizar operaciones de persistencia.</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>findDataApoderadoById(long dataApoderadoId)</td>
+        <td>Busca la información adicional de un apoderado según su ID.</td>
+    </tr>
+    <tr>
+        <td>findAllDataApoderados()</td>
+        <td>Recupera una lista de todas las entradas de información adicional de apoderados registradas.</td>
+    </tr>
+    <tr>
+        <td>findDataApoderadosByApoderadoId(long apoderadoId)</td>
+        <td>Busca todas las entradas de información adicional asociadas a un apoderado específico.</td>
+    </tr>
+</table>
+
 ### 4.2.2.5. Bounded Context Software Architecture Component Level Diagrams
 
 
@@ -2028,6 +2230,10 @@ interactuar directamente con la base de datos. Este layer asegura que los datos 
 ![Container-diagram](assets/images/applications-ddd.png) 
 
 #### 4.2.2.6.2. Bounded Context Database Design Diagram
+
+El diagrama de base de datos para el Bounded Context Applications detalla el esquema relacional que soporta la persistencia del modelo de dominio. La tabla principal applications incluye columnas como id (PK, autoincremental) y campos de auditoría (created_at, updated_at). La tabla data_apoderados contiene id (PK), name, apoderadoId (record), etc.
+
+La relación uno-a-muchos entre data_apoderados y applications nos muestra que la misma data para apoderados puede estar en diferentes postulaciones, al igual que para la relación de postulantes a postulaciones.
 
 ![Container-diagram](assets/images/applications-db-diag.png) 
 
