@@ -1309,13 +1309,215 @@ La relación muchos-a-muchos entre users y roles se implementa mediante una tabl
 
 #### 5.1.1. Style Guidelines
 ##### 5.1.1.1. General Style Guidelines
+La app móvil Scholr ha sido pensada para inspirar confianza, profesionalismo y tranquilidad desde el primer momento. Sabemos que nuestros usuarios —padres, madres y representantes de instituciones privadas— toman decisiones importantes para el futuro de sus hijos, y queremos acompañarlos con una experiencia clara, amigable y segura.
+
+Por eso, apostamos por un diseño visual limpio y moderno, usando como color principal un dorado cálido (#F4C542) que simboliza el éxito, la motivación y las oportunidades. Lo acompañamos con un azul profundo (#2A3D66) que transmite seriedad y confianza, ideal para una app que busca conectar familias con oportunidades educativas reales. Las letras son fáciles de leer, los espacios están bien organizados y todo está pensado para que cada paso —desde la búsqueda hasta la postulación a una beca— sea sencillo y claro.
+
+**Brand Overview**
+
+En Aventis, creamos Scholr con la convicción de que el acceso a una educación de calidad no debería depender de la suerte, sino de las oportunidades adecuadas. Al ver cómo muchas familias en el Perú aún enfrentan barreras para encontrar y postular a becas educativas, decidimos desarrollar una solución que acerque a los apoderados a empresas privadas dispuestas a apoyar el talento joven.
+
+Con Scholr, no solo facilitamos ese encuentro, sino que también ayudamos a las instituciones a gestionar de forma más eficiente todo el proceso de postulación. Queremos que cada familia sienta que tiene en sus manos una herramienta confiable, clara y útil para tomar decisiones importantes sobre el futuro académico de sus hijos.
+
+**Brand Name**
+
+Elegimos el nombre Scholr como una forma moderna de decir “scholar” (estudiante). Esta elección refleja nuestra identidad: una plataforma innovadora, centrada en la educación, pero con un enfoque digital y accesible.
+
+Nuestro logo, en tono dorado, representa la idea de avance, logro y esperanza. Para nosotros, cada beca no es solo un apoyo económico: es una puerta abierta, una historia de superación que empieza con un clic. Con Scholr, queremos ser ese primer paso que acompañe a las familias hacia un futuro más prometedor.
+
+Nuestro logo es un elefante con la trompa hacia arriba, un símbolo universal de buena suerte, sabiduría y fuerza. Lo elegimos porque representa muy bien lo que queremos transmitir con Scholr: confianza, estabilidad y progreso. Así como el elefante cuida de su manada, nosotros queremos acompañar a las familias en un camino lleno de decisiones importantes, brindándoles una herramienta sólida que los ayude a avanzar con seguridad hacia nuevas oportunidades educativas.
+
+<p align="center"><img src="assets/images/Logo-nunito.png"> </p>
+
+**Colores**
+
+En Scholr, hemos seleccionado una paleta de colores que refleja nuestros valores de confianza, profesionalismo y accesibilidad, brindando una experiencia visual clara y armónica para los usuarios. Cada color ha sido elegido cuidadosamente para facilitar la navegación, transmitir seguridad y resaltar las funciones clave de la aplicación.
+
+Colores primarios: Los colores primarios son fundamentales para la identidad visual de la aplicación, destacando elementos cruciales de la interfaz y asegurando que la marca se perciba de manera coherente en todo momento.
+
+<p align="center"><img src="assets/images/main-colors.png"> </p>
+
+Colores secundarios: Los colores secundarios complementan los primarios, ayudando a resaltar ciertos estados y funcionalidades dentro de la aplicación. Estos colores se emplean principalmente en alertas, mensajes de estado y botones secundarios.
+
+<p align="center"><img src="assets/images/second-colors.png"> </p>
+
+**Tipografia**
+
+En Scholr, hemos seleccionado la tipografía Nunito por su equilibrio entre modernidad y legibilidad, lo que permite una experiencia de lectura cómoda y fluida en dispositivos móviles. Nunito es una fuente sans-serif con líneas suaves que transmite confianza, claridad y accesibilidad, alineándose perfectamente con los valores de nuestra plataforma.
+
+<p align="center"><img src="assets/images/tipo.png"> </p>
+
+La tipografía Nunito es utilizada en toda la aplicación, desde los títulos hasta el contenido del cuerpo, garantizando que la lectura sea agradable tanto en pantallas pequeñas como grandes. Su diseño moderno y amigable se adapta a la estética limpia y profesional que buscamos para Scholr, permitiendo que los usuarios se enfoquen en el contenido sin distracciones visuales innecesarias.
 
 #### 5.1.2. Information Architecture
+
+En esta sección, vamos a describir cómo organizamos la información en Scholr para responder a las necesidades de nuestros dos segmentos principales: padres trabajadores y coordinadores de bienestar laboral/RSE. A través de una estructura clara y eficiente, buscamos que tanto los padres como los coordinadores puedan encontrar y gestionar las becas educativas de manera sencilla, rápida y sin complicaciones.
+
 ##### 5.1.2.1. Organization Systems
+
+En esta sección, describimos cómo organizamos la información dentro de Scholr para satisfacer las necesidades de los dos segmentos clave: padres trabajadores y coordinadores de bienestar laboral/RSE. Los sistemas de organización utilizados facilitan la navegación y optimizan la búsqueda de información relevante para cada grupo.
+
+**Segmento: Padres trabajadores**
+
+Jerárquica:
+
+- Lista de becas disponibles: Los padres podrán visualizar todas las becas disponibles para sus hijos, organizadas por categorías como tipo de beca, nivel educativo, y requisitos. Esto les permitirá encontrar de manera rápida y fácil las becas más relevantes para ellos.
+
+- Lista de postulación: Los padres podrán ver su historial de postulaciones y el estado de cada una, facilitando un seguimiento claro y organizado de sus trámites.
+
+Secuencial:
+
+- Proceso de postulación: Este sistema guía a los padres a través de los pasos necesarios para postular a una beca: seleccionar la beca, completar los formularios, cargar los documentos requeridos y enviar la solicitud.
+
+Matricial:
+
+- Calendario de fechas y plazos: Los padres tendrán acceso a un calendario donde se mostrarán los plazos importantes para cada beca, con la opción de añadir recordatorios personalizados.
+
+**Segmento: Coordinadores de bienestar laboral/RSE**
+
+Jerárquica:
+
+- Gestión de becas para empleados: Los coordinadores podrán visualizar las becas disponibles para los empleados, organizadas por tipo de beca, número de aplicaciones y estado actual (aprobada, pendiente, etc.).
+
+- Reporte de impacto: Un sistema jerárquico les permitirá ver estadísticas sobre el uso de las becas, como número de empleados beneficiados, ahorro total y evaluación de la satisfacción.
+
+Secuencial:
+
+- Aprobación de solicitudes: Los coordinadores podrán aprobar o rechazar las postulaciones de los padres, siguiendo un proceso secuencial que incluye la revisión de la documentación y la validación de la elegibilidad.
+
+Matricial:
+
+- Panel de métricas y resultados: Los coordinadores tendrán acceso a un panel donde se presentan los datos clave sobre el programa de becas, como el número de becas otorgadas, las áreas de mayor demanda y la distribución geográfica.
+
+**Funcionalidades comunes a ambos segmentos**
+
+Jerárquica:
+
+- Landing Page: En esta sección, los usuarios podrán acceder a toda la información relevante sobre las becas, con detalles organizados por categorías como tipo de beca, requisitos y plazos. Esto facilitará la navegación tanto a los padres como a los coordinadores.
+
+Matricial:
+
+- Menú de opciones: El menú de la aplicación presentará las distintas funciones disponibles, con un diseño modular que se adapta al tipo de usuario (padre trabajador o coordinador de bienestar). La disposición será simple y flexible para facilitar el acceso a todas las funcionalidades clave.
+
 ##### 5.1.2.2. Labelling Systems
+
+En esta sección presentamos el sistema de etiquetado que define de manera clara y accesible la organización de la información dentro de nuestra aplicación y la landing page. Nuestro objetivo es que cada usuario —ya sea visitante, postulante, empresa o coordinador— pueda navegar intuitivamente, comprendiendo en todo momento dónde se encuentra y qué puede hacer.
+
+**Etiquetado de la Landing Page**
+
+Hemos organizado la landing page en secciones que comunican de forma directa el propósito de la plataforma y facilitan el acceso a sus contenidos clave. Los encabezados son:
+
+- Inicio / Home: Página principal seleccionada por defecto. Aquí mostramos el logo y una frase representativa que resume la esencia de Scholr.
+
+- Sobre nosotros / About Us: Presentamos quiénes somos, nuestra misión, visión y el propósito que nos mueve como equipo.
+
+- Funcionalidades / Services: Sección dividida por tipo de usuario donde explicamos las funcionalidades que ofrece Scholr para cada segmento.
+
+- Contáctanos / Contact Us: Mostramos nuestros canales de comunicación para recibir consultas o solicitudes.
+
+**Etiquetado por tipo de usuario en la aplicación movil**
+
+Reconociendo que diferentes usuarios tienen necesidades distintas, hemos definido etiquetas específicas para cada uno de ellos:
+
+- Para padres y trabajadores:
+
+  - Mis Postulaciones / My Applications: Sección donde pueden revisar el estado de sus solicitudes (en revisión, aprobadas, rechazadas).
+
+  - Subir Documentos / Upload Documents: Funcionalidad que permite cargar credenciales laborales y notas escolares desde la app.
+
+  - Borradores / Drafts: Permite guardar una postulación incompleta para continuarla luego.
+
+  - Notificaciones / Notifications: Envío de alertas push cuando hay cambios de estado en la postulación.
+
+  - Recursos / Resources: Incluye tutoriales en video y cartillas en PDF para guiar el proceso de postulación.
+
+- Para coordinadores de bienestar:
+
+  - Panel de Postulaciones / Applications Dashboard: Visualización general de solicitudes filtrables por tipo de beca o estado.
+
+  - Revisión / Review & Respond: Permite aprobar o rechazar postulaciones incluyendo comentarios personalizados.
+
+  - Becas Disponibles / Scholarships: Publicación de nuevas becas, requisitos y fechas límite desde la aplicación.
+
 ##### 5.1.2.3. SEO Tags and Meta Tags
+
+En esta sección detallamos las etiquetas SEO y Meta Tags que utilizamos para mejorar la visibilidad de Scholr en buscadores y app stores. Esto nos permitirá llegar a más usuarios interesados en acceder a becas escolares a través de una plataforma digital ágil y confiable. Hemos definido títulos, descripciones y palabras clave para cada entorno: landing page, aplicación web y aplicación móvil.
+
+**Para el sitio web estático (Landing Page)**
+
+- Tittle: Scholr - Encuentra la beca que buscas
+
+- Description: Scholr facilita la postulación a becas escolares de trabajadores mediante una plataforma digital integrada con RRHH.
+
+- Keywords: scholarship application, employee benefits, school grants, online scholarship platform, HR integration
+
+- Authors: Aventis team
+
+**Para la aplicación web**
+
+- Tittle: Scholr - Plataforma de Postulación a Becas para Trabajadores
+
+- Description: Scholr te permite gestionar tu postulación a becas de manera digital, eliminando los trámites presenciales y acelerando tu acceso a beneficios educativos.
+
+- Keywords: digital scholarship, HR benefits, employee scholarships, grant management system, scholarship tracking
+
+- Authors: Aventis team
+
+**Para la aplicación móvil**
+
+- Tittle: Scholr - Postula a Becas de Forma Rápida y Fácil
+
+- Description: Scholr te ayuda a encontrar y postular a becas escolares desde tu móvil de manera rápida y sencilla, con integración directa a tu sistema de RRHH.
+
+- Keywords: mobile scholarship app, school grants, employee education benefits, online application, HR-linked scholarship
+
+- Authors: Aventis team
+
 ##### 5.1.2.4. Searching Systems
+
+En esta sección explicamos los sistemas de búsqueda que implementaremos en Scholr, tanto en la landing page como en la aplicación móvil. Nuestro objetivo es facilitar al máximo la experiencia de los usuarios al buscar la información que necesitan sobre becas, requisitos, procesos y seguimiento de postulaciones.
+
+**En el sitio web estático (Landing Page)**
+
+A través de la navegación principal, los visitantes podrán acceder rápidamente a información relevante sobre Scholr: qué ofrecemos, cómo funciona y por qué es una solución útil para padres de familia y colaboradores. Incorporaremos un botón interactivo que permitirá alternar entre los perfiles de “Trabajador” y “Encargado de RSE”, mostrando contenido personalizado según su rol. Además, contaremos con una sección de preguntas frecuentes (FAQ) con búsqueda por palabra clave.
+
+**En la aplicación móvil**
+
+- Perfil: Colaboradores que desean postular a becas para sus hijos
+
+  - Explorar becas: Permitiremos buscar becas disponibles según nivel educativo, institución, ubicación o tipo de beneficio. Este buscador incluirá filtros dinámicos que ayuden a precisar los resultados.
+
+  - Mis postulaciones: En esta sección, los usuarios podrán hacer seguimiento a sus solicitudes. Incorporaremos una barra de búsqueda para ubicar una postulación específica por nombre del menor, institución o estado (pendiente, aprobada, rechazada).
+
+  - Historial de becas: Aquí se podrá buscar entre las becas pasadas postuladas, facilitando la comparación o repetición de procesos en futuras convocatorias.
+
+- Perfil: Empresas que otorgan becas a sus colaboradores
+
+  - Buscar colaboradores: El área de RRHH podrá buscar y revisar las solicitudes de sus empleados por nombre, DNI o estado de la postulación.
+
+  - Gestión de beneficios: Se habilitará una búsqueda filtrada para revisar qué tipo de becas se han otorgado por sede, área o fecha, ayudando a la toma de decisiones y elaboración de reportes.
+
 ##### 5.1.2.5. Navigation Systems
+
+A continuación, presentamos los sistemas de navegación que implementaremos en Scholr para asegurar que nuestros usuarios puedan desplazarse de manera rápida, clara y sin fricciones dentro de la plataforma, ya sea desde la landing page o desde la aplicación móvil.
+
+**En la Landing Page**
+
+Nuestra landing page contará con un menú principal ubicado en la parte superior de la pantalla, con enlaces ancla que dirigirán al usuario directamente a secciones como Inicio, Acerca de Scholr, Beneficios, Para colaboradores, Para empresas, y Contacto. Este menú estará siempre visible mientras el usuario se desplace por la página, lo que permitirá un acceso ágil a la información sin necesidad de hacer scroll manual extensivo. También incluiremos botones destacados en cada bloque que faciliten el contacto o la descarga de la app, según el interés del visitante.
+
+**En la aplicación móvil**
+
+En la app de Scholr, la navegación estará pensada para adaptarse al tipo de usuario (trabajador o encargado de RSE) mediante un bottom navigation bar que permitirá cambiar entre las secciones principales: Inicio, Becas, Postulaciones, Notificaciones y Perfil. El acceso a información será inmediato con un diseño centrado en el usuario, mostrando banners dinámicos y carruseles en la pantalla de inicio que faciliten la exploración de nuevas becas y convocatorias activas. En ciertas pantallas, como la de búsqueda o historial, se implementarán filtros y secciones plegables para organizar mejor la navegación vertical.
+
+**Personalización según rol**
+
+Dependiendo del tipo de usuario que inicie sesión (trabajador o encargado de RSE), el contenido de la navegación variará ligeramente para mostrar funciones específicas:
+
+- A los trabajadores, les mostraremos accesos rápidos a becas, estados de postulación, alertas importantes y beneficios disponibles.
+
+- A las encargados de RSE, les permitiremos gestionar solicitudes, revisar estadísticas y mantener comunicación con sus colaboradores.
+
+Gracias a estos sistemas, aseguramos una navegación fluida, contextualizada y centrada en las necesidades específicas de quienes buscan o gestionan oportunidades de beca en Scholr.
 
 #### 5.1.3. Landing Page UI Design
 ##### 5.1.3.1. Landing Page Wireframe
@@ -1640,3 +1842,6 @@ ANEXO D Y F: [https://miro.com/app/board/uXjVI_S5wR4=/?share_link_id=43143314622
 ANEXO E : [https://miro.com/app/board/uXjVI_R_wiU=/?share_link_id=439952899853](https://miro.com/app/board/uXjVI_R_wiU=/?share_link_id=439952899853)
 
 ANEXO F: [https://lucid.app/lucidchart/a8f4f0b0-3ac8-4eb9-949f-53d55de9cf59/edit?view_items=WgKdBRZRehE_&invitationId=inv_e4354b3b-6041-4a50-b6da-1995114c8abb](https://lucid.app/lucidchart/a8f4f0b0-3ac8-4eb9-949f-53d55de9cf59/edit?view_items=WgKdBRZRehE_&invitationId=inv_e4354b3b-6041-4a50-b6da-1995114c8abb)
+
+Style Guidelines: https://www.figma.com/design/vKwCm8pF30AgFNQorLOMnf/Style-Guide-for-Mobile-App-design?node-id=1-542&t=lGJGdO2KcM6LceWm-1
+
