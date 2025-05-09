@@ -1567,7 +1567,102 @@ Menu hamburguesa
 
 #### 5.1.4. Mobile Applications UX/UI Design
 ##### 5.1.4.1. Mobile Applications Wireframes
+
+###### Vista de colaborador
+---
+
+- Login
+  - ![Login](/assets/images/wireframes-mobile-app/Login.png)
+
+- Registro
+  - ![Registro](/assets/images/wireframes-mobile-app/Register.png)
+
+- Confirmación de Registro
+  - ![Confirmación de Registro](/assets/images/wireframes-mobile-app/Register%20Confirm.png)
+
+- Selección de Compañía
+  - ![Selección de compañía](/assets/images/wireframes-mobile-app/Company%20Selection.png)
+
+- Drawer
+  - ![Drawer](//assets/images/wireframes-mobile-app/Drawer.png)
+
+- Bandeja Vacía
+  - ![Bandeja Vacía](/assets/images/wireframes-mobile-app/Bandeja%20Vacía.png)
+
+- Bandeja con Postulación
+  - ![Bandeja con Postulación](/assets/images/wireframes-mobile-app/Bandeja%20con%20Postulación%20En%20Espera.png)
+
+- Mensaje de Administrador
+  - ![Mensaje de Administrador](/assets/images/wireframes-mobile-app/Mensaje%20del%20Administrador.png)
+
+- Tutorial
+  - ![Tutorial](/assets/images/wireframes-mobile-app/Tutorial.png)
+
+- Postulación
+  - ![Postulación](/assets/images/wireframes-mobile-app/Postulación.png)
+
+- Formulario datos del Colaborador
+  - ![Formulario Colaborador](/assets/images/wireframes-mobile-app/Datos%20del%20colaborador.png)
+
+- Lista de Postulantes Vacía
+  - ![Lista de Potulantes](/assets/images/wireframes-mobile-app/Lista%20de%20Postulantes%20Vacía.png)
+
+- Formulario datos del Postulante
+  - ![Formulario Colaborador](/assets/images/wireframes-mobile-app/Datos%20del%20postulante.png)
+
+- Formulario Editar Postulante
+  - ![Formulario Editar Postulante](/assets/images/wireframes-mobile-app/Editar%20Postulante.png)
+
+###### Vista de Administrador
+---
+
+- Drawer Administrador
+  - ![Drawer Administrador](/assets/images/wireframes-mobile-app/Drawer%20Administrador.png)
+
+- Bandeja Administrador
+  - ![Bandeja Administrador](/assets/images/wireframes-mobile-app/Bandeja%20Administrador.png)
+
+- Vista de Beca Administrador
+  - ![Vista de Beca Administrador](/assets/images/wireframes-mobile-app/Vista%20de%20Beca.png)
+
+- Vista de Colaborador Administrador
+  - ![Vista de Colaborador Administrador](/assets/images/wireframes-mobile-app/Vista%20de%20Colaborador.png)
+
+- Lista de Postulantes de Colaborador Administrador
+  - ![Lista de Postulantes de Colaborador Administrador](/assets/images/wireframes-mobile-app/Lista%20de%20Postulantes.png)
+
+- Vista de Postulante Administrador
+  - ![Vista de Postulante Administrador](/assets/images/wireframes-mobile-app/Vista%20de%20Postulante.png)
+
+- Rechazo de Solicitud
+  - ![Rechazo de Solicitud](/assets/images/wireframes-mobile-app/Rechazo.png)
+
+- Rechazo Enviado
+  - ![Rechazo Enviado](/assets/images/wireframes-mobile-app/Rechazo%20Enviado.png)
+
 ##### 5.1.4.2. Mobile Applications Wireflow Diagrams
+
+- User Goal: Registrarse
+  - ![User Goal: Registrarse](/assets/images/wireflows-mobile-application/Registro.png)
+
+- User Goal: Iniciar Sesión
+  - ![User Goal: Iniciar Sesión](/assets/images/wireflows-mobile-application/IniciarSesión.png)
+
+- User Goal: Ver Tutoriales
+  - ![User Goal: Ver Tutoriales](/assets/images/wireflows-mobile-application/VerTutoriales.png)
+
+- User Goal: Crear Postulación
+  - ![User Goal: Crear Postulación](/assets/images/wireflows-mobile-application/CrearPostulación.png)
+
+- User Goal: Editar Postulación Rechazada
+  - ![User Goal: Editar Postulación Rechazada](/assets/images/wireflows-mobile-application/ReenviarPostulacionEditada.png)
+
+- User Goal: Ver Postulación como Administrador
+  - ![User Goal: Ver Postulación como Administrador](/assets/images/wireflows-mobile-application/AdminVerPostulación.png)
+
+- User Goal: Rechazar postulación como Administrador
+  - ![User Goal: Rechazar postulación como Administrador](/assets/images/wireflows-mobile-application/AdminRechazarPostulación.png)
+
 ##### 5.1.4.3. Mobile Applications Mock-ups
 ##### 5.1.4.4. Mobile Applications User Flow Diagrams
 ##### 5.1.4.5. Mobile Applications Prototyping
