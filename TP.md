@@ -2029,6 +2029,8 @@ interactuar directamente con la base de datos. Este layer asegura que los datos 
 
 #### 4.2.2.6.2. Bounded Context Database Design Diagram
 
+![Container-diagram](assets/images/applications-db-diag.png) 
+
 ## 4.2.3. Bounded Context: Management
 ### 4.2.3.1. Domain Layer
 ### 4.2.3.2. Interface Layer
