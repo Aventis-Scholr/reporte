@@ -1028,20 +1028,260 @@ ANEXO F
 
 **Componente de autenticación:**
 
-![Component-IAM](assets/images/structurizr-ComponentesIAM.png)
+![alt text](assets/images/structIAM.png) 
 
 ### 4.2. Tactical-Level Domain-Driven Design
 
-## 4.2.1. Bounded Context: IAM
+## 4.2.1. Bounded Context: IAM  
 ### 4.2.1.1. Domain Layer
-### 4.2.1.2. Interface Layer
-### 4.2.1.3. Application Layer
-### 4.2.1.4. Infrastructure Layer
-### 4.2.1.5. Bounded Context Software Architecture Component Level Diagrams
-### 4.2.1.6. Bounded Context Software Architecture Code Level Diagrams
-#### 4.2.1.6.1. Bounded Context Domain Layer Class Diagrams
-#### 4.2.1.6.2. Bounded Context Database Design Diagram
+La capa de dominio constituye el corazón de la aplicación, ya que en ella se encuentran las reglas y modelos fundamentales que determinan la lógica del negocio. En este contexto, el Aggregate "User" actúa como la entidad clave que representa a los usuarios del sistema, abarcando tanto sus atributos como sus funciones. Esta capa garantiza que los conceptos empresariales y sus relaciones estén adecuadamente representados y encapsulados.
 
+Objetivo: Representar las entidades del dominio, incorporando tanto sus características como sus acciones, para reflejar con precisión los elementos clave de la aplicación, como usuarios, productos, operaciones comerciales, entre otros.
+
+Este enfoque mantiene la esencia del texto original pero con un estilo y estructura diferentes, evitando así problemas de similitud textual. 
+
+* Aggregate: User  
+**Descripción:**  El agregado "Usuario" actúa como la raíz del modelo, encapsulando los datos esenciales de la cuenta y su rol dentro del sistema. Su representación en la base de datos se realiza mediante la tabla users, asegurando la persistencia de esta entidad clave.
+
+|Atributo|Tipo|Descripción|
+|:-|:-|:-|
+|id|Long|Identificador único del usuario (autogenerado).|
+|username|String|Nombre de usuario único del sistema.|
+|password|String|Contraseña del usuario.|
+|roles|Set<Role>|Conjunto de roles asociados al usuario.|
+|proofingEntrepreneure|String|Prueba o evidencia del usuario como emprendedor (almacenada como texto).|
+|createdAt|Date|Fecha de creación del usuario (heredado de la clase base).|
+|updatedAt|Date|Fecha de la última actualización del usuario (heredado de la clase base).|
+
+|Método|Descripción|
+|:-|:-|
+|addRoles(List< Role >roles)|Añade una lista de role para el usuario , retorna el usuario con su rol añadido|
+|getAuthorities()|retorna el conjunto de roles (roles) del usuario, que ya implementan la interfaz GrantedAuthority. Esto permite que Spring Security utilice esta información para realizar la autorización de acceso en la aplicación.|
+|isAccountNonExpired()| Indica si la cuenta del usuario no ha expirado. Devuelve true si la cuenta sigue siendo válida.|
+|isAccountNonLocked()| Indica si la cuenta del usuario no está bloqueada. Devuelve true si la cuenta está desbloqueada.|
+|isCredentialsNonExpired()| Indica si las credenciales del usuario (como la contraseña) no han expirado. Devuelve true si las credenciales son válidas.|
+|isEnabled()| Indica si la cuenta del usuario está habilitada. Devuelve true si la cuenta está activa.|
+|getId()|Retorna el id del usuario.||
+|getUsername()| Devuelve el nombre de usuario del usuario (valor incrustado)|
+|getEmail()| Devuelve el correo electrónico del usuario (valor incrustado)|
+|getPassword()| Devuelve la contraseña del usuario (valor incrustado)|
+
+* Value Object: EmailAddress  
+
+**Descripción:**  Representa una dirección de correo electrónico válida como un objeto de valor embebido.||
+
+|Atributo|Tipo|Descripción|
+|:-|:-|:-|
+|email|String|Dirección de correo electrónico validada (no en blanco, máximo 50 caracteres, formato válido de correo).|
+|Método|Descripción||
+|EmailAddress(String email)|Constructor que recibe un correo electrónico y lo valida según las restricciones.||
+|EmailAddress()|Constructor por defecto que inicializa con null .||
+
+* Value Object: Roles  
+
+Descripción : Define un conjunto fijo de constantes relacionadas con los roles de usuario en el sistema. En este caso, los roles definidos son ROLE_APODERADO,ROLE_ADMIN
+
+* Entity: Role   
+**Descripción:** La entidad "Role" representa el rol de un usuario dentro del sistema. Define los permisos y responsabilidades asociados a un usuario. Su representación en la base de datos se realiza mediante la tabla `roles`.
+
+|Atributo|Tipo|Descripción|
+|:-|:-|:-|
+|id|Long|Identificador único del rol (autogenerado).|
+|name|Roles|Nombre del rol, representado como un valor enumerado (enum).|
+
+|Método|Descripción|
+|:-|:-|
+|getStringName()|Devuelve el nombre del rol como una cadena de texto.|
+|getDefaultRole()|Devuelve el rol predeterminado del sistema (`ROLE_APODERADO`).|
+|toRoleFromName(String name)|Convierte un nombre de rol (cadena) en una instancia de la entidad `Role`.|
+|validateRoleSet(List< Role > roles)|Valida un conjunto de roles. Si el conjunto está vacío o es nulo, devuelve el rol predeterminado.|
+|getAuthority()|Devuelve el nombre del rol como una cadena, implementando la interfaz `GrantedAuthority` para integrarse con Spring Security.|
+
+### 4.2.1.2. Interface Layer
+Esta capa funciona como la puerta de entrada que facilita la comunicación entre los usuarios y los diferentes servicios del sistema. Aquí, los controladores (Controllers) juegan un papel fundamental, ya que se encargan de recibir las peticiones, procesarlas y generar las respuestas correspondientes. Por ejemplo, los controladores dedicados a la autenticación y a la gestión de usuarios son los responsables de manejar todo lo relacionado con el inicio de sesión y el acceso a la información de los perfiles. Su principal objetivo es proporcionar endpoints (APIs) que permitan a los usuarios o sistemas externos conectarse con la lógica del negocio, sin embargo, es importante destacar que esta capa no implementa reglas de negocio directamente, sino que su función principal es coordinar y dirigir las solicitudes hacia los servicios correspondientes o hacia la capa de dominio para su procesamiento.  
+
+- Controlador:  AuthenticationController
+
+**Descripción:** Controlador que maneja los endpoints relacionados con la autenticación de usuarios.
+
+|Método|Ruta|Descripción|
+|:-|:-|:-|
+|signIn|POST /api/v1/authentication/sign-in|Maneja la solicitud de inicio de sesión. Recibe un objeto `SignInResource` del cuerpo de la solicitud, lo convierte en un comando y llama al servicio de comandos para autenticar al usuario. Si la autenticación es exitosa, devuelve un recurso de usuario autenticado. Si falla, retorna un error 404.|
+|signUp|POST /api/v1/authentication/sign-up|Maneja la solicitud de registro de nuevos usuarios. Recibe un objeto `SignUpResource`, lo convierte en un comando y llama al servicio de comandos para registrar al usuario. Si el registro es exitoso, devuelve un recurso de usuario creado. Si hay un error, retorna un error 400.|
+
+|Dependencias|Descripción|
+|:-|:-|
+|UserCommandService|Servicio encargado de manejar los comandos relacionados con la creación y autenticación de usuarios.|
+|SignInCommandFromResourceAssembler|Utilidad para convertir el recurso de inicio de sesión en un comando.|
+|SignUpCommandFromResourceAssembler|Utilidad para convertir el recurso de registro en un comando.|
+|AuthenticatedUserResourceFromEntityAssembler|Utilidad para convertir el usuario autenticado en un recurso.|
+|UserResourceFromEntityAssembler|Utilidad para convertir el usuario registrado en un recurso.|
+
+- Controlador:  RolesController
+
+**Descripción:** Controlador que maneja los endpoints relacionados con la gestión de roles.
+
+|Método|Ruta|Descripción|
+|:-|:-|:-|
+|getAllRoles|GET /ap/v1/roles|Maneja la solicitud para obtener todos los roles. Llama al servicio de consultas, obtiene la lista de roles y los convierte en recursos para la respuesta. Devuelve una lista de recursos de roles.|
+
+|Dependencias|Descripción|
+|:-|:-|
+|RoleQueryService|Servicio encargado de manejar las consultas relacionadas con roles.|
+|GetAllRolesQuery|Consulta que se utiliza para obtener todos los roles.|
+|RoleResourceFromEntityAssembler|Utilidad para convertir las entidades de roles en recursos que se envían en la respuesta.|
+
+- Controlador:  UsersController
+
+**Descripción:** Controlador que maneja los endpoints relacionados con la gestión de usuarios.
+
+|Método|Ruta|Descripción|
+|:-|:-|:-|
+|getAllUsers|GET /api/v1/users|Maneja la solicitud para obtener todos los usuarios. Llama al servicio de consultas, obtiene la lista de usuarios y la convierte en recursos para la respuesta. Devuelve una lista de recursos de usuarios.|
+|getUserById|GET /api/v1/users/{userId}|Maneja la solicitud para obtener un usuario específico por su ID. Llama al servicio de consultas con el ID proporcionado. Si el usuario existe, lo convierte en un recurso y lo devuelve; si no, retorna un error 404.|
+|updateProofingEntrepreneure|PUT /api/v1/users/{userId}/update-proofing|Maneja la solicitud para actualizar el estado de verificación de un emprendedor. Recibe un objeto `UpdateProofingEntrepreneureResource` del cuerpo de la solicitud, lo convierte en un comando y llama al servicio de comandos para actualizar el estado. Devuelve un mensaje de éxito si la operación es exitosa.|
+
+|Dependencias|Descripción|
+|:-|:-|
+|UserQueryService|Servicio encargado de manejar las consultas relacionadas con usuarios.|
+|UserCommandService|Servicio encargado de manejar los comandos relacionados con la gestión de usuarios.|
+|GetAllUsersQuery|Consulta que se utiliza para obtener todos los usuarios.|
+|GetUserByIdQuery|Consulta que se utiliza para obtener un usuario específico por su ID.|
+|UpdateProofingEntrepreneureCommandFromResourceAssembler|Utilidad para convertir el recurso de actualización de verificación en un comando.|
+|UserResourceFromEntityAssembler|Utilidad para convertir las entidades de usuario en recursos que se envían en la respuesta.|
+
+### 4.2.1.3. Application Layer
+La capa de aplicación se encarga de organizar las operaciones del negocio y manejar la lógica que regula el intercambio de información entre las capas de dominio e infraestructura. En este nivel se encuentran los servicios que administran tanto las acciones (comandos) como las consultas vinculadas a los usuarios, integrando las normas de negocio asociadas a estos flujos. Su objetivo principal es ofrecer los servicios que materializan la lógica operativa del negocio, coordinando la comunicación entre el repositorio (capa de infraestructura) y las entidades del dominio. En esta capa también se llevan a cabo verificaciones de negocio y procesos complejos antes de cualquier interacción con las demás capas del sistema.  
+
+* Servicio:UserCommandServiceImpl
+**Descripción:** Implementación del servicio de comandos para la gestión de usuarios, incluyendo registro, inicio de sesión y actualización del estado de verificación de emprendedores.||
+
+|Método|Descripción|
+|:-|:-|
+|handle(SignUpCommand)|Maneja el comando de registro de un nuevo usuario. Verifica la unicidad del nombre de usuario. Si todo es válido, crea un nuevo usuario, lo guarda en el repositorio y devuelve el usuario creado.||
+|handle(SignInCommand)|Maneja el comando de inicio de sesión. Busca al usuario por nombre de usuario. Verifica que el usuario existe y que la contraseña coincide. Si es válido, genera un token de autenticación y lo devuelve junto con el usuario.||
+|updateProofingEntrepreneure(UpdateProofingEntrepreneureCommand)|Actualiza el estado de verificación de un emprendedor. Verifica que el usuario tenga el rol adecuado y actualiza el estado en el repositorio.||
+
+|Dependencias|Descripción|
+|:-|:-|
+|UserRepository|Repositorio que maneja las operaciones de persistencia relacionadas con usuarios.||
+|HashingService|Servicio encargado de codificar y verificar contraseñas de usuarios.||
+|TokenService|Servicio que genera tokens de autenticación para usuarios.||
+|RoleRepository|Repositorio que maneja las operaciones de persistencia relacionadas con roles.||
+|User|Agregado que representa al usuario en el sistema.||
+|SignUpCommand|Comando que encapsula la información necesaria para registrar un nuevo usuario.||
+|SignInCommand|Comando que encapsula la información necesaria para iniciar sesión con un usuario.||
+|UpdateProofingEntrepreneureCommand|Comando que encapsula la información necesaria para actualizar el estado de verificación de un emprendedor.||
+
+
+* Servicio:UserQueryServiceImpl
+
+**Descripción:** Implementación del servicio de consultas para la gestión de usuarios, permitiendo obtener información sobre usuarios registrados.||
+
+|Método|Descripción|
+|:-|:-|
+|handle(GetUserByUsernameQuery)|Maneja la consulta para obtener un usuario por su nombre de usuario. Devuelve un `Optional<User>` que puede estar vacío si no se encuentra el usuario.||
+|handle(GetUserByIdQuery)|Maneja la consulta para obtener un usuario por su ID. Devuelve un `Optional<User>` que puede estar vacío si no se encuentra el usuario.||
+|handle(GetAllUsersQuery)|Maneja la consulta para obtener todos los usuarios registrados en el sistema. Devuelve una lista de objetos `User`.||
+
+|Dependencias|Descripción|
+|:-|:-|
+|UserRepository|Repositorio que maneja las operaciones de persistencia relacionadas con usuarios.||
+|User|Agregado que representa al usuario en el sistema.||
+|GetUserByUsernameQuery|Consulta que encapsula la información necesaria para buscar un usuario por su nombre de usuario.||
+|GetUserByIdQuery|Consulta que encapsula la información necesaria para buscar un usuario por su ID.||
+|GetAllUsersQuery|Consulta que encapsula la información necesaria para obtener todos los usuarios registrados.||
+
+
+* Servicio: RoleCommandServiceImpl
+
+**Descripción:** Implementación del servicio de comandos para la gestión de roles, incluyendo la creación de roles iniciales si no existen.||
+
+|Método|Descripción|
+|:-|:-|
+|handle(SeedRolesCommand)|Maneja el comando para inicializar los roles en el sistema. Verifica si los roles ya existen en el repositorio y, si no, los crea y los guarda.||
+
+|Dependencias|Descripción|
+|:-|:-|
+|RoleRepository|Repositorio que maneja las operaciones de persistencia relacionadas con roles.||
+|Role|Entidad que representa un rol en el sistema.||
+|SeedRolesCommand|Comando que encapsula la información necesaria para inicializar los roles en el sistema.||
+
+
+* Servicio: RoleQueryServiceImpl
+
+**Descripción:** Implementación del servicio de consultas para la gestión de roles, permitiendo obtener información sobre los roles registrados.||
+
+|Método|Descripción|
+|:-|:-|
+|handle(GetAllRolesQuery)|Maneja la consulta para obtener todos los roles registrados en el sistema. Devuelve una lista de objetos `Role`.||
+|handle(GetRoleByNameQuery)|Maneja la consulta para obtener un rol por su nombre. Devuelve un `Optional<Role>` que puede estar vacío si no se encuentra el rol.||
+
+|Dependencias|Descripción|
+|:-|:-|
+|RoleRepository|Repositorio que maneja las operaciones de persistencia relacionadas con roles.||
+|Role|Entidad que representa un rol en el sistema.||
+|GetAllRolesQuery|Consulta que encapsula la información necesaria para obtener todos los roles registrados.||
+|GetRoleByNameQuery|Consulta que encapsula la información necesaria para buscar un rol por su nombre.||  
+
+### 4.2.1.4. Infrastructure Layer
+La capa de infraestructura gestiona la comunicación con sistemas externos, incluyendo bases de datos, servicios web y otros recursos ajenos al núcleo del negocio. En este contexto, el UserRepository se encarga específicamente de almacenar y recuperar información de usuarios, ofreciendo funcionalidades para verificar su existencia y realizar búsquedas en la base de datos. Su propósito principal es facilitar el acceso a los datos externos y asegurar que el sistema pueda interactuar con ellos de manera óptima. Esta capa alberga los componentes repositorio, que son los responsables de mantener la persistencia de las entidades definidas en el dominio. 
+
+* Repositorio: UserRepository
+**Descripción:** Repositorio que maneja las operaciones de persistencia relacionadas con los usuarios en la base de datos.
+
+|Método|Descripción|
+|:-|:-|
+|findByUsername(String username)|Busca un usuario en la base de datos utilizando su nombre de usuario. Devuelve un `Optional<User>`.|
+|existsByUsername(String username)|Verifica si un usuario con el nombre de usuario especificado ya existe en la base de datos. Devuelve un `boolean`.|
+|findById(Long id)|Busca un usuario en la base de datos utilizando su ID. Devuelve un `Optional<User>`.|
+|findAll()|Devuelve una lista de todos los usuarios almacenados en la base de datos.|
+|hasEntrepreneurRole(Long userId)|Verifica si un usuario tiene el rol de emprendedor (basado en `role_id = 3`). Devuelve un `boolean`.|
+
+|Dependencias|Descripción|
+|:-|:-|
+|User|Clase que representa al usuario en el sistema.||
+
+* Repositorio: RoleRepository
+
+**Descripción:** Repositorio que maneja las operaciones de persistencia relacionadas con los roles en la base de datos.
+
+|Método|Descripción|
+|:-|:-|
+|findByName(Roles name)|Busca un rol en la base de datos utilizando su nombre. Devuelve un `Optional<Role>`.|
+|existsByName(Roles name)|Verifica si un rol con el nombre especificado ya existe en la base de datos. Devuelve un `boolean`.|
+|findById(Long id)|Busca un rol en la base de datos utilizando su ID. Devuelve un `Optional<Role>`.|
+|findAll()|Devuelve una lista de todos los roles almacenados en la base de datos.|
+
+|Dependencias|Descripción|
+|:-|:-|
+|Role|Clase que representa un rol en el sistema.||
+|Roles|Valor de objeto que encapsula el nombre del rol.||
+
+### 4.2.1.5. Bounded Context Software Architecture Component Level Diagrams
+El diagrama representa una arquitectura monolítica de una aplicación API llamada "Ayni". La aplicación está dividida en componentes que interactúan entre sí: una SPA que realiza llamadas API a controladores para gestionar autenticación y obtener datos de usuarios. Los controladores, como el Auth Controller y Users Controller, delegan las operaciones de comandos y consultas a servicios como UserCommandService y UserQueryService, que interactúan con el UserRepository. El repositorio gestiona el acceso a la base de datos MySQL, encargada de almacenar los datos de los usuarios.   
+
+![alt text](assets/images/structIAM.png) 
+
+### 4.2.1.6. Bounded Context Software Architecture Code Level Diagrams  
+
+#### 4.2.1.6.1. Bounded Context Domain Layer Class Diagrams  
+El diagrama de clases del Domain Layer para el Bounded Context IAM representa la estructura central del modelo de dominio, mostrando las entidades, objetos de valor, enumeraciones y sus relaciones con un alto nivel de detalle. En este diagrama, la clase principal es User (Aggregate Root), que contiene atributos como id, username, password (todos privados) y métodos públicos como addRoles() y getAuthorities(). La relación con la entidad Role (1:N) se representa con multiplicidad (1..* en User y 1 en Role), calificada por el atributo roles (Set<Role>).
+
+El objeto de valor EmailAddress se muestra como una clase embebida (embedded) dentro de User, con su atributo privado email y constructores públicos. La enumeración Roles (ROLE_ADMIN, ROLE_APODERADO) se asocia con la entidad Role a través del atributo name. Cada clase incluye notación UML para scope (- private, + public), tipos de retorno y parámetros en métodos (ej: +addRoles(roles: List<Role>): User). Las interfaces implementadas (como UserDetails en User) se representan con líneas discontinuas y el estereotipo «implement».
+
+![alt text](assets/images/diagramclassIAM.png) 
+
+![alt text](assets/images/classIAM.png) 
+
+ANEXO F
+#### 4.2.1.6.2. Bounded Context Database Design Diagram  
+El diagrama de base de datos para el Bounded Context IAM detalla el esquema relacional que soporta la persistencia del modelo de dominio. La tabla principal users incluye columnas como id (PK, autoincremental), username (VARCHAR, UNIQUE), password (VARCHAR), proofing_entrepreneure (TEXT) y campos de auditoría (created_at, updated_at). La tabla roles contiene id (PK) y name (ENUM o VARCHAR con constraint CHECK para los valores permitidos).
+
+La relación muchos-a-muchos entre users y roles se implementa mediante una tabla de unión user_roles con las foreign keys user_id (FK a users.id) y role_id (FK a roles.id), ambas formando una PK compuesta. Se incluyen constraints como NOT NULL en campos obligatorios (ej: username) e índices únicos. Para el objeto de valor EmailAddress, se añade la columna email en users con constraints de formato (VALIDATE_EMAIL) y longitud máxima (50 caracteres). Las flechas identifican las relaciones (crow’s foot notation), destacando la cardinalidad (1:N entre users y user_roles). 
+
+![alt text](assets/images/bddiagram.png)
+ 
 ## 4.2.2. Bounded Context: Application
 ### 4.2.2.1. Domain Layer
 ### 4.2.2.2. Interface Layer
@@ -1130,12 +1370,249 @@ Menu hamburguesa
 ##### 5.1.4.4. Mobile Applications User Flow Diagrams
 ##### 5.1.4.5. Mobile Applications Prototyping
 
-## Capítulo VI: Product Implementation, Validation & Deployment
+## Capítulo VI: Product Implementation, Validation & Deployment  
+### 6.1. Software Configuration Management  
+La gestión de la configuración del software es fundamental para nuestro trabajo, ya que nos ayuda a controlar de manera exacta los componentes de nuestro proyecto, como el código fuente, los documentos de diseño y los recursos digitales. De esta manera, aseguramos que todos los miembros del equipo utilicen la misma versión de los archivos, lo que facilita la cooperación entre desarrolladores, diseñadores y otros profesionales involucrados.
 
-### 6.1. Software Configuration Management
 #### 6.1.1. Software Development Environment Configuration
-#### 6.1.2. Source Code Management
+
+  * ### Project Management
+    * ### Meet
+    Una herramienta de videoconferencias que posibilita la comunicación en tiempo real del grupo para reuniones de coordinación.
+  
+    Imagen de evidencia de uso
+  
+    ![alt text](assets/images/Meet.png)
+  
+  * ### Requirement Management
+    * ### Structurizr
+    Se trata de una suite de herramientas que posibilita la creación colaborativa de modelos C4 para representar de forma gráfica nuestros productos.
+    
+    Imagen de evidencia de uso
+  
+    ![alt text](assets/images/struct.png)
+  
+  * ### Product UX/UI Design
+    * ### Figma
+    Herramienta visual que facilita la creación de wireframes y mockups.
+  
+    Imagen de evidencia de uso
+  
+    ![alt text](assets/images/figmaaa.jpg)
+  
+  * ### Software Development
+    * ### HTML5
+    Lenguaje de etiquetado orientado a crear páginas web.
+  
+    Imagen de evidencia de uso
+  
+    ![alt text](assets/images/htmlll.jpg)
+  
+    * ### CSS
+    Lenguaje de diseño gráfico utilizado para dar formato al código escrito en HTML.
+  
+    Imagen de evidencia de uso
+  
+    ![alt text](assets/images/cssss.jpg)
+  
+    * ### Javascript
+    Lenguaje de programación orientado a objetos dinámico que utilizamos para implementar funcionalidades en un documento HTML.
+  
+    Imagen de evidencia de uso
+  
+    ![alt text](assets/images/jsss.jpg)
+  
+  * ### Software Documentation
+    * ### Github
+    Plataforma utilizada para el alojamiento de versiones del código fuente de un proyecto. Es una herramienta ampliamente popular en el trabajo colaborativo de programadores.  
+
+    ![alt text](assets/images/githubbb.png)
+  
+  * ### Software Documentation
+    * ### Github Pages
+    Una plataforma que posibilita la realización de despliegues simples directamente desde un repositorio de GitHub.  
+
+    ![alt text](assets/images/githubpagess.png)
+
+#### 6.1.2. Source Code Management  
+
+* ### **Gitflow Implementation:**
+Implementamos el flujo de trabajo gitflow para el control de versiones con branches(ramas) para trabajar paralelamente.
+
+![alt text](assets/images/gitflowww.png)  
+
+### **Master o Main branch**
+La rama principal de desarrollo del proyecto es la Master branch. En esta rama reside el código que actualmente se encuentra en producción.
+#### Notación: master o main
+
+### **Conventional Commits**
+"Conventional Commits" es una convención para estructurar los mensajes de confirmación (commits) en un formato estándar y semántico. Este formato ayuda a comunicar claramente los cambios realizados en el código y facilita la generación de registros de cambios automáticos. Los "Conventional Commits" suelen seguir un formato que incluye un encabezado, un cuerpo opcional y un pie de página opcional, y se utilizan para describir de manera sucinta y clara los cambios realizados en el código, lo que facilita su seguimiento y comprensión por parte de los desarrolladores y otros miembros del equipo.
+<br>
+La estructura de un commit debe seguir las siguientes pautas:
+~~~
+git commit -m “<type>[optional scope]: <title>“ -m “<description”
+~~~
+**Tipos De Conventional Commits**
+~~~
+1. feat: Used to describe a new feature or functionality added to the code.
+2. fix: Indicates a bug fix or solution to a problem.
+3. docs: Employed for changes or improvements in code documentation.
+4. style: Describes changes related to the code's formatting, such as whitespace, indentation, etc., that do not affect its functionality.
+5. refactor: Used for modifications to the code that do not fix bugs or add new features, but rather improve its structure or readability.
+6. test: Indicates the addition or modification of unit tests or functional tests.
+7. chore: Used for changes in the build process or maintenance tasks that are not directly related to the code itself.
+8. perf: Describes performance improvements in the code.
+~~~
+
 #### 6.1.3. Source Code Style Guide & Conventions
+
+- ### HTML 
+    - #### Use Lowercase Element Names:
+        Es recomendable utilizar minúsculas o lowercase para los nombres de los elementos HTML.
+        ~~~ 
+      <body>
+            <p>This is a paragraph</p>
+      <body>
+       ~~~
+    - #### Close All HTML Elements:
+        Es recomendable cerrar todos los elementos HTML correctamente.
+        ~~~ 
+      <body>
+            <p>This is a paragraph</p>
+            <p>This is another paragraph</p>
+      <body>
+       ~~~
+    - #### Use Lowercase Attribute Names:
+        Es recomendable utilizar minúsculas para los nombres de los atributos HTML.
+      ~~~ 
+      <a href="https://www.w3schools.com/html/">Visit our HTMLtutorial</a>
+       ~~~
+    - #### Always Specify alt, width, and height for Images:
+      Es recomendable seguir estas convenciones en caso de que la imagen no se pueda mostrar, lo que ayuda a mejorar la accesibilidad del contenido.
+      ~~~ 
+      <img src="html5.gif" alt="HTML5" 
+      style="width:128px;height:128px">
+      ~~~ 
+    - #### Spaces and Equal Signs:
+      Se recomienda no utilizar espacios en blanco entre las entidades para mejorar la legibilidad.
+      ~~~ 
+      <link rel="stylesheet" href="styles.css">
+      ~~~ 
+- ### CSS
+    - #### ID and Class Naming
+      Es recomendable utilizar nombres de clases e id's significativos que expresen claramente el propósito del elemento.
+      ~~~ 
+      #gallery {}
+      #login {}
+      .video {}
+       ~~~
+    - #### ID and Class Name Style
+      Se recomienda utilizar nombres cortos para nombrar ids o clases, pero lo suficientemente descriptivos para entender su propósito.
+      ~~~ 
+      #nav {}
+      .author {}
+      ~~~
+    - #### Shorthand Properties
+      Se recomienda utilizar propiedades CSS de forma abreviada siempre que sea posible para hacer el código más eficiente y comprensible.
+       ~~~ 
+       border-top: 0;
+       font: 100%/1.6 palatino, georgia, serif;
+       padding: 0 1em 2em;
+       ~~~ 
+    - #### 0 and Units
+      Es recomendable evitar especificar la unidad después del valor 0 en propiedades que lo permitan, ya que esto ayuda a reducir el tamaño del código y mejora su legibilidad.
+       ~~~ 
+       margin: 0;
+       padding: 0;
+       ~~~
+     - #### Declaration Order
+       Se recomienda ordenar las declaraciones en orden alfabético para facilitar el mantenimiento y la recordación del código.
+       ~~~ 
+        background: fuchsia;
+        border: 1px solid;
+        border-radius: 4px;
+        color: black;
+        text-align: center;
+        text-indent: 2em;
+       ~~~
+- ### JAVASCRIPT
+     - #### Use expanded syntax
+       Cada línea de JavaScript debería estar en una nueva línea, con la llave de apertura en la misma línea de su declaración y la llave de cierre en una nueva línea al final.
+       ~~~ 
+       function myFunc() {
+        console.log('Hello!');
+       };
+       ~~~
+     - #### Variable naming
+       Para el nombre de las variables, se recomienda utilizar lowerCamelCase. 
+       ~~~ 
+       let playerScore = 0;
+       let speed = distance / time;
+       ~~~  
+     - #### Declaring variables
+       Para la declaración de variables, es recomendable utilizar las palabras reservadas let y const en lugar de var.
+       ~~~ 
+       const myName = 'Chris';
+       console.log(myName);
+       let myAge = '40';
+       myAge++;
+       console.log('Happy birthday!');
+       ~~~ 
+     - #### Function naming
+       Para el nombre de las funciones, se recomienda utilizar lowerCamelCase.
+       ~~~ 
+       function sayHello() {
+       alert('Hello!');
+       };
+       ~~~
+- ### LENGUAJE GHERKIN
+    - #### Descriptive and concise titles for scenarios
+      Utilizar títulos descriptivos y concisos para los escenarios.
+      ~~~ 
+      Feature: Login
+        Scenario: Successful login
+          Given a user is on the login page     
+          When they enter valid credentials     
+          Then they should be logged in successfully      
+      ~~~
+    - #### Follow the Given-When-Then structure consistently.
+      Seguir la estructura de Given-When-Then de manera consistente.
+      ~~~ 
+      Scenario: Adding items to the shopping cart
+        Given the user is on the shopping page
+        When they add an item to the cart
+        Then the item should appear in the cart 
+      ~~~
+    - #### Focus on business-readable language
+      Centrarse en un lenguaje legible para el negocio, evitando detalles técnicos de implementación.
+      ~~~ 
+      Scenario: Changing user settingst
+        Given the user is logged in
+        When they navigate to the settings page
+        Then they should be able to update their profile
+      ~~~
+    - ####  Utilize Scenario Outline for scenarios with multiple similar cases.
+      Utilizar Scenario Outline para escenarios con múltiples casos similares.
+      ~~~ 
+      Scenario Outline: Searching for products
+        Given the user is on the search page
+        When they search for "<product>"
+        Then they should see search results for "<product>"
+      
+      Examples:
+        | product  |
+        | Laptop   |
+        | Smartphone |
+      ~~~
+    - #### Add comments to provide additional context
+      Agregar comentarios para proporcionar contexto adicional o explicaciones cuando sea necesario.
+      ~~~ 
+      # This scenario checks the functionality of the logout feature
+      Scenario: User logout
+        Given the user is logged in
+        When they click on the logout button
+        Then they should be redirected to the login page      
+      ~~~
 
 ## Conclusiones
 
@@ -1161,3 +1638,5 @@ ANEXO C : [https://miro.com/app/board/uXjVI_MtKqA=/?share_link_id=604688149286](
 ANEXO D Y F: [https://miro.com/app/board/uXjVI_S5wR4=/?share_link_id=431433146229](https://miro.com/app/board/uXjVI_S5wR4=/?share_link_id=431433146229)
 
 ANEXO E : [https://miro.com/app/board/uXjVI_R_wiU=/?share_link_id=439952899853](https://miro.com/app/board/uXjVI_R_wiU=/?share_link_id=439952899853)
+
+ANEXO F: [https://lucid.app/lucidchart/a8f4f0b0-3ac8-4eb9-949f-53d55de9cf59/edit?view_items=WgKdBRZRehE_&invitationId=inv_e4354b3b-6041-4a50-b6da-1995114c8abb](https://lucid.app/lucidchart/a8f4f0b0-3ac8-4eb9-949f-53d55de9cf59/edit?view_items=WgKdBRZRehE_&invitationId=inv_e4354b3b-6041-4a50-b6da-1995114c8abb)
