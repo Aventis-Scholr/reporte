@@ -1100,7 +1100,7 @@ Descripción : Define un conjunto fijo de constantes relacionadas con los roles 
 ### 4.2.1.2. Interface Layer
 Esta capa funciona como la puerta de entrada que facilita la comunicación entre los usuarios y los diferentes servicios del sistema. Aquí, los controladores (Controllers) juegan un papel fundamental, ya que se encargan de recibir las peticiones, procesarlas y generar las respuestas correspondientes. Por ejemplo, los controladores dedicados a la autenticación y a la gestión de usuarios son los responsables de manejar todo lo relacionado con el inicio de sesión y el acceso a la información de los perfiles. Su principal objetivo es proporcionar endpoints (APIs) que permitan a los usuarios o sistemas externos conectarse con la lógica del negocio, sin embargo, es importante destacar que esta capa no implementa reglas de negocio directamente, sino que su función principal es coordinar y dirigir las solicitudes hacia los servicios correspondientes o hacia la capa de dominio para su procesamiento.  
 
-- Controlador:  AuthenticationController
+- Controlador:  AuthenticationController  
 
 **Descripción:** Controlador que maneja los endpoints relacionados con la autenticación de usuarios.
 
@@ -1153,7 +1153,7 @@ Esta capa funciona como la puerta de entrada que facilita la comunicación entre
 ### 4.2.1.3. Application Layer
 La capa de aplicación se encarga de organizar las operaciones del negocio y manejar la lógica que regula el intercambio de información entre las capas de dominio e infraestructura. En este nivel se encuentran los servicios que administran tanto las acciones (comandos) como las consultas vinculadas a los usuarios, integrando las normas de negocio asociadas a estos flujos. Su objetivo principal es ofrecer los servicios que materializan la lógica operativa del negocio, coordinando la comunicación entre el repositorio (capa de infraestructura) y las entidades del dominio. En esta capa también se llevan a cabo verificaciones de negocio y procesos complejos antes de cualquier interacción con las demás capas del sistema.  
 
-* Servicio:UserCommandServiceImpl
+* Servicio:UserCommandServiceImpl  
 **Descripción:** Implementación del servicio de comandos para la gestión de usuarios, incluyendo registro, inicio de sesión y actualización del estado de verificación de emprendedores.||
 
 |Método|Descripción|
@@ -1174,7 +1174,7 @@ La capa de aplicación se encarga de organizar las operaciones del negocio y man
 |UpdateProofingEntrepreneureCommand|Comando que encapsula la información necesaria para actualizar el estado de verificación de un emprendedor.||
 
 
-* Servicio:UserQueryServiceImpl
+* Servicio:UserQueryServiceImpl  
 
 **Descripción:** Implementación del servicio de consultas para la gestión de usuarios, permitiendo obtener información sobre usuarios registrados.||
 
@@ -1193,7 +1193,7 @@ La capa de aplicación se encarga de organizar las operaciones del negocio y man
 |GetAllUsersQuery|Consulta que encapsula la información necesaria para obtener todos los usuarios registrados.||
 
 
-* Servicio: RoleCommandServiceImpl
+* Servicio: RoleCommandServiceImpl  
 
 **Descripción:** Implementación del servicio de comandos para la gestión de roles, incluyendo la creación de roles iniciales si no existen.||
 
@@ -1208,7 +1208,7 @@ La capa de aplicación se encarga de organizar las operaciones del negocio y man
 |SeedRolesCommand|Comando que encapsula la información necesaria para inicializar los roles en el sistema.||
 
 
-* Servicio: RoleQueryServiceImpl
+* Servicio: RoleQueryServiceImpl  
 
 **Descripción:** Implementación del servicio de consultas para la gestión de roles, permitiendo obtener información sobre los roles registrados.||
 
@@ -1227,7 +1227,7 @@ La capa de aplicación se encarga de organizar las operaciones del negocio y man
 ### 4.2.1.4. Infrastructure Layer
 La capa de infraestructura gestiona la comunicación con sistemas externos, incluyendo bases de datos, servicios web y otros recursos ajenos al núcleo del negocio. En este contexto, el UserRepository se encarga específicamente de almacenar y recuperar información de usuarios, ofreciendo funcionalidades para verificar su existencia y realizar búsquedas en la base de datos. Su propósito principal es facilitar el acceso a los datos externos y asegurar que el sistema pueda interactuar con ellos de manera óptima. Esta capa alberga los componentes repositorio, que son los responsables de mantener la persistencia de las entidades definidas en el dominio. 
 
-* Repositorio: UserRepository
+* Repositorio: UserRepository  
 **Descripción:** Repositorio que maneja las operaciones de persistencia relacionadas con los usuarios en la base de datos.
 
 |Método|Descripción|
@@ -1242,7 +1242,7 @@ La capa de infraestructura gestiona la comunicación con sistemas externos, incl
 |:-|:-|
 |User|Clase que representa al usuario en el sistema.||
 
-* Repositorio: RoleRepository
+* Repositorio: RoleRepository  
 
 **Descripción:** Repositorio que maneja las operaciones de persistencia relacionadas con los roles en la base de datos.
 
