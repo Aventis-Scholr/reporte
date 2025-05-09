@@ -1259,7 +1259,9 @@ La capa de infraestructura gestiona la comunicación con sistemas externos, incl
 |Roles|Valor de objeto que encapsula el nombre del rol.||
 
 ### 4.2.1.5. Bounded Context Software Architecture Component Level Diagrams
-El diagrama representa una arquitectura monolítica de una aplicación API llamada "Ayni". La aplicación está dividida en componentes que interactúan entre sí: una SPA que realiza llamadas API a controladores para gestionar autenticación y obtener datos de usuarios. Los controladores, como el Auth Controller y Users Controller, delegan las operaciones de comandos y consultas a servicios como UserCommandService y UserQueryService, que interactúan con el UserRepository. El repositorio gestiona el acceso a la base de datos MySQL, encargada de almacenar los datos de los usuarios.   
+El diagrama representa el módulo de Identity and Access Management (IAM) del sistema "BecasMobile" del aplicativo Scholr, diseñado con una arquitectura modular basada en Spring Boot. El AuthController expone endpoints para autenticación (login/registro), delegando la lógica al UserService (gestión de usuarios) y RoleService (gestión de roles). Estos servicios interactúan con sus respectivos repositorios (UserRepository y RoleRepository) para persistir datos en la base de datos, mientras que el componente Security se encarga del hashing y generación de tokens JWT.
+
+El IAM se integra con otros módulos: el UserService sincroniza datos con el Backend API, y el RoleService provee verificación de permisos para el sistema. Además, los actores (Apoderado , Gestionador y Administrador) interactúan directamente con el AuthController para autenticarse, estableciendo un flujo centralizado y seguro para la gestión de identidad.
 
 ![alt text](assets/images/structIAM.png) 
 
@@ -1268,19 +1270,20 @@ El diagrama representa una arquitectura monolítica de una aplicación API llama
 #### 4.2.1.6.1. Bounded Context Domain Layer Class Diagrams  
 El diagrama de clases del Domain Layer para el Bounded Context IAM representa la estructura central del modelo de dominio, mostrando las entidades, objetos de valor, enumeraciones y sus relaciones con un alto nivel de detalle. En este diagrama, la clase principal es User (Aggregate Root), que contiene atributos como id, username, password (todos privados) y métodos públicos como addRoles() y getAuthorities(). La relación con la entidad Role (1:N) se representa con multiplicidad (1..* en User y 1 en Role), calificada por el atributo roles (Set<Role>).
 
-El objeto de valor EmailAddress se muestra como una clase embebida (embedded) dentro de User, con su atributo privado email y constructores públicos. La enumeración Roles (ROLE_ADMIN, ROLE_APODERADO) se asocia con la entidad Role a través del atributo name. Cada clase incluye notación UML para scope (- private, + public), tipos de retorno y parámetros en métodos (ej: +addRoles(roles: List<Role>): User). Las interfaces implementadas (como UserDetails en User) se representan con líneas discontinuas y el estereotipo «implement».
+El objeto de valor EmailAddress se muestra como una clase embebida (embedded) dentro de User, con su atributo privado email y constructores públicos. La enumeración Roles (ROLE_ADMIN, ROLE_APODERADO y ROL_GESTIONADOR) se asocia con la entidad Role a través del atributo name. Cada clase incluye notación UML para scope (- private, + public), tipos de retorno y parámetros en métodos (ej: +addRoles(roles: List<Role>): User). Las interfaces implementadas (como UserDetails en User) se representan con líneas discontinuas y el estereotipo «implement».
 
-![alt text](assets/images/diagramclassIAM.png) 
+![alt text](assets/images/diagclassIAM.png) 
 
 ![alt text](assets/images/classIAM.png) 
 
-ANEXO F
+ANEXO F  
+
 #### 4.2.1.6.2. Bounded Context Database Design Diagram  
 El diagrama de base de datos para el Bounded Context IAM detalla el esquema relacional que soporta la persistencia del modelo de dominio. La tabla principal users incluye columnas como id (PK, autoincremental), username (VARCHAR, UNIQUE), password (VARCHAR), proofing_apoderado (TEXT) y campos de auditoría (created_at, updated_at). La tabla roles contiene id (PK) y name (ENUM o VARCHAR con constraint CHECK para los valores permitidos).
 
-La relación muchos-a-muchos entre users y roles se implementa mediante una tabla de unión user_roles con las foreign keys user_id (FK a users.id) y role_id (FK a roles.id), ambas formando una PK compuesta. Se incluyen constraints como NOT NULL en campos obligatorios (ej: username) e índices únicos. Para el objeto de valor EmailAddress, se añade la columna email en users con constraints de formato (VALIDATE_EMAIL) y longitud máxima (50 caracteres). Las flechas identifican las relaciones (crow’s foot notation), destacando la cardinalidad (1:N entre users y user_roles). 
+La relación muchos-a-muchos entre users y roles se implementa mediante una tabla de unión user_roles con las foreign keys user_id (FK a users.id) y role_id (FK a roles.id), ambas formando una PK compuesta. Se incluyen constraints como NOT NULL en campos obligatorios (ej: username) e índices únicos. Para el objeto de valor EmailAddress, se añade la columna email en users con longitud máxima (50 caracteres). Las flechas identifican las relaciones (crow’s foot notation), destacando la cardinalidad (1:N entre users y user_roles). 
 
-![alt text](assets/images/bddiagram.png)
+![alt text](assets/images/databasediagram.png)
  
 ## 4.2.2. Bounded Context: Application
 ### 4.2.2.1. Domain Layer
