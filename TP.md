@@ -1433,6 +1433,7 @@ La relación muchos-a-muchos entre users y roles se implementa mediante una tabl
 | saveWithSnapshot(Report) | Almacena con datos históricos |
 
 * **Integraciones Externas**
+
 | Componente          | Descripción |
 |---------------------|-------------|
 | PDFGenerator        | Genera documentos en formato PDF |
