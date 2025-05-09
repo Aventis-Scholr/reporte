@@ -1295,11 +1295,149 @@ La relación muchos-a-muchos entre users y roles se implementa mediante una tabl
 #### 4.2.2.6.1. Bounded Context Domain Layer Class Diagrams
 #### 4.2.2.6.2. Bounded Context Database Design Diagram
 
-## 4.2.3. Bounded Context: Management
-### 4.2.3.1. Domain Layer
-### 4.2.3.2. Interface Layer
-### 4.2.3.3. Application Layer
-### 4.2.3.4. Infrastructure Layer
+### 4.2.3. Bounded Context: Management
+
+#### 4.2.3.1. Domain Layer  
+**Descripción**: Capa que contiene los agregados, entidades y value objects fundamentales para la gestión de becas y reportes, garantizando la integridad de las reglas de negocio.
+
+* **Aggregate: Scholarship**  
+**Descripción:** Representa una convocatoria de beca en el sistema, controlando su ciclo de vida desde creación hasta cierre.
+
+| Atributo            | Tipo               | Descripción |
+|---------------------|--------------------|-------------|
+| id                  | Long               | ID único generado automáticamente |
+| name                | String             | Nombre descriptivo de la convocatoria (ej: "Beca Excelencia 2024") |
+| requirements        | List<Requirement>  | Lista de requisitos obligatorios y opcionales |
+| status              | ScholarshipStatus  | Estado actual: DRAFT, PUBLISHED o CLOSED |
+| coordinatorId       | Long               | ID del usuario coordinador (relación con BC IAM) |
+
+| Método              | Descripción |
+|---------------------|-------------|
+| publish()           | Transición de DRAFT a PUBLISHED si cumple validaciones |
+| close()             | Cambia estado a CLOSED y dispara eventos relacionados |
+
+| Dependencias        | Descripción |
+|---------------------|-------------|
+| Requirement         | Value Object que define los requisitos |
+| User (BC IAM)       | Para validar coordinador |
+
+* **Aggregate: Report**  
+**Descripción:** Documento oficial que registra el resultado de una postulación, incluyendo snapshots históricos.
+
+| Atributo            | Tipo               | Descripción |
+|---------------------|--------------------|-------------|
+| id                  | Long               | Identificador único |
+| applicationId       | Long               | Referencia a la postulación en BC Application |
+| apoderadoData       | ApoderadoSnapshot  | Copia inmutable de datos del apoderado |
+| postulanteData      | PostulanteSnapshot | Copia inmutable de datos del postulante |
+| resolution          | ResolutionStatus   | Resultado final: APPROVED/DENIED |
+| adminComments       | String             | Comentarios detallados cuando es DENIED |
+
+| Método              | Descripción |
+|---------------------|-------------|
+| generate()          | Crea documento con todos los datos relevantes |
+| addDenialDetails()  | Registra motivos específicos de rechazo |
+
+| Dependencias        | Descripción |
+|---------------------|-------------|
+| Application (BC App)| Para datos de postulación |
+| ApoderadoSnapshot   | Para preservar datos históricos |
+
+* **Value Object: Requirement**  
+**Descripción:** Define un requisito específico para aplicar a la beca.
+
+| Atributo            | Tipo      | Descripción |
+|---------------------|-----------|-------------|
+| name                | String    | Nombre del requisito (ej: "Promedio mínimo") |
+| description         | String    | Explicación detallada |
+| isMandatory         | Boolean   | Si es obligatorio para aplicar |
+
+* **Value Object: ApoderadoSnapshot**  
+**Descripción:** Captura inmutable de los datos del apoderado al momento de resolución.
+
+| Atributo            | Tipo      | Descripción |
+|---------------------|-----------|-------------|
+| nombres             | String    | Nombre completo |
+| dni                 | String    | Documento de identidad |
+| contacto            | Contacto  | Datos de contacto |
+| infoLaboral         | LaborInfo | Información laboral actual |
+
+#### 4.2.3.2. Interface Layer  
+**Descripción**: Capa que expone endpoints API para interactuar con el sistema de gestión.
+
+* **Controller: ScholarshipController**
+
+| Método | Ruta                    | Descripción |
+|--------|-------------------------|-------------|
+| POST   | /api/v1/scholarships    | Crea nueva convocatoria (requiere rol COORDINATOR) |
+| PUT    | /api/v1/scholarships/{id}/status | Actualiza estado (PUBLISHED/CLOSED) |
+
+| Dependencias        | Descripción |
+|---------------------|-------------|
+| ScholarshipCommandService | Para operaciones de escritura |
+| AuthService (BC IAM)| Para validación de roles |
+
+* **Controller: ReportController**
+
+| Método | Ruta                    | Descripción |
+|--------|-------------------------|-------------|
+| GET    | /api/v1/reports/{id}    | Descarga reporte en formato PDF |
+
+| Dependencias        | Descripción |
+|---------------------|-------------|
+| ReportQueryService  | Para recuperar reportes |
+| PDFGenerator        | Para generación de documentos |
+
+#### 4.2.3.3. Application Layer  
+**Descripción**: Orquesta operaciones complejas entre dominio e infraestructura.
+
+* **Service: ScholarshipCommandServiceImpl**
+
+| Método               | Descripción |
+|----------------------|-------------|
+| handle(CreateScholarshipCommand) | Valida y persiste nueva convocatoria |
+| handle(PublishScholarshipCommand) | Publica convocatoria si cumple requisitos |
+
+| Dependencias        | Descripción |
+|---------------------|-------------|
+| ScholarshipRepository | Persistencia de datos |
+| RoleValidator (BC IAM) | Verificación de roles |
+
+* **Service: ReportCommandServiceImpl**
+
+| Método               | Descripción |
+|----------------------|-------------|
+| handle(GenerateReportCommand) | Crea reporte con snapshots |
+| handle(AddDenialDetailsCommand) | Añade comentarios de denegación |
+
+| Dependencias        | Descripción |
+|---------------------|-------------|
+| ReportRepository    | Almacenamiento |
+| ApplicationService (BC App) | Datos de postulación |
+
+#### 4.2.3.4. Infrastructure Layer  
+**Descripción**: Implementa persistencia e integraciones técnicas.
+
+* **Repository: ScholarshipRepository**
+
+| Método              | Descripción |
+|---------------------|-------------|
+| findByStatus(Status) | Filtra por estado actual |
+| existsByName(String) | Verifica nombres duplicados |
+
+* **Repository: ReportRepository**
+
+| Método              | Descripción |
+|---------------------|-------------|
+| findByApplicationId(Long) | Busca por ID de postulación |
+| saveWithSnapshot(Report) | Almacena con datos históricos |
+
+* **Integraciones Externas**
+| Componente          | Descripción |
+|---------------------|-------------|
+| PDFGenerator        | Genera documentos en formato PDF |
+| EmailService        | Envía notificaciones (integración con BC IAM) |
+
 ### 4.2.3.5. Bounded Context Software Architecture Component Level Diagrams
 ### 4.2.3.6. Bounded Context Software Architecture Code Level Diagrams
 #### 4.2.3.6.1. Bounded Context Domain Layer Class Diagrams
