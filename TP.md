@@ -1049,7 +1049,7 @@ Este enfoque mantiene la esencia del texto original pero con un estilo y estruct
 |username|String|Nombre de usuario único del sistema.|
 |password|String|Contraseña del usuario.|
 |roles|Set<Role>|Conjunto de roles asociados al usuario.|
-|proofingEntrepreneure|String|Prueba o evidencia del usuario como emprendedor (almacenada como texto).|
+|proofingApoderado|String|Prueba o evidencia del usuario como apoderado (almacenada como texto).|
 |createdAt|Date|Fecha de creación del usuario (heredado de la clase base).|
 |updatedAt|Date|Fecha de la última actualización del usuario (heredado de la clase base).|
 
@@ -1139,7 +1139,7 @@ Esta capa funciona como la puerta de entrada que facilita la comunicación entre
 |:-|:-|:-|
 |getAllUsers|GET /api/v1/users|Maneja la solicitud para obtener todos los usuarios. Llama al servicio de consultas, obtiene la lista de usuarios y la convierte en recursos para la respuesta. Devuelve una lista de recursos de usuarios.|
 |getUserById|GET /api/v1/users/{userId}|Maneja la solicitud para obtener un usuario específico por su ID. Llama al servicio de consultas con el ID proporcionado. Si el usuario existe, lo convierte en un recurso y lo devuelve; si no, retorna un error 404.|
-|updateProofingEntrepreneure|PUT /api/v1/users/{userId}/update-proofing|Maneja la solicitud para actualizar el estado de verificación de un emprendedor. Recibe un objeto `UpdateProofingEntrepreneureResource` del cuerpo de la solicitud, lo convierte en un comando y llama al servicio de comandos para actualizar el estado. Devuelve un mensaje de éxito si la operación es exitosa.|
+|updateProofingApoderado|PUT /api/v1/users/{userId}/update-proofing|Maneja la solicitud para actualizar el estado de verificación de un apoderado. Recibe un objeto `UpdateProofingApoderadoResource` del cuerpo de la solicitud, lo convierte en un comando y llama al servicio de comandos para actualizar el estado. Devuelve un mensaje de éxito si la operación es exitosa.|
 
 |Dependencias|Descripción|
 |:-|:-|
@@ -1147,20 +1147,20 @@ Esta capa funciona como la puerta de entrada que facilita la comunicación entre
 |UserCommandService|Servicio encargado de manejar los comandos relacionados con la gestión de usuarios.|
 |GetAllUsersQuery|Consulta que se utiliza para obtener todos los usuarios.|
 |GetUserByIdQuery|Consulta que se utiliza para obtener un usuario específico por su ID.|
-|UpdateProofingEntrepreneureCommandFromResourceAssembler|Utilidad para convertir el recurso de actualización de verificación en un comando.|
+|UpdateProofingApoderadoCommandFromResourceAssembler|Utilidad para convertir el recurso de actualización de verificación en un comando.|
 |UserResourceFromEntityAssembler|Utilidad para convertir las entidades de usuario en recursos que se envían en la respuesta.|
 
 ### 4.2.1.3. Application Layer
 La capa de aplicación se encarga de organizar las operaciones del negocio y manejar la lógica que regula el intercambio de información entre las capas de dominio e infraestructura. En este nivel se encuentran los servicios que administran tanto las acciones (comandos) como las consultas vinculadas a los usuarios, integrando las normas de negocio asociadas a estos flujos. Su objetivo principal es ofrecer los servicios que materializan la lógica operativa del negocio, coordinando la comunicación entre el repositorio (capa de infraestructura) y las entidades del dominio. En esta capa también se llevan a cabo verificaciones de negocio y procesos complejos antes de cualquier interacción con las demás capas del sistema.  
 
 * Servicio:UserCommandServiceImpl  
-**Descripción:** Implementación del servicio de comandos para la gestión de usuarios, incluyendo registro, inicio de sesión y actualización del estado de verificación de emprendedores.||
+**Descripción:** Implementación del servicio de comandos para la gestión de usuarios, incluyendo registro, inicio de sesión y actualización del estado de verificación de apoderados y organizador.||
 
 |Método|Descripción|
 |:-|:-|
 |handle(SignUpCommand)|Maneja el comando de registro de un nuevo usuario. Verifica la unicidad del nombre de usuario. Si todo es válido, crea un nuevo usuario, lo guarda en el repositorio y devuelve el usuario creado.||
 |handle(SignInCommand)|Maneja el comando de inicio de sesión. Busca al usuario por nombre de usuario. Verifica que el usuario existe y que la contraseña coincide. Si es válido, genera un token de autenticación y lo devuelve junto con el usuario.||
-|updateProofingEntrepreneure(UpdateProofingEntrepreneureCommand)|Actualiza el estado de verificación de un emprendedor. Verifica que el usuario tenga el rol adecuado y actualiza el estado en el repositorio.||
+|updateProofingApoderado(UpdateProofingApoderadoCommand)|Actualiza el estado de verificación de un apoderado. Verifica que el usuario tenga el rol adecuado y actualiza el estado en el repositorio.||
 
 |Dependencias|Descripción|
 |:-|:-|
@@ -1171,7 +1171,7 @@ La capa de aplicación se encarga de organizar las operaciones del negocio y man
 |User|Agregado que representa al usuario en el sistema.||
 |SignUpCommand|Comando que encapsula la información necesaria para registrar un nuevo usuario.||
 |SignInCommand|Comando que encapsula la información necesaria para iniciar sesión con un usuario.||
-|UpdateProofingEntrepreneureCommand|Comando que encapsula la información necesaria para actualizar el estado de verificación de un emprendedor.||
+|UpdateProofingApoderadoCommand|Comando que encapsula la información necesaria para actualizar el estado de verificación de un apoderado.||
 
 
 * Servicio:UserQueryServiceImpl  
@@ -1236,7 +1236,7 @@ La capa de infraestructura gestiona la comunicación con sistemas externos, incl
 |existsByUsername(String username)|Verifica si un usuario con el nombre de usuario especificado ya existe en la base de datos. Devuelve un `boolean`.|
 |findById(Long id)|Busca un usuario en la base de datos utilizando su ID. Devuelve un `Optional<User>`.|
 |findAll()|Devuelve una lista de todos los usuarios almacenados en la base de datos.|
-|hasEntrepreneurRole(Long userId)|Verifica si un usuario tiene el rol de emprendedor (basado en `role_id = 3`). Devuelve un `boolean`.|
+|hasApoderadoRole(Long userId)|Verifica si un usuario tiene el rol de apoderado (basado en `role_id = 3`). Devuelve un `boolean`.|
 
 |Dependencias|Descripción|
 |:-|:-|
@@ -1276,7 +1276,7 @@ El objeto de valor EmailAddress se muestra como una clase embebida (embedded) de
 
 ANEXO F
 #### 4.2.1.6.2. Bounded Context Database Design Diagram  
-El diagrama de base de datos para el Bounded Context IAM detalla el esquema relacional que soporta la persistencia del modelo de dominio. La tabla principal users incluye columnas como id (PK, autoincremental), username (VARCHAR, UNIQUE), password (VARCHAR), proofing_entrepreneure (TEXT) y campos de auditoría (created_at, updated_at). La tabla roles contiene id (PK) y name (ENUM o VARCHAR con constraint CHECK para los valores permitidos).
+El diagrama de base de datos para el Bounded Context IAM detalla el esquema relacional que soporta la persistencia del modelo de dominio. La tabla principal users incluye columnas como id (PK, autoincremental), username (VARCHAR, UNIQUE), password (VARCHAR), proofing_apoderado (TEXT) y campos de auditoría (created_at, updated_at). La tabla roles contiene id (PK) y name (ENUM o VARCHAR con constraint CHECK para los valores permitidos).
 
 La relación muchos-a-muchos entre users y roles se implementa mediante una tabla de unión user_roles con las foreign keys user_id (FK a users.id) y role_id (FK a roles.id), ambas formando una PK compuesta. Se incluyen constraints como NOT NULL en campos obligatorios (ej: username) e índices únicos. Para el objeto de valor EmailAddress, se añade la columna email en users con constraints de formato (VALIDATE_EMAIL) y longitud máxima (50 caracteres). Las flechas identifican las relaciones (crow’s foot notation), destacando la cardinalidad (1:N entre users y user_roles). 
 
