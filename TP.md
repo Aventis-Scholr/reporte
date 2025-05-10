@@ -2708,6 +2708,9 @@ Dependiendo del tipo de usuario que inicie sesión (trabajador o encargado de RS
 Gracias a estos sistemas, aseguramos una navegación fluida, contextualizada y centrada en las necesidades específicas de quienes buscan o gestionan oportunidades de beca en Scholr.
 
 #### 5.1.3. Landing Page UI Design
+
+Link de los Wireframes y Mockups en Figma: [Figma](https://www.figma.com/design/R3ID29IJXbwS6b2I2Je17Y/Mobile-App?node-id=45-50&t=0LlevrjExwGZl3Nm-1)
+
 ##### 5.1.3.1. Landing Page Wireframe
 
 ![Container-diagram](assets/images/landing-page/wireframe-landing-page.png)
@@ -2852,7 +2855,62 @@ Menu hamburguesa
   - ![User Goal: Rechazar postulación como Administrador](/assets/images/wireflows-mobile-application/AdminRechazarPostulación.png)
 
 ##### 5.1.4.3. Mobile Applications Mock-ups
+
+- Login
+  - ![Login](/assets/images/mockups-mobile-application/Login.png)
+
+- Selección de Empresa
+  - ![Selección de Empresa](/assets/images/mockups-mobile-application/Company%20Selection.png)
+
+- Registro
+  - ![Registro](/assets/images/mockups-mobile-application/Register.png)
+
+- Bandeja Vacía - Colaborador
+  - ![Bandeja Vacía - Colaborador](/assets/images/mockups-mobile-application/Bandeja%20Vacía.png)
+
+- Bandeja con Postulación - Colaborador
+  - ![Bandeja con Postulación - Colaborador](/assets/images/mockups-mobile-application/Bandeja%20con%20Postulación%20en%20Espera.png)
+  
+- Drawer
+  - ![Drawer](/assets/images/mockups-mobile-application/Drawer.png)
+
+- Tutorial
+  - ![Tutorial](/assets/images/mockups-mobile-application/Tutorial.png)
+
+- Menu Postulación
+  - ![Menu Postulación](/assets/images/mockups-mobile-application/Postulación.png)
+
+- Formulario Datos del Colaborador
+  - ![Formulario Datos del Colaborador](/assets/images/mockups-mobile-application/Datos%20del%20colaborador.png)
+
+- Formulario Datos del Postulante
+  - ![Formulario Datos del Postulante](/assets/images/mockups-mobile-application/Datos%20del%20Postulante.png)
+
+- Confirmación de Formulario Postulante
+  - ![Confirmación de Formulario Postulante](/assets/images/mockups-mobile-application/Confirmar%20Postulante.png)
+
+- Bandeja - Administrador
+  - ![Bandeja - Administrador](/assets/images/mockups-mobile-application/Bandeja%20Administrador.png)
+
+- Vista de Beca - Administrador
+  - ![Vista de Beca - Administrador](/assets/images/mockups-mobile-application/Vista%20de%20Beca.png)
+
+- Vista de Colaborador - Administrador
+  - ![Vista de Colaborador - Administrador](/assets/images/mockups-mobile-application/Vista%20de%20Colaborador.png)
+
+- Lista de Postulantes - Administrador
+  - ![Lista de Postulantes - Administrador](/assets/images/mockups-mobile-application/Lista%20de%20Postulantes.png)
+
+- Vista de Postulante - Administrador
+  - ![Vista de Postulante - Administrador](/assets/images/mockups-mobile-application/Vista%20de%20Postulante.png)
+
+- Rechazo de Postulante - Administrador
+  - ![Rechazo de Postulante - Administrador](/assets/images/mockups-mobile-application/Rechazo.png)
+
 ##### 5.1.4.4. Mobile Applications User Flow Diagrams
+
+Link a los User Flow Diagrams en Lucidchart: [Lucidchart](https://lucid.app/lucidchart/34550ef2-7748-4f51-9aa8-626038c97334/edit?viewport_loc=-9239%2C-4725%2C24000%2C12666%2C0_0&invitationId=inv_afce5755-4963-40b5-a79a-d2cbcef93060)
+
 ##### 5.1.4.5. Mobile Applications Prototyping
 
 ## Capítulo VI: Product Implementation, Validation & Deployment  
