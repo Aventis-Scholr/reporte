@@ -2939,6 +2939,10 @@ Link a los User Flow Diagrams en Lucidchart: [Lucidchart](https://lucid.app/luci
 
 ##### 5.1.4.5. Mobile Applications Prototyping
 
+![Screenshot Prototype Video](/assets/images/screenshot_prototype_scholr.png)
+
+Link al video en Microsoft Stream: [Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221d964_upc_edu_pe/EUU42KdiezBIoM29sbqcNZkBzxHwiWkV-zVDLWSdM2X--g?e=V2V2eS&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
 ## Capítulo VI: Product Implementation, Validation & Deployment  
 ### 6.1. Software Configuration Management  
 La gestión de la configuración del software es fundamental para nuestro trabajo, ya que nos ayuda a controlar de manera exacta los componentes de nuestro proyecto, como el código fuente, los documentos de diseño y los recursos digitales. De esta manera, aseguramos que todos los miembros del equipo utilicen la misma versión de los archivos, lo que facilita la cooperación entre desarrolladores, diseñadores y otros profesionales involucrados.
