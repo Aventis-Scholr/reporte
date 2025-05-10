@@ -2221,13 +2221,13 @@ interactuar directamente con la base de datos. Este layer asegura que los datos 
 
 ### 4.2.2.5. Bounded Context Software Architecture Component Level Diagrams
 
-
+![Container-diagram-ddd-application](assets/images/structurizr-ddd-application.png) 
 
 ### 4.2.2.6. Bounded Context Software Architecture Code Level Diagrams
 
 #### 4.2.2.6.1. Bounded Context Domain Layer Class Diagrams
 
-![Container-diagram](assets/images/applications-ddd.png) 
+![class-diagram-application](assets/images/applications-ddd.png) 
 
 #### 4.2.2.6.2. Bounded Context Database Design Diagram
 
@@ -2235,7 +2235,7 @@ El diagrama de base de datos para el Bounded Context Applications detalla el esq
 
 La relación uno-a-muchos entre data_apoderados y applications nos muestra que la misma data para apoderados puede estar en diferentes postulaciones, al igual que para la relación de postulantes a postulaciones.
 
-![Container-diagram](assets/images/applications-db-diag.png) 
+![aplication-db-diagram](assets/images/applications-db-diag.png) 
 
 ## 4.2.3. Bounded Context: Management
 ### 4.2.3.1. Domain Layer
