@@ -1391,7 +1391,7 @@ La relación muchos-a-muchos entre users y roles se implementa mediante una tabl
 #### 4.2.3.3. Application Layer  
 **Descripción**: Orquesta operaciones complejas entre dominio e infraestructura.
 
-* **Service: ScholarshipCommandServiceImpl**
+* **Service: ScholarshipCommandService**
 
 | Método               | Descripción |
 |----------------------|-------------|
@@ -1403,7 +1403,7 @@ La relación muchos-a-muchos entre users y roles se implementa mediante una tabl
 | ScholarshipRepository | Persistencia de datos |
 | RoleValidator (BC IAM) | Verificación de roles |
 
-* **Service: ReportCommandServiceImpl**
+* **Service: ReportCommandService**
 
 | Método               | Descripción |
 |----------------------|-------------|
@@ -1442,8 +1442,18 @@ La relación muchos-a-muchos entre users y roles se implementa mediante una tabl
 ### 4.2.3.5. Bounded Context Software Architecture Component Level Diagrams
 ### 4.2.3.6. Bounded Context Software Architecture Code Level Diagrams
 #### 4.2.3.6.1. Bounded Context Domain Layer Class Diagrams
-#### 4.2.3.6.2. Bounded Context Database Design Diagram
+Este diagrama de clases representa el modelo de dominio para un sistema de gestión de becas, mostrando los elementos principales con detalle. La estructura se organiza en objetos de valor como Requirement, ApoderadoSnapshot y PostulanteSnapshot, que capturan datos inmutables, junto con enumeraciones como ScholarshipStatus y ResolutionStatus para definir estados. Los agregados Scholarship (como raíz) y Report gestionan la lógica central, con métodos como publish(), close() y generate() para operaciones clave. Las interfaces ReportCommandService y ScholarshipCommandService manejan comandos complejos, mientras que las secciones Queries y Commands separan las operaciones de lectura y escritura.
 
+El diseño sigue principios de Domain-Driven Design, destacando la inmutabilidad de los objetos de valor y la consistencia transaccional de los agregados. Scholarship controla el ciclo de vida de las becas, mientras que Report gestiona los datos de postulantes y apoderados mediante snapshots. Los servicios de comandos coordinan acciones que afectan múltiples agregados, y las enumeraciones definen los flujos de trabajo posibles. La estructura refleja un modelo bien delimitado, con clara separación entre consultas, comandos y la lógica de dominio central.
+
+![alt text](assets/images/diagclassmanagement.png) 
+
+#### 4.2.3.6.2. Bounded Context Database Design Diagram
+Este diagrama de base de datos para el Bounded Context de Gestión de Becas define el esquema relacional que persiste el modelo de dominio. La tabla principal Scholarship contiene columnas como id (PK, autoincremental), name (VARCHAR), status (ENUM con estados DRAFT/PUBLISHED/CLOSED), coordinator_id (BIGINT) y campos implícitos de auditoría. La tabla Report almacena id (PK), application_id (BIGINT), resolution (ENUM con estados DRAFT/APPROVED/DENIED) y admin_comments (TEXT), estableciendo una relación implícita con solicitudes de beca.
+
+Las relaciones 1:N se implementan mediante tablas anidadas: Scholarship_Requirement (con FK scholarship_id y campos como is_mandatory) y las relaciones 1:1 en las tablas de snapshots (Report_ApoderadoSnapshot y Report_PostulanteSnapshot) con FKs report_id y datos estructurados en JSON. Las constraints incluyen NOT NULL para campos clave (ej: name en Scholarship) y ON DELETE CASCADE en las FKs para mantener consistencia. La notación crow’s foot refleja cardinalidades (1:N entre Scholarship-Requirements y 1:1 entre Report-Snapshots), mientras que los ENUM y JSON preservan la semántica del dominio sin necesidad de tablas adicionales para objetos de valor simples.
+
+![alt text](assets/images/managementdatabasediagram.png) 
 
 ## Capítulo V: Solution UI/UX Design
 
