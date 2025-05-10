@@ -2709,7 +2709,7 @@ Gracias a estos sistemas, aseguramos una navegación fluida, contextualizada y c
 
 #### 5.1.3. Landing Page UI Design
 
-Link de los Wireframes y Mockups en Figma: [Figma](https://www.figma.com/design/R3ID29IJXbwS6b2I2Je17Y/Mobile-App?node-id=45-50&t=0LlevrjExwGZl3Nm-1)
+Link de los Wireframes y Mockups en Figma: [Figma](https://www.figma.com/design/R3ID29IJXbwS6b2I2Je17Y/Mobile-App?node-id=45-50&t=rSRzKmIDeavdXcrd-1)
 
 ##### 5.1.3.1. Landing Page Wireframe
 
@@ -2910,6 +2910,32 @@ Menu hamburguesa
 ##### 5.1.4.4. Mobile Applications User Flow Diagrams
 
 Link a los User Flow Diagrams en Lucidchart: [Lucidchart](https://lucid.app/lucidchart/34550ef2-7748-4f51-9aa8-626038c97334/edit?viewport_loc=-9239%2C-4725%2C24000%2C12666%2C0_0&invitationId=inv_afce5755-4963-40b5-a79a-d2cbcef93060)
+
+- User Goal: Registrarse
+  - ![User Goal: Registrarse](/assets/images/user-flows-scholr/RegistrarseColaborador.png)
+  - Happy path: Los datos ingresados son correctos y el código de colaborador coincide con la compañía.
+
+- User Goal: Iniciar Sesión
+  - ![User Goal: Iniciar Sesión](/assets/images/user-flows-scholr/IniciarSesión.png)
+  - Happy path: Los datos ingresados son correctos. La pantalla a la que se ingresa depende del rol de la cuenta.
+
+- User Goal: Establecer Datos de Colaborador
+  - ![User Goal: Establecer Datos de Colaborador](/assets/images/user-flows-scholr/EstablecerDatosDelColaborador.png)
+  - Happy path: Todos los campos están completos.
+
+- User Goal: Crear Postulación
+  - ![User Goal: Crear Postulación](/assets/images/user-flows-scholr/CrearPostulación.png)
+  - Happy path: Todos los campos están completos.
+
+- User Goal: Ver Tutorial
+  - ![User Goal: Ver Tutorial](/assets/images/user-flows-scholr/VerTutorial.png)
+
+- User Goal: Editar Postulación después de Rechazo
+  - ![User Goal: Editar Postulación después de Rechazo](/assets/images/user-flows-scholr/EditarAfterRechazo.png)
+  - Happy path: Todos los campos están completos y son diferentes a los anteriores.
+
+- User Goal: Rechazar Postulación como Administrador
+  - ![User Goal: Rechazar Postulación como Administrador](/assets/images/user-flows-scholr/AdminRechazarPostulación.png)
 
 ##### 5.1.4.5. Mobile Applications Prototyping
 
