@@ -1287,13 +1287,1198 @@ La relación muchos-a-muchos entre users y roles se implementa mediante una tabl
  
 ## 4.2.2. Bounded Context: Application
 ### 4.2.2.1. Domain Layer
+
+Descripción: El Domain Layer es donde se define la lógica de negocio principal, encapsulando las reglas de negocio más importantes del sistema. Este nivel contiene las entidades y los agregados que representan objetos de dominio reales. Los agregados en esta capa permiten gestionar la consistencia y las operaciones de estas entidades.
+
+Justificación: La entidad Application representa las postulaciones a becas en el sistema. Contiene atributos como un identificador único, el postulante, apoderado del mismo, fecha de solicitud, entre otros.
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="3"><b>Aggregate: Application</b></td>
+    </tr>
+    <tr>
+        <td colspan="3"><b>Descripción:</b> Representa la raíz del agregado de una postulación en el sistema, mapeando la tabla "applications".</td>
+    </tr>
+    <tr>
+        <td><b>Atributo</b></td>
+        <td><b>Tipo</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>id</td>
+        <td>Long</td>
+        <td>Identificador único de la postulación (autogenerado).</td>
+    </tr>
+    <tr>
+        <td>apoderadoId</td>
+        <td>Long</td>
+        <td>Identificador único del apoderado.</td>
+    </tr>
+    <tr>
+        <td>tipoBeca</td>
+        <td>TipoBeca (Value Object)</td>
+        <td>Tipo de beca a postular.</td>
+    </tr>
+    <tr>
+        <td>status</td>
+        <td>Status (Value Object)</td>
+        <td>Estado en el que se encuentra la postulación.</td>
+    </tr>
+    <tr>
+        <td>dataApoderado</td>
+        <td>DataApoderado</td>
+        <td>Información adicional sobre el apoderado.</td>
+    </tr>
+    <tr>
+        <td>postulante</td>
+        <td>Postulante</td>
+        <td>Relación con el postulante.</td>
+    </tr>
+    <tr>
+        <td>createdAt</td>
+        <td>Date</td>
+        <td>Fecha de creación de la postulación (no modificable).</td>
+    </tr>
+    <tr>
+        <td>updatedAt</td>
+        <td>Date</td>
+        <td>Fecha de última actualización de la postulación.</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td colspan="2"><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>Application(tipoBeca, apoderado, postulante)</td>
+        <td colspan="2">Constructor que inicializa una nueva postulación con tipo de beca, apoderado y postulante.</td>
+    </tr>
+    <tr>
+        <td>getId()</td>
+        <td colspan="2">Retorna el identificador único de la postulación.</td>
+    </tr>
+    <tr>
+        <td>getTipoBeca()</td>
+        <td colspan="2">Retorna el tipo de beca a la que se está postulando.</td>
+    </tr>
+    <tr>
+        <td>getStatus()</td>
+        <td colspan="2">Retorna el estado actual de la postulación.</td>
+    </tr>
+    <tr>
+        <td>getApoderado()</td>
+        <td colspan="2">Retorna la relación con el apoderado.</td>
+    </tr>
+    <tr>
+        <td>getPostulante()</td>
+        <td colspan="2">Retorna la relación con el postulante.</td>
+    </tr>
+    <tr>
+        <td>getCreatedAt()</td>
+        <td colspan="2">Retorna la fecha de creación de la postulación.</td>
+    </tr>
+    <tr>
+        <td>getUpdatedAt()</td>
+        <td colspan="2">Retorna la última fecha de actualización.</td>
+    </tr>
+    <tr>
+        <td>update(tipoBeca, apoderado, postulante)</td>
+        <td colspan="2">Actualiza los datos de la postulación excepto el estado.</td>
+    </tr>
+    <tr>
+        <td>delete()</td>
+        <td colspan="2">Elimina la postulación del sistema.</td>
+    </tr>
+    <tr>
+        <td>getEstado()</td>
+        <td colspan="2">Devuelve el estado actual de la postulación.</td>
+    </tr>
+    <tr>
+        <td>changeStatus(nuevoEstado)</td>
+        <td colspan="2">Modifica únicamente el estado de la postulación.</td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="3"><b>Aggregate: DataApoderado</b></td>
+    </tr>
+    <tr>
+        <td colspan="3"><b>Descripción:</b> Representa datos extra de un apoderado</td>
+    </tr>
+    <tr>
+        <td><b>Atributo</b></td>
+        <td><b>Tipo</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>id</td>
+        <td>Long</td>
+        <td>Identificador único de la informacion extra del apoderado.</td>
+    </tr>
+    <tr>
+        <td>apoderadoId</td>
+        <td>Long</td>
+        <td>Identificador único del apoderado.</td>
+    </tr>
+    <tr>
+        <td>nombres</td>
+        <td>String</td>
+        <td>Nombre(s) del apoderado.</td>
+    </tr>
+    <tr>
+        <td>apellidos</td>
+        <td>String</td>
+        <td>Apellido(s) del apoderado.</td>
+    </tr>
+    <tr>
+        <td>DNI</td>
+        <td>Int</td>
+        <td>Documento Nacional de Identidad.</td>
+    </tr>
+    <tr>
+        <td>fecha_nacimiento</td>
+        <td>Date</td>
+        <td>Fecha de nacimiento del apoderado.</td>
+    </tr>
+    <tr>
+        <td>contacto</td>
+        <td>Contacto</td>
+        <td>Información de contacto del apoderado.</td>
+    </tr>
+    <tr>
+        <td>domicilio</td>
+        <td>Domicilio</td>
+        <td>Dirección del apoderado.</td>
+    </tr>
+    <tr>
+        <td>cuentaBancaria</td>
+        <td>CuentaBancaria</td>
+        <td>Información de cuenta bancaria.</td>
+    </tr>
+    <tr>
+        <td>informacionLaboral</td>
+        <td>InformacionLaboral</td>
+        <td>Datos laborales del apoderado.</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td colspan="2"><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>Apoderado(id, nombres, apellidos, DNI, fecha_nacimiento, contacto, domicilio, cuentaBancaria, informacionLaboral)</td>
+        <td colspan="2">Constructor que inicializa un apoderado con toda su información.</td>
+    </tr>
+    <tr>
+        <td>getId()</td>
+        <td colspan="2">Retorna el identificador único.</td>
+    </tr>
+    <tr>
+        <td>getNombres()</td>
+        <td colspan="2">Retorna los nombres del apoderado.</td>
+    </tr>
+    <tr>
+        <td>getApellidos()</td>
+        <td colspan="2">Retorna los apellidos del apoderado.</td>
+    </tr>
+    <tr>
+        <td>getDNI()</td>
+        <td colspan="2">Retorna el DNI del apoderado.</td>
+    </tr>
+    <tr>
+        <td>getFechaNacimiento()</td>
+        <td colspan="2">Retorna la fecha de nacimiento.</td>
+    </tr>
+    <tr>
+        <td>getContacto()</td>
+        <td colspan="2">Retorna la información de contacto.</td>
+    </tr>
+    <tr>
+        <td>getDomicilio()</td>
+        <td colspan="2">Retorna el domicilio.</td>
+    </tr>
+    <tr>
+        <td>getCuentaBancaria()</td>
+        <td colspan="2">Retorna la cuenta bancaria.</td>
+    </tr>
+    <tr>
+        <td>getInformacionLaboral()</td>
+        <td colspan="2">Retorna la información laboral del apoderado.</td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="3"><b>Entidad: Postulante</b></td>
+    </tr>
+    <tr>
+        <td colspan="3"><b>Descripción:</b> Entidad que representa a un postulante.</td>
+    </tr>
+    <tr>
+        <td><b>Atributo</b></td>
+        <td><b>Tipo</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>id</td>
+        <td>Long</td>
+        <td>Identificador único de la postulación.</td>
+    </tr>
+    <tr>
+        <td>nombres</td>
+        <td>String</td>
+        <td>Nombres del postulante.</td>
+    </tr>
+    <tr>
+        <td>apellidos</td>
+        <td>String</td>
+        <td>Apellidos del postulante.</td>
+    </tr>
+    <tr>
+        <td>DNI</td>
+        <td>int</td>
+        <td>Documento Nacional de Identidad del postulante.</td>
+    </tr>
+    <tr>
+        <td>fechaNacimiento</td>
+        <td>Date</td>
+        <td>Fecha de nacimiento del postulante.</td>
+    </tr>
+    <tr>
+        <td>contacto</td>
+        <td>Contacto (value object)</td>
+        <td>Información de contacto del postulante.</td>
+    </tr>
+    <tr>
+        <td>centroEstudios</td>
+        <td>CentroEstudios (value object)</td>
+        <td>Centro de estudios del postulante.</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td colspan="2"><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>Postulante(id, nombres, apellidos, DNI, fechaNacimiento, contacto, centroEstudios)</td>
+        <td colspan="2">Constructor que inicializa los atributos del postulante.</td>
+    </tr>
+    <tr>
+        <td>setId(id: Long)</td>
+        <td colspan="2">Establece el identificador único de la postulación.</td>
+    </tr>
+    <tr>
+        <td>getId()</td>
+        <td colspan="2">Retorna el identificador único de la postulación.</td>
+    </tr>
+    <tr>
+        <td>setNombres(nombres: String)</td>
+        <td colspan="2">Establece los nombres del postulante.</td>
+    </tr>
+    <tr>
+        <td>getNombres()</td>
+        <td colspan="2">Retorna los nombres del postulante.</td>
+    </tr>
+    <tr>
+        <td>setApellidos(apellidos: String)</td>
+        <td colspan="2">Establece los apellidos del postulante.</td>
+    </tr>
+    <tr>
+        <td>getApellidos()</td>
+        <td colspan="2">Retorna los apellidos del postulante.</td>
+    </tr>
+    <tr>
+        <td>setDNI(DNI: int)</td>
+        <td colspan="2">Establece el DNI del postulante.</td>
+    </tr>
+    <tr>
+        <td>getDNI()</td>
+        <td colspan="2">Retorna el DNI del postulante.</td>
+    </tr>
+    <tr>
+        <td>setFechaNacimiento(fechaNacimiento: Date)</td>
+        <td colspan="2">Establece la fecha de nacimiento del postulante.</td>
+    </tr>
+    <tr>
+        <td>getFechaNacimiento()</td>
+        <td colspan="2">Retorna la fecha de nacimiento del postulante.</td>
+    </tr>
+    <tr>
+        <td>setContacto(contacto: Contacto)</td>
+        <td colspan="2">Establece el contacto del postulante.</td>
+    </tr>
+    <tr>
+        <td>getContacto()</td>
+        <td colspan="2">Retorna el contacto del postulante.</td>
+    </tr>
+    <tr>
+        <td>setCentroEstudios(centroEstudios: CentroEstudios)</td>
+        <td colspan="2">Establece el centro de estudios del postulante.</td>
+    </tr>
+    <tr>
+        <td>getCentroEstudios()</td>
+        <td colspan="2">Retorna el centro de estudios del postulante.</td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="3"><b>Value Object: Contacto</b></td>
+    </tr>
+    <tr>
+        <td colspan="3"><b>Descripcion:</b> Abarca tanto el correo como el número de celular para contacto.</td>
+    </tr>
+    <tr>
+        <td><b>Atributo</b></td>
+        <td><b>Tipo</b></td>
+        <td><b>Descripcion</b></td>
+    </tr>
+    <tr>
+        <td>email</td>
+        <td>String</td>
+        <td>Dirección de correo electrónico validada (no en blanco, máximo 50 caracteres, formato válido de correo).</td>
+    </tr>
+    <tr>
+        <td>celular</td>
+        <td>Long</td>
+        <td>Número de celular validado (no en blanco ni mas de 9 dígitos)</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td colspan="2"><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>EmailAddress(email: String)</td>
+        <td colspan="2">Contstructor que recibe un correo electrónico y lo valida.</td>
+    </tr>
+    <tr>
+        <td>PhoneNumber(celular: string)</td>
+        <td colspan="2">Contstructor que recibe un número de celular y lo valida.</td>
+    </tr>
+    <tr>
+        <td>getEmail()</td>
+        <td colspan="2">Retorna la dirección de correo electrónico.</td>
+    </tr>
+    <tr>
+        <td>getPhoneNumber()</td>
+        <td colspan="2">Retorna el número de celular.</td>
+    </tr>
+</table>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="3"><b>Value Object: InformaciónLaboral</b></td>
+    </tr>
+    <tr>
+        <td colspan="3"><b>Descripción:</b> Representa la información laboral de un colaborador.</td>
+    </tr>
+    <tr>
+        <td><b>Atributo</b></td>
+        <td><b>Tipo</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>tipoColaborador</td>
+        <td>String</td>
+        <td>Tipo de colaborador (empleado, contratista, etc.).</td>
+    </tr>
+    <tr>
+        <td>cargo</td>
+        <td>String</td>
+        <td>Puesto desempeñado dentro de la organización.</td>
+    </tr>
+    <tr>
+        <td>sede</td>
+        <td>String</td>
+        <td>Ubicación principal donde trabaja el colaborador.</td>
+    </tr>
+    <tr>
+        <td>local</td>
+        <td>String</td>
+        <td>Local específico dentro de la sede.</td>
+    </tr>
+    <tr>
+        <td>ingreso</td>
+        <td>BigDecimal</td>
+        <td>Salario o ingreso del colaborador.</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td colspan="2"><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>InformacionLaboral(tipoColaborador, cargo, sede, local, ingreso)</td>
+        <td colspan="2">Constructor que inicializa la información laboral.</td>
+    </tr>
+    <tr>
+        <td>getTipoColaborador()</td>
+        <td colspan="2">Retorna el tipo de colaborador.</td>
+    </tr>
+    <tr>
+        <td>getCargo()</td>
+        <td colspan="2">Retorna el cargo del colaborador.</td>
+    </tr>
+    <tr>
+        <td>getSede()</td>
+        <td colspan="2">Retorna la sede del colaborador.</td>
+    </tr>
+    <tr>
+        <td>getLocal()</td>
+        <td colspan="2">Retorna el local del colaborador.</td>
+    </tr>
+    <tr>
+        <td>getIngreso()</td>
+        <td colspan="2">Retorna el ingreso del colaborador.</td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="3"><b>Value Object: CuentaBancaria</b></td>
+    </tr>
+    <tr>
+        <td colspan="3"><b>Descripción:</b> Representa los datos bancarios de un colaborador.</td>
+    </tr>
+    <tr>
+        <td><b>Atributo</b></td>
+        <td><b>Tipo</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>entidadBancaria</td>
+        <td>String</td>
+        <td>Nombre de la institución bancaria.</td>
+    </tr>
+    <tr>
+        <td>numeroCuenta</td>
+        <td>String</td>
+        <td>Número de cuenta bancaria (validado con longitud entre 10 y 20 caracteres).</td>
+    </tr>
+    <tr>
+        <td>cci</td>
+        <td>String</td>
+        <td>Código de Cuenta Interbancaria (exactamente 20 caracteres).</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td colspan="2"><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>CuentaBancaria(entidadBancaria, numeroCuenta, cci)</td>
+        <td colspan="2">Constructor que inicializa una cuenta bancaria validada.</td>
+    </tr>
+    <tr>
+        <td>getEntidadBancaria()</td>
+        <td colspan="2">Retorna la entidad bancaria.</td>
+    </tr>
+    <tr>
+        <td>getNumeroCuenta()</td>
+        <td colspan="2">Retorna el número de cuenta.</td>
+    </tr>
+    <tr>
+        <td>getCci()</td>
+        <td colspan="2">Retorna el código CCI.</td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="3"><b>Value Object: CentroEstudio</b></td>
+    </tr>
+    <tr>
+        <td colspan="3"><b>Descripción:</b> Representa el centro de estudios del postulante.</td>
+    </tr>
+    <tr>
+        <td><b>Atributo</b></td>
+        <td><b>Tipo</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>nombre</td>
+        <td>String</td>
+        <td>Nombre de la institución</td>
+    </tr>
+    <tr>
+        <td>tipo</td>
+        <td>String</td>
+        <td>Tipo de institución</td>
+    </tr>
+    <tr>
+        <td>nivel</td>
+        <td>String</td>
+        <td>Nivel de la institución</td>
+    </tr>
+    <tr>
+        <td>departamento</td>
+        <td>String</td>
+        <td>Departamento en el que se encuentra la institución</td>
+    </tr>
+    <tr>
+        <td>provincia</td>
+        <td>String</td>
+        <td>Provincia en la que se encuentra la institución</td>
+    </tr>
+    <tr>
+        <td>distrito</td>
+        <td>String</td>
+        <td>Distrito en la que se encuentra la institución</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td colspan="2"><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>CentroEstudio(nombre, tipo, nivel, departamento, provincia, distrito)</td>
+        <td colspan="2">Constructor que inicializa los atributos de la institución.</td>
+    </tr>
+    <tr>
+        <td>setNombre(nombre: String)</td>
+        <td colspan="2">Establece el nombre de la institución.</td>
+    </tr>
+    <tr>
+        <td>getNombre()</td>
+        <td colspan="2">Retorna el nombre de la institución.</td>
+    </tr>
+    <tr>
+        <td>setTipo(tipo: String)</td>
+        <td colspan="2">Establece el tipo de institución.</td>
+    </tr>
+    <tr>
+        <td>getTipo()</td>
+        <td colspan="2">Retorna el tipo de institución.</td>
+    </tr>
+    <tr>
+        <td>setNivel(nivel: String)</td>
+        <td colspan="2">Establece el nivel de la institución.</td>
+    </tr>
+    <tr>
+        <td>getNivel()</td>
+        <td colspan="2">Retorna el nivel de la institución.</td>
+    </tr>
+    <tr>
+        <td>setDepartamento(departamento: String)</td>
+        <td colspan="2">Establece el departamento donde se ubica la institución.</td>
+    </tr>
+    <tr>
+        <td>getDepartamento()</td>
+        <td colspan="2">Retorna el departamento de la institución.</td>
+    </tr>
+    <tr>
+        <td>setProvincia(provincia: String)</td>
+        <td colspan="2">Establece la provincia donde se ubica la institución.</td>
+    </tr>
+    <tr>
+        <td>getProvincia()</td>
+        <td colspan="2">Retorna la provincia de la institución.</td>
+    </tr>
+    <tr>
+        <td>setDistrito(distrito: String)</td>
+        <td colspan="2">Establece el distrito donde se ubica la institución.</td>
+    </tr>
+    <tr>
+        <td>getDistrito()</td>
+        <td colspan="2">Retorna el distrito de la institución.</td>
+    </tr>
+    <tr>
+        <td>setEmail(email: String)</td>
+        <td colspan="2">Establece el correo electrónico validándolo.</td>
+    </tr>
+    <tr>
+        <td>getEmail()</td>
+        <td colspan="2">Retorna la dirección de correo electrónico.</td>
+    </tr>
+    <tr>
+        <td>setCelular(celular: String)</td>
+        <td colspan="2">Establece el número de celular validándolo.</td>
+    </tr>
+    <tr>
+        <td>getCelular()</td>
+        <td colspan="2">Retorna el número de celular.</td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="3"><b>Value Object: Domicilio</b></td>
+    </tr>
+    <tr>
+        <td colspan="3"><b>Descripción:</b> Representa el domicilio de una persona.</td>
+    </tr>
+    <tr>
+        <td><b>Atributo</b></td>
+        <td><b>Tipo</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>direccion</td>
+        <td>String</td>
+        <td>Dirección exacta del domicilio</td>
+    </tr>
+    <tr>
+        <td>departamento</td>
+        <td>String</td>
+        <td>Departamento donde se encuentra el domicilio</td>
+    </tr>
+    <tr>
+        <td>provincia</td>
+        <td>String</td>
+        <td>Provincia donde se encuentra el domicilio</td>
+    </tr>
+    <tr>
+        <td>distrito</td>
+        <td>String</td>
+        <td>Distrito donde se encuentra el domicilio</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td colspan="2"><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>Domicilio(direccion, departamento, provincia, distrito)</td>
+        <td colspan="2">Constructor que inicializa los atributos del domicilio.</td>
+    </tr>
+    <tr>
+        <td>setDireccion(direccion: String)</td>
+        <td colspan="2">Establece la dirección del domicilio.</td>
+    </tr>
+    <tr>
+        <td>getDireccion()</td>
+        <td colspan="2">Retorna la dirección del domicilio.</td>
+    </tr>
+    <tr>
+        <td>setDepartamento(departamento: String)</td>
+        <td colspan="2">Establece el departamento donde se ubica el domicilio.</td>
+    </tr>
+    <tr>
+        <td>getDepartamento()</td>
+        <td colspan="2">Retorna el departamento del domicilio.</td>
+    </tr>
+    <tr>
+        <td>setProvincia(provincia: String)</td>
+        <td colspan="2">Establece la provincia donde se ubica el domicilio.</td>
+    </tr>
+    <tr>
+        <td>getProvincia()</td>
+        <td colspan="2">Retorna la provincia del domicilio.</td>
+    </tr>
+    <tr>
+        <td>setDistrito(distrito: String)</td>
+        <td colspan="2">Establece el distrito donde se ubica el domicilio.</td>
+    </tr>
+    <tr>
+        <td>getDistrito()</td>
+        <td colspan="2">Retorna el distrito del domicilio.</td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="2"><b>Value Object: TipoBeca</b></td>
+    </tr>
+    <tr>
+        <td colspan="2"><b>Descripción:</b> Representa los tipos de becas disponibles.</td>
+    </tr>
+    <tr>
+        <td><b>Enumeración</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>MERITO</td>
+        <td>Beca otorgada por rendimiento académico sobresaliente.</td>
+    </tr>
+    <tr>
+        <td>DEPORTIVA</td>
+        <td>Beca otorgada por habilidades deportivas destacadas.</td>
+    </tr>
+    <tr>
+        <td>ECONOMICA</td>
+        <td>Beca otorgada por necesidad económica.</td>
+    </tr>
+    <tr>
+        <td>CULTURAL</td>
+        <td>Beca otorgada por logros en actividades artísticas o culturales.</td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="2"><b>Value Object: Status</b></td>
+    </tr>
+    <tr>
+        <td colspan="2"><b>Descripción:</b> Representa el estado de un proceso o entidad.</td>
+    </tr>
+    <tr>
+        <td><b>Enumeración</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>PENDIENTE</td>
+        <td>El proceso está en espera de revisión o aprobación.</td>
+    </tr>
+    <tr>
+        <td>APROBADO</td>
+        <td>El proceso ha sido validado y aceptado.</td>
+    </tr>
+    <tr>
+        <td>RECHAZADO</td>
+        <td>El proceso ha sido denegado por no cumplir los requisitos.</td>
+    </tr>
+    <tr>
+        <td>FINALIZADO</td>
+        <td>El proceso ha concluido satisfactoriamente.</td>
+    </tr>
+</table>
+
 ### 4.2.2.2. Interface Layer
+
+Descripción: El Interface Layer o capa de interfaz define cómo los usuarios o sistemas externos interactúan con el sistema. Aquí, los controladores reciben y gestionan las solicitudes HTTP, enviando la información adecuada a los servicios de aplicación.
+
+Justificación: ApplicationController maneja las solicitudes relacionadas con las postulaciones a becas, como la creación de nuevas mediante createApplication. Este controlador se apoya en los servicios ApplicationQueryService y ApplicationCommandService para consultar y ejecutar acciones sobre las postulaciones. Este layer actúa como la entrada principal para interactuar con las postulaciones, canalizando solicitudes a la capa de aplicación.
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="2"><b>Controlador: ApplicationsController</b></td>
+    </tr>
+    <tr>
+        <td colspan="2"><b>Descripcion:</b> Controlador que gestiona las operaciones relacionadas con las postulaciones.</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>createApplication(CreateApplicationResource resource)</td>
+        <td>Crea una nueva postulación</td>
+    </tr>
+    <tr>
+        <td>updateApplication(long applicationId, UpdateApplicationResource resource)</td>
+        <td>Actualizar una postulación</td>
+    </tr>
+    <tr>
+        <td>deleteApplication(long applicationId)</td>
+        <td>Eliminar una postulacion</td>
+    </tr>
+    <tr>
+        <td>getAllApplications()</td>
+        <td>Recupera una lista de todas las postulaciones registradas.</td>
+    </tr>
+    <tr>
+        <td>getApplicationById(long applicationId)</td>
+        <td>Recupera postulacion por el id de la misma.</td>
+    </tr>
+    <tr>
+        <td>getApplicationsByApoderadoId(long apoderadoId)</td>
+        <td>Recupera todas las postulaciones segun el id del apoderado.</td>
+    </tr>
+    <tr>
+        <td>acceptApplication(long applicationId)</td>
+        <td>Cambiar el estado de una postulacion a aceptada.</td>
+    </tr>
+    <tr>
+        <td>denyApplication(long applicationId)</td>
+        <td>Cambiar el estado de una postulacion a denegada.</td>
+    </tr>
+    <tr>
+        <td><b>Dependencias</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>ApplicationQueryService</td>
+        <td>Servicio para manejar consultas relacionas con las postulaciones.</td>
+    </tr>
+    <tr>
+        <td>ApplicationCommandService</td>
+        <td>Servicio para manejar comandos de posulaciones.</td>
+    </tr>
+    <tr>
+        <td>CreateApplicationCommandFromResourceAssembler</td>
+        <td>Ensamblador para convertir un recurso de postulación en un comando.</td>
+    </tr>
+    <tr>
+        <td>ApplicationResourceFromEntityAssembler</td>
+        <td>Ensamblador para conovertir una entidad de postulación en un recurso para la API.</td>
+    </tr>
+    <tr>
+        <td>CreateApplicationResource</td>
+        <td>Recurso que representa la solicitud para crear una postulación.</td>
+    </tr>
+    <tr>
+        <td>ApplicationResource</td>
+        <td>Recurso que representa la respuesta de una postulación en la API.</td>
+    </tr>
+    <tr>
+        <td>UpdateApplicationResource</td>
+        <td>Recurso que representa la solicitud para actualizar la postulación.</td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="2"><b>Controlador: DataApoderadoController</b></td>
+    </tr>
+    <tr>
+        <td colspan="2"><b>Descripcion:</b> Controlador que gestiona las operaciones relacionadas con la información adicional de los apoderados.</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>createDataApoderado(CreateDataApoderadoResource resource)</td>
+        <td>Crea una nueva entrada de información adicional para un apoderado.</td>
+    </tr>
+    <tr>
+        <td>updateDataApoderado(long dataApoderadoId, UpdateDataApoderadoResource resource)</td>
+        <td>Actualiza la información adicional de un apoderado.</td>
+    </tr>
+    <tr>
+        <td>deleteDataApoderado(long dataApoderadoId)</td>
+        <td>Elimina una entrada de información adicional de un apoderado.</td>
+    </tr>
+    <tr>
+        <td>getAllDataApoderados()</td>
+        <td>Recupera una lista de todas las entradas de información adicional de apoderados registradas.</td>
+    </tr>
+    <tr>
+        <td>getDataApoderadoById(long dataApoderadoId)</td>
+        <td>Recupera la información adicional de un apoderado por su ID.</td>
+    </tr>
+    <tr>
+        <td>getDataApoderadosByApoderadoId(long apoderadoId)</td>
+        <td>Recupera todas las entradas de información adicional asociadas a un apoderado específico.</td>
+    </tr>
+    <tr>
+        <td><b>Dependencias</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>DataApoderadoQueryService</td>
+        <td>Servicio para manejar consultas relacionadas con la información adicional de apoderados.</td>
+    </tr>
+    <tr>
+        <td>DataApoderadoCommandService</td>
+        <td>Servicio para manejar comandos relacionados con la información adicional de apoderados.</td>
+    </tr>
+    <tr>
+        <td>CreateDataApoderadoCommandFromResourceAssembler</td>
+        <td>Ensamblador para convertir un recurso de información adicional en un comando.</td>
+    </tr>
+    <tr>
+        <td>DataApoderadoResourceFromEntityAssembler</td>
+        <td>Ensamblador para convertir una entidad de información adicional en un recurso para la API.</td>
+    </tr>
+    <tr>
+        <td>CreateDataApoderadoResource</td>
+        <td>Recurso que representa la solicitud para crear una entrada de información adicional.</td>
+    </tr>
+    <tr>
+        <td>DataApoderadoResource</td>
+        <td>Recurso que representa la respuesta de una entrada de información adicional en la API.</td>
+    </tr>
+    <tr>
+        <td>UpdateDataApoderadoResource</td>
+        <td>Recurso que representa la solicitud para actualizar una entrada de información adicional.</td>
+    </tr>
+</table>
+
 ### 4.2.2.3. Application Layer
+
+Descripción: El Application Layer orquesta las operaciones que deben ejecutarse para cumplir con las necesidades del usuario, coordinando diferentes servicios y repositorios del sistema. Contiene la lógica específica de las acciones que no necesariamente forman parte del dominio principal pero son esenciales para el funcionamiento.
+
+Justificación: En este contexto, los servicios ApplicationCommandService y ApplicationQueryService gestionan las reglas de negocio relacionadas con las postulaciones. Se encargan de ejecutar comandos y consultas sobre las postulaciones. Esta capa se comunica con ApplicationRepository, asegurando que la lógica de negocio esté aplicada y se cumpla.
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="2"><b>Servicio: ApplicationCommandServiceImpl</b></td>
+    </tr>
+    <tr>
+        <td colspan="2"><b>Descripcion:</b> Implementación de la interfaz ApplicationCommandService, encargada de gestionar las postulaciones. </td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>handle(CreateApplicationCommand command)</td>
+        <td>Maneja la creación de una nueva postulación.</td>
+    </tr>
+    <tr>
+        <td>handle(AcceptApplicationCommand command)</td>
+        <td>Maneja la aprobacion de una postulación.</td>
+    </tr>
+    <tr>
+        <td>handle(DenyApplicationCommand command)</td>
+        <td>Maneja la denegación de una postulación</td>
+    </tr>
+    <tr>
+        <td>deleteApplication(long applicationId)</td>
+        <td>Elimina una postulación existente por el id de la misma.</td>
+    </tr>
+    <tr>
+        <td>updateApplication(long applicationId, UpdateApplicationResource request)</td>
+        <td>Actualiza una aplicación, si esta ya fue iniciada, lanza una excepción.</td>
+    </tr>
+    <tr>
+        <td><b>Dependencias</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>ApplicationRepository</td>
+        <td>Repositorio para manejar la persistencia en las postulaciones.</td>
+    </tr>
+    <tr>
+        <td>CreateApplicationCommand</td>
+        <td>Comando que encapsula los datos necesarios para crear una nueva postulación</td>
+    </tr>
+    <tr>
+        <td>DenyApplicationCommand</td>
+        <td>Comando que encapsula los datos necesarios para denegar una potulación.</td>
+    </tr>
+    <tr>
+        <td>AcceptApplicationCommand</td>
+        <td>Comando que encapsula los datos necesarios para aceptar una potulación.</td>
+    </tr>
+    <tr>
+        <td>UpdateApplicationResource</td>
+        <td>Recurso que encapsula los datos necesarios para actualizar una postulación</td>
+    </tr>
+    <tr>
+        <td>Application</td>
+        <td>Entidad que representa una postulación en el dominio.</td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="2"><b>Servicio: ApplicationQueryServiceImpl</b></td>
+    </tr>
+    <tr>
+        <td colspan="2"><b>Descripcion:</b> Implementación de la interfaz ApplicationQueryService, encargada de manejar las consulatas relacionadas con postulaciones. </td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>handle(GetApplicationByIdQuery query)</td>
+        <td>Maneja la consulta para obtener una postulacion por su Id.</td>
+    </tr>
+    <tr>
+        <td>handle(getAllApplicationsQuery query)</td>
+        <td>Maneja la consulta para obtener todas las postulaciones.</td>
+    </tr>
+    <tr>
+        <td>handle(GetApplicationsByApoderadoIdQuery query)</td>
+        <td>Maneja la consulta para obtener todas las postulaciones según el id del apoderado.</td>
+    </tr>
+    <tr>
+        <td><b>Dependencias</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>ApplicationRepository</td>
+        <td>Repositorio para manejar la persistencia en las postulaciones.</td>
+    </tr>
+    <tr>
+        <td>GetApplicationByIdQuery</td>
+        <td>Consulta que encaptula el Id de la postulación que se desea obtener.</td>
+    </tr>
+    <tr>
+        <td>GetAllApplicationsQuery</td>
+        <td>Consulta que no requiere parámetros y busca todas las postulaciones.</td>
+    </tr>
+    <tr>
+        <td>GetApplicationByApoderadoIdQuery</td>
+        <td>Consulta que encaptula el Id del apoderado para buscar asi postulaciones que coincidan.</td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="2"><b>Servicio: DataApoderadoCommandServiceImpl</b></td>
+    </tr>
+    <tr>
+        <td colspan="2"><b>Descripcion:</b> Implementación de la interfaz DataApoderadoCommandService, encargada de gestionar las operaciones relacionadas con la información adicional de los apoderados.</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>handle(CreateDataApoderadoCommand command)</td>
+        <td>Maneja la creación de una nueva entrada de información adicional para un apoderado.</td>
+    </tr>
+    <tr>
+        <td>handle(UpdateDataApoderadoCommand command)</td>
+        <td>Maneja la actualización de la información adicional de un apoderado.</td>
+    </tr>
+    <tr>
+        <td>deleteDataApoderado(long dataApoderadoId)</td>
+        <td>Elimina una entrada de información adicional de un apoderado por su ID.</td>
+    </tr>
+    <tr>
+        <td><b>Dependencias</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>DataApoderadoRepository</td>
+        <td>Repositorio para manejar la persistencia de la información adicional de los apoderados.</td>
+    </tr>
+    <tr>
+        <td>CreateDataApoderadoCommand</td>
+        <td>Comando que encapsula los datos necesarios para crear una nueva entrada de información adicional.</td>
+    </tr>
+    <tr>
+        <td>UpdateDataApoderadoCommand</td>
+        <td>Comando que encapsula los datos necesarios para actualizar una entrada de información adicional.</td>
+    </tr>
+    <tr>
+        <td>DataApoderado</td>
+        <td>Entidad que representa la información adicional de un apoderado en el dominio.</td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="2"><b>Servicio: DataApoderadoQueryServiceImpl</b></td>
+    </tr>
+    <tr>
+        <td colspan="2"><b>Descripcion:</b> Implementación de la interfaz DataApoderadoQueryService, encargada de manejar las consultas relacionadas con la información adicional de los apoderados.</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>handle(GetDataApoderadoByIdQuery query)</td>
+        <td>Maneja la consulta para obtener la información adicional de un apoderado por su ID.</td>
+    </tr>
+    <tr>
+        <td>handle(GetAllDataApoderadosQuery query)</td>
+        <td>Maneja la consulta para obtener todas las entradas de información adicional de apoderados registradas.</td>
+    </tr>
+    <tr>
+        <td>handle(GetDataApoderadosByApoderadoIdQuery query)</td>
+        <td>Maneja la consulta para obtener todas las entradas de información adicional asociadas a un apoderado específico.</td>
+    </tr>
+    <tr>
+        <td><b>Dependencias</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>DataApoderadoRepository</td>
+        <td>Repositorio para manejar la persistencia de la información adicional de los apoderados.</td>
+    </tr>
+    <tr>
+        <td>GetDataApoderadoByIdQuery</td>
+        <td>Consulta que encapsula el ID de la información adicional que se desea obtener.</td>
+    </tr>
+    <tr>
+        <td>GetAllDataApoderadosQuery</td>
+        <td>Consulta que no requiere parámetros y busca todas las entradas de información adicional.</td>
+    </tr>
+    <tr>
+        <td>GetDataApoderadosByApoderadoIdQuery</td>
+        <td>Consulta que encapsula el ID del apoderado para buscar las entradas de información adicional asociadas.</td>
+    </tr>
+</table>
+
 ### 4.2.2.4. Infrastructure Layer
+
+Descripción: El Infrastructure Layer se encarga de proporcionar acceso a la base de datos, servicios externos y otros detalles técnicos que no forman
+parte de la lógica de negocio. Actúa como la implementación real de la persistencia y otras preocupaciones técnicas.
+
+Justificación: ApplicationRepository es el responsable de la persistencia de las postulaciones. Los diferentes métodos permiten
+interactuar directamente con la base de datos. Este layer asegura que los datos se almacenen y recuperen correctamente desde la infraestructura subyacente, separando las preocupaciones técnicas de las reglas de negocio.
+
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="2"><b>Repositorio: ApplicationRepository</b></td>
+    </tr>
+    <tr>
+        <td colspan="2"><b>Descripcion:</b> Repositorio de acceso a datos para la entidad Application, utilizando JPA para realizar operaciones de persistencia.</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>findApplicationStatus(long applicationId)</td>
+        <td>Busca el estado de una postulación según el id de la misma.</td>
+    </tr>
+    <tr>
+        <td>findApplicationByPostulanteIdAndId(long applicationId, long postulanteId)</td>
+        <td>Busca una postulación que coincida con el id de la misma y el del postulante ingresados.</td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="2"><b>Repositorio: DataApoderadoRepository</b></td>
+    </tr>
+    <tr>
+        <td colspan="2"><b>Descripcion:</b> Repositorio de acceso a datos para la entidad DataApoderado, utilizando JPA para realizar operaciones de persistencia.</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>findDataApoderadoById(long dataApoderadoId)</td>
+        <td>Busca la información adicional de un apoderado según su ID.</td>
+    </tr>
+    <tr>
+        <td>findAllDataApoderados()</td>
+        <td>Recupera una lista de todas las entradas de información adicional de apoderados registradas.</td>
+    </tr>
+    <tr>
+        <td>findDataApoderadosByApoderadoId(long apoderadoId)</td>
+        <td>Busca todas las entradas de información adicional asociadas a un apoderado específico.</td>
+    </tr>
+</table>
+
 ### 4.2.2.5. Bounded Context Software Architecture Component Level Diagrams
+
+![Container-diagram-ddd-application](assets/images/structurizr-ddd-application.png) 
+
 ### 4.2.2.6. Bounded Context Software Architecture Code Level Diagrams
+
 #### 4.2.2.6.1. Bounded Context Domain Layer Class Diagrams
+
+![class-diagram-application](assets/images/applications-ddd.png) 
+
 #### 4.2.2.6.2. Bounded Context Database Design Diagram
+
+El diagrama de base de datos para el Bounded Context Applications detalla el esquema relacional que soporta la persistencia del modelo de dominio. La tabla principal applications incluye columnas como id (PK, autoincremental) y campos de auditoría (created_at, updated_at). La tabla data_apoderados contiene id (PK), name, apoderadoId (record), etc.
+
+La relación uno-a-muchos entre data_apoderados y applications nos muestra que la misma data para apoderados puede estar en diferentes postulaciones, al igual que para la relación de postulantes a postulaciones.
+
+![aplication-db-diagram](assets/images/applications-db-diag.png) 
 
 ## 4.2.3. Bounded Context: Management
 ### 4.2.3.1. Domain Layer
