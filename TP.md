@@ -3474,12 +3474,12 @@ El módulo IAM (Identity and Access Management) implementa la gestión centraliz
 
 | Bounded Context | Endpoint | Acción | Verbo HTTP | Parámetros | Ejemplo de Respuesta | Documentación |
 |-----------------|----------|--------|------------|------------|----------------------|---------------|
-| **Autenticación** | `/api/v1/authentication/sign-in` | Inicio de sesión | POST | `{"email": string, "password": string}` | `{"token": "jwt.token", "user": {...}}` | [Swagger](#) | 
-|  | `/api/v1/authentication/sign-up` | Registro de usuario | POST | `{"email": string, "password": string, "name": string}` | `{"id": 1, "email": "user@example.com"}` | [Swagger](#) |
-| **Usuarios** | `/api/v1/users` | Listar usuarios | GET | - | `[{"id": 1, "email": "user@example.com"}]` | [Swagger](#) |
-|  | `/api/v1/users/{userId}` | Obtener usuario por ID | GET | `userId: long` | `{"id": 1, "email": "user@example.com"}` | [Swagger](#) |
+| **Autenticación** | `/api/v1/authentication/sign-in` | Inicio de sesión | POST | `{"username": "string","password": "string"}` | `{"id": 0,"username": "string","token": "string"}` | [Swagger](#) | 
+|  | `/api/v1/authentication/sign-up` | Registro de usuario | POST | `{"username": "string","password": "string","compania": "string","dni": "string","cod_colaborador": "string","roles": ["string"]}` | `{"id": 0,"username": "string","roles": ["string"],"proofingEntrepreneure": "string"}` | [Swagger](#) |
+| **Usuarios** | `/api/v1/users` | Listar usuarios | GET | - | `[{"id": 0,"username": "string","roles": ["string"],"proofingEntrepreneure": "string"}]` | [Swagger](#) |
+|  | `/api/v1/users/{userId}` | Obtener usuario por ID | GET | `userId: long` | `{"id": 0,"username": "string","roles": ["string"],"proofingEntrepreneure": "string"}` | [Swagger](#) |
 |  | `/api/v1/users/{userId}/update-proofing` | Actualizar verificación | PUT | `{"proofingStatus": string}` | `{"message": "Proofing updated"}` | [Swagger](#) |
-| **Roles** | `/api/v1/roles` | Listar roles | GET | - | `[{"id": 1, "name": "ADMIN"}]` | [Swagger](#) |
+| **Roles** | `/api/v1/roles` | Listar roles | GET | - | `  {"id": 0,"name": "string"}]` | [Swagger](#) |
 
 ---
 
