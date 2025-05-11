@@ -2500,17 +2500,173 @@ La relación uno-a-muchos entre data_apoderados y applications nos muestra que l
 ![aplication-db-diagram](assets/images/applications-db-diag.png) 
 
 ANEXO H
+  
+### 4.2.3. Bounded Context: Management
 
-## 4.2.3. Bounded Context: Management
-### 4.2.3.1. Domain Layer
-### 4.2.3.2. Interface Layer
-### 4.2.3.3. Application Layer
-### 4.2.3.4. Infrastructure Layer
+#### 4.2.3.1. Domain Layer  
+**Descripción**: Capa que contiene los agregados, entidades y value objects fundamentales para la gestión de becas y reportes, garantizando la integridad de las reglas de negocio.
+
+* **Aggregate: Scholarship**  
+**Descripción:** Representa una convocatoria de beca en el sistema, controlando su ciclo de vida desde creación hasta cierre.
+
+| Atributo            | Tipo               | Descripción |
+|---------------------|--------------------|-------------|
+| id                  | Long               | ID único generado automáticamente |
+| name                | String             | Nombre descriptivo de la convocatoria (ej: "Beca Excelencia 2024") |
+| requirements        | List<Requirement>  | Lista de requisitos obligatorios y opcionales |
+| status              | ScholarshipStatus  | Estado actual: DRAFT, PUBLISHED o CLOSED |
+| coordinatorId       | Long               | ID del usuario coordinador (relación con BC IAM) |
+
+| Método              | Descripción |
+|---------------------|-------------|
+| publish()           | Transición de DRAFT a PUBLISHED si cumple validaciones |
+| close()             | Cambia estado a CLOSED y dispara eventos relacionados |
+
+| Dependencias        | Descripción |
+|---------------------|-------------|
+| Requirement         | Value Object que define los requisitos |
+| User (BC IAM)       | Para validar coordinador |
+
+* **Aggregate: Report**  
+**Descripción:** Documento oficial que registra el resultado de una postulación, incluyendo snapshots históricos.
+
+| Atributo            | Tipo               | Descripción |
+|---------------------|--------------------|-------------|
+| id                  | Long               | Identificador único |
+| applicationId       | Long               | Referencia a la postulación en BC Application |
+| apoderadoData       | ApoderadoSnapshot  | Copia inmutable de datos del apoderado |
+| postulanteData      | PostulanteSnapshot | Copia inmutable de datos del postulante |
+| resolution          | ResolutionStatus   | Resultado final: APPROVED/DENIED |
+| adminComments       | String             | Comentarios detallados cuando es DENIED |
+
+| Método              | Descripción |
+|---------------------|-------------|
+| generate()          | Crea documento con todos los datos relevantes |
+| addDenialDetails()  | Registra motivos específicos de rechazo |
+
+| Dependencias        | Descripción |
+|---------------------|-------------|
+| Application (BC App)| Para datos de postulación |
+| ApoderadoSnapshot   | Para preservar datos históricos |
+
+* **Value Object: Requirement**  
+**Descripción:** Define un requisito específico para aplicar a la beca.
+
+| Atributo            | Tipo      | Descripción |
+|---------------------|-----------|-------------|
+| name                | String    | Nombre del requisito (ej: "Promedio mínimo") |
+| description         | String    | Explicación detallada |
+| isMandatory         | Boolean   | Si es obligatorio para aplicar |
+
+* **Value Object: ApoderadoSnapshot**  
+**Descripción:** Captura inmutable de los datos del apoderado al momento de resolución.
+
+| Atributo            | Tipo      | Descripción |
+|---------------------|-----------|-------------|
+| nombres             | String    | Nombre completo |
+| dni                 | String    | Documento de identidad |
+| contacto            | Contacto  | Datos de contacto |
+| infoLaboral         | LaborInfo | Información laboral actual |
+
+#### 4.2.3.2. Interface Layer  
+**Descripción**: Capa que expone endpoints API para interactuar con el sistema de gestión.
+
+* **Controller: ScholarshipController**
+
+| Método | Ruta                    | Descripción |
+|--------|-------------------------|-------------|
+| POST   | /api/v1/scholarships    | Crea nueva convocatoria (requiere rol COORDINATOR) |
+| PUT    | /api/v1/scholarships/{id}/status | Actualiza estado (PUBLISHED/CLOSED) |
+
+| Dependencias        | Descripción |
+|---------------------|-------------|
+| ScholarshipCommandService | Para operaciones de escritura |
+| AuthService (BC IAM)| Para validación de roles |
+
+* **Controller: ReportController**
+
+| Método | Ruta                    | Descripción |
+|--------|-------------------------|-------------|
+| GET    | /api/v1/reports/{id}    | Descarga reporte en formato PDF |
+
+| Dependencias        | Descripción |
+|---------------------|-------------|
+| ReportQueryService  | Para recuperar reportes |
+| PDFGenerator        | Para generación de documentos |
+
+#### 4.2.3.3. Application Layer  
+**Descripción**: Orquesta operaciones complejas entre dominio e infraestructura.
+
+* **Service: ScholarshipCommandService**
+
+| Método               | Descripción |
+|----------------------|-------------|
+| handle(CreateScholarshipCommand) | Valida y persiste nueva convocatoria |
+| handle(PublishScholarshipCommand) | Publica convocatoria si cumple requisitos |
+
+| Dependencias        | Descripción |
+|---------------------|-------------|
+| ScholarshipRepository | Persistencia de datos |
+| RoleValidator (BC IAM) | Verificación de roles |
+
+* **Service: ReportCommandService**
+
+| Método               | Descripción |
+|----------------------|-------------|
+| handle(GenerateReportCommand) | Crea reporte con snapshots |
+| handle(AddDenialDetailsCommand) | Añade comentarios de denegación |
+
+| Dependencias        | Descripción |
+|---------------------|-------------|
+| ReportRepository    | Almacenamiento |
+| ApplicationService (BC App) | Datos de postulación |
+
+#### 4.2.3.4. Infrastructure Layer  
+**Descripción**: Implementa persistencia e integraciones técnicas.
+
+* **Repository: ScholarshipRepository**
+
+| Método              | Descripción |
+|---------------------|-------------|
+| findByStatus(Status) | Filtra por estado actual |
+| existsByName(String) | Verifica nombres duplicados |
+
+* **Repository: ReportRepository**
+
+| Método              | Descripción |
+|---------------------|-------------|
+| findByApplicationId(Long) | Busca por ID de postulación |
+| saveWithSnapshot(Report) | Almacena con datos históricos |
+
+* **Integraciones Externas**
+
+| Componente          | Descripción |
+|---------------------|-------------|
+| PDFGenerator        | Genera documentos en formato PDF |
+| EmailService        | Envía notificaciones (integración con BC IAM) |
+
 ### 4.2.3.5. Bounded Context Software Architecture Component Level Diagrams
+
+Este diagrama de contenedores refleja la estructura y componentes clave de nuestro Sistema de Gestión de Becas y Reportes. En él, mostramos cómo interactúan los distintos actores, sistemas y servicios dentro de la plataforma para gestionar y procesar becas y reportes. El coordinador es el principal usuario del sistema, encargado de gestionar las convocatorias y los reportes, mientras que los diversos componentes y servicios como las APIs, servicios de comandos, repositorios y herramientas externas trabajan juntos para facilitar la creación, publicación, almacenamiento y notificación de información clave. Este diagrama nos ayuda a visualizar cómo cada parte del sistema contribuye a una experiencia fluida y eficiente para nuestros usuarios.
+
+![alt text](assets/images/structurizr-Container-001.png) 
+
+ANEXO F
+
 ### 4.2.3.6. Bounded Context Software Architecture Code Level Diagrams
 #### 4.2.3.6.1. Bounded Context Domain Layer Class Diagrams
-#### 4.2.3.6.2. Bounded Context Database Design Diagram
+Este diagrama de clases representa el modelo de dominio para un sistema de gestión de becas, mostrando los elementos principales con detalle. La estructura se organiza en objetos de valor como Requirement, ApoderadoSnapshot y PostulanteSnapshot, que capturan datos inmutables, junto con enumeraciones como ScholarshipStatus y ResolutionStatus para definir estados. Los agregados Scholarship (como raíz) y Report gestionan la lógica central, con métodos como publish(), close() y generate() para operaciones clave. Las interfaces ReportCommandService y ScholarshipCommandService manejan comandos complejos, mientras que las secciones Queries y Commands separan las operaciones de lectura y escritura.
 
+El diseño sigue principios de Domain-Driven Design, destacando la inmutabilidad de los objetos de valor y la consistencia transaccional de los agregados. Scholarship controla el ciclo de vida de las becas, mientras que Report gestiona los datos de postulantes y apoderados mediante snapshots. Los servicios de comandos coordinan acciones que afectan múltiples agregados, y las enumeraciones definen los flujos de trabajo posibles. La estructura refleja un modelo bien delimitado, con clara separación entre consultas, comandos y la lógica de dominio central.
+
+![alt text](assets/images/diagclassmanagement.png) 
+
+#### 4.2.3.6.2. Bounded Context Database Design Diagram
+Este diagrama de base de datos para el Bounded Context de Gestión de Becas define el esquema relacional que persiste el modelo de dominio. La tabla principal Scholarship contiene columnas como id (PK, autoincremental), name (VARCHAR), status (ENUM con estados DRAFT/PUBLISHED/CLOSED), coordinator_id (BIGINT) y campos implícitos de auditoría. La tabla Report almacena id (PK), application_id (BIGINT), resolution (ENUM con estados DRAFT/APPROVED/DENIED) y admin_comments (TEXT), estableciendo una relación implícita con solicitudes de beca.
+
+Las relaciones 1:N se implementan mediante tablas anidadas: Scholarship_Requirement (con FK scholarship_id y campos como is_mandatory) y las relaciones 1:1 en las tablas de snapshots (Report_ApoderadoSnapshot y Report_PostulanteSnapshot) con FKs report_id y datos estructurados en JSON. Las constraints incluyen NOT NULL para campos clave (ej: name en Scholarship) y ON DELETE CASCADE en las FKs para mantener consistencia. La notación crow’s foot refleja cardinalidades (1:N entre Scholarship-Requirements y 1:1 entre Report-Snapshots), mientras que los ENUM y JSON preservan la semántica del dominio sin necesidad de tablas adicionales para objetos de valor simples.
+
+![alt text](assets/images/managementdatabasediagram.png) 
 
 ## Capítulo V: Solution UI/UX Design
 
@@ -3278,6 +3434,23 @@ Link de Trello: ANEXO M
 
 En este Sprint, los miembros del equipo de desarrollo de software de Aventis han completado y desplegado la Landing Page. A continuación, mostramos imágenes que demuestran cómo nuestra página presenta de manera clara e intuitiva la información sobre nuestro producto y nuestra empresa.
 
+<br>
+
+![deploy](assets/images/landing1.png)
+<br>
+
+![deploy](assets/images/landing2.png)
+<br>
+
+![deploy](assets/images/landing3.png)
+<br>
+
+![deploy](assets/images/landing4.png)
+<br>
+
+![deploy](assets/images/landing5.png)
+<br>
+
 
 En segundo lugar ,se avanzo el bounded context IAM tanto en backend como en frontend :
 
@@ -3445,13 +3618,16 @@ Subida de Archivos: Transferencia de archivos y recursos al servidor de hosting.
 Verificación: Comprobación de que la landing page se despliega correctamente y está accesible en la web.
 
 **Deploy del Landing Page**
-![deploy](assets/images/deploy_tb1.png)
+![deploy](assets/images/landing-page-deploy1.png)
+<br>
+
+![deploy](assets/images/landing-page-deploy2.png)
 **Capturas de Pantalla**
 
 - Repositorio de Landing Page:
-  ![alt text](assets/images/foto_repositorio.jpg)
+  ![alt text](assets/images/repositorio-landing-page.png)
 
-**Enlace al Repositorio**: https://github.com/Rampart-SaboresCercanos/Landing-page 
+**Enlace al Repositorio**: https://aventis-scholr.github.io/landing-page/ 
 
 ### 6.2.1.7. Team Collaboration Insights during Sprint 1 
 
@@ -3466,16 +3642,24 @@ En esta sección, se presenta un análisis detallado de la colaboración del equ
 
 **Landing Page**
 
-[FOTOS LANDING]
-- Estefano Oscar Jaque Peña: 2
-- John Telesforo Arevalo Meza: 10
+![Commits](assets/images/landing-page/landingc1.png)
+
+- John Telesforo Arevalo Meza: 6
 
 **Report:**
 
-[COMMITS]
+![alt text](assets/images/commitsall1.png)
 
-- Estefano Oscar Jaque Peña: X
-- John Telesforo Arevalo Meza: X
+![alt text](assets/images/commitsall2.png)
+
+![alt text](assets/images/commitsreport1.png)
+
+![Commits](assets/images/commitsreport2.png)
+
+- Estefano Oscar Jaque Peña: 14
+- John Telesforo Arevalo Meza: 13
+- Sebastian Real Calderon: 16
+- Diego Alonso Rosado Iporre: 11
 
 ## Conclusiones
 
