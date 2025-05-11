@@ -165,6 +165,16 @@ TB1:<br>
       - [6.1.1. Software Development Environment Configuration](#611-software-development-environment-configuration)
       - [6.1.2. Source Code Management](#612-source-code-management)
       - [6.1.3. Source Code Style Guide & Conventions](#613-source-code-style-guide--conventions)
+      - [6.1.4. Software Deployment Configuration.](#614-software-deployment-condiguration)
+    - [6.2. Landing Page, Services & Applications Implementation.](#62-landing-page--mobile-application-implementation)
+      - [6.2.1. Sprint 1](#621-sprint-1)
+        - [6.2.1.1. Sprint Planning 1.](#6211-sprint-planning-1)
+        - [6.2.1.2. Sprint Backlog 1.](#6212-sprint-backlog-1)
+        - [6.2.1.3. Development Evidence for Sprint Review.](#6213-development-evidence-for-sprint-review)
+        -[6.2.1.4. Execution Evidence for Sprint Review.](#6214-execution-evidence-for-sprint-review)
+        - [6.2.1.5. Services Documentation Evidence for Sprint Review.](#6215-services-documentation-evidence-for-sprint-review)
+        - [6.2.1.6. Software Deployment Evidence for Sprint Review.](#6216-software-deployment-evidence-for-sprint-review)
+        - [6.2.1.7. Team Collaboration Insights during Sprint.](#6217-team-collaboration-insights-during-sprint-1)
   - [Conclusiones](#conclusiones)
   - [Bibliografia](#bibliografia)
   - [Anexos](#anexos)
@@ -998,7 +1008,7 @@ Se identificaron los siguientes bounded contexts en el sistema:
 
 Este diseño final refleja la autonomía de contextos y prepara el sistema para evolucionar modularmente.
 
-ANEXO F  
+ANEXO E  
 
 ### 4.1.3. Software Architecture
 
@@ -1030,6 +1040,7 @@ ANEXO F
 
 ![alt text](assets/images/structIAM.png) 
 
+ANEXO F
 ### 4.2. Tactical-Level Domain-Driven Design
 
 ## 4.2.1. Bounded Context: IAM  
@@ -1263,7 +1274,9 @@ El diagrama representa el módulo de Identity and Access Management (IAM) del si
 
 El IAM se integra con otros módulos: el UserService sincroniza datos con el Backend API, y el RoleService provee verificación de permisos para el sistema. Además, los actores (Apoderado , Gestionador y Administrador) interactúan directamente con el AuthController para autenticarse, estableciendo un flujo centralizado y seguro para la gestión de identidad.
 
-![alt text](assets/images/structIAM.png) 
+![alt text](assets/images/structIAM.png)
+
+ANEXO F
 
 ### 4.2.1.6. Bounded Context Software Architecture Code Level Diagrams  
 
@@ -1276,7 +1289,7 @@ El objeto de valor EmailAddress se muestra como una clase embebida (embedded) de
 
 ![alt text](assets/images/classIAM.png) 
 
-ANEXO F  
+ANEXO G
 
 #### 4.2.1.6.2. Bounded Context Database Design Diagram  
 El diagrama de base de datos para el Bounded Context IAM detalla el esquema relacional que soporta la persistencia del modelo de dominio. La tabla principal users incluye columnas como id (PK, autoincremental), username (VARCHAR, UNIQUE), password (VARCHAR), proofing_apoderado (TEXT) y campos de auditoría (created_at, updated_at). La tabla roles contiene id (PK) y name (ENUM o VARCHAR con constraint CHECK para los valores permitidos).
@@ -1284,17 +1297,1210 @@ El diagrama de base de datos para el Bounded Context IAM detalla el esquema rela
 La relación muchos-a-muchos entre users y roles se implementa mediante una tabla de unión user_roles con las foreign keys user_id (FK a users.id) y role_id (FK a roles.id), ambas formando una PK compuesta. Se incluyen constraints como NOT NULL en campos obligatorios (ej: username) e índices únicos. Para el objeto de valor EmailAddress, se añade la columna email en users con longitud máxima (50 caracteres). Las flechas identifican las relaciones (crow’s foot notation), destacando la cardinalidad (1:N entre users y user_roles). 
 
 ![alt text](assets/images/databasediagram.png)
+
+ANEXO H
  
 ## 4.2.2. Bounded Context: Application
 ### 4.2.2.1. Domain Layer
+
+Descripción: El Domain Layer es donde se define la lógica de negocio principal, encapsulando las reglas de negocio más importantes del sistema. Este nivel contiene las entidades y los agregados que representan objetos de dominio reales. Los agregados en esta capa permiten gestionar la consistencia y las operaciones de estas entidades.
+
+Justificación: La entidad Application representa las postulaciones a becas en el sistema. Contiene atributos como un identificador único, el postulante, apoderado del mismo, fecha de solicitud, entre otros.
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="3"><b>Aggregate: Application</b></td>
+    </tr>
+    <tr>
+        <td colspan="3"><b>Descripción:</b> Representa la raíz del agregado de una postulación en el sistema, mapeando la tabla "applications".</td>
+    </tr>
+    <tr>
+        <td><b>Atributo</b></td>
+        <td><b>Tipo</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>id</td>
+        <td>Long</td>
+        <td>Identificador único de la postulación (autogenerado).</td>
+    </tr>
+    <tr>
+        <td>apoderadoId</td>
+        <td>Long</td>
+        <td>Identificador único del apoderado.</td>
+    </tr>
+    <tr>
+        <td>tipoBeca</td>
+        <td>TipoBeca (Value Object)</td>
+        <td>Tipo de beca a postular.</td>
+    </tr>
+    <tr>
+        <td>status</td>
+        <td>Status (Value Object)</td>
+        <td>Estado en el que se encuentra la postulación.</td>
+    </tr>
+    <tr>
+        <td>dataApoderado</td>
+        <td>DataApoderado</td>
+        <td>Información adicional sobre el apoderado.</td>
+    </tr>
+    <tr>
+        <td>postulante</td>
+        <td>Postulante</td>
+        <td>Relación con el postulante.</td>
+    </tr>
+    <tr>
+        <td>createdAt</td>
+        <td>Date</td>
+        <td>Fecha de creación de la postulación (no modificable).</td>
+    </tr>
+    <tr>
+        <td>updatedAt</td>
+        <td>Date</td>
+        <td>Fecha de última actualización de la postulación.</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td colspan="2"><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>Application(tipoBeca, apoderado, postulante)</td>
+        <td colspan="2">Constructor que inicializa una nueva postulación con tipo de beca, apoderado y postulante.</td>
+    </tr>
+    <tr>
+        <td>getId()</td>
+        <td colspan="2">Retorna el identificador único de la postulación.</td>
+    </tr>
+    <tr>
+        <td>getTipoBeca()</td>
+        <td colspan="2">Retorna el tipo de beca a la que se está postulando.</td>
+    </tr>
+    <tr>
+        <td>getStatus()</td>
+        <td colspan="2">Retorna el estado actual de la postulación.</td>
+    </tr>
+    <tr>
+        <td>getApoderado()</td>
+        <td colspan="2">Retorna la relación con el apoderado.</td>
+    </tr>
+    <tr>
+        <td>getPostulante()</td>
+        <td colspan="2">Retorna la relación con el postulante.</td>
+    </tr>
+    <tr>
+        <td>getCreatedAt()</td>
+        <td colspan="2">Retorna la fecha de creación de la postulación.</td>
+    </tr>
+    <tr>
+        <td>getUpdatedAt()</td>
+        <td colspan="2">Retorna la última fecha de actualización.</td>
+    </tr>
+    <tr>
+        <td>update(tipoBeca, apoderado, postulante)</td>
+        <td colspan="2">Actualiza los datos de la postulación excepto el estado.</td>
+    </tr>
+    <tr>
+        <td>delete()</td>
+        <td colspan="2">Elimina la postulación del sistema.</td>
+    </tr>
+    <tr>
+        <td>getEstado()</td>
+        <td colspan="2">Devuelve el estado actual de la postulación.</td>
+    </tr>
+    <tr>
+        <td>changeStatus(nuevoEstado)</td>
+        <td colspan="2">Modifica únicamente el estado de la postulación.</td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="3"><b>Aggregate: DataApoderado</b></td>
+    </tr>
+    <tr>
+        <td colspan="3"><b>Descripción:</b> Representa datos extra de un apoderado</td>
+    </tr>
+    <tr>
+        <td><b>Atributo</b></td>
+        <td><b>Tipo</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>id</td>
+        <td>Long</td>
+        <td>Identificador único de la informacion extra del apoderado.</td>
+    </tr>
+    <tr>
+        <td>apoderadoId</td>
+        <td>Long</td>
+        <td>Identificador único del apoderado.</td>
+    </tr>
+    <tr>
+        <td>nombres</td>
+        <td>String</td>
+        <td>Nombre(s) del apoderado.</td>
+    </tr>
+    <tr>
+        <td>apellidos</td>
+        <td>String</td>
+        <td>Apellido(s) del apoderado.</td>
+    </tr>
+    <tr>
+        <td>DNI</td>
+        <td>Int</td>
+        <td>Documento Nacional de Identidad.</td>
+    </tr>
+    <tr>
+        <td>fecha_nacimiento</td>
+        <td>Date</td>
+        <td>Fecha de nacimiento del apoderado.</td>
+    </tr>
+    <tr>
+        <td>contacto</td>
+        <td>Contacto</td>
+        <td>Información de contacto del apoderado.</td>
+    </tr>
+    <tr>
+        <td>domicilio</td>
+        <td>Domicilio</td>
+        <td>Dirección del apoderado.</td>
+    </tr>
+    <tr>
+        <td>cuentaBancaria</td>
+        <td>CuentaBancaria</td>
+        <td>Información de cuenta bancaria.</td>
+    </tr>
+    <tr>
+        <td>informacionLaboral</td>
+        <td>InformacionLaboral</td>
+        <td>Datos laborales del apoderado.</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td colspan="2"><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>Apoderado(id, nombres, apellidos, DNI, fecha_nacimiento, contacto, domicilio, cuentaBancaria, informacionLaboral)</td>
+        <td colspan="2">Constructor que inicializa un apoderado con toda su información.</td>
+    </tr>
+    <tr>
+        <td>getId()</td>
+        <td colspan="2">Retorna el identificador único.</td>
+    </tr>
+    <tr>
+        <td>getNombres()</td>
+        <td colspan="2">Retorna los nombres del apoderado.</td>
+    </tr>
+    <tr>
+        <td>getApellidos()</td>
+        <td colspan="2">Retorna los apellidos del apoderado.</td>
+    </tr>
+    <tr>
+        <td>getDNI()</td>
+        <td colspan="2">Retorna el DNI del apoderado.</td>
+    </tr>
+    <tr>
+        <td>getFechaNacimiento()</td>
+        <td colspan="2">Retorna la fecha de nacimiento.</td>
+    </tr>
+    <tr>
+        <td>getContacto()</td>
+        <td colspan="2">Retorna la información de contacto.</td>
+    </tr>
+    <tr>
+        <td>getDomicilio()</td>
+        <td colspan="2">Retorna el domicilio.</td>
+    </tr>
+    <tr>
+        <td>getCuentaBancaria()</td>
+        <td colspan="2">Retorna la cuenta bancaria.</td>
+    </tr>
+    <tr>
+        <td>getInformacionLaboral()</td>
+        <td colspan="2">Retorna la información laboral del apoderado.</td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="3"><b>Entidad: Postulante</b></td>
+    </tr>
+    <tr>
+        <td colspan="3"><b>Descripción:</b> Entidad que representa a un postulante.</td>
+    </tr>
+    <tr>
+        <td><b>Atributo</b></td>
+        <td><b>Tipo</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>id</td>
+        <td>Long</td>
+        <td>Identificador único de la postulación.</td>
+    </tr>
+    <tr>
+        <td>nombres</td>
+        <td>String</td>
+        <td>Nombres del postulante.</td>
+    </tr>
+    <tr>
+        <td>apellidos</td>
+        <td>String</td>
+        <td>Apellidos del postulante.</td>
+    </tr>
+    <tr>
+        <td>DNI</td>
+        <td>int</td>
+        <td>Documento Nacional de Identidad del postulante.</td>
+    </tr>
+    <tr>
+        <td>fechaNacimiento</td>
+        <td>Date</td>
+        <td>Fecha de nacimiento del postulante.</td>
+    </tr>
+    <tr>
+        <td>contacto</td>
+        <td>Contacto (value object)</td>
+        <td>Información de contacto del postulante.</td>
+    </tr>
+    <tr>
+        <td>centroEstudios</td>
+        <td>CentroEstudios (value object)</td>
+        <td>Centro de estudios del postulante.</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td colspan="2"><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>Postulante(id, nombres, apellidos, DNI, fechaNacimiento, contacto, centroEstudios)</td>
+        <td colspan="2">Constructor que inicializa los atributos del postulante.</td>
+    </tr>
+    <tr>
+        <td>setId(id: Long)</td>
+        <td colspan="2">Establece el identificador único de la postulación.</td>
+    </tr>
+    <tr>
+        <td>getId()</td>
+        <td colspan="2">Retorna el identificador único de la postulación.</td>
+    </tr>
+    <tr>
+        <td>setNombres(nombres: String)</td>
+        <td colspan="2">Establece los nombres del postulante.</td>
+    </tr>
+    <tr>
+        <td>getNombres()</td>
+        <td colspan="2">Retorna los nombres del postulante.</td>
+    </tr>
+    <tr>
+        <td>setApellidos(apellidos: String)</td>
+        <td colspan="2">Establece los apellidos del postulante.</td>
+    </tr>
+    <tr>
+        <td>getApellidos()</td>
+        <td colspan="2">Retorna los apellidos del postulante.</td>
+    </tr>
+    <tr>
+        <td>setDNI(DNI: int)</td>
+        <td colspan="2">Establece el DNI del postulante.</td>
+    </tr>
+    <tr>
+        <td>getDNI()</td>
+        <td colspan="2">Retorna el DNI del postulante.</td>
+    </tr>
+    <tr>
+        <td>setFechaNacimiento(fechaNacimiento: Date)</td>
+        <td colspan="2">Establece la fecha de nacimiento del postulante.</td>
+    </tr>
+    <tr>
+        <td>getFechaNacimiento()</td>
+        <td colspan="2">Retorna la fecha de nacimiento del postulante.</td>
+    </tr>
+    <tr>
+        <td>setContacto(contacto: Contacto)</td>
+        <td colspan="2">Establece el contacto del postulante.</td>
+    </tr>
+    <tr>
+        <td>getContacto()</td>
+        <td colspan="2">Retorna el contacto del postulante.</td>
+    </tr>
+    <tr>
+        <td>setCentroEstudios(centroEstudios: CentroEstudios)</td>
+        <td colspan="2">Establece el centro de estudios del postulante.</td>
+    </tr>
+    <tr>
+        <td>getCentroEstudios()</td>
+        <td colspan="2">Retorna el centro de estudios del postulante.</td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="3"><b>Value Object: Contacto</b></td>
+    </tr>
+    <tr>
+        <td colspan="3"><b>Descripcion:</b> Abarca tanto el correo como el número de celular para contacto.</td>
+    </tr>
+    <tr>
+        <td><b>Atributo</b></td>
+        <td><b>Tipo</b></td>
+        <td><b>Descripcion</b></td>
+    </tr>
+    <tr>
+        <td>email</td>
+        <td>String</td>
+        <td>Dirección de correo electrónico validada (no en blanco, máximo 50 caracteres, formato válido de correo).</td>
+    </tr>
+    <tr>
+        <td>celular</td>
+        <td>Long</td>
+        <td>Número de celular validado (no en blanco ni mas de 9 dígitos)</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td colspan="2"><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>EmailAddress(email: String)</td>
+        <td colspan="2">Contstructor que recibe un correo electrónico y lo valida.</td>
+    </tr>
+    <tr>
+        <td>PhoneNumber(celular: string)</td>
+        <td colspan="2">Contstructor que recibe un número de celular y lo valida.</td>
+    </tr>
+    <tr>
+        <td>getEmail()</td>
+        <td colspan="2">Retorna la dirección de correo electrónico.</td>
+    </tr>
+    <tr>
+        <td>getPhoneNumber()</td>
+        <td colspan="2">Retorna el número de celular.</td>
+    </tr>
+</table>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="3"><b>Value Object: InformaciónLaboral</b></td>
+    </tr>
+    <tr>
+        <td colspan="3"><b>Descripción:</b> Representa la información laboral de un colaborador.</td>
+    </tr>
+    <tr>
+        <td><b>Atributo</b></td>
+        <td><b>Tipo</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>tipoColaborador</td>
+        <td>String</td>
+        <td>Tipo de colaborador (empleado, contratista, etc.).</td>
+    </tr>
+    <tr>
+        <td>cargo</td>
+        <td>String</td>
+        <td>Puesto desempeñado dentro de la organización.</td>
+    </tr>
+    <tr>
+        <td>sede</td>
+        <td>String</td>
+        <td>Ubicación principal donde trabaja el colaborador.</td>
+    </tr>
+    <tr>
+        <td>local</td>
+        <td>String</td>
+        <td>Local específico dentro de la sede.</td>
+    </tr>
+    <tr>
+        <td>ingreso</td>
+        <td>BigDecimal</td>
+        <td>Salario o ingreso del colaborador.</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td colspan="2"><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>InformacionLaboral(tipoColaborador, cargo, sede, local, ingreso)</td>
+        <td colspan="2">Constructor que inicializa la información laboral.</td>
+    </tr>
+    <tr>
+        <td>getTipoColaborador()</td>
+        <td colspan="2">Retorna el tipo de colaborador.</td>
+    </tr>
+    <tr>
+        <td>getCargo()</td>
+        <td colspan="2">Retorna el cargo del colaborador.</td>
+    </tr>
+    <tr>
+        <td>getSede()</td>
+        <td colspan="2">Retorna la sede del colaborador.</td>
+    </tr>
+    <tr>
+        <td>getLocal()</td>
+        <td colspan="2">Retorna el local del colaborador.</td>
+    </tr>
+    <tr>
+        <td>getIngreso()</td>
+        <td colspan="2">Retorna el ingreso del colaborador.</td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="3"><b>Value Object: CuentaBancaria</b></td>
+    </tr>
+    <tr>
+        <td colspan="3"><b>Descripción:</b> Representa los datos bancarios de un colaborador.</td>
+    </tr>
+    <tr>
+        <td><b>Atributo</b></td>
+        <td><b>Tipo</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>entidadBancaria</td>
+        <td>String</td>
+        <td>Nombre de la institución bancaria.</td>
+    </tr>
+    <tr>
+        <td>numeroCuenta</td>
+        <td>String</td>
+        <td>Número de cuenta bancaria (validado con longitud entre 10 y 20 caracteres).</td>
+    </tr>
+    <tr>
+        <td>cci</td>
+        <td>String</td>
+        <td>Código de Cuenta Interbancaria (exactamente 20 caracteres).</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td colspan="2"><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>CuentaBancaria(entidadBancaria, numeroCuenta, cci)</td>
+        <td colspan="2">Constructor que inicializa una cuenta bancaria validada.</td>
+    </tr>
+    <tr>
+        <td>getEntidadBancaria()</td>
+        <td colspan="2">Retorna la entidad bancaria.</td>
+    </tr>
+    <tr>
+        <td>getNumeroCuenta()</td>
+        <td colspan="2">Retorna el número de cuenta.</td>
+    </tr>
+    <tr>
+        <td>getCci()</td>
+        <td colspan="2">Retorna el código CCI.</td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="3"><b>Value Object: CentroEstudio</b></td>
+    </tr>
+    <tr>
+        <td colspan="3"><b>Descripción:</b> Representa el centro de estudios del postulante.</td>
+    </tr>
+    <tr>
+        <td><b>Atributo</b></td>
+        <td><b>Tipo</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>nombre</td>
+        <td>String</td>
+        <td>Nombre de la institución</td>
+    </tr>
+    <tr>
+        <td>tipo</td>
+        <td>String</td>
+        <td>Tipo de institución</td>
+    </tr>
+    <tr>
+        <td>nivel</td>
+        <td>String</td>
+        <td>Nivel de la institución</td>
+    </tr>
+    <tr>
+        <td>departamento</td>
+        <td>String</td>
+        <td>Departamento en el que se encuentra la institución</td>
+    </tr>
+    <tr>
+        <td>provincia</td>
+        <td>String</td>
+        <td>Provincia en la que se encuentra la institución</td>
+    </tr>
+    <tr>
+        <td>distrito</td>
+        <td>String</td>
+        <td>Distrito en la que se encuentra la institución</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td colspan="2"><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>CentroEstudio(nombre, tipo, nivel, departamento, provincia, distrito)</td>
+        <td colspan="2">Constructor que inicializa los atributos de la institución.</td>
+    </tr>
+    <tr>
+        <td>setNombre(nombre: String)</td>
+        <td colspan="2">Establece el nombre de la institución.</td>
+    </tr>
+    <tr>
+        <td>getNombre()</td>
+        <td colspan="2">Retorna el nombre de la institución.</td>
+    </tr>
+    <tr>
+        <td>setTipo(tipo: String)</td>
+        <td colspan="2">Establece el tipo de institución.</td>
+    </tr>
+    <tr>
+        <td>getTipo()</td>
+        <td colspan="2">Retorna el tipo de institución.</td>
+    </tr>
+    <tr>
+        <td>setNivel(nivel: String)</td>
+        <td colspan="2">Establece el nivel de la institución.</td>
+    </tr>
+    <tr>
+        <td>getNivel()</td>
+        <td colspan="2">Retorna el nivel de la institución.</td>
+    </tr>
+    <tr>
+        <td>setDepartamento(departamento: String)</td>
+        <td colspan="2">Establece el departamento donde se ubica la institución.</td>
+    </tr>
+    <tr>
+        <td>getDepartamento()</td>
+        <td colspan="2">Retorna el departamento de la institución.</td>
+    </tr>
+    <tr>
+        <td>setProvincia(provincia: String)</td>
+        <td colspan="2">Establece la provincia donde se ubica la institución.</td>
+    </tr>
+    <tr>
+        <td>getProvincia()</td>
+        <td colspan="2">Retorna la provincia de la institución.</td>
+    </tr>
+    <tr>
+        <td>setDistrito(distrito: String)</td>
+        <td colspan="2">Establece el distrito donde se ubica la institución.</td>
+    </tr>
+    <tr>
+        <td>getDistrito()</td>
+        <td colspan="2">Retorna el distrito de la institución.</td>
+    </tr>
+    <tr>
+        <td>setEmail(email: String)</td>
+        <td colspan="2">Establece el correo electrónico validándolo.</td>
+    </tr>
+    <tr>
+        <td>getEmail()</td>
+        <td colspan="2">Retorna la dirección de correo electrónico.</td>
+    </tr>
+    <tr>
+        <td>setCelular(celular: String)</td>
+        <td colspan="2">Establece el número de celular validándolo.</td>
+    </tr>
+    <tr>
+        <td>getCelular()</td>
+        <td colspan="2">Retorna el número de celular.</td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="3"><b>Value Object: Domicilio</b></td>
+    </tr>
+    <tr>
+        <td colspan="3"><b>Descripción:</b> Representa el domicilio de una persona.</td>
+    </tr>
+    <tr>
+        <td><b>Atributo</b></td>
+        <td><b>Tipo</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>direccion</td>
+        <td>String</td>
+        <td>Dirección exacta del domicilio</td>
+    </tr>
+    <tr>
+        <td>departamento</td>
+        <td>String</td>
+        <td>Departamento donde se encuentra el domicilio</td>
+    </tr>
+    <tr>
+        <td>provincia</td>
+        <td>String</td>
+        <td>Provincia donde se encuentra el domicilio</td>
+    </tr>
+    <tr>
+        <td>distrito</td>
+        <td>String</td>
+        <td>Distrito donde se encuentra el domicilio</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td colspan="2"><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>Domicilio(direccion, departamento, provincia, distrito)</td>
+        <td colspan="2">Constructor que inicializa los atributos del domicilio.</td>
+    </tr>
+    <tr>
+        <td>setDireccion(direccion: String)</td>
+        <td colspan="2">Establece la dirección del domicilio.</td>
+    </tr>
+    <tr>
+        <td>getDireccion()</td>
+        <td colspan="2">Retorna la dirección del domicilio.</td>
+    </tr>
+    <tr>
+        <td>setDepartamento(departamento: String)</td>
+        <td colspan="2">Establece el departamento donde se ubica el domicilio.</td>
+    </tr>
+    <tr>
+        <td>getDepartamento()</td>
+        <td colspan="2">Retorna el departamento del domicilio.</td>
+    </tr>
+    <tr>
+        <td>setProvincia(provincia: String)</td>
+        <td colspan="2">Establece la provincia donde se ubica el domicilio.</td>
+    </tr>
+    <tr>
+        <td>getProvincia()</td>
+        <td colspan="2">Retorna la provincia del domicilio.</td>
+    </tr>
+    <tr>
+        <td>setDistrito(distrito: String)</td>
+        <td colspan="2">Establece el distrito donde se ubica el domicilio.</td>
+    </tr>
+    <tr>
+        <td>getDistrito()</td>
+        <td colspan="2">Retorna el distrito del domicilio.</td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="2"><b>Value Object: TipoBeca</b></td>
+    </tr>
+    <tr>
+        <td colspan="2"><b>Descripción:</b> Representa los tipos de becas disponibles.</td>
+    </tr>
+    <tr>
+        <td><b>Enumeración</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>MERITO</td>
+        <td>Beca otorgada por rendimiento académico sobresaliente.</td>
+    </tr>
+    <tr>
+        <td>DEPORTIVA</td>
+        <td>Beca otorgada por habilidades deportivas destacadas.</td>
+    </tr>
+    <tr>
+        <td>ECONOMICA</td>
+        <td>Beca otorgada por necesidad económica.</td>
+    </tr>
+    <tr>
+        <td>CULTURAL</td>
+        <td>Beca otorgada por logros en actividades artísticas o culturales.</td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="2"><b>Value Object: Status</b></td>
+    </tr>
+    <tr>
+        <td colspan="2"><b>Descripción:</b> Representa el estado de un proceso o entidad.</td>
+    </tr>
+    <tr>
+        <td><b>Enumeración</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>PENDIENTE</td>
+        <td>El proceso está en espera de revisión o aprobación.</td>
+    </tr>
+    <tr>
+        <td>APROBADO</td>
+        <td>El proceso ha sido validado y aceptado.</td>
+    </tr>
+    <tr>
+        <td>RECHAZADO</td>
+        <td>El proceso ha sido denegado por no cumplir los requisitos.</td>
+    </tr>
+    <tr>
+        <td>FINALIZADO</td>
+        <td>El proceso ha concluido satisfactoriamente.</td>
+    </tr>
+</table>
+
 ### 4.2.2.2. Interface Layer
+
+Descripción: El Interface Layer o capa de interfaz define cómo los usuarios o sistemas externos interactúan con el sistema. Aquí, los controladores reciben y gestionan las solicitudes HTTP, enviando la información adecuada a los servicios de aplicación.
+
+Justificación: ApplicationController maneja las solicitudes relacionadas con las postulaciones a becas, como la creación de nuevas mediante createApplication. Este controlador se apoya en los servicios ApplicationQueryService y ApplicationCommandService para consultar y ejecutar acciones sobre las postulaciones. Este layer actúa como la entrada principal para interactuar con las postulaciones, canalizando solicitudes a la capa de aplicación.
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="2"><b>Controlador: ApplicationsController</b></td>
+    </tr>
+    <tr>
+        <td colspan="2"><b>Descripcion:</b> Controlador que gestiona las operaciones relacionadas con las postulaciones.</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>createApplication(CreateApplicationResource resource)</td>
+        <td>Crea una nueva postulación</td>
+    </tr>
+    <tr>
+        <td>updateApplication(long applicationId, UpdateApplicationResource resource)</td>
+        <td>Actualizar una postulación</td>
+    </tr>
+    <tr>
+        <td>deleteApplication(long applicationId)</td>
+        <td>Eliminar una postulacion</td>
+    </tr>
+    <tr>
+        <td>getAllApplications()</td>
+        <td>Recupera una lista de todas las postulaciones registradas.</td>
+    </tr>
+    <tr>
+        <td>getApplicationById(long applicationId)</td>
+        <td>Recupera postulacion por el id de la misma.</td>
+    </tr>
+    <tr>
+        <td>getApplicationsByApoderadoId(long apoderadoId)</td>
+        <td>Recupera todas las postulaciones segun el id del apoderado.</td>
+    </tr>
+    <tr>
+        <td>acceptApplication(long applicationId)</td>
+        <td>Cambiar el estado de una postulacion a aceptada.</td>
+    </tr>
+    <tr>
+        <td>denyApplication(long applicationId)</td>
+        <td>Cambiar el estado de una postulacion a denegada.</td>
+    </tr>
+    <tr>
+        <td><b>Dependencias</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>ApplicationQueryService</td>
+        <td>Servicio para manejar consultas relacionas con las postulaciones.</td>
+    </tr>
+    <tr>
+        <td>ApplicationCommandService</td>
+        <td>Servicio para manejar comandos de posulaciones.</td>
+    </tr>
+    <tr>
+        <td>CreateApplicationCommandFromResourceAssembler</td>
+        <td>Ensamblador para convertir un recurso de postulación en un comando.</td>
+    </tr>
+    <tr>
+        <td>ApplicationResourceFromEntityAssembler</td>
+        <td>Ensamblador para conovertir una entidad de postulación en un recurso para la API.</td>
+    </tr>
+    <tr>
+        <td>CreateApplicationResource</td>
+        <td>Recurso que representa la solicitud para crear una postulación.</td>
+    </tr>
+    <tr>
+        <td>ApplicationResource</td>
+        <td>Recurso que representa la respuesta de una postulación en la API.</td>
+    </tr>
+    <tr>
+        <td>UpdateApplicationResource</td>
+        <td>Recurso que representa la solicitud para actualizar la postulación.</td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="2"><b>Controlador: DataApoderadoController</b></td>
+    </tr>
+    <tr>
+        <td colspan="2"><b>Descripcion:</b> Controlador que gestiona las operaciones relacionadas con la información adicional de los apoderados.</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>createDataApoderado(CreateDataApoderadoResource resource)</td>
+        <td>Crea una nueva entrada de información adicional para un apoderado.</td>
+    </tr>
+    <tr>
+        <td>updateDataApoderado(long dataApoderadoId, UpdateDataApoderadoResource resource)</td>
+        <td>Actualiza la información adicional de un apoderado.</td>
+    </tr>
+    <tr>
+        <td>deleteDataApoderado(long dataApoderadoId)</td>
+        <td>Elimina una entrada de información adicional de un apoderado.</td>
+    </tr>
+    <tr>
+        <td>getAllDataApoderados()</td>
+        <td>Recupera una lista de todas las entradas de información adicional de apoderados registradas.</td>
+    </tr>
+    <tr>
+        <td>getDataApoderadoById(long dataApoderadoId)</td>
+        <td>Recupera la información adicional de un apoderado por su ID.</td>
+    </tr>
+    <tr>
+        <td>getDataApoderadosByApoderadoId(long apoderadoId)</td>
+        <td>Recupera todas las entradas de información adicional asociadas a un apoderado específico.</td>
+    </tr>
+    <tr>
+        <td><b>Dependencias</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>DataApoderadoQueryService</td>
+        <td>Servicio para manejar consultas relacionadas con la información adicional de apoderados.</td>
+    </tr>
+    <tr>
+        <td>DataApoderadoCommandService</td>
+        <td>Servicio para manejar comandos relacionados con la información adicional de apoderados.</td>
+    </tr>
+    <tr>
+        <td>CreateDataApoderadoCommandFromResourceAssembler</td>
+        <td>Ensamblador para convertir un recurso de información adicional en un comando.</td>
+    </tr>
+    <tr>
+        <td>DataApoderadoResourceFromEntityAssembler</td>
+        <td>Ensamblador para convertir una entidad de información adicional en un recurso para la API.</td>
+    </tr>
+    <tr>
+        <td>CreateDataApoderadoResource</td>
+        <td>Recurso que representa la solicitud para crear una entrada de información adicional.</td>
+    </tr>
+    <tr>
+        <td>DataApoderadoResource</td>
+        <td>Recurso que representa la respuesta de una entrada de información adicional en la API.</td>
+    </tr>
+    <tr>
+        <td>UpdateDataApoderadoResource</td>
+        <td>Recurso que representa la solicitud para actualizar una entrada de información adicional.</td>
+    </tr>
+</table>
+
 ### 4.2.2.3. Application Layer
+
+Descripción: El Application Layer orquesta las operaciones que deben ejecutarse para cumplir con las necesidades del usuario, coordinando diferentes servicios y repositorios del sistema. Contiene la lógica específica de las acciones que no necesariamente forman parte del dominio principal pero son esenciales para el funcionamiento.
+
+Justificación: En este contexto, los servicios ApplicationCommandService y ApplicationQueryService gestionan las reglas de negocio relacionadas con las postulaciones. Se encargan de ejecutar comandos y consultas sobre las postulaciones. Esta capa se comunica con ApplicationRepository, asegurando que la lógica de negocio esté aplicada y se cumpla.
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="2"><b>Servicio: ApplicationCommandServiceImpl</b></td>
+    </tr>
+    <tr>
+        <td colspan="2"><b>Descripcion:</b> Implementación de la interfaz ApplicationCommandService, encargada de gestionar las postulaciones. </td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>handle(CreateApplicationCommand command)</td>
+        <td>Maneja la creación de una nueva postulación.</td>
+    </tr>
+    <tr>
+        <td>handle(AcceptApplicationCommand command)</td>
+        <td>Maneja la aprobacion de una postulación.</td>
+    </tr>
+    <tr>
+        <td>handle(DenyApplicationCommand command)</td>
+        <td>Maneja la denegación de una postulación</td>
+    </tr>
+    <tr>
+        <td>deleteApplication(long applicationId)</td>
+        <td>Elimina una postulación existente por el id de la misma.</td>
+    </tr>
+    <tr>
+        <td>updateApplication(long applicationId, UpdateApplicationResource request)</td>
+        <td>Actualiza una aplicación, si esta ya fue iniciada, lanza una excepción.</td>
+    </tr>
+    <tr>
+        <td><b>Dependencias</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>ApplicationRepository</td>
+        <td>Repositorio para manejar la persistencia en las postulaciones.</td>
+    </tr>
+    <tr>
+        <td>CreateApplicationCommand</td>
+        <td>Comando que encapsula los datos necesarios para crear una nueva postulación</td>
+    </tr>
+    <tr>
+        <td>DenyApplicationCommand</td>
+        <td>Comando que encapsula los datos necesarios para denegar una potulación.</td>
+    </tr>
+    <tr>
+        <td>AcceptApplicationCommand</td>
+        <td>Comando que encapsula los datos necesarios para aceptar una potulación.</td>
+    </tr>
+    <tr>
+        <td>UpdateApplicationResource</td>
+        <td>Recurso que encapsula los datos necesarios para actualizar una postulación</td>
+    </tr>
+    <tr>
+        <td>Application</td>
+        <td>Entidad que representa una postulación en el dominio.</td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="2"><b>Servicio: ApplicationQueryServiceImpl</b></td>
+    </tr>
+    <tr>
+        <td colspan="2"><b>Descripcion:</b> Implementación de la interfaz ApplicationQueryService, encargada de manejar las consulatas relacionadas con postulaciones. </td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>handle(GetApplicationByIdQuery query)</td>
+        <td>Maneja la consulta para obtener una postulacion por su Id.</td>
+    </tr>
+    <tr>
+        <td>handle(getAllApplicationsQuery query)</td>
+        <td>Maneja la consulta para obtener todas las postulaciones.</td>
+    </tr>
+    <tr>
+        <td>handle(GetApplicationsByApoderadoIdQuery query)</td>
+        <td>Maneja la consulta para obtener todas las postulaciones según el id del apoderado.</td>
+    </tr>
+    <tr>
+        <td><b>Dependencias</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>ApplicationRepository</td>
+        <td>Repositorio para manejar la persistencia en las postulaciones.</td>
+    </tr>
+    <tr>
+        <td>GetApplicationByIdQuery</td>
+        <td>Consulta que encaptula el Id de la postulación que se desea obtener.</td>
+    </tr>
+    <tr>
+        <td>GetAllApplicationsQuery</td>
+        <td>Consulta que no requiere parámetros y busca todas las postulaciones.</td>
+    </tr>
+    <tr>
+        <td>GetApplicationByApoderadoIdQuery</td>
+        <td>Consulta que encaptula el Id del apoderado para buscar asi postulaciones que coincidan.</td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="2"><b>Servicio: DataApoderadoCommandServiceImpl</b></td>
+    </tr>
+    <tr>
+        <td colspan="2"><b>Descripcion:</b> Implementación de la interfaz DataApoderadoCommandService, encargada de gestionar las operaciones relacionadas con la información adicional de los apoderados.</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>handle(CreateDataApoderadoCommand command)</td>
+        <td>Maneja la creación de una nueva entrada de información adicional para un apoderado.</td>
+    </tr>
+    <tr>
+        <td>handle(UpdateDataApoderadoCommand command)</td>
+        <td>Maneja la actualización de la información adicional de un apoderado.</td>
+    </tr>
+    <tr>
+        <td>deleteDataApoderado(long dataApoderadoId)</td>
+        <td>Elimina una entrada de información adicional de un apoderado por su ID.</td>
+    </tr>
+    <tr>
+        <td><b>Dependencias</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>DataApoderadoRepository</td>
+        <td>Repositorio para manejar la persistencia de la información adicional de los apoderados.</td>
+    </tr>
+    <tr>
+        <td>CreateDataApoderadoCommand</td>
+        <td>Comando que encapsula los datos necesarios para crear una nueva entrada de información adicional.</td>
+    </tr>
+    <tr>
+        <td>UpdateDataApoderadoCommand</td>
+        <td>Comando que encapsula los datos necesarios para actualizar una entrada de información adicional.</td>
+    </tr>
+    <tr>
+        <td>DataApoderado</td>
+        <td>Entidad que representa la información adicional de un apoderado en el dominio.</td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="2"><b>Servicio: DataApoderadoQueryServiceImpl</b></td>
+    </tr>
+    <tr>
+        <td colspan="2"><b>Descripcion:</b> Implementación de la interfaz DataApoderadoQueryService, encargada de manejar las consultas relacionadas con la información adicional de los apoderados.</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>handle(GetDataApoderadoByIdQuery query)</td>
+        <td>Maneja la consulta para obtener la información adicional de un apoderado por su ID.</td>
+    </tr>
+    <tr>
+        <td>handle(GetAllDataApoderadosQuery query)</td>
+        <td>Maneja la consulta para obtener todas las entradas de información adicional de apoderados registradas.</td>
+    </tr>
+    <tr>
+        <td>handle(GetDataApoderadosByApoderadoIdQuery query)</td>
+        <td>Maneja la consulta para obtener todas las entradas de información adicional asociadas a un apoderado específico.</td>
+    </tr>
+    <tr>
+        <td><b>Dependencias</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>DataApoderadoRepository</td>
+        <td>Repositorio para manejar la persistencia de la información adicional de los apoderados.</td>
+    </tr>
+    <tr>
+        <td>GetDataApoderadoByIdQuery</td>
+        <td>Consulta que encapsula el ID de la información adicional que se desea obtener.</td>
+    </tr>
+    <tr>
+        <td>GetAllDataApoderadosQuery</td>
+        <td>Consulta que no requiere parámetros y busca todas las entradas de información adicional.</td>
+    </tr>
+    <tr>
+        <td>GetDataApoderadosByApoderadoIdQuery</td>
+        <td>Consulta que encapsula el ID del apoderado para buscar las entradas de información adicional asociadas.</td>
+    </tr>
+</table>
+
 ### 4.2.2.4. Infrastructure Layer
+
+Descripción: El Infrastructure Layer se encarga de proporcionar acceso a la base de datos, servicios externos y otros detalles técnicos que no forman
+parte de la lógica de negocio. Actúa como la implementación real de la persistencia y otras preocupaciones técnicas.
+
+Justificación: ApplicationRepository es el responsable de la persistencia de las postulaciones. Los diferentes métodos permiten
+interactuar directamente con la base de datos. Este layer asegura que los datos se almacenen y recuperen correctamente desde la infraestructura subyacente, separando las preocupaciones técnicas de las reglas de negocio.
+
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="2"><b>Repositorio: ApplicationRepository</b></td>
+    </tr>
+    <tr>
+        <td colspan="2"><b>Descripcion:</b> Repositorio de acceso a datos para la entidad Application, utilizando JPA para realizar operaciones de persistencia.</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>findApplicationStatus(long applicationId)</td>
+        <td>Busca el estado de una postulación según el id de la misma.</td>
+    </tr>
+    <tr>
+        <td>findApplicationByPostulanteIdAndId(long applicationId, long postulanteId)</td>
+        <td>Busca una postulación que coincida con el id de la misma y el del postulante ingresados.</td>
+    </tr>
+</table>
+
+<br>
+
+<table border="1">
+    <tr style="text-align: center;">
+        <td colspan="2"><b>Repositorio: DataApoderadoRepository</b></td>
+    </tr>
+    <tr>
+        <td colspan="2"><b>Descripcion:</b> Repositorio de acceso a datos para la entidad DataApoderado, utilizando JPA para realizar operaciones de persistencia.</td>
+    </tr>
+    <tr>
+        <td><b>Método</b></td>
+        <td><b>Descripción</b></td>
+    </tr>
+    <tr>
+        <td>findDataApoderadoById(long dataApoderadoId)</td>
+        <td>Busca la información adicional de un apoderado según su ID.</td>
+    </tr>
+    <tr>
+        <td>findAllDataApoderados()</td>
+        <td>Recupera una lista de todas las entradas de información adicional de apoderados registradas.</td>
+    </tr>
+    <tr>
+        <td>findDataApoderadosByApoderadoId(long apoderadoId)</td>
+        <td>Busca todas las entradas de información adicional asociadas a un apoderado específico.</td>
+    </tr>
+</table>
+
 ### 4.2.2.5. Bounded Context Software Architecture Component Level Diagrams
+
+![Container-diagram-ddd-application](assets/images/structurizr-ddd-application.png)
+
+ANEXO F
+
 ### 4.2.2.6. Bounded Context Software Architecture Code Level Diagrams
+
 #### 4.2.2.6.1. Bounded Context Domain Layer Class Diagrams
+
+![class-diagram-application](assets/images/applications-ddd.png)
+
+ANEXO G 
+
 #### 4.2.2.6.2. Bounded Context Database Design Diagram
 
+El diagrama de base de datos para el Bounded Context Applications detalla el esquema relacional que soporta la persistencia del modelo de dominio. La tabla principal applications incluye columnas como id (PK, autoincremental) y campos de auditoría (created_at, updated_at). La tabla data_apoderados contiene id (PK), name, apoderadoId (record), etc.
+
+La relación uno-a-muchos entre data_apoderados y applications nos muestra que la misma data para apoderados puede estar en diferentes postulaciones, al igual que para la relación de postulantes a postulaciones.
+
+![aplication-db-diagram](assets/images/applications-db-diag.png) 
+
+ANEXO H
+  
 ### 4.2.3. Bounded Context: Management
 
 #### 4.2.3.1. Domain Layer  
@@ -1508,6 +2714,8 @@ En Scholr, hemos seleccionado la tipografía Nunito por su equilibrio entre mode
 
 La tipografía Nunito es utilizada en toda la aplicación, desde los títulos hasta el contenido del cuerpo, garantizando que la lectura sea agradable tanto en pantallas pequeñas como grandes. Su diseño moderno y amigable se adapta a la estética limpia y profesional que buscamos para Scholr, permitiendo que los usuarios se enfoquen en el contenido sin distracciones visuales innecesarias.
 
+ANEXO I  
+
 #### 5.1.2. Information Architecture
 
 En esta sección, vamos a describir cómo organizamos la información en Scholr para responder a las necesidades de nuestros dos segmentos principales: padres trabajadores y coordinadores de bienestar laboral/RSE. A través de una estructura clara y eficiente, buscamos que tanto los padres como los coordinadores puedan encontrar y gestionar las becas educativas de manera sencilla, rápida y sin complicaciones.
@@ -1679,6 +2887,9 @@ Dependiendo del tipo de usuario que inicie sesión (trabajador o encargado de RS
 Gracias a estos sistemas, aseguramos una navegación fluida, contextualizada y centrada en las necesidades específicas de quienes buscan o gestionan oportunidades de beca en Scholr.
 
 #### 5.1.3. Landing Page UI Design
+
+Link de los Wireframes y Mockups en Figma: ANEXO J
+
 ##### 5.1.3.1. Landing Page Wireframe
 
 ![Container-diagram](assets/images/landing-page/wireframe-landing-page.png)
@@ -1823,8 +3034,95 @@ Menu hamburguesa
   - ![User Goal: Rechazar postulación como Administrador](/assets/images/wireflows-mobile-application/AdminRechazarPostulación.png)
 
 ##### 5.1.4.3. Mobile Applications Mock-ups
+
+- Login
+  - ![Login](/assets/images/mockups-mobile-application/Login.png)
+
+- Selección de Empresa
+  - ![Selección de Empresa](/assets/images/mockups-mobile-application/Company%20Selection.png)
+
+- Registro
+  - ![Registro](/assets/images/mockups-mobile-application/Register.png)
+
+- Bandeja Vacía - Colaborador
+  - ![Bandeja Vacía - Colaborador](/assets/images/mockups-mobile-application/Bandeja%20Vacía.png)
+
+- Bandeja con Postulación - Colaborador
+  - ![Bandeja con Postulación - Colaborador](/assets/images/mockups-mobile-application/Bandeja%20con%20Postulación%20en%20Espera.png)
+  
+- Drawer
+  - ![Drawer](/assets/images/mockups-mobile-application/Drawer.png)
+
+- Tutorial
+  - ![Tutorial](/assets/images/mockups-mobile-application/Tutorial.png)
+
+- Menu Postulación
+  - ![Menu Postulación](/assets/images/mockups-mobile-application/Postulación.png)
+
+- Formulario Datos del Colaborador
+  - ![Formulario Datos del Colaborador](/assets/images/mockups-mobile-application/Datos%20del%20colaborador.png)
+
+- Formulario Datos del Postulante
+  - ![Formulario Datos del Postulante](/assets/images/mockups-mobile-application/Datos%20del%20Postulante.png)
+
+- Confirmación de Formulario Postulante
+  - ![Confirmación de Formulario Postulante](/assets/images/mockups-mobile-application/Confirmar%20Postulante.png)
+
+- Bandeja - Administrador
+  - ![Bandeja - Administrador](/assets/images/mockups-mobile-application/Bandeja%20Administrador.png)
+
+- Vista de Beca - Administrador
+  - ![Vista de Beca - Administrador](/assets/images/mockups-mobile-application/Vista%20de%20Beca.png)
+
+- Vista de Colaborador - Administrador
+  - ![Vista de Colaborador - Administrador](/assets/images/mockups-mobile-application/Vista%20de%20Colaborador.png)
+
+- Lista de Postulantes - Administrador
+  - ![Lista de Postulantes - Administrador](/assets/images/mockups-mobile-application/Lista%20de%20Postulantes.png)
+
+- Vista de Postulante - Administrador
+  - ![Vista de Postulante - Administrador](/assets/images/mockups-mobile-application/Vista%20de%20Postulante.png)
+
+- Rechazo de Postulante - Administrador
+  - ![Rechazo de Postulante - Administrador](/assets/images/mockups-mobile-application/Rechazo.png)
+
 ##### 5.1.4.4. Mobile Applications User Flow Diagrams
+
+Link a los User Flow Diagrams en Lucidchart: ANEXO K
+
+- User Goal: Registrarse
+  - ![User Goal: Registrarse](/assets/images/user-flows-scholr/RegistrarseColaborador.png)
+  - Happy path: Los datos ingresados son correctos y el código de colaborador coincide con la compañía.
+
+- User Goal: Iniciar Sesión
+  - ![User Goal: Iniciar Sesión](/assets/images/user-flows-scholr/IniciarSesión.png)
+  - Happy path: Los datos ingresados son correctos. La pantalla a la que se ingresa depende del rol de la cuenta.
+
+- User Goal: Establecer Datos de Colaborador
+  - ![User Goal: Establecer Datos de Colaborador](/assets/images/user-flows-scholr/EstablecerDatosDelColaborador.png)
+  - Happy path: Todos los campos están completos.
+
+- User Goal: Crear Postulación
+  - ![User Goal: Crear Postulación](/assets/images/user-flows-scholr/CrearPostulación.png)
+  - Happy path: Todos los campos están completos.
+
+- User Goal: Ver Tutorial
+  - ![User Goal: Ver Tutorial](/assets/images/user-flows-scholr/VerTutorial.png)
+
+- User Goal: Editar Postulación después de Rechazo
+  - ![User Goal: Editar Postulación después de Rechazo](/assets/images/user-flows-scholr/EditarAfterRechazo.png)
+  - Happy path: Todos los campos están completos y son diferentes a los anteriores.
+
+- User Goal: Rechazar Postulación como Administrador
+  - ![User Goal: Rechazar Postulación como Administrador](/assets/images/user-flows-scholr/AdminRechazarPostulación.png)
+
 ##### 5.1.4.5. Mobile Applications Prototyping
+
+![Screenshot Prototype Video](/assets/images/screenshot_prototype_scholr.png)
+
+Link al video en Microsoft Stream: ANEXO L
+
+[https://drive.google.com/file/d/12c-wkU0GFZEksaZxkmVYf3qiUFZXQRxy/view?usp=sharing](https://drive.google.com/file/d/12c-wkU0GFZEksaZxkmVYf3qiUFZXQRxy/view?usp=sharing)
 
 ## Capítulo VI: Product Implementation, Validation & Deployment  
 ### 6.1. Software Configuration Management  
@@ -2069,6 +3367,169 @@ git commit -m “<type>[optional scope]: <title>“ -m “<description”
         When they click on the logout button
         Then they should be redirected to the login page      
       ~~~
+### 6.1.4 Software Deployment Condiguration
+
+### 6.2 Landing Page & Mobile Application Implementation
+
+### 6.2.1. Sprint 1
+
+El primer sprint es una etapa importante en nuestro marco de gestión de proyectos de metodología ágil Scrum. En este periodo, agendamos reuniones con el objetivo de conocer mejor las características de cada integrante, y delegamos tareas para materializar el diseño y funcionalidades ya establecidas, para transformarlos en un landing page funcional y que cumple las heurísticas.  
+
+### 6.2.1.1. Sprint Planning 1
+El sprint planning es una reunion antes de cada sprint en la metodologia Scrum donde el equipo elige las user stories que va a transformar en un producto tangible. Tambien define que como se van a separar los trabajos y quien sera responsable. Nuestro objetivo sera construir un plan resolubre en un tiempo determinado que sera lo que dure el sprint, para crearlo fomentaremos la colaboracion para que todos sepan y entiendas los objetivos y prioridades.  
+
+| Sprint #| Sprint 1|
+| -- | -- |
+| **Sprint Planning Background**||
+| **Date**| 06/09/2024|
+| **Time**| 12:00 AM|
+| **Location**| Discord (Reunión virtual)|
+| **Prepared By**| Jaque Peña, Estefano Oscar|
+| **Attendees (to planning meeting)** | John Telesforo Arevalo Meza ,Diego Alonso Rosado Iporre,Sebastian Omar Real Calderón, Estefano Oscar Jaque Peña|
+| **Sprint Goal & User Stories**||
+| **Sprint 1 Goal**| Nuestro enfoque está en finalizar el informe , desplegar nuestra Landing Page desde el repositorio de GitHub y avanzar bounded context del aplicativo (Tanto IAM como applications). Creemos que esto entrega una experiencia de usuario optimizada a nuestros clientes. Esto se confirmará cuando todas las tareas se muevan a la columna "Terminado" en Trello. |
+| **Sprint 1 Velocity**| ------ |
+| **Sum of Story Points**| 19 |  
+
+### 6.2.1.2. Sprint Backlog 1  
+
+Para el primer sprint backlog, recopilamos historias de usuario relacionadas con la página de inicio (landing page) . Para organizar y administrar estas historias de usuario, las dividimos en tareas fáciles de realizar y las asignamos a los miembros del equipo de manera efectiva, utilizamos la herramienta Trello. Nos concentramos en completar las historias de usuario durante este sprint, con el objetivo principal de crear una landing page completa con un diseño atractivo y fácil de usar.Ademas de terminar el informe para la entrega y realizar el desarrollo de Front y back de los bounded context IAM y Applications. Gracias a Trello, pudimos colaborar efectivamente y seguir el progreso de las tareas, lo que nos permitió abordar y resolver.
+
+[FOTO TRELLO]
+
+| Sprint # | Sprint 1 | | | | | | |
+|---------|---------|--|--|--|--|--|--|
+| **User Story** | | **Work-Item / Task** | | | | | |
+| **ID** | **Title** | **ID** | **Title** | **Description** | **Estimation (Hours)** | **Assigned To** | **Status** |
+| US01 | Selección de empresa durante el registro | TA001 | Implementar campo de subida de documentos | Crear componente para subir credencial laboral y notas con validación de formatos (PDF, JPG, PNG) | 3 | [Nombre Asignado] | To-do |
+| | | TA002 | Integración con API de verificación | Conectar formulario con backend para habilitar botón "Continuar" tras validación básica | 2 | Estefano Oscar Jaque Peña | Done |
+| US02 | Validación automática de datos laborales | TA003 | Desarrollo de integración con API Backus | Implementar servicio para verificar códigos de colaborador en base de datos empresa | 4 | Estefano Oscar Jaque Peña | Done |
+| | | TA004 | Sistema de notificaciones por email | Configurar envío automático de correo con credenciales tras verificación exitosa | 2 | [Nombre Asignado] | Done |
+| US16 | Visualización de información clave | TA005 | Diseño de tarjetas interactivas | Crear 3 tarjetas con iconos + texto responsive para sección "Cómo funciona" | 3 | John Telesforo Arevalo Meza | Done |
+| | | TA006 | Implementación de video explicativo | Integrar video de 30s con autoplay (sin audio) y estadísticas dinámicas | 2 | [Nombre Asignado] |Done |
+| US18 | Formulario de contacto para empresas | TA007 | Desarrollo de formulario sin autenticación | Crear formulario con campos: Nombre, Empresa, Email, Consulta | 2 | John Telesforo Arevalo Meza | Done |
+| | | TA008 | Validación en tiempo real | Implementar verificación de formato email y resaltado de campos obligatorios | 2 | [Nombre Asignado] | Done |
+| US19 | Adaptabilidad móvil | TA009 | Implementación de menú hamburguesa | Crear menú responsive con animación y overlay oscuro para móviles | 3 | John Telesforo Arevalo Meza | Done |
+| | | TA010 | Ajustes de viewport | Optimizar todos los componentes para pantallas <768px con media queries | 4 |John Telesforo Arevalo Meza | Done |
+
+Link de Trello: ANEXO M
+
+### 6.2.1.3. Development Evidence for Sprint Review
+
+| Commit Id (ejemplo) | Commit Message                          | Commit Message Body                                      | Date       |
+|---------------------|----------------------------------------|---------------------------------------------------------|------------|
+| 2a4b6c8d           | feat(header): Add logo and navigation  | Implemented header with Scholr logo, main nav items and CTA button "Empezar" | 04/05/2025 |
+| 1e3f5g7h           | feat(hero): Create main banner         | Added hero section with headline, subheadline and primary CTA | 04/05/2025 |
+| 9i2k4m6o           | feat(features): Add características section | Implemented 3-column feature cards with icons         | 04/05/2025 |
+| 8p1q3r5t           | feat(benefits): Create benefits module | Added benefits section with 3 cards (Ahorro de tiempo, Tranquilidad, Oportunidades) | 04/05/2025 |
+| 7s2u4w6y           | feat(about): Add "Nosotros" section    | Implemented company info section with team photos       | 05/05/2025 |
+| 5v1x3z9b           | feat(faq): Create FAQ accordion        | Added interactive FAQ section with 4 questions (costos, becas oficiales, etc.) | 05/05/2025 |
+| 4c6d8e0f           | feat(contact): Add contact information | Implemented contact section with email, phone and location (Lima, Perú) | 05/05/2025 |
+| 3g5h7j9k           | feat(form): Create contact form        | Added form with fields (Nombre, Email, Empresa, Mensaje) and submit button | 05/05/2025 |
+| 2l4n6p8r           | style: Add responsive design           | Implemented mobile-first responsive layout for all sections | 05/05/2025 |
+| 1m3o5q7s           | fix(form): Validate email field        | Added email validation and error messages to contact form | 05/05/2025 |
+| 9t1v3x5z           | feat(animations): Add scroll effects   | Implemented subtle animations on scroll for engagement  | 05/05/2025 |
+| 8y2b4d6f           | perf: Optimize images                  | Compressed all images without losing quality            | 05/05/2025 |
+
+### 6.2.1.4. Execution Evidence for Sprint Review
+
+
+En este Sprint, los miembros del equipo de desarrollo de software de Aventis han completado y desplegado la Landing Page. A continuación, mostramos imágenes que demuestran cómo nuestra página presenta de manera clara e intuitiva la información sobre nuestro producto y nuestra empresa.
+
+<br>
+
+![deploy](assets/images/landing1.png)
+<br>
+
+![deploy](assets/images/landing2.png)
+<br>
+
+![deploy](assets/images/landing3.png)
+<br>
+
+![deploy](assets/images/landing4.png)
+<br>
+
+![deploy](assets/images/landing5.png)
+<br>
+
+
+En segundo lugar ,se avanzo el bounded context IAM tanto en backend como en frontend :
+
+
+### 6.2.1.5. Services Documentation Evidence for Sprint Review
+
+### 6.2.1.6. Software Deployment Evidence for Sprint Review  
+
+**Resumen**
+Durante este Sprint, nos hemos enfocado en el despliegue de la landing page. Las actividades realizadas incluyen la configuración del entorno de desarrollo y el despliegue inicial del sitio. A continuación, se detalla el proceso seguido para el despliegue de la landing page.
+
+**Actividades Realizadas**
+
+- Creación de Cuentas y Configuración de Recursos:
+
+Proveedor de Hosting: Selección y configuración de la cuenta en el proveedor de hosting para desplegar la landing page.
+Configuración del Entorno: Establecimiento del entorno de desarrollo y producción para la landing page.
+
+- Configuración de Proyectos para Integración:
+
+Repositorio de Código: Configuración del repositorio en GitHub para la integración continua y despliegue automático.
+Automatización: Configuración de scripts y herramientas para la automatización del despliegue.
+
+- Despliegue de la Landing Page:
+
+Subida de Archivos: Transferencia de archivos y recursos al servidor de hosting.
+Verificación: Comprobación de que la landing page se despliega correctamente y está accesible en la web.
+
+**Deploy del Landing Page**
+![deploy](assets/images/landing-page-deploy1.png)
+<br>
+
+![deploy](assets/images/landing-page-deploy2.png)
+**Capturas de Pantalla**
+
+- Repositorio de Landing Page:
+  ![alt text](assets/images/repositorio-landing-page.png)
+
+**Enlace al Repositorio**: https://aventis-scholr.github.io/landing-page/ 
+
+### 6.2.1.7. Team Collaboration Insights during Sprint 1 
+
+En esta sección, se presenta un análisis detallado de la colaboración del equipo durante el Sprint. Durante este sprint, las actividades de implementación se organizaron siguiendo una metodología ágil, garantizando una colaboración fluida entre los miembros del equipo. Se exponen capturas de los analíticos de colaboración y de los commits realizados en GitHub, lo que permite visualizar la contribución individual de cada miembro del equipo.
+
+- Diseño y Desarrollo:
+  Diseño de la Landing Page: Desarrollo y diseño completo de la landing page, incluyendo la creación de secciones y funcionalidad.
+  Implementación: Realización de las tareas de codificación, pruebas y ajustes necesarios para completar la página.
+- Documentación y Despliegue:
+  Documentación: Creación de documentación relevante para la landing page, incluyendo capturas de pantalla y descripciones.
+  Despliegue: Configuración del entorno de despliegue y transferencia de archivos al servidor.
+
+**Landing Page**
+
+![Commits](assets/TB1-new/landingc1.jpeg)
+![Commits](assets/TB1-new/landingc2.jpeg)
+
+- Estefano Oscar Jaque Peña: 2
+- Diego Rolin Acuña Tomas: 1
+- John Telesforo Arevalo Meza: 10
+- Valentino Sandoval Paiva: 1
+- Sergio André Gómez Vallejos: 8
+
+**Report:**
+
+![alt text](assets/TB1-new/commitsall2.jpeg)
+
+![alt text](assets/TB1-new/commitall1.jpeg)
+
+![alt text](assets/TB1-image/commitsreport3.jpeg)
+
+![Commits](assets/TB1-image/commitsreport3.jpeg)
+
+- Estefano Oscar Jaque Peña: 55
+- Diego Rolin Acuña Tomas: 52
+- John Telesforo Arevalo Meza: 40
+- Valentino Sandoval Paiva: 59
+- Sergio André Gómez Vallejos: 13
 
 ## Conclusiones
 
@@ -2085,17 +3546,28 @@ En esta entrega, aplicamos diversas técnicas de análisis y diseño como entrev
 - mURAL (2024). https://www.mural.co/
 
 ## Anexos
-ANEXO A : [https://app.mural.co/t/estudiando0947/m/estudiando0947/1745390656723/0835c036e3645e7898d5d12592570047f4e910c5?sender=uc4343c08b6b097f4a42e5558 ](https://app.mural.co/t/estudiando0947/m/estudiando0947/1745390656723/0835c036e3645e7898d5d12592570047f4e910c5?sender=uc4343c08b6b097f4a42e5558 )
+ANEXO A : User Personas--> [https://app.mural.co/t/estudiando0947/m/estudiando0947/1745390656723/0835c036e3645e7898d5d12592570047f4e910c5?sender=uc4343c08b6b097f4a42e5558 ](https://app.mural.co/t/estudiando0947/m/estudiando0947/1745390656723/0835c036e3645e7898d5d12592570047f4e910c5?sender=uc4343c08b6b097f4a42e5558 )
 
-ANEXO B : [https://www.pivotaltracker.com/n/projects/2740632](https://www.pivotaltracker.com/n/projects/2740632)
+ANEXO B : Product Backlog--> [https://www.pivotaltracker.com/n/projects/2740632](https://www.pivotaltracker.com/n/projects/2740632)
 
-ANEXO C : [https://miro.com/app/board/uXjVI_MtKqA=/?share_link_id=604688149286](https://miro.com/app/board/uXjVI_MtKqA=/?share_link_id=604688149286)
+ANEXO C : EventStorming--> [https://miro.com/app/board/uXjVI_MtKqA=/?share_link_id=604688149286](https://miro.com/app/board/uXjVI_MtKqA=/?share_link_id=604688149286)
 
-ANEXO D Y F: [https://miro.com/app/board/uXjVI_S5wR4=/?share_link_id=431433146229](https://miro.com/app/board/uXjVI_S5wR4=/?share_link_id=431433146229)
+ANEXO D: Domain Message Flows Modeling--> [https://miro.com/app/board/uXjVI_S5wR4=/?share_link_id=431433146229](https://miro.com/app/board/uXjVI_S5wR4=/?share_link_id=431433146229)
 
-ANEXO E : [https://miro.com/app/board/uXjVI_R_wiU=/?share_link_id=439952899853](https://miro.com/app/board/uXjVI_R_wiU=/?share_link_id=439952899853)
+ANEXO E : Bounded Context Canvases y Context Mapping --> [https://miro.com/app/board/uXjVI_R_wiU=/?share_link_id=439952899853](https://miro.com/app/board/uXjVI_R_wiU=/?share_link_id=439952899853)
 
-ANEXO F: [https://lucid.app/lucidchart/a8f4f0b0-3ac8-4eb9-949f-53d55de9cf59/edit?view_items=WgKdBRZRehE_&invitationId=inv_e4354b3b-6041-4a50-b6da-1995114c8abb](https://lucid.app/lucidchart/a8f4f0b0-3ac8-4eb9-949f-53d55de9cf59/edit?view_items=WgKdBRZRehE_&invitationId=inv_e4354b3b-6041-4a50-b6da-1995114c8abb)
+ANEXO F: El codigo se encuentra en la carpeta assets>Structurizr
 
-Style Guidelines: https://www.figma.com/design/vKwCm8pF30AgFNQorLOMnf/Style-Guide-for-Mobile-App-design?node-id=1-542&t=lGJGdO2KcM6LceWm-1
+ANEXO G: Bounded Context Domain Layer Class Diagrams --> [https://lucid.app/lucidchart/a8f4f0b0-3ac8-4eb9-949f-53d55de9cf59/edit?view_items=WgKdBRZRehE_&invitationId=inv_e4354b3b-6041-4a50-b6da-1995114c8abb](https://lucid.app/lucidchart/a8f4f0b0-3ac8-4eb9-949f-53d55de9cf59/edit?view_items=WgKdBRZRehE_&invitationId=inv_e4354b3b-6041-4a50-b6da-1995114c8abb)
 
+ANEXO H: DATABASE DIAGRAM
+
+ANEXO I: Style Guidelines -->  [https://www.figma.com/design/vKwCm8pF30AgFNQorLOMnf/Style-Guide-for-Mobile-App-design?node-id=1-542&t=lGJGdO2KcM6LceWm-1](https://www.figma.com/design/vKwCm8pF30AgFNQorLOMnf/Style-Guide-for-Mobile-App-design?node-id=1-542&t=lGJGdO2KcM6LceWm-1)
+
+ANEXO J: Wireframes y Mockups --> [https://www.figma.com/design/R3ID29IJXbwS6b2I2Je17Y/Mobile-App?node-id=45-50&t=rSRzKmIDeavdXcrd-1](https://www.figma.com/design/R3ID29IJXbwS6b2I2Je17Y/Mobile-App?node-id=45-50&t=rSRzKmIDeavdXcrd-1)
+
+ANEXO K: User Flow Diagrams--> [https://lucid.app/lucidchart/34550ef2-7748-4f51-9aa8-626038c97334/edit?viewport_loc=-9239%2C-4725%2C24000%2C12666%2C0_0&invitationId=inv_afce5755-4963-40b5-a79a-d2cbcef93060](https://lucid.app/lucidchart/34550ef2-7748-4f51-9aa8-626038c97334/edit?viewport_loc=-9239%2C-4725%2C24000%2C12666%2C0_0&invitationId=inv_afce5755-4963-40b5-a79a-d2cbcef93060) 
+
+ANEXO L: Mobile Applications Prototyping --> [https://drive.google.com/file/d/12c-wkU0GFZEksaZxkmVYf3qiUFZXQRxy/view?usp=sharing](https://drive.google.com/file/d/12c-wkU0GFZEksaZxkmVYf3qiUFZXQRxy/view?usp=sharing)
+
+ANEXO M: Trello--> []()

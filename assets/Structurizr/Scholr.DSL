@@ -82,20 +82,11 @@ workspace "SistemaGestionBecasMobile" "Gestión de Becas Móvil" {
                 }
             }
         }
-        
-        sistemaMail = softwareSystem "Sistema de Correos" "Servicio externo de envío de emails" {
-            tags "external_system"
-        }
 
         // ===== RELACIONES CORREGIDAS =====
-        
-        // El coordinador accede al módulo
         coordinador -> sistema.gestion.notificaciones "Envía notificaciones"
-        
-        // Flujo de notificaciones
         sistema.gestion.revision -> sistema.gestion.notificaciones "Solicita notificación"
         sistema.gestion.notificaciones -> estudiante "Notifica estado"
-
 
         estudiante -> sistema.iam.auth "Inicia sesión"
         estudiante -> sistema.postulacion.formulario "Completa postulación"
@@ -108,12 +99,8 @@ workspace "SistemaGestionBecasMobile" "Gestión de Becas Móvil" {
         sistema.postulacion.formulario -> sistema.backend.api "Envía postulación"
         sistema.gestion.revision -> sistema.backend.api "Actualiza estados"
         sistema.backend.api -> sistema.iam.roles "Verifica permisos"
-        
-        sistema.gestion.notificaciones -> sistemaMail "Envía correos electrónicos"
 
-        
         sistema.gestion -> estudiante "Envía datos de postulación"
-
     }
 
     views {
@@ -131,7 +118,6 @@ workspace "SistemaGestionBecasMobile" "Gestión de Becas Móvil" {
             include *
             autolayout tb
         }
-        
 
         component sistema.postulacion "Componentes_Postulacion" {
             include *
@@ -188,10 +174,11 @@ workspace "SistemaGestionBecasMobile" "Gestión de Becas Móvil" {
                 routing curved
                 fontSize 10
             }
-            
+
             element "Element" {
                 opacity 100
             }
+
             element "Element:animated" {
                 opacity 30
             }
