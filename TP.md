@@ -3399,16 +3399,15 @@ Para el primer sprint backlog, recopilamos historias de usuario relacionadas con
 |---------|---------|--|--|--|--|--|--|
 | **User Story** | | **Work-Item / Task** | | | | | |
 | **ID** | **Title** | **ID** | **Title** | **Description** | **Estimation (Hours)** | **Assigned To** | **Status** |
-| US01 | Selección de empresa durante el registro | TA001 | Implementar campo de subida de documentos | Crear componente para subir credencial laboral y notas con validación de formatos (PDF, JPG, PNG) | 3 | [Nombre Asignado] | To-do |
+| US01 | Selección de empresa durante el registro | TA001 | Implementar campo de subida de documentos | Crear componente para subir credencial laboral y notas con validación de formatos (PDF, JPG, PNG) | 3 | Estefano Oscar Jaque Peña | Done |
 | | | TA002 | Integración con API de verificación | Conectar formulario con backend para habilitar botón "Continuar" tras validación básica | 2 | Estefano Oscar Jaque Peña | Done |
 | US02 | Validación automática de datos laborales | TA003 | Desarrollo de integración con API Backus | Implementar servicio para verificar códigos de colaborador en base de datos empresa | 4 | Estefano Oscar Jaque Peña | Done |
-| | | TA004 | Sistema de notificaciones por email | Configurar envío automático de correo con credenciales tras verificación exitosa | 2 | [Nombre Asignado] | Done |
-| US16 | Visualización de información clave | TA005 | Diseño de tarjetas interactivas | Crear 3 tarjetas con iconos + texto responsive para sección "Cómo funciona" | 3 | John Telesforo Arevalo Meza | Done |
-| | | TA006 | Implementación de video explicativo | Integrar video de 30s con autoplay (sin audio) y estadísticas dinámicas | 2 | [Nombre Asignado] |Done |
-| US18 | Formulario de contacto para empresas | TA007 | Desarrollo de formulario sin autenticación | Crear formulario con campos: Nombre, Empresa, Email, Consulta | 2 | John Telesforo Arevalo Meza | Done |
-| | | TA008 | Validación en tiempo real | Implementar verificación de formato email y resaltado de campos obligatorios | 2 | [Nombre Asignado] | Done |
-| US19 | Adaptabilidad móvil | TA009 | Implementación de menú hamburguesa | Crear menú responsive con animación y overlay oscuro para móviles | 3 | John Telesforo Arevalo Meza | Done |
-| | | TA010 | Ajustes de viewport | Optimizar todos los componentes para pantallas <768px con media queries | 4 |John Telesforo Arevalo Meza | Done |
+| US16 | Visualización de información clave | TA004 | Diseño de tarjetas interactivas | Crear 3 tarjetas con iconos + texto responsive para sección "Cómo funciona" | 3 | John Telesforo Arevalo Meza | Done |
+| | | TA005 | Implementación de video explicativo | Integrar video de 30s con autoplay (sin audio) y estadísticas dinámicas | 2 | John Telesforo Arevalo Meza |Done |
+| US18 | Formulario de contacto para empresas | TA006 | Desarrollo de formulario sin autenticación | Crear formulario con campos: Nombre, Empresa, Email, Consulta | 2 | John Telesforo Arevalo Meza | Done |
+| | | TA007 | Validación en tiempo real | Implementar verificación de formato email y resaltado de campos obligatorios | 2 | John Telesforo Arevalo Meza | Done |
+| US19 | Adaptabilidad móvil | TA008 | Implementación de menú hamburguesa | Crear menú responsive con animación y overlay oscuro para móviles | 3 | John Telesforo Arevalo Meza | Done |
+| | | TA009 | Ajustes de viewport | Optimizar todos los componentes para pantallas <768px con media queries | 4 |John Telesforo Arevalo Meza | Done |
 
 Link de Trello: ANEXO M
 
