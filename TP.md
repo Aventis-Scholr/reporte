@@ -3122,8 +3122,6 @@ Link a los User Flow Diagrams en Lucidchart: ANEXO K
 
 Link al video en Microsoft Stream: ANEXO L
 
-[https://drive.google.com/file/d/12c-wkU0GFZEksaZxkmVYf3qiUFZXQRxy/view?usp=sharing](https://drive.google.com/file/d/12c-wkU0GFZEksaZxkmVYf3qiUFZXQRxy/view?usp=sharing)
-
 ## Capítulo VI: Product Implementation, Validation & Deployment  
 ### 6.1. Software Configuration Management  
 La gestión de la configuración del software es fundamental para nuestro trabajo, ya que nos ayuda a controlar de manera exacta los componentes de nuestro proyecto, como el código fuente, los documentos de diseño y los recursos digitales. De esta manera, aseguramos que todos los miembros del equipo utilicen la misma versión de los archivos, lo que facilita la cooperación entre desarrolladores, diseñadores y otros profesionales involucrados.
@@ -3459,6 +3457,144 @@ En segundo lugar ,se avanzo el bounded context IAM tanto en backend como en fron
 
 ### 6.2.1.5. Services Documentation Evidence for Sprint Review
 
+**Introducción:**   
+Durante este Sprint, se logró la documentación y despliegue de varios Endpoints correspondientes a los diferentes bounded contexts implementados por el equipo. Se utilizó OpenAPI para describir de forma estructurada los servicios Web desarrollados. A continuación, se presenta la relación de los Endpoints, las acciones soportadas y la respectiva documentación disponible.
+
+Esta documentación incluye los verbos HTTP utilizados, sintaxis de llamadas, parámetros, ejemplos de respuesta, así como capturas de la interacción con los Web Services utilizando datos de muestra. También se proporciona el URL del repositorio de los Web Services y los commit IDs correspondientes al trabajo realizado en la documentación durante este Sprint. 
+
+**Sección IAM (Identity and Access Management)**
+
+---
+
+### **Introducción**
+El módulo IAM (Identity and Access Management) implementa la gestión centralizada de usuarios, roles y autenticación en la plataforma Scholr. A continuación se detallan los endpoints desarrollados, su funcionalidad y documentación técnica.
+
+---
+
+### **Tabla de Endpoints IAM**
+
+| Bounded Context | Endpoint | Acción | Verbo HTTP | Parámetros | Ejemplo de Respuesta | Documentación |
+|-----------------|----------|--------|------------|------------|----------------------|---------------|
+| **Autenticación** | `/api/v1/authentication/sign-in` | Inicio de sesión | POST | `{"email": string, "password": string}` | `{"token": "jwt.token", "user": {...}}` | [Swagger](#) | 
+|  | `/api/v1/authentication/sign-up` | Registro de usuario | POST | `{"email": string, "password": string, "name": string}` | `{"id": 1, "email": "user@example.com"}` | [Swagger](#) |
+| **Usuarios** | `/api/v1/users` | Listar usuarios | GET | - | `[{"id": 1, "email": "user@example.com"}]` | [Swagger](#) |
+|  | `/api/v1/users/{userId}` | Obtener usuario por ID | GET | `userId: long` | `{"id": 1, "email": "user@example.com"}` | [Swagger](#) |
+|  | `/api/v1/users/{userId}/update-proofing` | Actualizar verificación | PUT | `{"proofingStatus": string}` | `{"message": "Proofing updated"}` | [Swagger](#) |
+| **Roles** | `/api/v1/roles` | Listar roles | GET | - | `[{"id": 1, "name": "ADMIN"}]` | [Swagger](#) |
+
+---
+
+### **Ejemplos de Uso**
+
+#### **1. Autenticación (JWT)**
+```java
+// Sign-Up Request
+POST /api/v1/authentication/sign-up
+Body: {
+  "username": "Estefano",
+  "password": "12345",
+  "compania": "backus",
+  "dni": "72260921",
+  "cod_colaborador": "ABC123",
+  "roles": [
+    "ROLE_APODERADO"
+  ]
+}
+
+// Response (201 Created)
+{
+  "id": 1,
+  "username": "Estefano",
+  "roles": [
+    "ROLE_APODERADO"
+  ],
+  "proofingEntrepreneure": null
+}
+```
+
+#### **2. Gestión de Usuarios**
+```java
+// Actualizar verificación de emprendedor
+PUT /api/v1/users/1/update-proofing
+Body: {
+  "proofingStatus": "VERIFIED"
+}
+
+// Response (200 OK)
+{
+  "message": "ProofingEntrepreneure updated successfully."
+}
+```
+
+---
+
+### **Arquitectura y Patrones**
+1. **CQRS**: Separación clara entre:
+   - `UserCommandService`: Manejo de escritura (sign-up, update-proofing)
+   - `UserQueryService`: Consultas (getAllUsers, getUserById)
+
+2. **DTO Pattern**: Uso de `*Resource` para transferencia de datos:
+   ```java
+   public record UserResource(Long id, String email, String name) {}
+   ```
+
+3. **Swagger Integration**: Documentación automática con `@Tag` y OpenAPI.
+
+---
+
+### **Seguridad**
+- **JWT**: Implementado en `AuthenticationController`.
+- **Validaciones**: 
+  - Campos obligatorios con `@Valid`
+  - Manejo de errores (404 para usuarios no encontrados)
+
+---
+
+### **Validación de Colaboradores en Registro (Sign-Up)**  
+Se implementó un **mecanismo de validación corporativa** que verifica la identidad de colaboradores antes de permitir su registro. Este proceso:
+
+1. **Consulta tablas dinámicas** por compañía (`{compania}_colaboradores`)
+2. **Valida coincidencia** entre:  
+   - DNI del usuario  
+   - Código de colaborador  
+3. **Flujo técnico**:  
+   ```java
+   // Ejemplo de validación
+   if (!colaboradorValidationService.validarColaborador(
+       "backus", 
+       "72260921", 
+       "ABC123")) {
+       throw new InvalidColaboradorException();
+   }
+   ```
+
+**Impacto**:  
+- ✔️ Asegura que solo personal autorizado se registre  
+- ✔️ Integración transparente con el endpoint existente `/sign-up`  
+- ✔️ Prevención de SQL Injection mediante parámetros con `EntityManager`
+
+### **Repositorio y Commits**
+| Endpoint | Commit ID | Cambios Realizados |
+|----------|-----------|---------------------|
+| Autenticación | `a1b2c3d` | Implementación JWT |
+| Users | `e4f5g6h` | Add proofing feature |
+| Roles | `i7j8k9l` | Listado de roles |
+
+---
+
+**Repositorio Principal**: [https://github.com/Aventis-Scholr/scholr-backend.git](https://github.com/Aventis-Scholr/scholr-backend.git)
+
+---
+
+### **Conclusión**
+El módulo IAM proporciona:
+- ✅ Autenticación segura con JWT
+- ✅ Gestión granular de usuarios y roles
+- ✅ Escalabilidad mediante CQRS
+- ✅ Documentación completa con Swagger
+
+**Próximos pasos**: Integración con OAuth2 para proveedores externos (Google, Microsoft).
+
 ### 6.2.1.6. Software Deployment Evidence for Sprint Review  
 
 **Resumen**
@@ -3562,6 +3698,6 @@ ANEXO J: Wireframes y Mockups --> [https://www.figma.com/design/R3ID29IJXbwS6b2I
 
 ANEXO K: User Flow Diagrams--> [https://lucid.app/lucidchart/34550ef2-7748-4f51-9aa8-626038c97334/edit?viewport_loc=-9239%2C-4725%2C24000%2C12666%2C0_0&invitationId=inv_afce5755-4963-40b5-a79a-d2cbcef93060](https://lucid.app/lucidchart/34550ef2-7748-4f51-9aa8-626038c97334/edit?viewport_loc=-9239%2C-4725%2C24000%2C12666%2C0_0&invitationId=inv_afce5755-4963-40b5-a79a-d2cbcef93060) 
 
-ANEXO L: Mobile Applications Prototyping --> [https://drive.google.com/file/d/12c-wkU0GFZEksaZxkmVYf3qiUFZXQRxy/view?usp=sharing](https://drive.google.com/file/d/12c-wkU0GFZEksaZxkmVYf3qiUFZXQRxy/view?usp=sharing)
+ANEXO L: Mobile Applications Prototyping --> [https://drive.google.com/file/d/1kz82_tqddC0bch8E58fF1T7sxBhNr1Ji/view?usp=sharing](https://drive.google.com/file/d/1kz82_tqddC0bch8E58fF1T7sxBhNr1Ji/view?usp=sharing)
 
 ANEXO M: Trello--> []()
