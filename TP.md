@@ -3506,30 +3506,24 @@ En esta sección, se presenta un análisis detallado de la colaboración del equ
 
 **Landing Page**
 
-![Commits](assets/TB1-new/landingc1.jpeg)
-![Commits](assets/TB1-new/landingc2.jpeg)
+![Commits](assets/images/landing-page/landingc1.png)
 
-- Estefano Oscar Jaque Peña: 2
-- Diego Rolin Acuña Tomas: 1
-- John Telesforo Arevalo Meza: 10
-- Valentino Sandoval Paiva: 1
-- Sergio André Gómez Vallejos: 8
+- John Telesforo Arevalo Meza: 6
 
 **Report:**
 
-![alt text](assets/TB1-new/commitsall2.jpeg)
+![alt text](assets/images/commitsall1.png)
 
-![alt text](assets/TB1-new/commitall1.jpeg)
+![alt text](assets/images/commitsall2.png)
 
-![alt text](assets/TB1-image/commitsreport3.jpeg)
+![alt text](assets/images/commitsreport1.png)
 
-![Commits](assets/TB1-image/commitsreport3.jpeg)
+![Commits](assets/images/commitsreport2.png)
 
-- Estefano Oscar Jaque Peña: 55
-- Diego Rolin Acuña Tomas: 52
-- John Telesforo Arevalo Meza: 40
-- Valentino Sandoval Paiva: 59
-- Sergio André Gómez Vallejos: 13
+- Estefano Oscar Jaque Peña: 14
+- John Telesforo Arevalo Meza: 13
+- Sebastian Real Calderon: 16
+- Diego Alonso Rosado Iporre: 11
 
 ## Conclusiones
 
