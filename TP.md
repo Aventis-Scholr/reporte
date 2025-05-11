@@ -3280,6 +3280,23 @@ Link de Trello: ANEXO M
 
 En este Sprint, los miembros del equipo de desarrollo de software de Aventis han completado y desplegado la Landing Page. A continuación, mostramos imágenes que demuestran cómo nuestra página presenta de manera clara e intuitiva la información sobre nuestro producto y nuestra empresa.
 
+<br>
+
+![deploy](assets/images/landing1.png)
+<br>
+
+![deploy](assets/images/landing2.png)
+<br>
+
+![deploy](assets/images/landing3.png)
+<br>
+
+![deploy](assets/images/landing4.png)
+<br>
+
+![deploy](assets/images/landing5.png)
+<br>
+
 
 En segundo lugar ,se avanzo el bounded context IAM tanto en backend como en frontend :
 
@@ -3309,13 +3326,16 @@ Subida de Archivos: Transferencia de archivos y recursos al servidor de hosting.
 Verificación: Comprobación de que la landing page se despliega correctamente y está accesible en la web.
 
 **Deploy del Landing Page**
-![deploy](assets/images/deploy_tb1.png)
+![deploy](assets/images/landing-page-deploy1.png)
+<br>
+
+![deploy](assets/images/landing-page-deploy2.png)
 **Capturas de Pantalla**
 
 - Repositorio de Landing Page:
-  ![alt text](assets/images/foto_repositorio.jpg)
+  ![alt text](assets/images/repositorio-landing-page.png)
 
-**Enlace al Repositorio**: https://github.com/Rampart-SaboresCercanos/Landing-page 
+**Enlace al Repositorio**: https://aventis-scholr.github.io/landing-page/ 
 
 ### 6.2.1.7. Team Collaboration Insights during Sprint 1 
 
