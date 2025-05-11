@@ -1440,6 +1440,13 @@ La relación muchos-a-muchos entre users y roles se implementa mediante una tabl
 | EmailService        | Envía notificaciones (integración con BC IAM) |
 
 ### 4.2.3.5. Bounded Context Software Architecture Component Level Diagrams
+
+Este diagrama de contenedores refleja la estructura y componentes clave de nuestro Sistema de Gestión de Becas y Reportes. En él, mostramos cómo interactúan los distintos actores, sistemas y servicios dentro de la plataforma para gestionar y procesar becas y reportes. El coordinador es el principal usuario del sistema, encargado de gestionar las convocatorias y los reportes, mientras que los diversos componentes y servicios como las APIs, servicios de comandos, repositorios y herramientas externas trabajan juntos para facilitar la creación, publicación, almacenamiento y notificación de información clave. Este diagrama nos ayuda a visualizar cómo cada parte del sistema contribuye a una experiencia fluida y eficiente para nuestros usuarios.
+
+![alt text](assets/images/structurizr-Container-001.png) 
+
+ANEXO F
+
 ### 4.2.3.6. Bounded Context Software Architecture Code Level Diagrams
 #### 4.2.3.6.1. Bounded Context Domain Layer Class Diagrams
 Este diagrama de clases representa el modelo de dominio para un sistema de gestión de becas, mostrando los elementos principales con detalle. La estructura se organiza en objetos de valor como Requirement, ApoderadoSnapshot y PostulanteSnapshot, que capturan datos inmutables, junto con enumeraciones como ScholarshipStatus y ResolutionStatus para definir estados. Los agregados Scholarship (como raíz) y Report gestionan la lógica central, con métodos como publish(), close() y generate() para operaciones clave. Las interfaces ReportCommandService y ScholarshipCommandService manejan comandos complejos, mientras que las secciones Queries y Commands separan las operaciones de lectura y escritura.
