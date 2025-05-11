@@ -165,6 +165,16 @@ TB1:<br>
       - [6.1.1. Software Development Environment Configuration](#611-software-development-environment-configuration)
       - [6.1.2. Source Code Management](#612-source-code-management)
       - [6.1.3. Source Code Style Guide & Conventions](#613-source-code-style-guide--conventions)
+      - [6.1.4. Software Deployment Configuration.](#614-software-deployment-condiguration)
+    - [6.2. Landing Page, Services & Applications Implementation.](#62-landing-page--mobile-application-implementation)
+      - [6.2.1. Sprint 1](#621-sprint-1)
+        - [6.2.1.1. Sprint Planning 1.](#6211-sprint-planning-1)
+        - [6.2.1.2. Sprint Backlog 1.](#6212-sprint-backlog-1)
+        - [6.2.1.3. Development Evidence for Sprint Review.](#6213-development-evidence-for-sprint-review)
+        -[6.2.1.4. Execution Evidence for Sprint Review.](#6214-execution-evidence-for-sprint-review)
+        - [6.2.1.5. Services Documentation Evidence for Sprint Review.](#6215-services-documentation-evidence-for-sprint-review)
+        - [6.2.1.6. Software Deployment Evidence for Sprint Review.](#6216-software-deployment-evidence-for-sprint-review)
+        - [6.2.1.7. Team Collaboration Insights during Sprint.](#6217-team-collaboration-insights-during-sprint-1)
   - [Conclusiones](#conclusiones)
   - [Bibliografia](#bibliografia)
   - [Anexos](#anexos)
@@ -998,7 +1008,7 @@ Se identificaron los siguientes bounded contexts en el sistema:
 
 Este diseño final refleja la autonomía de contextos y prepara el sistema para evolucionar modularmente.
 
-ANEXO F  
+ANEXO E  
 
 ### 4.1.3. Software Architecture
 
@@ -1030,6 +1040,7 @@ ANEXO F
 
 ![alt text](assets/images/structIAM.png) 
 
+ANEXO F
 ### 4.2. Tactical-Level Domain-Driven Design
 
 ## 4.2.1. Bounded Context: IAM  
@@ -1263,7 +1274,9 @@ El diagrama representa el módulo de Identity and Access Management (IAM) del si
 
 El IAM se integra con otros módulos: el UserService sincroniza datos con el Backend API, y el RoleService provee verificación de permisos para el sistema. Además, los actores (Apoderado , Gestionador y Administrador) interactúan directamente con el AuthController para autenticarse, estableciendo un flujo centralizado y seguro para la gestión de identidad.
 
-![alt text](assets/images/structIAM.png) 
+![alt text](assets/images/structIAM.png)
+
+ANEXO F
 
 ### 4.2.1.6. Bounded Context Software Architecture Code Level Diagrams  
 
@@ -1276,7 +1289,7 @@ El objeto de valor EmailAddress se muestra como una clase embebida (embedded) de
 
 ![alt text](assets/images/classIAM.png) 
 
-ANEXO F  
+ANEXO G
 
 #### 4.2.1.6.2. Bounded Context Database Design Diagram  
 El diagrama de base de datos para el Bounded Context IAM detalla el esquema relacional que soporta la persistencia del modelo de dominio. La tabla principal users incluye columnas como id (PK, autoincremental), username (VARCHAR, UNIQUE), password (VARCHAR), proofing_apoderado (TEXT) y campos de auditoría (created_at, updated_at). La tabla roles contiene id (PK) y name (ENUM o VARCHAR con constraint CHECK para los valores permitidos).
@@ -1284,6 +1297,8 @@ El diagrama de base de datos para el Bounded Context IAM detalla el esquema rela
 La relación muchos-a-muchos entre users y roles se implementa mediante una tabla de unión user_roles con las foreign keys user_id (FK a users.id) y role_id (FK a roles.id), ambas formando una PK compuesta. Se incluyen constraints como NOT NULL en campos obligatorios (ej: username) e índices únicos. Para el objeto de valor EmailAddress, se añade la columna email en users con longitud máxima (50 caracteres). Las flechas identifican las relaciones (crow’s foot notation), destacando la cardinalidad (1:N entre users y user_roles). 
 
 ![alt text](assets/images/databasediagram.png)
+
+ANEXO H
  
 ## 4.2.2. Bounded Context: Application
 ### 4.2.2.1. Domain Layer
@@ -2464,13 +2479,17 @@ interactuar directamente con la base de datos. Este layer asegura que los datos 
 
 ### 4.2.2.5. Bounded Context Software Architecture Component Level Diagrams
 
-![Container-diagram-ddd-application](assets/images/structurizr-ddd-application.png) 
+![Container-diagram-ddd-application](assets/images/structurizr-ddd-application.png)
+
+ANEXO F
 
 ### 4.2.2.6. Bounded Context Software Architecture Code Level Diagrams
 
 #### 4.2.2.6.1. Bounded Context Domain Layer Class Diagrams
 
-![class-diagram-application](assets/images/applications-ddd.png) 
+![class-diagram-application](assets/images/applications-ddd.png)
+
+ANEXO G 
 
 #### 4.2.2.6.2. Bounded Context Database Design Diagram
 
@@ -2479,6 +2498,8 @@ El diagrama de base de datos para el Bounded Context Applications detalla el esq
 La relación uno-a-muchos entre data_apoderados y applications nos muestra que la misma data para apoderados puede estar en diferentes postulaciones, al igual que para la relación de postulantes a postulaciones.
 
 ![aplication-db-diagram](assets/images/applications-db-diag.png) 
+
+ANEXO H
 
 ## 4.2.3. Bounded Context: Management
 ### 4.2.3.1. Domain Layer
@@ -2536,6 +2557,8 @@ En Scholr, hemos seleccionado la tipografía Nunito por su equilibrio entre mode
 <p align="center"><img src="assets/images/tipo.png"> </p>
 
 La tipografía Nunito es utilizada en toda la aplicación, desde los títulos hasta el contenido del cuerpo, garantizando que la lectura sea agradable tanto en pantallas pequeñas como grandes. Su diseño moderno y amigable se adapta a la estética limpia y profesional que buscamos para Scholr, permitiendo que los usuarios se enfoquen en el contenido sin distracciones visuales innecesarias.
+
+ANEXO I  
 
 #### 5.1.2. Information Architecture
 
@@ -2709,7 +2732,7 @@ Gracias a estos sistemas, aseguramos una navegación fluida, contextualizada y c
 
 #### 5.1.3. Landing Page UI Design
 
-Link de los Wireframes y Mockups en Figma: [Figma](https://www.figma.com/design/R3ID29IJXbwS6b2I2Je17Y/Mobile-App?node-id=45-50&t=rSRzKmIDeavdXcrd-1)
+Link de los Wireframes y Mockups en Figma: ANEXO J
 
 ##### 5.1.3.1. Landing Page Wireframe
 
@@ -2909,7 +2932,7 @@ Menu hamburguesa
 
 ##### 5.1.4.4. Mobile Applications User Flow Diagrams
 
-Link a los User Flow Diagrams en Lucidchart: [Lucidchart](https://lucid.app/lucidchart/34550ef2-7748-4f51-9aa8-626038c97334/edit?viewport_loc=-9239%2C-4725%2C24000%2C12666%2C0_0&invitationId=inv_afce5755-4963-40b5-a79a-d2cbcef93060)
+Link a los User Flow Diagrams en Lucidchart: ANEXO K
 
 - User Goal: Registrarse
   - ![User Goal: Registrarse](/assets/images/user-flows-scholr/RegistrarseColaborador.png)
@@ -2941,7 +2964,9 @@ Link a los User Flow Diagrams en Lucidchart: [Lucidchart](https://lucid.app/luci
 
 ![Screenshot Prototype Video](/assets/images/screenshot_prototype_scholr.png)
 
-Link al video en Microsoft Stream: [Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20221d964_upc_edu_pe/EUU42KdiezBIoM29sbqcNZkBzxHwiWkV-zVDLWSdM2X--g?e=V2V2eS&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+Link al video en Microsoft Stream: ANEXO L
+
+[https://drive.google.com/file/d/12c-wkU0GFZEksaZxkmVYf3qiUFZXQRxy/view?usp=sharing](https://drive.google.com/file/d/12c-wkU0GFZEksaZxkmVYf3qiUFZXQRxy/view?usp=sharing)
 
 ## Capítulo VI: Product Implementation, Validation & Deployment  
 ### 6.1. Software Configuration Management  
@@ -3186,6 +3211,149 @@ git commit -m “<type>[optional scope]: <title>“ -m “<description”
         When they click on the logout button
         Then they should be redirected to the login page      
       ~~~
+### 6.1.4 Software Deployment Condiguration
+
+### 6.2 Landing Page & Mobile Application Implementation
+
+### 6.2.1. Sprint 1
+
+El primer sprint es una etapa importante en nuestro marco de gestión de proyectos de metodología ágil Scrum. En este periodo, agendamos reuniones con el objetivo de conocer mejor las características de cada integrante, y delegamos tareas para materializar el diseño y funcionalidades ya establecidas, para transformarlos en un landing page funcional y que cumple las heurísticas.  
+
+### 6.2.1.1. Sprint Planning 1
+El sprint planning es una reunion antes de cada sprint en la metodologia Scrum donde el equipo elige las user stories que va a transformar en un producto tangible. Tambien define que como se van a separar los trabajos y quien sera responsable. Nuestro objetivo sera construir un plan resolubre en un tiempo determinado que sera lo que dure el sprint, para crearlo fomentaremos la colaboracion para que todos sepan y entiendas los objetivos y prioridades.  
+
+| Sprint #| Sprint 1|
+| -- | -- |
+| **Sprint Planning Background**||
+| **Date**| 06/09/2024|
+| **Time**| 12:00 AM|
+| **Location**| Discord (Reunión virtual)|
+| **Prepared By**| Jaque Peña, Estefano Oscar|
+| **Attendees (to planning meeting)** | John Telesforo Arevalo Meza ,Diego Alonso Rosado Iporre,Sebastian Omar Real Calderón, Estefano Oscar Jaque Peña|
+| **Sprint Goal & User Stories**||
+| **Sprint 1 Goal**| Nuestro enfoque está en finalizar el informe , desplegar nuestra Landing Page desde el repositorio de GitHub y avanzar bounded context del aplicativo (Tanto IAM como applications). Creemos que esto entrega una experiencia de usuario optimizada a nuestros clientes. Esto se confirmará cuando todas las tareas se muevan a la columna "Terminado" en Trello. |
+| **Sprint 1 Velocity**| ------ |
+| **Sum of Story Points**| 19 |  
+
+### 6.2.1.2. Sprint Backlog 1  
+
+Para el primer sprint backlog, recopilamos historias de usuario relacionadas con la página de inicio (landing page) . Para organizar y administrar estas historias de usuario, las dividimos en tareas fáciles de realizar y las asignamos a los miembros del equipo de manera efectiva, utilizamos la herramienta Trello. Nos concentramos en completar las historias de usuario durante este sprint, con el objetivo principal de crear una landing page completa con un diseño atractivo y fácil de usar.Ademas de terminar el informe para la entrega y realizar el desarrollo de Front y back de los bounded context IAM y Applications. Gracias a Trello, pudimos colaborar efectivamente y seguir el progreso de las tareas, lo que nos permitió abordar y resolver.
+
+[FOTO TRELLO]
+
+| Sprint # | Sprint 1 | | | | | | |
+|---------|---------|--|--|--|--|--|--|
+| **User Story** | | **Work-Item / Task** | | | | | |
+| **ID** | **Title** | **ID** | **Title** | **Description** | **Estimation (Hours)** | **Assigned To** | **Status** |
+| US01 | Selección de empresa durante el registro | TA001 | Implementar campo de subida de documentos | Crear componente para subir credencial laboral y notas con validación de formatos (PDF, JPG, PNG) | 3 | [Nombre Asignado] | To-do |
+| | | TA002 | Integración con API de verificación | Conectar formulario con backend para habilitar botón "Continuar" tras validación básica | 2 | Estefano Oscar Jaque Peña | Done |
+| US02 | Validación automática de datos laborales | TA003 | Desarrollo de integración con API Backus | Implementar servicio para verificar códigos de colaborador en base de datos empresa | 4 | Estefano Oscar Jaque Peña | Done |
+| | | TA004 | Sistema de notificaciones por email | Configurar envío automático de correo con credenciales tras verificación exitosa | 2 | [Nombre Asignado] | Done |
+| US16 | Visualización de información clave | TA005 | Diseño de tarjetas interactivas | Crear 3 tarjetas con iconos + texto responsive para sección "Cómo funciona" | 3 | John Telesforo Arevalo Meza | Done |
+| | | TA006 | Implementación de video explicativo | Integrar video de 30s con autoplay (sin audio) y estadísticas dinámicas | 2 | [Nombre Asignado] |Done |
+| US18 | Formulario de contacto para empresas | TA007 | Desarrollo de formulario sin autenticación | Crear formulario con campos: Nombre, Empresa, Email, Consulta | 2 | John Telesforo Arevalo Meza | Done |
+| | | TA008 | Validación en tiempo real | Implementar verificación de formato email y resaltado de campos obligatorios | 2 | [Nombre Asignado] | Done |
+| US19 | Adaptabilidad móvil | TA009 | Implementación de menú hamburguesa | Crear menú responsive con animación y overlay oscuro para móviles | 3 | John Telesforo Arevalo Meza | Done |
+| | | TA010 | Ajustes de viewport | Optimizar todos los componentes para pantallas <768px con media queries | 4 |John Telesforo Arevalo Meza | Done |
+
+Link de Trello: ANEXO M
+
+### 6.2.1.3. Development Evidence for Sprint Review
+
+| Commit Id (ejemplo) | Commit Message                          | Commit Message Body                                      | Date       |
+|---------------------|----------------------------------------|---------------------------------------------------------|------------|
+| 2a4b6c8d           | feat(header): Add logo and navigation  | Implemented header with Scholr logo, main nav items and CTA button "Empezar" | 04/05/2025 |
+| 1e3f5g7h           | feat(hero): Create main banner         | Added hero section with headline, subheadline and primary CTA | 04/05/2025 |
+| 9i2k4m6o           | feat(features): Add características section | Implemented 3-column feature cards with icons         | 04/05/2025 |
+| 8p1q3r5t           | feat(benefits): Create benefits module | Added benefits section with 3 cards (Ahorro de tiempo, Tranquilidad, Oportunidades) | 04/05/2025 |
+| 7s2u4w6y           | feat(about): Add "Nosotros" section    | Implemented company info section with team photos       | 05/05/2025 |
+| 5v1x3z9b           | feat(faq): Create FAQ accordion        | Added interactive FAQ section with 4 questions (costos, becas oficiales, etc.) | 05/05/2025 |
+| 4c6d8e0f           | feat(contact): Add contact information | Implemented contact section with email, phone and location (Lima, Perú) | 05/05/2025 |
+| 3g5h7j9k           | feat(form): Create contact form        | Added form with fields (Nombre, Email, Empresa, Mensaje) and submit button | 05/05/2025 |
+| 2l4n6p8r           | style: Add responsive design           | Implemented mobile-first responsive layout for all sections | 05/05/2025 |
+| 1m3o5q7s           | fix(form): Validate email field        | Added email validation and error messages to contact form | 05/05/2025 |
+| 9t1v3x5z           | feat(animations): Add scroll effects   | Implemented subtle animations on scroll for engagement  | 05/05/2025 |
+| 8y2b4d6f           | perf: Optimize images                  | Compressed all images without losing quality            | 05/05/2025 |
+
+### 6.2.1.4. Execution Evidence for Sprint Review
+
+
+En este Sprint, los miembros del equipo de desarrollo de software de Aventis han completado y desplegado la Landing Page. A continuación, mostramos imágenes que demuestran cómo nuestra página presenta de manera clara e intuitiva la información sobre nuestro producto y nuestra empresa.
+
+
+En segundo lugar ,se avanzo el bounded context IAM tanto en backend como en frontend :
+
+
+### 6.2.1.5. Services Documentation Evidence for Sprint Review
+
+### 6.2.1.6. Software Deployment Evidence for Sprint Review  
+
+**Resumen**
+Durante este Sprint, nos hemos enfocado en el despliegue de la landing page. Las actividades realizadas incluyen la configuración del entorno de desarrollo y el despliegue inicial del sitio. A continuación, se detalla el proceso seguido para el despliegue de la landing page.
+
+**Actividades Realizadas**
+
+- Creación de Cuentas y Configuración de Recursos:
+
+Proveedor de Hosting: Selección y configuración de la cuenta en el proveedor de hosting para desplegar la landing page.
+Configuración del Entorno: Establecimiento del entorno de desarrollo y producción para la landing page.
+
+- Configuración de Proyectos para Integración:
+
+Repositorio de Código: Configuración del repositorio en GitHub para la integración continua y despliegue automático.
+Automatización: Configuración de scripts y herramientas para la automatización del despliegue.
+
+- Despliegue de la Landing Page:
+
+Subida de Archivos: Transferencia de archivos y recursos al servidor de hosting.
+Verificación: Comprobación de que la landing page se despliega correctamente y está accesible en la web.
+
+**Deploy del Landing Page**
+![deploy](assets/images/deploy_tb1.png)
+**Capturas de Pantalla**
+
+- Repositorio de Landing Page:
+  ![alt text](assets/images/foto_repositorio.jpg)
+
+**Enlace al Repositorio**: https://github.com/Rampart-SaboresCercanos/Landing-page 
+
+### 6.2.1.7. Team Collaboration Insights during Sprint 1 
+
+En esta sección, se presenta un análisis detallado de la colaboración del equipo durante el Sprint. Durante este sprint, las actividades de implementación se organizaron siguiendo una metodología ágil, garantizando una colaboración fluida entre los miembros del equipo. Se exponen capturas de los analíticos de colaboración y de los commits realizados en GitHub, lo que permite visualizar la contribución individual de cada miembro del equipo.
+
+- Diseño y Desarrollo:
+  Diseño de la Landing Page: Desarrollo y diseño completo de la landing page, incluyendo la creación de secciones y funcionalidad.
+  Implementación: Realización de las tareas de codificación, pruebas y ajustes necesarios para completar la página.
+- Documentación y Despliegue:
+  Documentación: Creación de documentación relevante para la landing page, incluyendo capturas de pantalla y descripciones.
+  Despliegue: Configuración del entorno de despliegue y transferencia de archivos al servidor.
+
+**Landing Page**
+
+![Commits](assets/TB1-new/landingc1.jpeg)
+![Commits](assets/TB1-new/landingc2.jpeg)
+
+- Estefano Oscar Jaque Peña: 2
+- Diego Rolin Acuña Tomas: 1
+- John Telesforo Arevalo Meza: 10
+- Valentino Sandoval Paiva: 1
+- Sergio André Gómez Vallejos: 8
+
+**Report:**
+
+![alt text](assets/TB1-new/commitsall2.jpeg)
+
+![alt text](assets/TB1-new/commitall1.jpeg)
+
+![alt text](assets/TB1-image/commitsreport3.jpeg)
+
+![Commits](assets/TB1-image/commitsreport3.jpeg)
+
+- Estefano Oscar Jaque Peña: 55
+- Diego Rolin Acuña Tomas: 52
+- John Telesforo Arevalo Meza: 40
+- Valentino Sandoval Paiva: 59
+- Sergio André Gómez Vallejos: 13
 
 ## Conclusiones
 
@@ -3202,17 +3370,28 @@ En esta entrega, aplicamos diversas técnicas de análisis y diseño como entrev
 - mURAL (2024). https://www.mural.co/
 
 ## Anexos
-ANEXO A : [https://app.mural.co/t/estudiando0947/m/estudiando0947/1745390656723/0835c036e3645e7898d5d12592570047f4e910c5?sender=uc4343c08b6b097f4a42e5558 ](https://app.mural.co/t/estudiando0947/m/estudiando0947/1745390656723/0835c036e3645e7898d5d12592570047f4e910c5?sender=uc4343c08b6b097f4a42e5558 )
+ANEXO A : User Personas--> [https://app.mural.co/t/estudiando0947/m/estudiando0947/1745390656723/0835c036e3645e7898d5d12592570047f4e910c5?sender=uc4343c08b6b097f4a42e5558 ](https://app.mural.co/t/estudiando0947/m/estudiando0947/1745390656723/0835c036e3645e7898d5d12592570047f4e910c5?sender=uc4343c08b6b097f4a42e5558 )
 
-ANEXO B : [https://www.pivotaltracker.com/n/projects/2740632](https://www.pivotaltracker.com/n/projects/2740632)
+ANEXO B : Product Backlog--> [https://www.pivotaltracker.com/n/projects/2740632](https://www.pivotaltracker.com/n/projects/2740632)
 
-ANEXO C : [https://miro.com/app/board/uXjVI_MtKqA=/?share_link_id=604688149286](https://miro.com/app/board/uXjVI_MtKqA=/?share_link_id=604688149286)
+ANEXO C : EventStorming--> [https://miro.com/app/board/uXjVI_MtKqA=/?share_link_id=604688149286](https://miro.com/app/board/uXjVI_MtKqA=/?share_link_id=604688149286)
 
-ANEXO D Y F: [https://miro.com/app/board/uXjVI_S5wR4=/?share_link_id=431433146229](https://miro.com/app/board/uXjVI_S5wR4=/?share_link_id=431433146229)
+ANEXO D: Domain Message Flows Modeling--> [https://miro.com/app/board/uXjVI_S5wR4=/?share_link_id=431433146229](https://miro.com/app/board/uXjVI_S5wR4=/?share_link_id=431433146229)
 
-ANEXO E : [https://miro.com/app/board/uXjVI_R_wiU=/?share_link_id=439952899853](https://miro.com/app/board/uXjVI_R_wiU=/?share_link_id=439952899853)
+ANEXO E : Bounded Context Canvases y Context Mapping --> [https://miro.com/app/board/uXjVI_R_wiU=/?share_link_id=439952899853](https://miro.com/app/board/uXjVI_R_wiU=/?share_link_id=439952899853)
 
-ANEXO F: [https://lucid.app/lucidchart/a8f4f0b0-3ac8-4eb9-949f-53d55de9cf59/edit?view_items=WgKdBRZRehE_&invitationId=inv_e4354b3b-6041-4a50-b6da-1995114c8abb](https://lucid.app/lucidchart/a8f4f0b0-3ac8-4eb9-949f-53d55de9cf59/edit?view_items=WgKdBRZRehE_&invitationId=inv_e4354b3b-6041-4a50-b6da-1995114c8abb)
+ANEXO F: El codigo se encuentra en la carpeta assets>Structurizr
 
-Style Guidelines: https://www.figma.com/design/vKwCm8pF30AgFNQorLOMnf/Style-Guide-for-Mobile-App-design?node-id=1-542&t=lGJGdO2KcM6LceWm-1
+ANEXO G: Bounded Context Domain Layer Class Diagrams --> [https://lucid.app/lucidchart/a8f4f0b0-3ac8-4eb9-949f-53d55de9cf59/edit?view_items=WgKdBRZRehE_&invitationId=inv_e4354b3b-6041-4a50-b6da-1995114c8abb](https://lucid.app/lucidchart/a8f4f0b0-3ac8-4eb9-949f-53d55de9cf59/edit?view_items=WgKdBRZRehE_&invitationId=inv_e4354b3b-6041-4a50-b6da-1995114c8abb)
 
+ANEXO H: DATABASE DIAGRAM
+
+ANEXO I: Style Guidelines -->  [https://www.figma.com/design/vKwCm8pF30AgFNQorLOMnf/Style-Guide-for-Mobile-App-design?node-id=1-542&t=lGJGdO2KcM6LceWm-1](https://www.figma.com/design/vKwCm8pF30AgFNQorLOMnf/Style-Guide-for-Mobile-App-design?node-id=1-542&t=lGJGdO2KcM6LceWm-1)
+
+ANEXO J: Wireframes y Mockups --> [https://www.figma.com/design/R3ID29IJXbwS6b2I2Je17Y/Mobile-App?node-id=45-50&t=rSRzKmIDeavdXcrd-1](https://www.figma.com/design/R3ID29IJXbwS6b2I2Je17Y/Mobile-App?node-id=45-50&t=rSRzKmIDeavdXcrd-1)
+
+ANEXO K: User Flow Diagrams--> [https://lucid.app/lucidchart/34550ef2-7748-4f51-9aa8-626038c97334/edit?viewport_loc=-9239%2C-4725%2C24000%2C12666%2C0_0&invitationId=inv_afce5755-4963-40b5-a79a-d2cbcef93060](https://lucid.app/lucidchart/34550ef2-7748-4f51-9aa8-626038c97334/edit?viewport_loc=-9239%2C-4725%2C24000%2C12666%2C0_0&invitationId=inv_afce5755-4963-40b5-a79a-d2cbcef93060) 
+
+ANEXO L: Mobile Applications Prototyping --> [https://drive.google.com/file/d/12c-wkU0GFZEksaZxkmVYf3qiUFZXQRxy/view?usp=sharing](https://drive.google.com/file/d/12c-wkU0GFZEksaZxkmVYf3qiUFZXQRxy/view?usp=sharing)
+
+ANEXO M: Trello--> []()
