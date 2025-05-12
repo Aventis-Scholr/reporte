@@ -3430,7 +3430,6 @@ Link de Trello: ANEXO M
 
 ### 6.2.1.4. Execution Evidence for Sprint Review
 
-
 En este Sprint, los miembros del equipo de desarrollo de software de Aventis han completado y desplegado la Landing Page. A continuación, mostramos imágenes que demuestran cómo nuestra página presenta de manera clara e intuitiva la información sobre nuestro producto y nuestra empresa.
 
 <br>
@@ -3451,7 +3450,23 @@ En este Sprint, los miembros del equipo de desarrollo de software de Aventis han
 <br>
 
 
-En segundo lugar ,se avanzo el bounded context IAM tanto en backend como en frontend :
+En segundo lugar ,se avanzo el bounded context IAM y applications tanto en backend como en frontend :
+
+Backend - Swagger:
+
+![alt text](assets/images/swagg.png) 
+
+![alt text](assets/images/swaggdos.png)  
+
+Frontend - AndroidStudio:  
+
+![alt text](assets/images/AS.png)
+
+![alt text](assets/images/asdos.png)
+
+![alt text](assets/images/astres.png)
+
+![alt text](assets/images/ascuatro.png)
 
 
 ### 6.2.1.5. Services Documentation Evidence for Sprint Review
