@@ -3609,6 +3609,246 @@ El módulo IAM proporciona:
 
 **Próximos pasos**: Integración con OAuth2 para proveedores externos (Google, Microsoft).
 
+**Sección Applications (Gestión de Postulaciones)**
+
+---
+
+### **Introducción**
+El módulo Applications maneja el proceso completo de postulación a becas, incluyendo la gestión de postulantes y datos de apoderados. Implementa un sistema robusto para crear, consultar y actualizar postulaciones.
+
+---
+
+### **Tabla de Endpoints**
+
+| Bounded Context | Endpoint | Acción | Verbo HTTP | Parámetros | Ejemplo de Respuesta | Documentación |
+|-----------------|----------|--------|------------|------------|----------------------|---------------|
+| **Postulaciones** | `/api/v1/applications` | Crear postulación | POST | `{"idApoderado": 0,"dataApoderado": {"id": 0,"createdAt": "2025-05-12T03:16:58.590Z","updatedAt": "2025-05-12T03:16:58.590Z","apoderadoId": 0,"nombres": "string","apellidos": "string","dni": 0,"fechaNacimiento": "2025-05-12T03:16:58.590Z","contacto": {"correo": "string","celular": 0},"domicilio": {"direccion": "string","departamento": "string","provincia": "string","distrito": "string"},"cuentaBancaria": {"entidadBancaria": "string","numeroCuenta": 0,"cci": 0},"informacionLaboral": {"tipoColaborador": "string","cargo": "string","sede": "string","local": "string","ingreso": 0}},"status": "PENDIENTE","tipoBeca": "MERITO","postulante": {"nombres": "string","apellidos": "string","dni": 0,"fechaNacimiento": "2025-05-12T03:16:58.590Z","contacto": {"correo": "string","celular": 0},"centroEstudios": {"nombre": "string","tipo": "string","nivel": "string","departamento": "string","provincia": "string","distrito": "string"}}}` | `{"id": 0,"idApoderado": 0,"dataApoderado": {"id": 0,"createdAt": "2025-05-12T03:16:58.592Z","updatedAt": "2025-05-12T03:16:58.592Z","apoderadoId": 0,"nombres": "string","apellidos": "string","dni": 0,"fechaNacimiento": "2025-05-12T03:16:58.592Z","contacto": {"correo": "string","celular": 0},"domicilio": {"direccion": "string","departamento": "string","provincia": "string","distrito": "string"},"cuentaBancaria": {"entidadBancaria": "string","numeroCuenta": 0,"cci": 0},"informacionLaboral": {"tipoColaborador": "string","cargo": "string","sede": "string","local": "string","ingreso": 0}},"status": "PENDIENTE","tipoBeca": "MERITO","postulante": {"nombres": "string","apellidos": "string","dni": 0,"fechaNacimiento": "2025-05-12T03:16:58.592Z","contacto": {"correo": "string","celular": 0},"centroEstudios": {"nombre": "string","tipo": "string","nivel": "string","departamento": "string","provincia": "string","distrito": "string"}}}` | [Swagger](#) |
+|  | `/api/v1/applications` | Listar postulaciones | GET | - | `[{"id": 0,"idApoderado": 0,"dataApoderado": {"id": 0,"createdAt": "2025-05-12T03:20:30.473Z","updatedAt": "2025-05-12T03:20:30.473Z","apoderadoId": 0,"nombres": "string","apellidos": "string","dni": 0,"fechaNacimiento": "2025-05-12T03:20:30.473Z","contacto": {"correo": "string","celular": 0},"domicilio": {"direccion": "string","departamento": "string","provincia": "string","distrito": "string"},"cuentaBancaria": {"entidadBancaria": "string","numeroCuenta": 0,"cci": 0},"informacionLaboral": {"tipoColaborador": "string","cargo": "string","sede": "string","local": "string","ingreso": 0}},"status": "PENDIENTE","tipoBeca": "MERITO","postulante": {"nombres": "string","apellidos": "string","dni": 0,"fechaNacimiento": "2025-05-12T03:20:30.473Z","contacto": {"correo": "string","celular": 0},"centroEstudios": {"nombre": "string","tipo": "string","nivel": "string","departamento": "string","provincia": "string","distrito": "string"}}}]` | [Swagger](#) |
+| **Datos Apoderados** | `/api/v1/data-apoderado/{apoderadoId}` | Crear datos | POST | `Lond :id` | `{"nombres": "string","apellidos": "string","dni": 0,"fechaNacimiento": "2025-05-12T03:23:02.739Z","contacto": {"correo": "string","celular": 0},"domicilio": {"direccion": "string","departamento": "string","provincia": "string","distrito": "string"},"cuentaBancaria": {"entidadBancaria": "string","numeroCuenta": 0,"cci": 0},"informacionLaboral": {"tipoColaborador": "string","cargo": "string","sede": "string","local": "string","ingreso": 0}}` | [Swagger](#) |
+|  | `/api/v1/data-apoderado/{id}` | Obtener datos | GET | - | `"nombres": "string","apellidos": "string","dni": 0,"fechaNacimiento": "2025-05-12T03:24:28.677Z","contacto": {"correo": "string","celular": 0},"domicilio": {"direccion": "string","departamento": "string","provincia": "string","distrito": "string"},"cuentaBancaria": {"entidadBancaria": "string","numeroCuenta": 0,"cci": 0},"informacionLaboral": {"tipoColaborador": "string","cargo": "string","sede": "string","local": "string","ingreso": 0}}` | [Swagger](#) |
+|  | `/api/v1/data-apoderado/{apoderadoId}/{id}` | Obtener por usuario | GET | `apoderadoId, id` | `{"nombres": "string","apellidos": "string","dni": 0,"fechaNacimiento": "2025-05-12T03:26:07.971Z","contacto": {"correo": "string","celular": 0},"domicilio": {"direccion": "string","departamento": "string","provincia": "string","distrito": "string"},"cuentaBancaria": {"entidadBancaria": "string","numeroCuenta": 0,"cci": 0},"informacionLaboral": {"tipoColaborador": "string","cargo": "string","sede": "string","local": "string","ingreso": 0}}` | [Swagger](#) |
+
+---
+
+### **Ejemplos de Uso**
+
+#### **1. Creación de Postulación**
+```java
+POST /api/v1/applications
+Content-Type: application/json
+
+{
+  "idApoderado": 123,
+  "dataApoderado": {
+    "nombres": "María Elena",
+    "apellidos": "Gómez Torres",
+    "dni": "87654321",
+    "fechaNacimiento": "1985-04-15",
+    "contacto": {
+      "correo": "maria.gomez@email.com",
+      "celular": "987654321"
+    },
+    "domicilio": {
+      "direccion": "Av. Los Olivos 123",
+      "departamento": "Lima",
+      "provincia": "Lima",
+      "distrito": "San Martín de Porres"
+    },
+    "cuentaBancaria": {
+      "entidadBancaria": "BCP",
+      "numeroCuenta": "19123456789",
+      "cci": "00219112345678912"
+    },
+    "informacionLaboral": {
+      "tipoColaborador": "TIEMPO_COMPLETO",
+      "cargo": "Supervisora de Logística",
+      "sede": "Planta Lima Norte",
+      "local": "Almacén Principal",
+      "ingreso": 2018
+    }
+  },
+  "status": "PENDIENTE",
+  "tipoBeca": "EXCELENCIA_ACADEMICA",
+  "postulante": {
+    "nombres": "Diego Alonso",
+    "apellidos": "Gómez Pérez",
+    "dni": "12345678",
+    "fechaNacimiento": "2010-08-22",
+    "contacto": {
+      "correo": "diego.alonso@colegio.edu.pe",
+      "celular": "912345678"
+    },
+    "centroEstudios": {
+      "nombre": "Colegio San Agustín",
+      "tipo": "PRIVADO",
+      "nivel": "PRIMARIA",
+      "departamento": "Lima",
+      "provincia": "Lima",
+      "distrito": "San Isidro"
+    }
+  }
+}
+
+Response (201 Created):
+HTTP/1.1 201 Created
+Content-Type: application/json
+
+{
+  "id": 42,
+  "idApoderado": 123,
+  "dataApoderado": {
+    "id": 56,
+    "createdAt": "2025-05-12T10:30:45.123Z",
+    "updatedAt": "2025-05-12T10:30:45.123Z",
+    "apoderadoId": 123,
+    "nombres": "María Elena",
+    "apellidos": "Gómez Torres",
+    "dni": "87654321",
+    "fechaNacimiento": "1985-04-15",
+    "contacto": {
+      "correo": "maria.gomez@email.com",
+      "celular": "987654321"
+    },
+    "domicilio": {
+      "direccion": "Av. Los Olivos 123",
+      "departamento": "Lima",
+      "provincia": "Lima",
+      "distrito": "San Martín de Porres"
+    },
+    "cuentaBancaria": {
+      "entidadBancaria": "BCP",
+      "numeroCuenta": "19123456789",
+      "cci": "00219112345678912"
+    },
+    "informacionLaboral": {
+      "tipoColaborador": "TIEMPO_COMPLETO",
+      "cargo": "Supervisora de Logística",
+      "sede": "Planta Lima Norte",
+      "local": "Almacén Principal",
+      "ingreso": 2018
+    }
+  },
+  "status": "PENDIENTE",
+  "tipoBeca": "EXCELENCIA_ACADEMICA",
+  "postulante": {
+    "nombres": "Diego Alonso",
+    "apellidos": "Gómez Pérez",
+    "dni": "12345678",
+    "fechaNacimiento": "2010-08-22",
+    "contacto": {
+      "correo": "diego.alonso@colegio.edu.pe",
+      "celular": "912345678"
+    },
+    "centroEstudios": {
+      "nombre": "Colegio San Agustín",
+      "tipo": "PRIVADO",
+      "nivel": "PRIMARIA",
+      "departamento": "Lima",
+      "provincia": "Lima",
+      "distrito": "San Isidro"
+    }
+  }
+}
+```
+
+#### **2. Gestión de Datos de Apoderado**
+```java
+GET /api/v1/data-apoderado/3/1
+Accept: application/json
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "id": 1,
+  "createdAt": "2025-05-12T10:45:22.123Z",
+  "updatedAt": "2025-05-12T10:45:22.123Z",
+  "apoderadoId": 3,
+  "nombres": "Carlos Alberto",
+  "apellidos": "Rodríguez Mendoza",
+  "dni": "76543210",
+  "fechaNacimiento": "1980-11-25",
+  "contacto": {
+    "correo": "carlos.rodriguez@empresa.com",
+    "celular": "987654321"
+  },
+  "domicilio": {
+    "direccion": "Calle Las Gardenias 456",
+    "departamento": "Lima",
+    "provincia": "Lima",
+    "distrito": "Miraflores"
+  },
+  "cuentaBancaria": {
+    "entidadBancaria": "BBVA",
+    "numeroCuenta": "001123456789",
+    "cci": "01112345678912345"
+  },
+  "informacionLaboral": {
+    "tipoColaborador": "TIEMPO_COMPLETO",
+    "cargo": "Jefe de Ventas",
+    "sede": "Oficina Central",
+    "local": "Torre B",
+    "ingreso": 2015
+  }
+}
+```
+
+---
+
+### **Arquitectura Clave**
+
+1. **Patrón CQRS**:
+   - `ApplicationCommandService`: Maneja creación/actualización
+   - `ApplicationQueryService`: Gestiona consultas
+
+2. **Value Objects**:
+   ```java
+   public record Contacto(String email, String telefono) {}
+   public record Domicilio(String direccion, String distrito) {}
+   ```
+
+3. **Validaciones**:
+   - Campos obligatorios en recursos
+   - Verificación de existencia de relaciones (apoderado → postulante)
+
+---
+
+### **Flujo Completo de Postulación**
+
+1. **Paso 1**: Registro de datos del apoderado
+   ```java
+   POST /data-apoderado/{userId}
+   ```
+2. **Paso 2**: Creación de postulación
+   ```java
+   POST /applications
+   ```
+3. **Paso 3**: Consulta de estado
+   ```java
+   GET /applications/{id}
+   ```
+
+---
+
+### **Repositorio y Commits**
+
+| Feature | Commit ID | Cambios |
+|---------|-----------|---------|
+| Core Applications | `f8e7d6c` | Implementación inicial |
+| Data Apoderado | `a3b4c5d` | Gestión de datos complementarios |
+| Validaciones | `e6f7g8h` | Reglas de negocio |
+
+**Repositorio**: [github.com/Aventis-Scholr/scholr-backend](https://github.com/Aventis-Scholr/scholr-backend)
+
+---
+
+### **Conclusión**
+El módulo permite:
+- ✅ Gestión completa del ciclo de postulaciones
+- ✅ Datos estructurados de apoderados (contacto, bancarios, laborales)
+- ✅ Seguridad en accesos (relación usuario → datos)
+
+**Próximos pasos**: Integración con servicio de notificaciones para cambios de estado.
+
 ### 6.2.1.6. Software Deployment Evidence for Sprint Review  
 
 **Resumen**
@@ -3642,6 +3882,7 @@ Verificación: Comprobación de que la landing page se despliega correctamente y
   ![alt text](assets/images/repositorio-landing-page.png)
 
 **Enlace al Repositorio**: https://aventis-scholr.github.io/landing-page/ 
+
 
 ### 6.2.1.7. Team Collaboration Insights during Sprint 1 
 
