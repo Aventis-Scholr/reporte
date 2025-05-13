@@ -44,11 +44,27 @@ Product: "Scholr"
 | TB1     | 23/04/2025 | John Arévalo |  Desarrollé el Event Storming, antecedentes y problemática, startup profile, Domain Message Flows Modeling, Bounded Context Canvases, empathy mapping, User journey mapping y el registro de 1 entrevista para el segmento 1. |
 | TB1     | 18/04/2025  | Diego Rosado | Desarrolle las preguntas para los segmentos objetivos e hice una entrevista, As-is Scenario Mapping, To-Be Scenario Mapping, EventStorming, Software Architecture.Ademas el diagrama C4 ,as is ,to be , context mapping y  candidate context dicovery|
 
+|TP|13/05/2025|Estefano Jaque |Realice el bounded contex IAm tanto en frontend como en backend y en el informe todo el Tactical-Level Domain-Driven Design de el bounded context IAM , ademas de el punto 6.1.1. Software Development en el que indique todaslas herramientas que se utilizaron a lo largo del desarrollo de este proyecto.Por ultimo como leader organice el Sprint 1 ademas de añadir los putnos de este y tomar en cuenta el aporte por cada participante |
+|TP|13/05/2025 |John Arévalo | Desarrollé el bounde context Applicactions completo en backend y parcialmente en Frontend , realice el Tactical-Level Domain-Driven Desig de el bounded Applications , realice la landing page y en el informe rellene el apartado de Landing Page UI Design y los otros puntos en los que es necesario demostrar mi aporte tanto de mi bounded como de la landing page|
+|TP|13/05/2025|Diego Rosado| Desarrollé con el apoyo de mi compañero Sebastian el bounded context management , y añadi lo necesario para demostrar lo hecho en este bounded,en el informe desarrolle el punto Product design ,ademas de apoyar para la realizacion de los mockups y de los wireframes del aplicativo|
+|TP|13/05/2025|Sebastian Real|Realice con el apoyo de mi compañero Diego el bounded context Management que es basicamente la seccion del administrador tanto en el backend como en lel frontend parcialmente , ademas de ello en el informe realice los mockups , wireframes , userflows y prototipo del aplicativo,ademas de la  demostracion de lo que desarrollé del bounded que se me delegó|
+
+
 ## Project Report Collaboration Insights
 
 |  URL de la organización del proyecto  |          URL del repositorio del reporte          |
 | :-----------------------------------: | :-----------------------------------------------: |
 | https://github.com/Aventis-Scholr | https://github.com/Aventis-Scholr/reporte |
+
+|  URL de la Landing page  |          URL del repositorio del frontend mobile       |
+| :-----------------------------------: | :-----------------------------------------------: |
+|https://github.com/Aventis-Scholr/landing-page | https://github.com/Aventis-Scholr/scholr-mobile |
+
+|  URL del backend  |
+| :-----------------------------------: |
+|https://github.com/Aventis-Scholr/scholr-backend | 
+
+
 
 <br>**Report:**
 
@@ -59,6 +75,17 @@ Product: "Scholr"
 - John Telesforo Arevalo Meza: 13
 - Diego Alonso Rosado Iporre: 11
 
+backend:
+![alt text](assets/images/commae.png) 
+- Estefano Oscar Jaque Peña: 1
+- John Telesforo Arevalo Meza: 1
+
+Frontend:
+![alt text](assets/images/commae.png) 
+- Estefano Oscar Jaque Peña: 1
+- John Telesforo Arevalo Meza: 1
+
+
 TB1:<br>
 |Integrante|Tarea Asignada|
 |-|-|
@@ -66,6 +93,15 @@ TB1:<br>
 | Sebastian Omar Real Calderón | Análisis de entrevistas, Registro de entrevista, Ubiquitous Language, Impact Mapping, Bounded Context Management |
 | Arévalo Meza John | Desarrollé el Event Storming, antecedentes y problemática, startup profile, Domain Message Flows Modeling, Bounded Context Canvases, empathy mapping, User journey mapping y el registro de 1 entrevista para el segmento 1. |
 | Rosado Iporre, Diego | Entrevistas, diagrama C4 ,as is ,to be , context mapping y  candidate context dicovery |
+
+
+TP:<br>
+|Integrante|Tarea Asignada|
+|-|-|
+|Jaque Peña, Estefano Oscar|Desarrollé Tactical-Level Domain-Driven Design del Bounded context IAM,ademas de el  Software Development Environment Configuration.	,Source Code Management., Source Code Style Guide & Conventions. y el Sprint 1 completo con apoyo de mis compañeros.Desarrolle frontend y backend de el bounded context IAM|
+| Sebastian Omar Real Calderón | Realice parte del Tactical-Level Domain-Driven Design junto a mi compañero Diego Rosado del bounded context Management, ademas de los siguientes puntos: 5.1.4. Mobile Applications UX/UI Design	,5.1.4.1. Mobile Applications Wireframes,5.1.4.2. Mobile Applications Wireflow Diagrams,5.1.4.3. Mobile Applications Mock-ups,5.1.4.4. Mobile Applications User Flow Diagrams,5.1.4.5. Mobile Applications Prototyping.Por utlimo desarrolle aprte del frontend y backend del bounded context Management|
+| Arévalo Meza John | Desarrollé Tactical-Level Domain-Driven Design del Bounded context Spplications ademas de los siguientes puntos del informe: 5.1.3. Landing Page UI Design ,5.1.3.1. Landing Page Wireframe, 5.1.3.2. Landing Page Mock-up y el Sprint 1 junto a mis compañeros.Desarrolle frontend y backend de el bounded Applications|
+| Rosado Iporre, Diego | Realice parte c4 del Tactical-Level Domain-Driven Design  del bounded context Management, ademas de los siguientes puntos : 5.1.2.1.Organization Systems,.1.2.2. Labelling Systems,5.1.2.3. SEO Tags and Meta Tags,5.1.2.4. Searching Systems,5.1.2.5. Navigation Systems .Por utlimo desarrolle aprte del frontend y backend del bounded context Management|
 
 ## Contenido
 
@@ -188,8 +224,8 @@ En el siguiente cuadro se describen las acciones realizadas y enunciados de conc
 
 | Criterio especifico | Acciones Realizadas| Conclusiones|
 | :-- | :-- | -- |
-| 1. Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | <br>**Estefano Oscar Jaque Peña**<br>TB1: Al realizar las user stories pude aprender a profundidad la funcionalidad del aplicativo pensar a hacer a futuro , pude conocer mas a los segementos objetivos con las entrevistas y realizando el user persona , ademas con el lean UX procees puede ver las necesidades y beneficios del aplicativo<br>**Diego Alonso Rosado Iporre**<br> TB1: Apliqué herramientas como entrevistas, wireframes y escenarios para identificar oportunidades clave del proyecto. Contribuí al diseño de la solución desde la comprensión del dominio hasta la arquitectura del software. <br>**John Arévalo Meza** <br>TB1: Realicé el registro de entrevistas, empathy mapping, user journey mapping, event storming y bounded context canvases, lo que permitió identificar claramente los bounded contexts, además de una mayor comprensión del dominio. <br>**Sebastián Omar Real Calderón**<br>TB1: Apliqué análisis de entrevistas y modelado de dominios para entender las necesidades reales del proyecto. Mi contribución ayudó a traducir problemas complejos en requisitos claros para la solución de software.| **TB1:** El equipo demostró capacidad para integrar aprendizajes técnicos y metodologías ágiles en el desarrollo del proyecto. A través de la investigación y colaboración, se identificaron oportunidades clave para optimizar procesos mediante tecnología, reforzando la importancia de adaptarse continuamente a los requerimientos del contexto profesional.|
-| 2. Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | TB1:<br> **Estefano Oscar Jaque Peña**<br>TB1:  Al realizar las user stories pude aprender a profundidad la funcionalidad del aplicativo pensar a hacer a futuro , pude conocer mas a los segementos objetivos con las entrevistas y realizando el user persona , ademas con el lean UX procees puede ver las necesidades y beneficios del aplicativo<br>**Diego Alonso Rosado Iporre**<br> TB1: Entendí que el aprendizaje constante es esencial para enfrentar retos cambiantes. Este proyecto fortaleció mi motivación por seguir explorando enfoques modernos en desarrollo de software. <br>**Sebastián Omar Real Calderón**<br>TB1: Reconozco que mantenerme actualizado con metodologías ágiles y técnicas de análisis es clave para desarrollar soluciones efectivas. Este proyecto reforzó mi compromiso con el aprendizaje continuo para abordar desafíos técnicos y de negocio.<br>**John Telesforo Arevalo Meza**<br>TB1: Comprendí que mantenerse a la vanguardía con metodologías y flujos de trabajos es importante, ya que nos permite eliminar posibles retrasos y aplicar conceptos anteriormente sabidos con el fin de mejorar el proyecto. <br>| **TB1:** El equipo evidenció la importancia de la formación continua en el ámbito profesional, aplicando nuevos conocimientos directamente al desarrollo del proyecto. Esta experiencia destacó cómo la adaptabilidad y la mejora constante son esenciales para entregar soluciones de software alineadas con las necesidades reales del mercado. |
+| 1. Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | <br>**Estefano Oscar Jaque Peña**<br>TB1: Al realizar las user stories pude aprender a profundidad la funcionalidad del aplicativo pensar a hacer a futuro , pude conocer mas a los segementos objetivos con las entrevistas y realizando el user persona , ademas con el lean UX procees puede ver las necesidades y beneficios del aplicativo<br>**Diego Alonso Rosado Iporre**<br> TB1: Apliqué herramientas como entrevistas, wireframes y escenarios para identificar oportunidades clave del proyecto. Contribuí al diseño de la solución desde la comprensión del dominio hasta la arquitectura del software. <br>**John Arévalo Meza** <br>TB1: Realicé el registro de entrevistas, empathy mapping, user journey mapping, event storming y bounded context canvases, lo que permitió identificar claramente los bounded contexts, además de una mayor comprensión del dominio. <br>**Sebastián Omar Real Calderón**<br>TB1: Apliqué análisis de entrevistas y modelado de dominios para entender las necesidades reales del proyecto. Mi contribución ayudó a traducir problemas complejos en requisitos claros para la solución de software.<br>**TP – Estefano Oscar Jaque Peña**<br>Desarrollé el bounded context IAM (frontend y backend), aplicando tácticas de DDD. Esto me permitió actualizar conocimientos en arquitectura de software, seguridad y gestión de usuarios, así como emplear herramientas de desarrollo profesional en la sección de Software Development del informe.<br><br>**TP – John Arévalo Meza**<br>Desarrollé el bounded context Applications, lo que fortaleció mis habilidades en desarrollo backend y frontend parcial, así como en diseño táctico DDD. Complementé con el desarrollo de la landing page, donde apliqué UI/UX actualizado.<br><br>**TP – Diego Alonso Rosado Iporre**<br>Desarrollé el bounded context Management junto a mi compañero. Aplicamos patrones tácticos de DDD y reforcé mis conocimientos en diseño de producto y wireframes, siendo clave para definir flujos de interacción.<br><br>**TP – Sebastián Omar Real Calderón**<br>Desarrollé parcialmente el frontend y backend del bounded context Management. Implementé prototipos, wireframes, userflows y mockups, integrando herramientas actualizadas de diseño y análisis de usuario.| **TB1:** El equipo demostró capacidad para integrar aprendizajes técnicos y metodologías ágiles en el desarrollo del proyecto. A través de la investigación y colaboración, se identificaron oportunidades clave para optimizar procesos mediante tecnología, reforzando la importancia de adaptarse continuamente a los requerimientos del contexto profesional.<br>**TP:** El equipo demostró la capacidad de aplicar conceptos técnicos avanzados como el diseño táctico de DDD y arquitectura por bounded contexts. Además, se utilizaron herramientas modernas para gestión de usuarios, diseño UI/UX y desarrollo frontend/backend, evidenciando una actualización profesional efectiva y aplicada.|
+| 2. Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | TB1:<br> **Estefano Oscar Jaque Peña**<br>TB1:  Al realizar las user stories pude aprender a profundidad la funcionalidad del aplicativo pensar a hacer a futuro , pude conocer mas a los segementos objetivos con las entrevistas y realizando el user persona , ademas con el lean UX procees puede ver las necesidades y beneficios del aplicativo<br>**Diego Alonso Rosado Iporre**<br> TB1: Entendí que el aprendizaje constante es esencial para enfrentar retos cambiantes. Este proyecto fortaleció mi motivación por seguir explorando enfoques modernos en desarrollo de software. <br>**Sebastián Omar Real Calderón**<br>TB1: Reconozco que mantenerme actualizado con metodologías ágiles y técnicas de análisis es clave para desarrollar soluciones efectivas. Este proyecto reforzó mi compromiso con el aprendizaje continuo para abordar desafíos técnicos y de negocio.<br>**John Telesforo Arevalo Meza**<br>TB1: Comprendí que mantenerse a la vanguardía con metodologías y flujos de trabajos es importante, ya que nos permite eliminar posibles retrasos y aplicar conceptos anteriormente sabidos con el fin de mejorar el proyecto. <br>**TP – Estefano Oscar Jaque Peña**<br>El desarrollo completo del bounded IAM me permitió reconocer la necesidad de seguir aprendiendo sobre patrones de seguridad, arquitectura modular y organización de sprints, fundamentales para liderar proyectos escalables.<br><br>**TP – John Arévalo Meza**<br>Comprendí que al implementar múltiples capas (backend, frontend, diseño) debía reforzar constantemente mis conocimientos y adaptarme a tecnologías como frameworks modernos y buenas prácticas de UI.<br><br>**TP – Diego Alonso Rosado Iporre**<br>Participar en el diseño del producto, mockups y desarrollo me mostró que el aprendizaje constante en herramientas visuales y estructuración de información es vital para soluciones centradas en el usuario.<br><br>**TP – Sebastián Omar Real Calderón**<br>Reconocí que aplicar herramientas como Figma, userflows y la estructuración del bounded context me obliga a mantenerme al día en diseño de interacción, flujos administrativos y análisis UX.  | **TB1:** El equipo evidenció la importancia de la formación continua en el ámbito profesional, aplicando nuevos conocimientos directamente al desarrollo del proyecto. Esta experiencia destacó cómo la adaptabilidad y la mejora constante son esenciales para entregar soluciones de software alineadas con las necesidades reales del mercado.<br>**TP:** El equipo valoró el aprendizaje continuo como parte esencial del crecimiento profesional. Cada estudiante identificó áreas en las que necesitaba mejorar y lo hizo en el transcurso del proyecto, integrando nuevos conocimientos en seguridad, diseño, arquitectura de software y metodologías ágiles. |
 
 ## Capítulo I: Presentación
 
@@ -3405,39 +3441,65 @@ El sprint planning es una reunion antes de cada sprint en la metodologia Scrum d
 Para el primer sprint backlog, recopilamos historias de usuario relacionadas con la página de inicio (landing page) . Para organizar y administrar estas historias de usuario, las dividimos en tareas fáciles de realizar y las asignamos a los miembros del equipo de manera efectiva, utilizamos la herramienta Trello. Nos concentramos en completar las historias de usuario durante este sprint, con el objetivo principal de crear una landing page completa con un diseño atractivo y fácil de usar.Ademas de terminar el informe para la entrega y realizar el desarrollo de Front y back de los bounded context IAM y Applications. Gracias a Trello, pudimos colaborar efectivamente y seguir el progreso de las tareas, lo que nos permitió abordar y resolver.
 
 [FOTO TRELLO]
-
-| Sprint # | Sprint 1 | | | | | | |
-|---------|---------|--|--|--|--|--|--|
-| **User Story** | | **Work-Item / Task** | | | | | |
-| **ID** | **Title** | **ID** | **Title** | **Description** | **Estimation (Hours)** | **Assigned To** | **Status** |
-| US01 | Selección de empresa durante el registro | TA001 | Implementar campo de subida de documentos | Crear componente para subir credencial laboral y notas con validación de formatos (PDF, JPG, PNG) | 3 | Estefano Oscar Jaque Peña | Done |
-| | | TA002 | Integración con API de verificación | Conectar formulario con backend para habilitar botón "Continuar" tras validación básica | 2 | Estefano Oscar Jaque Peña | Done |
-| US02 | Validación automática de datos laborales | TA003 | Desarrollo de integración con API Backus | Implementar servicio para verificar códigos de colaborador en base de datos empresa | 4 | Estefano Oscar Jaque Peña | Done |
-| US16 | Visualización de información clave | TA004 | Diseño de tarjetas interactivas | Crear 3 tarjetas con iconos + texto responsive para sección "Cómo funciona" | 3 | John Telesforo Arevalo Meza | Done |
-| | | TA005 | Implementación de video explicativo | Integrar video de 30s con autoplay (sin audio) y estadísticas dinámicas | 2 | John Telesforo Arevalo Meza |Done |
-| US18 | Formulario de contacto para empresas | TA006 | Desarrollo de formulario sin autenticación | Crear formulario con campos: Nombre, Empresa, Email, Consulta | 2 | John Telesforo Arevalo Meza | Done |
-| | | TA007 | Validación en tiempo real | Implementar verificación de formato email y resaltado de campos obligatorios | 2 | John Telesforo Arevalo Meza | Done |
-| US19 | Adaptabilidad móvil | TA008 | Implementación de menú hamburguesa | Crear menú responsive con animación y overlay oscuro para móviles | 3 | John Telesforo Arevalo Meza | Done |
-| | | TA009 | Ajustes de viewport | Optimizar todos los componentes para pantallas <768px con media queries | 4 |John Telesforo Arevalo Meza | Done |
+| Sprint #       | Sprint 1                                 |                      |                                              |                                                                                                   |                        |                             |            |
+| -------------- | ---------------------------------------- | -------------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------- | ---------------------- | --------------------------- | ---------- |
+| **User Story** |                                          | **Work-Item / Task** |                                              |                                                                                                   |                        |                             |            |
+| **ID**         | **Title**                                | **ID**               | **Title**                                    | **Description**                                                                                   | **Estimation (Hours)** | **Assigned To**             | **Status** |
+| US01           | Selección de empresa durante el registro |**TA002**            | Integración visual con formulario de sign-up | Conectar subida de documentos al flujo existente en `/sign-up` usando DTO extendido               | 2                      | Estefano Oscar Jaque Peña   | Done       |
+|                |                                          | **TA003**            | Respuesta backend con campos de verificación | Mostrar `proofingEntrepreneure` del backend tras registro exitoso                                 | 1                      | Estefano Oscar Jaque Peña   | Done       |
+| US02           | Validación automática de datos laborales | **TA004**            | Desarrollo de integración con API Backus     | Implementar servicio para verificar código de colaborador (compañía, DNI, código)                 | 4                      | Estefano Oscar Jaque Peña   | Done       |
+|                |                                          | **TA005**            | Validación corporativa dinámica              | Crear lógica para seleccionar tabla `{compania}_colaboradores` y validar contra DB                | 3                      | Estefano Oscar Jaque Peña   | Done       |
+|                |                                          | **TA006**            | Control de flujo ante error de validación    | Implementar excepción `InvalidColaboradorException` y mensaje claro al usuario final              | 2                      | Estefano Oscar Jaque Peña   | Done       |
+| US16           | Visualización de información clave       | **TA007**            | Diseño de tarjetas interactivas              | Crear 3 tarjetas con íconos + texto responsive para sección "Cómo funciona"                       | 3                      | John Telesforo Arevalo Meza | Done       |
+|                |                                          | **TA008**            | Implementar sección de características       | Crear cards con íconos explicando beneficios clave usando diseño en 3 columnas                    | 3                      | John Telesforo Arevalo Meza | Done       |
+|                |                                          | **TA009**            | Agregar animaciones de scroll                | Añadir efectos sutiles al hacer scroll para resaltar información clave                            | 2                      | John Telesforo Arevalo Meza | Done       |
+| US18           | Formulario de contacto para empresas     | **TA010**            | Desarrollo de formulario sin autenticación   | Crear formulario con campos: Nombre, Empresa, Email, Consulta                                     | 2                      | John Telesforo Arevalo Meza | Done       |
+|                |                                          | **TA011**            | Validación en tiempo real                    | Implementar verificación de formato email y resaltado de campos obligatorios                      | 2                      | John Telesforo Arevalo Meza | Done       |
+|                |                                          | **TA012**            | Agregar sección de contacto general          | Incluir correo, número telefónico y ubicación física en footer o sección dedicada                 | 1                      | John Telesforo Arevalo Meza | Done       |
+| US19           | Adaptabilidad móvil                      | **TA013**            | Implementación de menú hamburguesa           | Crear menú responsive con animación y overlay oscuro para móviles                                 | 3                      | John Telesforo Arevalo Meza | Done       |
+|                |                                          | **TA014**            | Ajustes de viewport                          | Optimizar todos los componentes para pantallas <768px con media queries                           | 4                      | John Telesforo Arevalo Meza | Done       |
+|                |                                          | **TA015**            | Aplicar diseño responsive global             | Implementar layout mobile-first en todas las secciones con breakpoints y ajustes de CSS           | 4                      | John Telesforo Arevalo Meza | Done       |
+|                |                                          | **TA016**            | Optimización de imágenes                     | Comprimir imágenes sin pérdida para mejorar performance en móviles                                | 2                      | John Telesforo Arevalo Meza | Done       |
+| US07           | Visualización de postulaciones           | **TA017**            | Desarrollo de endpoint para postulaciones    | Crear API REST (`/api/applications`) que retorne postulaciones con filtrado por estado (query param) | 3                      | John Telesforo Arevalo Meza          | Done     |
+|                |                                          | **TA018**            | Componente de lista filtrable                | Implementar vista frontend con dropdown de filtros y cards responsive para cada postulación       | 4                      |John Telesforo Arevalo Meza        | Done      |
+|                |                                          | **TA019**            | Modal de detalles completos                  | Crear componente modal que muestre documentos adjuntos, historial y comentarios de evaluadores   | 3                      | John Telesforo Arevalo Meza         | Done      |
 
 Link de Trello: ANEXO M
 
 ### 6.2.1.3. Development Evidence for Sprint Review
 
-| Commit Id (ejemplo) | Commit Message                          | Commit Message Body                                      | Date       |
-|---------------------|----------------------------------------|---------------------------------------------------------|------------|
-| 2a4b6c8d           | feat(header): Add logo and navigation  | Implemented header with Scholr logo, main nav items and CTA button "Empezar" | 04/05/2025 |
-| 1e3f5g7h           | feat(hero): Create main banner         | Added hero section with headline, subheadline and primary CTA | 04/05/2025 |
-| 9i2k4m6o           | feat(features): Add características section | Implemented 3-column feature cards with icons         | 04/05/2025 |
-| 8p1q3r5t           | feat(benefits): Create benefits module | Added benefits section with 3 cards (Ahorro de tiempo, Tranquilidad, Oportunidades) | 04/05/2025 |
-| 7s2u4w6y           | feat(about): Add "Nosotros" section    | Implemented company info section with team photos       | 05/05/2025 |
-| 5v1x3z9b           | feat(faq): Create FAQ accordion        | Added interactive FAQ section with 4 questions (costos, becas oficiales, etc.) | 05/05/2025 |
-| 4c6d8e0f           | feat(contact): Add contact information | Implemented contact section with email, phone and location (Lima, Perú) | 05/05/2025 |
-| 3g5h7j9k           | feat(form): Create contact form        | Added form with fields (Nombre, Email, Empresa, Mensaje) and submit button | 05/05/2025 |
-| 2l4n6p8r           | style: Add responsive design           | Implemented mobile-first responsive layout for all sections | 05/05/2025 |
-| 1m3o5q7s           | fix(form): Validate email field        | Added email validation and error messages to contact form | 05/05/2025 |
-| 9t1v3x5z           | feat(animations): Add scroll effects   | Implemented subtle animations on scroll for engagement  | 05/05/2025 |
-| 8y2b4d6f           | perf: Optimize images                  | Compressed all images without losing quality            | 05/05/2025 |
+Landing Page:
+
+|Repository |Branch| Commit Id | Commit Message| Commit Message Body| Date|
+|----|-----|---------------------|----------------------------------------|---------------------------------------------------------|------------|
+|Aventis-Scholr/landing-page|develop| 2a4b6c8d           | feat(header): Add logo and navigation  | Implemented header with Scholr logo, main nav items and CTA button "Empezar" | 04/05/2025 |
+|Aventis-Scholr/landing-page|develop| 1e3f5g7h           | feat(hero): Create main banner         | Added hero section with headline, subheadline and primary CTA | 04/05/2025 |
+|Aventis-Scholr/landing-page|develop| 9i2k4m6o           | feat(features): Add características section | Implemented 3-column feature cards with icons         | 04/05/2025 |
+|Aventis-Scholr/landing-page|develop| 8p1q3r5t           | feat(benefits): Create benefits module | Added benefits section with 3 cards (Ahorro de tiempo, Tranquilidad, Oportunidades) | 04/05/2025 |
+|Aventis-Scholr/landing-page|develop| 7s2u4w6y           | feat(about): Add "Nosotros" section    | Implemented company info section with team photos       | 05/05/2025 |
+|Aventis-Scholr/landing-page|develop| 5v1x3z9b           | feat(faq): Create FAQ accordion        | Added interactive FAQ section with 4 questions (costos, becas oficiales, etc.) | 05/05/2025 |
+|Aventis-Scholr/landing-page|develop| 4c6d8e0f           | feat(contact): Add contact information | Implemented contact section with email, phone and location (Lima, Perú) | 05/05/2025 |
+|Aventis-Scholr/landing-page|develop| 3g5h7j9k           | feat(form): Create contact form        | Added form with fields (Nombre, Email, Empresa, Mensaje) and submit button | 05/05/2025 |
+|Aventis-Scholr/landing-page|develop| 2l4n6p8r           | style: Add responsive design           | Implemented mobile-first responsive layout for all sections | 05/05/2025 |
+|Aventis-Scholr/landing-page|develop| 1m3o5q7s           | fix(form): Validate email field        | Added email validation and error messages to contact form | 05/05/2025 |
+|Aventis-Scholr/landing-page|develop| 9t1v3x5z           | feat(animations): Add scroll effects   | Implemented subtle animations on scroll for engagement  | 05/05/2025 |
+|Aventis-Scholr/landing-page|develop| 8y2b4d6f           | perf: Optimize images                  | Compressed all images without losing quality            | 05/05/2025 |
+
+Backend:
+
+|Repository |Branch| Commit Id | Commit Message| Commit Message Body| Date|
+|----|-----|---------------------|----------------------------------------|---------------------------------------------------------|------------|
+|Aventis-Scholr/scholr-backend|master| 2q3b6etd           | feat: Add bounded context IAM | Se implemento el bounded IAM con roles y autenticacion | 09/05/2025 |
+|Aventis-Scholr/scholr-backend|master| 5e3g2t6t           | feat: Added methods to controllers| se agregaron los metodos necesarios| 09/05/2025 |
+|Aventis-Scholr/scholr-backend|master| 1d5n4m4r           | feat: Add applications|- | 09/05/2025 |
+
+Frontend:
+
+
+|Repository |Branch| Commit Id | Commit Message| Commit Message Body| Date|
+|----|-----|---------------------|----------------------------------------|---------------------------------------------------------|------------|
+|Aventis-Scholr/scholr-mobile|master| 2q3b5etz           | feat: Add bounded context IAM | Se implemento el bounded IAM con roles y autenticacion para el frontend| 10/05/2025 |
+|Aventis-Scholr/scholr-mobile|master| 2t5n2m4p           | feat: Add applications|- | 11/05/2025 |
 
 ### 6.2.1.4. Execution Evidence for Sprint Review
 
@@ -3966,4 +4028,4 @@ ANEXO K: User Flow Diagrams--> [https://lucid.app/lucidchart/34550ef2-7748-4f51-
 
 ANEXO L: Mobile Applications Prototyping --> [https://drive.google.com/file/d/1kz82_tqddC0bch8E58fF1T7sxBhNr1Ji/view?usp=sharing](https://drive.google.com/file/d/1kz82_tqddC0bch8E58fF1T7sxBhNr1Ji/view?usp=sharing)
 
-ANEXO M: Trello--> []()
+ANEXO M: Trello--> [https://trello.com/invite/b/6821617a3fd57ee9f724decf/ATTI533e2db5100a6bd688d78c512734b867D939C8D9/project-management](https://trello.com/invite/b/6821617a3fd57ee9f724decf/ATTI533e2db5100a6bd688d78c512734b867D939C8D9/project-management)
