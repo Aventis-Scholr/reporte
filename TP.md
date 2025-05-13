@@ -2513,9 +2513,12 @@ ANEXO H
 |---------------------|--------------------|-------------|
 | id                  | Long               | ID único generado automáticamente |
 | name                | String             | Nombre descriptivo de la convocatoria (ej: "Beca Excelencia 2024") |
+| companyName              | String  | Nombre de la compañia a la que pertence la beca |
 | requirements        | List<Requirement>  | Lista de requisitos obligatorios y opcionales |
 | status              | ScholarshipStatus  | Estado actual: DRAFT, PUBLISHED o CLOSED |
 | coordinatorId       | Long               | ID del usuario coordinador (relación con BC IAM) |
+| scholarshiptype              | scholarshipType  | Tipo actual: PARTIAL o TOTAL |
+
 
 | Método              | Descripción |
 |---------------------|-------------|
