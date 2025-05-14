@@ -75,16 +75,22 @@ Product: "Scholr"
 - John Telesforo Arevalo Meza: 13
 - Diego Alonso Rosado Iporre: 11
 
-backend:
-![alt text](assets/images/commae.png) 
-- Estefano Oscar Jaque Peña: 1
-- John Telesforo Arevalo Meza: 1
+<br>**Backend:**
 
-Frontend:
-![alt text](assets/images/commae.png) 
-- Estefano Oscar Jaque Peña: 1
-- John Telesforo Arevalo Meza: 1
+![alt text](assets/images/commits_backend.png) 
 
+- Estefano Oscar Jaque Peña: 1
+- Sebastian Omar Real Calderón: 2
+- John Telesforo Arevalo Meza: 8
+- Diego Alonso Rosado Iporre: 2
+
+<br>**Frontend:**
+
+![alt text](assets/images/commits_frontend.png) 
+
+- Sebastian Omar Real Calderón: 3
+- John Telesforo Arevalo Meza: 3
+- Diego Alonso Rosado Iporre: 1
 
 TB1:<br>
 |Integrante|Tarea Asignada|
@@ -3492,6 +3498,11 @@ Backend:
 |Aventis-Scholr/scholr-backend|master| 2q3b6etd           | feat: Add bounded context IAM | Se implemento el bounded IAM con roles y autenticacion | 09/05/2025 |
 |Aventis-Scholr/scholr-backend|master| 5e3g2t6t           | feat: Added methods to controllers| se agregaron los metodos necesarios| 09/05/2025 |
 |Aventis-Scholr/scholr-backend|master| 1d5n4m4r           | feat: Add applications|- | 09/05/2025 |
+|Aventis-Scholr/scholr-backend|develop| 568b229           | feat: added everything related to scholarships |- | 12/05/2025 |
+|Aventis-Scholr/scholr-backend|develop| d9a8998           | feat:adding-reportAggregate |- | 13/05/2025 |
+|Aventis-Scholr/scholr-backend|develop| 22812d7           | fix: pass - pgadmin |- | 13/05/2025 |
+|Aventis-Scholr/scholr-backend|develop| 10482f3           | feat: added implementation for ScholarshipCommandServiceImpl |- | 13/05/2025 |
+ |Aventis-Scholr/scholr-backend|develop| 95a0fc0           | Feature/management |- | 13/05/2025 |
 
 Frontend:
 
@@ -3500,6 +3511,11 @@ Frontend:
 |----|-----|---------------------|----------------------------------------|---------------------------------------------------------|------------|
 |Aventis-Scholr/scholr-mobile|master| 2q3b5etz           | feat: Add bounded context IAM | Se implemento el bounded IAM con roles y autenticacion para el frontend| 10/05/2025 |
 |Aventis-Scholr/scholr-mobile|master| 2t5n2m4p           | feat: Add applications|- | 11/05/2025 |
+|Aventis-Scholr/scholr-backend|develop| 6050380           | feat: added Scholarship Model|-| 13/05/2025 |
+|Aventis-Scholr/scholr-backend|develop|1583cb3           | feat: added Scholarship base for homescreen|- | 13/05/2025 |
+|Aventis-Scholr/scholr-backend|develop| 1e12b2e           | feat: BC Management|- | 13/05/2025 |
+|Aventis-Scholr/scholr-backend|develop| 58fdaab           | fix: made scholarships visible through admin view |- | 13/05/2025 |
+|Aventis-Scholr/scholr-backend|develop| c8116dc           | Feature/management bc|- | 13/05/2025 |
 
 ### 6.2.1.4. Execution Evidence for Sprint Review
 
@@ -3527,9 +3543,7 @@ En segundo lugar ,se avanzo el bounded context IAM y applications tanto en backe
 
 Backend - Swagger:
 
-![alt text](assets/images/swagg.png) 
-
-![alt text](assets/images/swaggdos.png)  
+![alt text](assets/images/swagger.png) 
 
 Frontend - AndroidStudio:  
 
@@ -3541,6 +3555,7 @@ Frontend - AndroidStudio:
 
 ![alt text](assets/images/ascuatro.png)
 
+![alt text](assets/images/ascinco.png)
 
 ### 6.2.1.5. Services Documentation Evidence for Sprint Review
 
@@ -3568,7 +3583,6 @@ El módulo IAM (Identity and Access Management) implementa la gestión centraliz
 |  | `/api/v1/users/{userId}` | Obtener usuario por ID | GET | `userId: long` | `{"id": 0,"username": "string","roles": ["string"],"proofingEntrepreneure": "string"}` | [Swagger](#) |
 |  | `/api/v1/users/{userId}/update-proofing` | Actualizar verificación | PUT | `{"proofingStatus": string}` | `{"message": "Proofing updated"}` | [Swagger](#) |
 | **Roles** | `/api/v1/roles` | Listar roles | GET | - | `  {"id": 0,"name": "string"}]` | [Swagger](#) |
-
 ---
 
 ### **Ejemplos de Uso**
@@ -3693,13 +3707,25 @@ El módulo Applications maneja el proceso completo de postulación a becas, incl
 
 ### **Tabla de Endpoints**
 
-| Bounded Context | Endpoint | Acción | Verbo HTTP | Parámetros | Ejemplo de Respuesta | Documentación |
-|-----------------|----------|--------|------------|------------|----------------------|---------------|
-| **Postulaciones** | `/api/v1/applications` | Crear postulación | POST | `{"idApoderado": 0,"dataApoderado": {"id": 0,"createdAt": "2025-05-12T03:16:58.590Z","updatedAt": "2025-05-12T03:16:58.590Z","apoderadoId": 0,"nombres": "string","apellidos": "string","dni": 0,"fechaNacimiento": "2025-05-12T03:16:58.590Z","contacto": {"correo": "string","celular": 0},"domicilio": {"direccion": "string","departamento": "string","provincia": "string","distrito": "string"},"cuentaBancaria": {"entidadBancaria": "string","numeroCuenta": 0,"cci": 0},"informacionLaboral": {"tipoColaborador": "string","cargo": "string","sede": "string","local": "string","ingreso": 0}},"status": "PENDIENTE","tipoBeca": "MERITO","postulante": {"nombres": "string","apellidos": "string","dni": 0,"fechaNacimiento": "2025-05-12T03:16:58.590Z","contacto": {"correo": "string","celular": 0},"centroEstudios": {"nombre": "string","tipo": "string","nivel": "string","departamento": "string","provincia": "string","distrito": "string"}}}` | `{"id": 0,"idApoderado": 0,"dataApoderado": {"id": 0,"createdAt": "2025-05-12T03:16:58.592Z","updatedAt": "2025-05-12T03:16:58.592Z","apoderadoId": 0,"nombres": "string","apellidos": "string","dni": 0,"fechaNacimiento": "2025-05-12T03:16:58.592Z","contacto": {"correo": "string","celular": 0},"domicilio": {"direccion": "string","departamento": "string","provincia": "string","distrito": "string"},"cuentaBancaria": {"entidadBancaria": "string","numeroCuenta": 0,"cci": 0},"informacionLaboral": {"tipoColaborador": "string","cargo": "string","sede": "string","local": "string","ingreso": 0}},"status": "PENDIENTE","tipoBeca": "MERITO","postulante": {"nombres": "string","apellidos": "string","dni": 0,"fechaNacimiento": "2025-05-12T03:16:58.592Z","contacto": {"correo": "string","celular": 0},"centroEstudios": {"nombre": "string","tipo": "string","nivel": "string","departamento": "string","provincia": "string","distrito": "string"}}}` | [Swagger](#) |
-|  | `/api/v1/applications` | Listar postulaciones | GET | - | `[{"id": 0,"idApoderado": 0,"dataApoderado": {"id": 0,"createdAt": "2025-05-12T03:20:30.473Z","updatedAt": "2025-05-12T03:20:30.473Z","apoderadoId": 0,"nombres": "string","apellidos": "string","dni": 0,"fechaNacimiento": "2025-05-12T03:20:30.473Z","contacto": {"correo": "string","celular": 0},"domicilio": {"direccion": "string","departamento": "string","provincia": "string","distrito": "string"},"cuentaBancaria": {"entidadBancaria": "string","numeroCuenta": 0,"cci": 0},"informacionLaboral": {"tipoColaborador": "string","cargo": "string","sede": "string","local": "string","ingreso": 0}},"status": "PENDIENTE","tipoBeca": "MERITO","postulante": {"nombres": "string","apellidos": "string","dni": 0,"fechaNacimiento": "2025-05-12T03:20:30.473Z","contacto": {"correo": "string","celular": 0},"centroEstudios": {"nombre": "string","tipo": "string","nivel": "string","departamento": "string","provincia": "string","distrito": "string"}}}]` | [Swagger](#) |
-| **Datos Apoderados** | `/api/v1/data-apoderado/{apoderadoId}` | Crear datos | POST | `Lond :id` | `{"nombres": "string","apellidos": "string","dni": 0,"fechaNacimiento": "2025-05-12T03:23:02.739Z","contacto": {"correo": "string","celular": 0},"domicilio": {"direccion": "string","departamento": "string","provincia": "string","distrito": "string"},"cuentaBancaria": {"entidadBancaria": "string","numeroCuenta": 0,"cci": 0},"informacionLaboral": {"tipoColaborador": "string","cargo": "string","sede": "string","local": "string","ingreso": 0}}` | [Swagger](#) |
-|  | `/api/v1/data-apoderado/{id}` | Obtener datos | GET | - | `"nombres": "string","apellidos": "string","dni": 0,"fechaNacimiento": "2025-05-12T03:24:28.677Z","contacto": {"correo": "string","celular": 0},"domicilio": {"direccion": "string","departamento": "string","provincia": "string","distrito": "string"},"cuentaBancaria": {"entidadBancaria": "string","numeroCuenta": 0,"cci": 0},"informacionLaboral": {"tipoColaborador": "string","cargo": "string","sede": "string","local": "string","ingreso": 0}}` | [Swagger](#) |
-|  | `/api/v1/data-apoderado/{apoderadoId}/{id}` | Obtener por usuario | GET | `apoderadoId, id` | `{"nombres": "string","apellidos": "string","dni": 0,"fechaNacimiento": "2025-05-12T03:26:07.971Z","contacto": {"correo": "string","celular": 0},"domicilio": {"direccion": "string","departamento": "string","provincia": "string","distrito": "string"},"cuentaBancaria": {"entidadBancaria": "string","numeroCuenta": 0,"cci": 0},"informacionLaboral": {"tipoColaborador": "string","cargo": "string","sede": "string","local": "string","ingreso": 0}}` | [Swagger](#) |
+| **Bounded Context** | **Endpoint** | **Acción** | **Verbo HTTP** | **Parámetros** | **Ejemplo de Respuesta** | **Documentación** |
+|---------------------|--------------|------------|----------------|----------------|---------------------------|--------------------|
+| **Reports** | `/api/v1/reports` | Reportar Endpoints | POST | - | `{"applicationId": 0,"apoderadoData": {},"postulanteSnapshot": {},"resolution": "DRAFT","adminComments": "string"}` | [Swagger](#) |
+| **Postulaciones** | `/api/v1/applications` | Registro de postulación | POST | `{"idApoderado": 0, "dataApoderado": { "id": 0, "...", "provincia": "string", "distrito": "string" } }` | `{"message": "Application created"}` | [Swagger](#) |
+|  | `/api/v1/applications` | Listar postulaciones | GET | - | `[{"applicationId": 0, "status": "PENDIENTE", "tipoBeca": "MERITO"}]` | [Swagger](#) |
+| **Data Apoderado** | `/api/v1/data-apoderado/{id}` | Obtener por ID | GET | `id: long` | `{"id": 0, "nombres": "string", ...}` | [Swagger](#) |
+|  | `/api/v1/data-apoderado/{id}` | Actualizar por ID | PUT | `{"nombres": "string", ...}` | `{"message": "Updated"}` | [Swagger](#) |
+|  | `/api/v1/data-apoderado/{apoderadoId}` | Obtener por apoderadoId | GET | `apoderadoId: long` | `{...}` | [Swagger](#) |
+|  | `/api/v1/data-apoderado/{apoderadoId}` | Actualizar por apoderadoId | PUT | `{"nombres": "string", ...}` | `{"message": "Updated"}` | [Swagger](#) |
+|  | `/api/v1/data-apoderado/{apoderadoId}` | Crear datos de apoderado | POST | `{"nombres": "string", ...}` | `{"message": "Created"}` | [Swagger](#) |
+|  | `/api/v1/data-apoderado/{apoderadoId}/{id}` | Obtener dato específico | GET | `apoderadoId, id: long` | `{...}` | [Swagger](#) |
+| **Scholarships** | `/api/v1/scholarships` | Listar becas | GET | - | `[{"id": 0, "nombre": "string", ...}]` | [Swagger](#) |
+|  | `/api/v1/scholarships` | Registrar beca | POST | `{"nombre": "string", "tipo": "string", ...}` | `{"id": 0, "nombre": "string", ...}` | [Swagger](#) |
+| **Postulaciones** | `/api/v1/applications` | Crear postulación | POST | `{"idApoderado": 0,"dataApoderado": {...},"status": "PENDIENTE","tipoBeca": "MERITO","postulante": {...}}` | `{"id": 0,"idApoderado": 0,"dataApoderado": {...},"status": "PENDIENTE","tipoBeca": "MERITO","postulante": {...}}` | [Swagger](#) |
+|  | `/api/v1/applications` | Listar postulaciones | GET | - | `[{"id": 0,"idApoderado": 0,"dataApoderado": {...},"status": "PENDIENTE","tipoBeca": "MERITO","postulante": {...}}]` | [Swagger](#) |
+| **Datos Apoderados** | `/api/v1/data-apoderado/{apoderadoId}` | Crear datos | POST | `Long :id` | `{"nombres": "string",...}` | [Swagger](#) |
+|  | `/api/v1/data-apoderado/{id}` | Obtener datos | GET | - | `{"nombres": "string",...}` | [Swagger](#) |
+|  | `/api/v1/data-apoderado/{apoderadoId}/{id}` | Obtener por usuario | GET | `apoderadoId, id` | `{"nombres": "string",...}` | [Swagger](#) |
+
 
 ---
 
@@ -3959,14 +3985,21 @@ Verificación: Comprobación de que la landing page se despliega correctamente y
 
 ### 6.2.1.7. Team Collaboration Insights during Sprint 1 
 
-En esta sección, se presenta un análisis detallado de la colaboración del equipo durante el Sprint. Durante este sprint, las actividades de implementación se organizaron siguiendo una metodología ágil, garantizando una colaboración fluida entre los miembros del equipo. Se exponen capturas de los analíticos de colaboración y de los commits realizados en GitHub, lo que permite visualizar la contribución individual de cada miembro del equipo.
+En esta sección, se presenta un análisis detallado de la colaboración del equipo durante el Sprint. Durante este Sprint, las actividades se organizaron siguiendo una metodología ágil, lo que permitió una coordinación efectiva entre los miembros del equipo. Se incluyen capturas de los analíticos de colaboración y de los commits realizados en GitHub, evidenciando la contribución individual.
 
-- Diseño y Desarrollo:
-  Diseño de la Landing Page: Desarrollo y diseño completo de la landing page, incluyendo la creación de secciones y funcionalidad.
-  Implementación: Realización de las tareas de codificación, pruebas y ajustes necesarios para completar la página.
-- Documentación y Despliegue:
-  Documentación: Creación de documentación relevante para la landing page, incluyendo capturas de pantalla y descripciones.
-  Despliegue: Configuración del entorno de despliegue y transferencia de archivos al servidor.
+Diseño y Desarrollo:
+
+- Frontend: Desarrollo y diseño completo de la landing page, incluyendo la creación de secciones, estilos y estructura responsive.
+
+- Backend: Implementación de funcionalidades básicas y configuración inicial del servidor y servicios necesarios.
+
+- Codificación: Ejecución de tareas de programación, pruebas funcionales y ajustes iterativos.
+
+Documentación y Despliegue:
+
+- Documentación: Elaboración de documentación técnica y visual, incluyendo descripciones y capturas de pantalla del proceso.
+
+- Despliegue: Configuración del entorno y despliegue tanto del frontend como del backend en un entorno de pruebas, asegurando la operatividad conjunta.
 
 **Landing Page**
 
@@ -3988,6 +4021,23 @@ En esta sección, se presenta un análisis detallado de la colaboración del equ
 - John Telesforo Arevalo Meza: 13
 - Sebastian Real Calderon: 16
 - Diego Alonso Rosado Iporre: 11
+
+<br>**Backend:**
+
+![alt text](assets/images/commits_backend.png) 
+
+- Estefano Oscar Jaque Peña: 1
+- Sebastian Omar Real Calderón: 2
+- John Telesforo Arevalo Meza: 8
+- Diego Alonso Rosado Iporre: 2
+
+<br>**Frontend:**
+
+![alt text](assets/images/commits_frontend.png) 
+
+- Sebastian Omar Real Calderón: 3
+- John Telesforo Arevalo Meza: 3
+- Diego Alonso Rosado Iporre: 1
 
 ## Conclusiones
 
