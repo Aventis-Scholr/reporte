@@ -3555,7 +3555,14 @@ Frontend - AndroidStudio:
 
 ![alt text](assets/images/ascuatro.png)
 
+<<<<<<< HEAD
 ![alt text](assets/images/ascinco.png)
+=======
+![alt text](assets/images/applications1.png)
+
+![alt text](assets/images/applications2.png)
+
+>>>>>>> ce88a2e8d2bd1c850d42fcbf6ec847f40af661e9
 
 ### 6.2.1.5. Services Documentation Evidence for Sprint Review
 
