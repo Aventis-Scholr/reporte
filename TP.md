@@ -2995,179 +2995,173 @@ Menu hamburguesa
 ---
 
 - Login
-  - ![Login](/assets/images/wireframes-mobile-app/Login.png)
+  ![alt text](assets/images/wireframes-mobile-app/login.png)
 
 - Registro
-  - ![Registro](/assets/images/wireframes-mobile-app/Register.png)
+  ![alt text](assets/images/wireframes-mobile-app/register.png)
 
-- Confirmación de Registro
-  - ![Confirmación de Registro](/assets/images/wireframes-mobile-app/Register%20Confirm.png)
+- Confirmación de Registro  
+  ![alt text](assets/images/wireframes-mobile-app/registerconf.png)
 
 - Selección de Compañía
-  - ![Selección de compañía](/assets/images/wireframes-mobile-app/Company%20Selection.png)
+  ![alt text](assets/images/wireframes-mobile-app/cs.png)
 
 - Drawer
-  - ![Drawer](//assets/images/wireframes-mobile-app/Drawer.png)
+  ![alt text](assets/images/wireframes-mobile-app/drawer.png)
 
 - Bandeja Vacía
-  - ![Bandeja Vacía](/assets/images/wireframes-mobile-app/Bandeja%20Vacía.png)
+  ![alt text](assets/images/wireframes-mobile-app/bs.png)
 
 - Bandeja con Postulación
-  - ![Bandeja con Postulación](/assets/images/wireframes-mobile-app/Bandeja%20con%20Postulación%20En%20Espera.png)
+  ![alt text](assets/images/wireframes-mobile-app/bsd.png)
 
 - Mensaje de Administrador
-  - ![Mensaje de Administrador](/assets/images/wireframes-mobile-app/Mensaje%20del%20Administrador.png)
+  ![alt text](assets/images/wireframes-mobile-app/msa.png)
 
 - Tutorial
-  - ![Tutorial](/assets/images/wireframes-mobile-app/Tutorial.png)
+  ![alt text](assets/images/wireframes-mobile-app/t.png)
 
 - Postulación
-  - ![Postulación](/assets/images/wireframes-mobile-app/Postulación.png)
+  ![alt text](assets/images/wireframes-mobile-app/p.png)
 
 - Formulario datos del Colaborador
-  - ![Formulario Colaborador](/assets/images/wireframes-mobile-app/Datos%20del%20colaborador.png)
+  ![alt text](assets/images/wireframes-mobile-app/dc.png)
 
 - Lista de Postulantes Vacía
-  - ![Lista de Potulantes](/assets/images/wireframes-mobile-app/Lista%20de%20Postulantes%20Vacía.png)
+  ![alt text](assets/images/wireframes-mobile-app/lpv.png)
 
 - Formulario datos del Postulante
-  - ![Formulario Colaborador](/assets/images/wireframes-mobile-app/Datos%20del%20postulante.png)
+  ![alt text](assets/images/wireframes-mobile-app/ddp.png)
 
 - Formulario Editar Postulante
-  - ![Formulario Editar Postulante](/assets/images/wireframes-mobile-app/Editar%20Postulante.png)
+  ![alt text](assets/images/wireframes-mobile-app/eps.png)
 
 ###### Vista de Administrador
 ---
 
 - Drawer Administrador
-  - ![Drawer Administrador](/assets/images/wireframes-mobile-app/Drawer%20Administrador.png)
+  ![alt text](assets/images/wireframes-mobile-app/dacs.png)
 
 - Bandeja Administrador
-  - ![Bandeja Administrador](/assets/images/wireframes-mobile-app/Bandeja%20Administrador.png)
+  ![alt text](assets/images/wireframes-mobile-app/bas.png)
 
 - Vista de Beca Administrador
-  - ![Vista de Beca Administrador](/assets/images/wireframes-mobile-app/Vista%20de%20Beca.png)
+  ![alt text](assets/images/wireframes-mobile-app/vdb.png)
 
 - Vista de Colaborador Administrador
-  - ![Vista de Colaborador Administrador](/assets/images/wireframes-mobile-app/Vista%20de%20Colaborador.png)
+  ![alt text](assets/images/wireframes-mobile-app/vsc.png)
 
 - Lista de Postulantes de Colaborador Administrador
-  - ![Lista de Postulantes de Colaborador Administrador](/assets/images/wireframes-mobile-app/Lista%20de%20Postulantes.png)
+  ![alt text](assets/images/wireframes-mobile-app/ldp.png)
 
 - Vista de Postulante Administrador
-  - ![Vista de Postulante Administrador](/assets/images/wireframes-mobile-app/Vista%20de%20Postulante.png)
+  ![alt text](assets/images/wireframes-mobile-app/asd.png)
 
 - Rechazo de Solicitud
-  - ![Rechazo de Solicitud](/assets/images/wireframes-mobile-app/Rechazo.png)
+  ![alt text](assets/images/wireframes-mobile-app/r.png)
 
 - Rechazo Enviado
-  - ![Rechazo Enviado](/assets/images/wireframes-mobile-app/Rechazo%20Enviado.png)
+  ![alt text](assets/images/wireframes-mobile-app/re.png)
 
 ##### 5.1.4.2. Mobile Applications Wireflow Diagrams
 
 - User Goal: Registrarse
-  - ![User Goal: Registrarse](/assets/images/wireflows-mobile-application/Registro.png)
+  ![alt text](assets/images/wireflows-mobile-application/reg.png)
 
 - User Goal: Iniciar Sesión
-  - ![User Goal: Iniciar Sesión](/assets/images/wireflows-mobile-application/IniciarSesión.png)
+  ![alt text](assets/images/wireflows-mobile-application/is.png)
 
 - User Goal: Ver Tutoriales
-  - ![User Goal: Ver Tutoriales](/assets/images/wireflows-mobile-application/VerTutoriales.png)
+  ![alt text](assets/images/wireflows-mobile-application/vte.png)
 
 - User Goal: Crear Postulación
-  - ![User Goal: Crear Postulación](/assets/images/wireflows-mobile-application/CrearPostulación.png)
+  ![alt text](assets/images/wireflows-mobile-application/csp.png)
 
 - User Goal: Editar Postulación Rechazada
-  - ![User Goal: Editar Postulación Rechazada](/assets/images/wireflows-mobile-application/ReenviarPostulacionEditada.png)
+  ![alt text](assets/images/wireflows-mobile-application/rps.png)
 
 - User Goal: Ver Postulación como Administrador
-  - ![User Goal: Ver Postulación como Administrador](/assets/images/wireflows-mobile-application/AdminVerPostulación.png)
+  ![alt text](assets/images/wireflows-mobile-application/asda.png)
 
 - User Goal: Rechazar postulación como Administrador
-  - ![User Goal: Rechazar postulación como Administrador](/assets/images/wireflows-mobile-application/AdminRechazarPostulación.png)
+  ![alt text](assets/images/wireflows-mobile-application/asdqe.png)
 
 ##### 5.1.4.3. Mobile Applications Mock-ups
 
 - Login
-  - ![Login](/assets/images/mockups-mobile-application/Login.png)
+  ![alt text](assets/images/mockups-mobile-application/l.png)
 
 - Selección de Empresa
-  - ![Selección de Empresa](/assets/images/mockups-mobile-application/Company%20Selection.png)
+  ![alt text](assets/images/mockups-mobile-application/csal.png)
 
 - Registro
-  - ![Registro](/assets/images/mockups-mobile-application/Register.png)
+  ![alt text](assets/images/mockups-mobile-application/asdaw.png)
 
 - Bandeja Vacía - Colaborador
-  - ![Bandeja Vacía - Colaborador](/assets/images/mockups-mobile-application/Bandeja%20Vacía.png)
+  ![alt text](assets/images/mockups-mobile-application/asdqksdc.png)
 
 - Bandeja con Postulación - Colaborador
-  - ![Bandeja con Postulación - Colaborador](/assets/images/mockups-mobile-application/Bandeja%20con%20Postulación%20en%20Espera.png)
+  ![alt text](assets/images/mockups-mobile-application/asdq.png)
   
 - Drawer
-  - ![Drawer](/assets/images/mockups-mobile-application/Drawer.png)
-
-- Tutorial
-  - ![Tutorial](/assets/images/mockups-mobile-application/Tutorial.png)
+  ![alt text](assets/images/mockups-mobile-application/poe.png)
 
 - Menu Postulación
-  - ![Menu Postulación](/assets/images/mockups-mobile-application/Postulación.png)
+  ![alt text](assets/images/mockups-mobile-application/ascz.png)
 
 - Formulario Datos del Colaborador
-  - ![Formulario Datos del Colaborador](/assets/images/mockups-mobile-application/Datos%20del%20colaborador.png)
+  ![alt text](assets/images/mockups-mobile-application/dscl.png)
 
 - Formulario Datos del Postulante
-  - ![Formulario Datos del Postulante](/assets/images/mockups-mobile-application/Datos%20del%20Postulante.png)
+  ![alt text](assets/images/mockups-mobile-application/kpa.png)
 
 - Confirmación de Formulario Postulante
-  - ![Confirmación de Formulario Postulante](/assets/images/mockups-mobile-application/Confirmar%20Postulante.png)
+  ![alt text](assets/images/mockups-mobile-application/cmla.png)
 
 - Bandeja - Administrador
-  - ![Bandeja - Administrador](/assets/images/mockups-mobile-application/Bandeja%20Administrador.png)
+  ![alt text](assets/images/mockups-mobile-application/weqwe.png)
 
 - Vista de Beca - Administrador
-  - ![Vista de Beca - Administrador](/assets/images/mockups-mobile-application/Vista%20de%20Beca.png)
+  ![alt text](assets/images/mockups-mobile-application/askid.png)
 
 - Vista de Colaborador - Administrador
-  - ![Vista de Colaborador - Administrador](/assets/images/mockups-mobile-application/Vista%20de%20Colaborador.png)
+  ![alt text](assets/images/mockups-mobile-application/asdwq.png)
 
 - Lista de Postulantes - Administrador
-  - ![Lista de Postulantes - Administrador](/assets/images/mockups-mobile-application/Lista%20de%20Postulantes.png)
+  ![alt text](assets/images/mockups-mobile-application/lasoq.png)
 
 - Vista de Postulante - Administrador
-  - ![Vista de Postulante - Administrador](/assets/images/mockups-mobile-application/Vista%20de%20Postulante.png)
-
-- Rechazo de Postulante - Administrador
-  - ![Rechazo de Postulante - Administrador](/assets/images/mockups-mobile-application/Rechazo.png)
+  ![alt text](assets/images/mockups-mobile-application/asdqwd.png)
 
 ##### 5.1.4.4. Mobile Applications User Flow Diagrams
 
 Link a los User Flow Diagrams en Lucidchart: ANEXO K
 
 - User Goal: Registrarse
-  - ![User Goal: Registrarse](/assets/images/user-flows-scholr/RegistrarseColaborador.png)
+  ![alt text](assets/images/user-flows-scholr/jklas.png)
   - Happy path: Los datos ingresados son correctos y el código de colaborador coincide con la compañía.
 
 - User Goal: Iniciar Sesión
-  - ![User Goal: Iniciar Sesión](/assets/images/user-flows-scholr/IniciarSesión.png)
+  ![alt text](assets/images/user-flows-scholr/asdas.png)
   - Happy path: Los datos ingresados son correctos. La pantalla a la que se ingresa depende del rol de la cuenta.
 
 - User Goal: Establecer Datos de Colaborador
-  - ![User Goal: Establecer Datos de Colaborador](/assets/images/user-flows-scholr/EstablecerDatosDelColaborador.png)
+  ![alt text](assets/images/user-flows-scholr/ifoimv.png)
   - Happy path: Todos los campos están completos.
 
 - User Goal: Crear Postulación
-  - ![User Goal: Crear Postulación](/assets/images/user-flows-scholr/CrearPostulación.png)
+  ![alt text](assets/images/user-flows-scholr/oskoq.png)
   - Happy path: Todos los campos están completos.
 
 - User Goal: Ver Tutorial
-  - ![User Goal: Ver Tutorial](/assets/images/user-flows-scholr/VerTutorial.png)
+  ![alt text](assets/images/user-flows-scholr/asdasq.png)
 
 - User Goal: Editar Postulación después de Rechazo
-  - ![User Goal: Editar Postulación después de Rechazo](/assets/images/user-flows-scholr/EditarAfterRechazo.png)
+  ![alt text](assets/images/user-flows-scholr/oqmw.png)
   - Happy path: Todos los campos están completos y son diferentes a los anteriores.
 
 - User Goal: Rechazar Postulación como Administrador
-  - ![User Goal: Rechazar Postulación como Administrador](/assets/images/user-flows-scholr/AdminRechazarPostulación.png)
+  ![alt text](assets/images/user-flows-scholr/jgiod.png)
 
 ##### 5.1.4.5. Mobile Applications Prototyping
 
@@ -3962,6 +3956,148 @@ El módulo permite:
 
 **Próximos pasos**: Integración con servicio de notificaciones para cambios de estado.
 
+**Sección Management (Gestión de Becas y Reportes)**
+
+---
+
+## **Introducción**  
+El módulo **Management** se encarga de la gestión centralizada de becas y reportes dentro de la plataforma Scholr. A continuación, se detallan los endpoints disponibles, su funcionalidad y documentación técnica.
+
+---
+
+## **Tabla de Endpoints Management**  
+
+| Bounded Context | Endpoint | Acción | Verbo HTTP | Parámetros | Ejemplo de Respuesta | Documentación |
+|-----------------|----------|--------|------------|------------|----------------------|---------------|
+| **Scholarships (Becas)** | `/api/v1/scholarships` | Listar todas las becas | GET | - | `[{"id": 0,"name": "string","companyName": "string","requirements": [{}],"scholarshipType": "PARTIAL","scholarshipStatus": "DRAFT","coordinatorId": 0}]` | [Swagger](#) |
+|  | `/api/v1/scholarships` | Crear una nueva beca | POST | `{"name": "string","companyName": "string","requirements": [{}],"scholarshipType": "PARTIAL","scholarshipStatus": "DRAFT","coordinatorId": 0}` | `{"id": 0,"name": "string","companyName": "string","requirements": [{}],"scholarshipType": "PARTIAL","scholarshipStatus": "DRAFT","coordinatorId": 0}` | [Swagger](#) |
+| **Reports (Reportes)** | `/api/v1/reports` | Crear un reporte | POST | `{"applicationId": 0,"apoderadoData": {},"postulanteSnapshot": {},"resolution": "DRAFT","adminComments": "string"}` | `{"id": 0,"applicationId": 0,"apoderadoData": {},"postulanteSnapshot": {},"resolution": "DRAFT","adminComments": "string"}` | [Swagger](#) |
+
+---
+
+## **Ejemplos de Uso**  
+
+### **1. Gestión de Becas**  
+```java
+// Crear una nueva beca
+POST /api/v1/scholarships
+Body: {
+  "name": "Beca Tech 2024",
+  "companyName": "Backus",
+  "requirements": [
+    {"description": "Promedio mínimo 15", "documentRequired": "Certificado de notas"}
+  ],
+  "scholarshipType": "FULL",
+  "scholarshipStatus": "PUBLISHED",
+  "coordinatorId": 5
+}
+
+// Respuesta (201 Created)
+{
+  "id": 15,
+  "name": "Beca Tech 2024",
+  "companyName": "Backus",
+  "requirements": [
+    {
+      "id": 1,
+      "description": "Promedio mínimo 15",
+      "documentRequired": "Certificado de notas"
+    }
+  ],
+  "scholarshipType": "FULL",
+  "scholarshipStatus": "PUBLISHED",
+  "coordinatorId": 5,
+  "createdAt": "2024-05-15T14:30:00Z"
+}
+
+// Listar todas las becas
+GET /api/v1/scholarships
+
+// Respuesta (200 OK)
+[
+  {
+    "scholarshipId": "sch-001",
+    "name": "Beca Tech 2024",
+    "description": "Beca para estudiantes de ingeniería",
+    "requirements": ["Promedio mínimo 15", "Certificado de notas"],
+    "scholarshipType": "FULL",
+    "status": "PUBLISHED",
+    "startDate": "2024-06-01",
+    "endDate": "2024-12-31"
+  }
+]
+```
+
+### **2. Gestión de Reportes**  
+```java
+// Crear un reporte
+POST /api/v1/reports
+Body: {
+  "reportType": "APPLICATION",
+  "applicationId": "app-123",
+  "comments": "Revisión pendiente de documentación"
+}
+
+// Respuesta (201 Created)
+{
+  "reportId": "rep-001",
+  "reportType": "APPLICATION",
+  "applicationId": "app-123",
+  "comments": "Revisión pendiente de documentación",
+  "createdAt": "2024-05-15T14:30:00Z"
+}
+```
+
+---
+
+## **Arquitectura y Patrones**  
+
+1. **CQRS (Command Query Responsibility Segregation)**  
+   - **`ScholarshipCommandService`**: Maneja la creación de becas.  
+   - **`ScholarshipQueryService`**: Procesa consultas (listado de becas).  
+   - **`ReportCommandService`**: Encargado de la generación de reportes.  
+
+2. **DTO Pattern**  
+   - Uso de `*Resource` para transferencia de datos:  
+     ```java
+     public record ScholarshipResource(Long id, String name, String description, String status) {}
+     public record ReportResource(Long id, String title, String description, String type) {}
+     ```
+
+3. **Swagger Integration**  
+   - Documentación automática con `@Tag` en cada controlador.  
+
+---
+
+## **Seguridad**  
+- **JWT**: Todos los endpoints requieren autenticación (excepto Swagger UI).  
+- **Validaciones**:  
+  - Campos obligatorios con `@Valid`.  
+  - Manejo de errores (400 Bad Request si falta algún campo).  
+
+---
+
+## **Repositorio y Commits**  
+
+| Endpoint | Commit ID | Cambios Realizados |
+|----------|-----------|---------------------|
+| Scholarships | `x1y2z3a` | Implementación de CRUD de becas |  
+| Reports | `b4c5d6e` | Creación de reportes |  
+
+---
+
+## **Conclusión**  
+El módulo **Management** proporciona:  
+✅ **Gestión de becas** (creación y consulta).  
+✅ **Generación de reportes** (seguimiento de datos).  
+✅ **Escalabilidad** mediante CQRS y DTOs.  
+✅ **Documentación Swagger** integrada.  
+
+**Próximos pasos**:  
+- Añadir filtros avanzados en consultas de becas.  
+- Implementar generación de reportes en PDF/Excel.  
+
+--- 
 ### 6.2.1.6. Software Deployment Evidence for Sprint Review  
 
 **Resumen**
@@ -3996,6 +4132,14 @@ Verificación: Comprobación de que la landing page se despliega correctamente y
 
 **Enlace al Repositorio**: https://aventis-scholr.github.io/landing-page/ 
 
+**Link deploy Landing Page:** ANEXO N
+
+Backend:
+
+![alt text](assets/images/backdeploy.png)
+
+
+**Link deploy Landing Page:** ANEXO O
 
 ### 6.2.1.7. Team Collaboration Insights during Sprint 1 
 
@@ -4055,7 +4199,12 @@ Documentación y Despliegue:
 
 ## Conclusiones
 
+TB1:
+
 En esta entrega, aplicamos diversas técnicas de análisis y diseño como entrevistas, mapeo de escenarios, EventStorming y wireframes para comprender el dominio del problema y proponer una solución coherente. Modelamos la arquitectura del sistema utilizando context maps y diagramas estructurados, lo que nos permitió visualizar los límites y responsabilidades de cada módulo. Este proceso fortaleció nuestras habilidades en diseño centrado en el usuario y resaltó la importancia del aprendizaje continuo en el desarrollo de soluciones de software efectivas.
+
+TP:
+En esta entrega, implementamos con éxito los bounded contexts de IAM, Applications y Management, aplicando principios de Domain-Driven Design para definir una arquitectura modular y escalable. A través de la colaboración en equipo, logramos integrar frontend y backend para cada contexto, siguiendo estándares de código y documentación. El uso de herramientas como Swagger, JWT y CQRS nos permitió garantizar seguridad y mantenibilidad, mientras que el desarrollo de wireframes, mockups y prototipos reforzó nuestro enfoque en la experiencia de usuario. Esta experiencia consolidó nuestras habilidades técnicas y destacó la importancia de la planificación y coordinación en proyectos ágiles.  
 
 ## Bibliografia
 
@@ -4066,6 +4215,7 @@ En esta entrega, aplicamos diversas técnicas de análisis y diseño como entrev
 - The C4 model for visualising software architecture. (2024). https://c4model.com/
 - Structurizr. (2024). https://www.structurizr.com/
 - mURAL (2024). https://www.mural.co/
+- Trello(2024). https://trello.com/
 
 ## Anexos
 ANEXO A : User Personas--> [https://app.mural.co/t/estudiando0947/m/estudiando0947/1745390656723/0835c036e3645e7898d5d12592570047f4e910c5?sender=uc4343c08b6b097f4a42e5558 ](https://app.mural.co/t/estudiando0947/m/estudiando0947/1745390656723/0835c036e3645e7898d5d12592570047f4e910c5?sender=uc4343c08b6b097f4a42e5558 )
@@ -4093,3 +4243,7 @@ ANEXO K: User Flow Diagrams--> [https://lucid.app/lucidchart/34550ef2-7748-4f51-
 ANEXO L: Mobile Applications Prototyping --> [https://drive.google.com/file/d/1kz82_tqddC0bch8E58fF1T7sxBhNr1Ji/view?usp=sharing](https://drive.google.com/file/d/1kz82_tqddC0bch8E58fF1T7sxBhNr1Ji/view?usp=sharing)
 
 ANEXO M: Trello--> [https://trello.com/invite/b/6821617a3fd57ee9f724decf/ATTI533e2db5100a6bd688d78c512734b867D939C8D9/project-management](https://trello.com/invite/b/6821617a3fd57ee9f724decf/ATTI533e2db5100a6bd688d78c512734b867D939C8D9/project-management)
+
+ANEXO N: Link deploy Landing page --> [https://aventis-scholr.github.io/landing-page/](https://aventis-scholr.github.io/landing-page/)
+
+ANEXO O: Link deploy backend --> [https://scholrapi.onrender.com/swagger-ui/index.html](https://scholrapi.onrender.com/swagger-ui/index.html) 
