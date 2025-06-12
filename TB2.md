@@ -4332,7 +4332,7 @@ Si tuvieras acceso a esta herramienta de forma oficial, ¿la recomendarías a ot
 
 ![Entrevista2](assets/images/interviews/Entrevista_Pia_Prototipo.png)
 
-Link de entrevista : [https://drive.google.com/file/d/1sjZi95xLPCam7giprGC7reAFExzH_G5E/view?usp=sharing](https://drive.google.com/file/d/1sjZi95xLPCam7giprGC7reAFExzH_G5E/view?usp=sharing)
+Link de entrevista : [https://drive.google.com/file/d/1ik6YJekV_ESf4EYik6W0SgLZOVAfbMYR/view?usp=sharing](https://drive.google.com/file/d/1ik6YJekV_ESf4EYik6W0SgLZOVAfbMYR/view?usp=sharing)
 
 Inicio: 4:15<br>
 Duracion: 5:40
