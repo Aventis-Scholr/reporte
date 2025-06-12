@@ -4321,6 +4321,25 @@ Si tuvieras acceso a esta herramienta de forma oficial, ¿la recomendarías a ot
 
 ### 6.3.2. Registro de Entrevistas
 
+**Segmento 2: Coordinadores de Bienestar Laboral/RSE**
+
+1.  Entrevista 1: <br>
+    Datos del entrevistado <br>
+    Nombre: Maria Pía<br>
+    Apellidos: Tejada<br>
+    Edad: 38 <br>
+    Distrito: Miraflores <br>
+
+![Entrevista2](assets/images/interviews/Entrevista_Pia_Prototipo.png)
+
+Link de entrevista : [https://drive.google.com/file/d/1sjZi95xLPCam7giprGC7reAFExzH_G5E/view?usp=sharing](https://drive.google.com/file/d/1sjZi95xLPCam7giprGC7reAFExzH_G5E/view?usp=sharing)
+
+Inicio: 4:15<br>
+Duracion: 5:40
+
+Resumen:<br>
+María Pía, Directora de Programas Educativos de Futuros Brillantes Perú, evaluó la plataforma de becas como intuitiva pero con áreas de mejora. Destacó que el inicio de sesión es claro, aunque sugirió añadir guías iniciales. La visualización de becas le pareció organizada, pero propuso filtros por número de postulaciones y avances en procesamiento. Sobre la validación, encontró confuso cambiar estados y pidió previsualizar archivos sin descargarlos. Valoró los mensajes de rechazo para corregir postulaciones rápidamente, pero sugirió separar la aprobación de datos del colaborador y postulante para agilizar el proceso. Considera que la herramienta optimizará la gestión, pero señaló como barrera el diseño móvil, complicando el manejo de archivos. En general, ve potencial una vez se pulan detalles de usabilidad y flujos.
+
 ### 6.3.3- Evaluaciones según Heurísticas
 
 ### 6.4. Video About-the-Product
