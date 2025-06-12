@@ -4223,9 +4223,13 @@ Segmento encontrado:
 
 - Padres Trabajadores (Empleados/Colaboradores)
 
-Antes de realizar entrevistas a nuestro segmento principal de apoderados, consideramos importante haber desarrollado un primer prototipo funcional, el cual será probado por usuarios reales. En ese contexto, proponemos la siguiente batería de preguntas cualitativas orientadas a observar el uso de la app Scholr en Android Studio, identificar posibles puntos de fricción y validar nuestras suposiciones de diseño.
+- Coordinadores de Bienestar Laboral / Responsabilidad Social Empresarial (RSE)
 
-Estas preguntas nos permitirán recoger percepciones reales sobre la experiencia de uso inicial y mejorar iterativamente la aplicación.
+Antes de realizar las entrevistas, consideramos necesario realizar un análisis previo que nos permita entender mejor a nuestros públicos objetivo. Para ello, hemos diseñado una serie de preguntas específicas para cada segmento, con el fin de orientar nuestras entrevistas de manera más eficiente y alineada a sus realidades.
+
+En particular, previo a entrevistar a nuestro segmento principal de apoderados, consideramos importante contar con un primer prototipo funcional. Este prototipo será probado por usuarios reales, y en ese contexto proponemos una batería de preguntas cualitativas orientadas a observar el uso de la aplicación Scholr en Android Studio, identificar posibles puntos de fricción y validar nuestras suposiciones de diseño.
+
+Las siguientes preguntas están organizadas según los dos segmentos clave de la startup Scholr y nos permitirán recoger percepciones reales sobre la experiencia de uso inicial, facilitando así un proceso iterativo de mejora del producto.
 
 **Preguntas para Apoderados (fase de testeo del primer prototipo funcional de Scholr)**
 
@@ -4276,6 +4280,44 @@ Estas preguntas nos permitirán recoger percepciones reales sobre la experiencia
 ¿Crees que esta app podría facilitarte la búsqueda y postulación a becas? ¿Por qué sí o por qué no?
 
 Si tuvieras acceso a esta herramienta de forma oficial, ¿la recomendarías a otros apoderados de tu empresa o comunidad?
+
+**Preguntas para Administradores (fase de testeo del primer prototipo funcional de Scholr)**
+
+1. Acceso y configuración inicial
+
+¿Qué tan clara fue la experiencia de inicio de sesión?
+
+¿Pudiste identificar rápidamente las principales funcionalidades del sistema? ¿Cambiarías algo del diseño inicial?
+
+2. Visualización de becas
+
+¿Cómo evaluas la forma en que el sistema muestra las becas en lista? ¿Te pareció clara, ordenada y fácil de filtrar?
+
+¿Faltó alguna información relevante que necesites revisar al momento de validar una beca?
+
+3. Visualización de información de becas
+
+¿Consideras que la información mostrada en la descripción de la beca es completa? ¿Hay algo que crees que debería agregarse?
+
+¿La información sobre el colaborador te pareció clara? ¿Hubo algún campo o etiqueta que resultara confuso o difícil de entender? 
+
+4. Validación de documentos y estado de solicitudes de postulante
+
+¿La forma de cambiar el estado de una solicitud (aceptada, observada, rechazada) te pareció intuitiva?
+
+¿Agregarías algún otro estado o acción al flujo actual?
+
+5. Experiencia general como administrador/a
+
+¿Crees que esta herramienta puede ayudarte a optimizar la gestión de becas en tu institución?
+
+¿Hubo algo que no entendiste o que te generó dudas?
+
+¿Qué funcionalidades te parecieron más valiosas y cuáles no usarías?
+
+6. Adopción institucional
+
+¿Crees que esta plataforma podría ser adoptada fácilmente dentro de tu organización? ¿Qué barreras posibles ves para su implementación?
 
 ### 6.3.2. Registro de Entrevistas
 
