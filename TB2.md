@@ -122,7 +122,7 @@ TB2:<br>
 |Integrante|Tarea Asignada|
 |-|-|
 |Jaque Peña, Estefano Oscar|COMPLETAR|
-| Sebastian Omar Real Calderón | COMPLETAR |
+| Sebastian Omar Real Calderón | Entrevista a coordinadora, evidencias de servicios y de despliegue |
 | Arévalo Meza John | COMPLETAR |
 | Rosado Iporre, Diego | Entrevista al coordinadora y heurísticas de cada entrevista. |
 
