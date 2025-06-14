@@ -4299,6 +4299,52 @@ Frontend-flutter:
 
 ### 6.2.2.4. Testing Suite Evidence for Sprint Review
 
+**Core Entities Unit Tests**
+
+Los Core Entities Unit Tests son esenciales en el desarrollo de software, ya que garantizan la calidad y correcto funcionamiento de las entidades centrales, previniendo errores y facilitando el mantenimiento del código.
+
+Applications Service Test
+![alt text](assets/tb2/applicationServiceTest.png)   
+
+
+IAM Service Test
+![alt text](assets/tb2/iamServiceTest.png)   
+
+
+Management Service Test
+![alt text](assets/tb2/managementServiceTest.png)   
+
+
+**Core Integration Tests**
+
+Las Core Integration Tests son fundamentales para asegurar que los controladores interactúen correctamente con otros componentes del sistema, como servicios y bases de datos. Al evaluar escenarios de error, estas pruebas garantizan que el sistema maneje adecuadamente situaciones inesperadas y responda con los códigos de estado correctos. Esto mejora la experiencia del usuario, facilita la depuración y contribuye a desarrollar un software confiable y de alta calidad.
+
+Applications Controller Test
+![alt text](assets/tb2/applicationControllereTest.png)   
+
+
+IAM Controller Test
+![alt text](assets/tb2/iamControllerTest.png)   
+
+
+Management Controller Test
+![alt text](assets/tb2/managementControllerTest.png)   
+
+
+**Core Behavior-Driven Development**
+
+![alt text](assets/tb2/features.png)   
+
+<br><br>
+
+![alt text](assets/tb2/featureUs1.png)   
+<br>
+
+![alt text](assets/tb2/featureUs7.png)   
+
+
+
+
 ### 6.2.2.5. Execution Evidence for Sprint Review
 
 En este Sprint 2 , los miembros del equipo de desarrollo de software de Aventis han completado el bounded context Applications tanto por parte del frontend como backend 
