@@ -4340,7 +4340,101 @@ Duracion: 5:40
 Resumen:<br>
 María Pía, Directora de Programas Educativos de Futuros Brillantes Perú, evaluó la plataforma de becas como intuitiva pero con áreas de mejora. Destacó que el inicio de sesión es claro, aunque sugirió añadir guías iniciales. La visualización de becas le pareció organizada, pero propuso filtros por número de postulaciones y avances en procesamiento. Sobre la validación, encontró confuso cambiar estados y pidió previsualizar archivos sin descargarlos. Valoró los mensajes de rechazo para corregir postulaciones rápidamente, pero sugirió separar la aprobación de datos del colaborador y postulante para agilizar el proceso. Considera que la herramienta optimizará la gestión, pero señaló como barrera el diseño móvil, complicando el manejo de archivos. En general, ve potencial una vez se pulan detalles de usabilidad y flujos.
 
-### 6.3.3- Evaluaciones según Heurísticas
+### 6.3.3. Evaluaciones según Heurísticas
+
+Esta sección contiene el proceso de evaluación de las sesiones de validación basado en heurísticas, considerando heurísticas de usabilidad, arquitectura de información e inclusive design de la experiencia propuesta.
+
+# TABLA RESUMEN
+
+| #  | Problema                                                                                         | Escala de severidad | Heurística/Principio violado                                  |
+|----|--------------------------------------------------------------------------------------------------|---------------------|---------------------------------------------------------------|
+| 1  | Falta de guías iniciales para nuevos usuarios                                                    | 2                   | Usabilidad: Ayuda y documentación                             |
+| 2  | No hay filtros por número de postulaciones ni avance de procesamiento                           | 2                   | Arquitectura de Información: Is it findable?                  |
+| 3  | Cambiar el estado de una postulación resulta confuso                                             | 3                   | Usabilidad: Claridad del sistema / Prevención de errores      |
+| 4  | No se pueden previsualizar archivos sin descargarlos                                             | 3                   | Usabilidad: Flexibilidad y eficiencia de uso                  |
+| 5  | No está separada la aprobación de datos del colaborador y del postulante                        | 2                   | Arquitectura de Información: Is it clear?                     |
+| 6  | El diseño móvil complica el manejo de archivos                                                   | 3                   | Diseño Responsivo: Accesibilidad en múltiples dispositivos     |
+| 7  | El sistema de mensajes de rechazo es útil, pero podría incluir más orientación para corregir     | 1                   | Usabilidad: Feedback del sistema / Ayuda para corrección      |
+
+
+# DESCRIPCIÓN DE PROBLEMAS
+
+## PROBLEMA #1: Falta de guías iniciales para nuevos usuarios  
+**Severidad:** 2  
+**Heurística violada:** Usabilidad - Ayuda y documentación  
+**Problema:**  
+Aunque el inicio de sesión es claro, no existen guías visuales ni instrucciones que orienten al usuario nuevo. Esto puede generar incertidumbre sobre cómo utilizar las funcionalidades principales, especialmente para quienes no están familiarizados con plataformas de postulación.  
+
+**Recomendación:**  
+Incorporar un proceso de onboarding que muestre las principales funciones al primer ingreso, o habilitar una sección de ayuda fácilmente accesible desde el menú principal.
+
+---
+
+## PROBLEMA #2: No hay filtros por número de postulaciones ni avance de procesamiento  
+**Severidad:** 2  
+**Heurística violada:** Arquitectura de Información - Is it findable?  
+**Problema:**  
+Aunque la información de las becas está organizada, no se pueden aplicar filtros útiles como el número de postulaciones o el avance del proceso. Esto dificulta a los usuarios priorizar entre opciones más accesibles o en etapas iniciales.
+
+**Recomendación:**  
+Añadir filtros por cantidad de postulantes y por estado de procesamiento para facilitar la exploración eficiente de oportunidades de becas.
+
+---
+
+## PROBLEMA #3: Cambiar el estado de una postulación resulta confuso  
+**Severidad:** 3  
+**Heurística violada:** Usabilidad - Claridad del sistema / Prevención de errores  
+**Problema:**  
+La interfaz para cambiar el estado de las postulaciones no es clara. No se entienden bien las consecuencias de cada acción ni los significados de los estados disponibles, lo que puede llevar a errores administrativos.
+
+**Recomendación:**  
+Rediseñar el flujo de cambio de estado, incorporando etiquetas más claras y ventanas de confirmación que expliquen qué implica cada transición.
+
+---
+
+## PROBLEMA #4: No se pueden previsualizar archivos sin descargarlos  
+**Severidad:** 3  
+**Heurística violada:** Usabilidad - Flexibilidad y eficiencia de uso  
+**Problema:**  
+Los usuarios deben descargar cada archivo adjunto para poder revisarlo, lo que ralentiza el proceso y afecta especialmente a quienes revisan múltiples postulaciones. Esto también representa un problema para usuarios móviles.
+
+**Recomendación:**  
+Implementar un visor en línea que permita abrir archivos dentro de la plataforma, sin necesidad de descargarlos.
+
+---
+
+## PROBLEMA #5: No está separada la aprobación de datos del colaborador y del postulante  
+**Severidad:** 2  
+**Heurística violada:** Arquitectura de Información - Is it clear?  
+**Problema:**  
+Actualmente no hay una separación clara entre los datos del colaborador y los del postulante, lo que dificulta la validación. Esto genera confusión y puede hacer más lento el flujo de trabajo.
+
+**Recomendación:**  
+Separar visual y funcionalmente la aprobación de datos del colaborador y del postulante, permitiendo flujos de revisión independientes.
+
+---
+
+## PROBLEMA #6: El diseño móvil complica el manejo de archivos  
+**Severidad:** 3  
+**Heurística violada:** Diseño Responsivo - Accesibilidad en múltiples dispositivos  
+**Problema:**  
+La interfaz no está bien adaptada para móviles en procesos que requieren revisar o subir archivos. Botones pequeños, dificultad para navegar entre secciones y falta de visores hacen la experiencia incómoda desde celulares.  
+
+**Recomendación:**  
+Optimizar la interfaz móvil, priorizando accesibilidad a archivos, botones más grandes y navegación fluida entre pasos del proceso.
+
+---
+
+## PROBLEMA #7: El sistema de mensajes de rechazo es útil, pero podría incluir más orientación para corregir  
+**Severidad:** 1  
+**Heurística violada:** Usabilidad - Feedback del sistema / Ayuda para corrección  
+**Problema:**  
+Los mensajes de rechazo permiten saber que hay un error, pero no siempre explican con claridad cómo corregirlo. Esto puede llevar a errores repetidos y frustración por parte del usuario.  
+
+**Recomendación:**  
+Mejorar los mensajes de rechazo agregando instrucciones claras, ejemplos o enlaces a documentación de ayuda específica.
+
+---
 
 ### 6.4. Video About-the-Product
 
