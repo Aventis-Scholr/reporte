@@ -4434,6 +4434,27 @@ Duracion: 5:40
 Resumen:<br>
 María Pía, Directora de Programas Educativos de Futuros Brillantes Perú, evaluó la plataforma de becas como intuitiva pero con áreas de mejora. Destacó que el inicio de sesión es claro, aunque sugirió añadir guías iniciales. La visualización de becas le pareció organizada, pero propuso filtros por número de postulaciones y avances en procesamiento. Sobre la validación, encontró confuso cambiar estados y pidió previsualizar archivos sin descargarlos. Valoró los mensajes de rechazo para corregir postulaciones rápidamente, pero sugirió separar la aprobación de datos del colaborador y postulante para agilizar el proceso. Considera que la herramienta optimizará la gestión, pero señaló como barrera el diseño móvil, complicando el manejo de archivos. En general, ve potencial una vez se pulan detalles de usabilidad y flujos.
 
+2.  Entrevista 2: <br>
+    Datos del entrevistado <br>
+    Nombre: Lourdes<br>
+    Apellidos: Huamaní Vasquez<br>
+    Edad: 27 <br>
+    Distrito: Los Olivos <br>
+
+![Entrevista3](assets/images/interviews/Entrevista_Testing_RSE_2.png)
+
+Link de entrevista : [https://drive.google.com/file/d/1kGOfRYu-KHkVUpZO2NENXTQX_Fj55XZx/view?usp=drive_link](https://drive.google.com/file/d/1kGOfRYu-KHkVUpZO2NENXTQX_Fj55XZx/view?usp=drive_link)
+
+Inicio: 1:15<br>
+Duracion: 14:00
+
+Resumen:<br>
+Lourdes Huamani Vasquez, Coordinadora de RSE y Bienestar Laboral en Grupo Horizonte, con 3 años de experiencia gestionando becas para más de 300 colaboradores, participó en el recorrido del primer prototipo de la app móvil Scholr. Lourdes, de 27 años y residente en Los Olivos, destacó que el inicio de sesión es intuitivo y visualmente atractivo, aunque sugirió añadir ingreso por huella dactilar para mayor comodidad.
+
+Valoró la claridad del diseño y la organización del listado de becas, pero recomendó incluir el plazo de inscripción visible y permitir ordenarlas según su fecha de cierre. Al revisar una beca específica, propuso agregar si es para pregrado o posgrado, si aplica a universidades nacionales o extranjeras, y una lista de instituciones elegibles.
+
+En la sección de datos del trabajador todo le pareció claro, pero sugirió que al registrar al postulante (hijo/a) se incluya un campo para datos del padre y la madre. Finalmente, consideró útil que, al aceptar una postulación, la app envíe un mensaje automático con la fecha y lugar para finalizar el trámite presencial, así como un recordatorio de los documentos necesarios.
+
 ### 6.3.3. Evaluaciones según Heurísticas
 
 Esta sección contiene el proceso de evaluación de las sesiones de validación basado en heurísticas, considerando heurísticas de usabilidad, arquitectura de información e inclusive design de la experiencia propuesta.
@@ -4449,7 +4470,11 @@ Esta sección contiene el proceso de evaluación de las sesiones de validación 
 | 5  | No está separada la aprobación de datos del colaborador y del postulante                        | 2                   | Arquitectura de Información: Is it clear?                     |
 | 6  | El diseño móvil complica el manejo de archivos                                                   | 3                   | Diseño Responsivo: Accesibilidad en múltiples dispositivos     |
 | 7  | El sistema de mensajes de rechazo es útil, pero podría incluir más orientación para corregir     | 1                   | Usabilidad: Feedback del sistema / Ayuda para corrección      |
-
+| 8   | No se indica claramente el plazo límite de postulación en la vista general de becas                       | 2                   | Visibilidad del estado del sistema / Arquitectura de Información: Is it findable? |
+| 9   | Falta de opciones para clasificar las becas por tipo (pregrado, posgrado, nacional, extranjera, etc.)     | 2                   | Control del usuario y libertad / Arquitectura de Información: Is it clear? |
+| 10  | No hay confirmación ni seguimiento tras aceptar una postulación                                           | 3                   | Usabilidad: Feedback del sistema / Prevención de errores                  |
+| 11  | No hay campos para ingresar datos del padre y madre al postular                                           | 2                   | Correspondencia entre el sistema y el mundo real                          |
+| 12  | No se permite agendar o enviar recordatorios sobre citas presenciales para completar el trámite           | 2                   | Flexibilidad y eficiencia de uso / Feedback del sistema                   |
 
 # DESCRIPCIÓN DE PROBLEMAS
 
@@ -4527,6 +4552,61 @@ Los mensajes de rechazo permiten saber que hay un error, pero no siempre explica
 
 **Recomendación:**  
 Mejorar los mensajes de rechazo agregando instrucciones claras, ejemplos o enlaces a documentación de ayuda específica.
+
+---
+
+## PROBLEMA #8: No se indica claramente el plazo límite de postulación en la vista general de becas  
+**Severidad:** 2  
+**Heurística violada:** Visibilidad del estado del sistema / Arquitectura de Información - Is it findable?  
+**Problema:**  
+Los usuarios no pueden ver fácilmente hasta cuándo pueden postular a una beca desde la vista general. Esto puede generar confusión, pérdida de oportunidades y postulaciones fuera de plazo.  
+
+**Recomendación:**  
+Incluir de forma visible la fecha de cierre de postulación en la vista general de cada beca, usando íconos o colores para destacar urgencia si la fecha está próxima.
+
+---
+
+## PROBLEMA #9: Falta de opciones para clasificar las becas por tipo (pregrado, posgrado, nacional, extranjera, etc.)  
+**Severidad:** 2  
+**Heurística violada:** Control del usuario y libertad / Arquitectura de Información - Is it clear?  
+**Problema:**  
+Los usuarios no pueden filtrar o clasificar las becas según sus características. Esto dificulta encontrar las opciones más relevantes para cada caso.  
+
+**Recomendación:**  
+Agregar filtros por tipo de beca (nivel educativo, ubicación geográfica, área de estudio) y permitir ordenarlas según diferentes criterios como fecha de cierre o popularidad.
+
+---
+
+## PROBLEMA #10: No hay confirmación ni seguimiento tras aceptar una postulación  
+**Severidad:** 3  
+**Heurística violada:** Usabilidad - Feedback del sistema / Prevención de errores  
+**Problema:**  
+Una vez que se acepta una postulación, el sistema no proporciona confirmación clara ni próximos pasos. Esto puede generar incertidumbre en el usuario sobre si el proceso ha sido exitoso y qué hacer a continuación.  
+
+**Recomendación:**  
+Implementar un mensaje de confirmación con detalles claros (fecha, estado de postulación, pasos siguientes) y permitir su consulta posterior desde la app.
+
+---
+
+## PROBLEMA #11: No hay campos para ingresar datos del padre y madre al postular  
+**Severidad:** 2  
+**Heurística violada:** Correspondencia entre el sistema y el mundo real  
+**Problema:**  
+La postulación de hijos no contempla el registro de datos del padre y madre, lo cual puede ser necesario para validar parentesco o para efectos administrativos.  
+
+**Recomendación:**  
+Añadir campos opcionales para registrar nombre completo, DNI y vínculo con el postulante de ambos padres, especialmente útil si solo uno es colaborador.
+
+---
+
+## PROBLEMA #12: No se permite agendar o enviar recordatorios sobre citas presenciales para completar el trámite  
+**Severidad:** 2  
+**Heurística violada:** Flexibilidad y eficiencia de uso / Feedback del sistema  
+**Problema:**  
+Actualmente, no existe una forma automatizada de agendar la cita final en oficina ni enviar recordatorios, lo que puede provocar ausencias o retrasos en la entrega de documentos.  
+
+**Recomendación:**  
+Permitir al sistema enviar un mensaje automático al confirmar la postulación con la fecha, hora y lugar de la cita, así como un recordatorio previo configurable.
 
 ---
 
