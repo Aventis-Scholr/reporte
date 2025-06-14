@@ -842,7 +842,6 @@ EPICS:
 | -- | -- | -- | -- | -- |
 | US01|Selección de empresa durante el registro|Como padre/trabajador,quiero subir documentos (credencial laboral, notas de mi hijo) directamente en la app,para evitar trámites presenciales y acelerar mi postulación.| Escenario: Dado que el usuario está en el formulario de registro,cuando selecciona la empresa y completa su código de colaborador y datos extras,entonces el sistema habilita el botón "Continuar" para enviar los datos a verificación.| EP01|
 | US02| Validación automática de datos laborales|Como trabajador, quiero que el sistema verifique automáticamente mi código de colaborador con la base de datos de mi empresa, para confirmar mi elegibilidad en 24 horas.| Escenario: Dado que el usuario ingresó su código de colaborador de su empresa.Cuando la API de Backus confirma que el código existe, entonces el sistema envía un correo al correo del usuario con el asunto "¡Cuenta verificada! ingresa a tu cuenta scholr", con su usuario y contraseña.| EP01|
-| US03| Notificación de verificación exitosa| Como padre/trabajador,quiero recibir confirmación con un código único al enviar mi postulación,para tener un comprobante digital de mi solicitud.| Escenario: Dado que el usuario hizo clic en el enlace de activación del correo.Cuando inicia sesión por primera vez,entonces la app muestra: "¡Bienvenido, Ahora puedes postular a becas exclusivas que brinda tu empresa".| EP01|
 | US04|Subir documentos de postulación|Como padre/trabajador,quiero subir documentos (credencial laboral, notas de mi hijo) directamente en la app,para evitar trámites presenciales y acelerar mi postulación.| Escenario: El usuario potencial visita la página principal.<br>Dado que el usuario potencial ha accedido a la página de inicio, Cuando navega hacia la sección de beneficios y funcionalidades, Entonces puede ver una descripción clara y visualmente destacada de las características clave de la plataforma.| EP02|
 | US05| Guardar postulación como borrador| Como padre/trabajador,quiero guardar una postulación como borrador antes de enviarla,para completar los requisitos más tarde sin perder el progreso.| Escenario: El usuario potencial busca información sobre la plataforma en redes sociales.<br>Dado que el usuario potencial navega a la página de inicio,Cuando se desplaza hasta el pie de página o la sección de contacto,Entonces puede hacer clic en enlaces directos a las redes sociales de la plataforma.| EP2|
 | US06| Confirmación con código único| Como padre/trabajador,quiero recibir confirmación con un código único al enviar mi postulación,para tener un comprobante digital de mi solicitud.| Escenario: Un nuevo usuario desea registrarse.<br>Dado que el usuario nuevo accede a la página de registro,Cuando completa el formulario con los datos básicos,Entonces puede finalizar el registro sin complicaciones ni pasos adicionales innecesarios.| EP02|
@@ -4198,16 +4197,111 @@ Documentación y Despliegue:
 - Diego Alonso Rosado Iporre: 1
 
 ### 6.2.2. Sprint 2
+En este segundo sprint continuamos con el desarrollo del proyecto dentro del marco ágil de Scrum. Esta etapa se centrará en la implementación del frontend del bounded context "Applications", enfocado en el segmento objetivo Apoderado, es decir, el usuario encargado de ingresar las postulaciones de sus hijos al sistema de becas.
 
+Durante este periodo, se asignarán tareas relacionadas con la construcción visual del aplicativo, siguiendo los lineamientos de diseño previamente establecidos. El objetivo es convertir los requerimientos funcionales en una interfaz intuitiva, clara y usable, asegurando que cumpla con las heurísticas y necesidades específicas del usuario final.
 ### 6.2.2.1. Sprint Planning 2
+Como parte del proceso de planificación del sprint, el equipo se reunió para seleccionar las user stories correspondientes a la visualización del módulo "Applications". Se definieron las tareas técnicas necesarias para implementar cada componente visual, así como los responsables asignados para su desarrollo.
+
+Se promovió nuevamente la colaboración y la alineación del equipo en torno a los objetivos específicos del sprint, asegurando una distribución equitativa del trabajo y una visión compartida del producto final esperado.
+
+
+| Sprint #| Sprint 2|
+| -- | -- |
+| **Sprint Planning Background**||
+| **Date**| 05/06/2025|
+| **Time**| 12:00 AM|
+| **Location**| Discord (Reunión virtual)|
+| **Prepared By**| Jaque Peña, Estefano Oscar|
+| **Attendees (to planning meeting)** | John Telesforo Arevalo Meza ,Diego Alonso Rosado Iporre,Sebastian Omar Real Calderón, Estefano Oscar Jaque Peña|
+| **Sprint Goal & User Stories**||
+| **Sprint 2 Goal**| 	El objetivo de este sprint es implementar el frontend del bounded context "Applications", centrado en el perfil del Apoderado, así como continuar con los avances del bounded context "IAM". Además, se busca desplegar la landing page desde el repositorio de GitHub y consolidar el informe del proyecto. El sprint se considerará exitoso cuando todas las tareas estén en la columna "Terminado" en Trello.|
+| **Sprint 2 Velocity**| 19 |
+| **Sum of Story Points**|  |  
 
 ### 6.2.2.2. Sprint Backlog 2 
 
+Para el segundo sprint backlog, el equipo se enfocó en completar el bounded context Applications, específicamente la implementación del frontend, con lo cual se concluyó toda la parte correspondiente a Jetpack Compose. Además, se avanzó en el desarrollo de nuevos endpoints del backend de este mismo módulo, permitiendo una integración más robusta del sistema.
+
+En paralelo, se trabajó en el bounded context IAM, finalizando tanto el frontend como el backend en Flutter, completando así su implementación funcional. Estas tareas se organizaron y gestionaron eficientemente utilizando la herramienta Trello, lo que permitió dividir las historias de usuario en subtareas manejables, asignarlas de forma adecuada y hacer seguimiento del progreso en tiempo real.
+
+Gracias a esta estructura, el equipo pudo mantener una colaboración efectiva, resolver bloqueos con agilidad y cumplir con los objetivos establecidos para este sprint.  
+
+
+[IMAGEN DE TRELLO]
+
+
+| User Story | Title                                        | Work-Item ID | Task Title                             | Description                                                                                     | Estimation (Hours) | Assigned To                  | Status |
+|------------|----------------------------------------------|--------------|----------------------------------------|--------------------------------------------------------------------------------------------------|--------------------|-------------------------------|--------|
+| US01       | Selección de empresa durante el registro     | TA026        | Diseño de interfaz registro IAM        | Diseñar pantalla de registro en Flutter para seleccionar empresa y subir documentos             | 2                  | Estefano Oscar Jaque Peña    | Done   |
+| US01       |                                              | TA027        | Integración con backend IAM            | Conectar campos de empresa y documentos al backend IAM ya existente                             | 3                  | Estefano Oscar Jaque Peña    | Done   |
+| US01       |                                              | TA028        | Validación visual y flujo de navegación| Asegurar que el botón 'Continuar' se habilite al completar los datos correctamente              | 2                  | Estefano Oscar Jaque Peña    | Done   |
+| US05       | Guardar postulación como borrador            | TA029        | Botón guardar postulación              | Agregar botón para guardar sin enviar, visible solo cuando campos esenciales estén llenos       | 2                  | John Telesforo Arevalo Meza  | Done   |
+| US05       |                                              | TA030        | Persistencia local de borrador         | Guardar temporalmente los datos en el dispositivo hasta ser enviados                            | 2                  | John Telesforo Arevalo Meza  | Done   |
+| US05       |                                              | TA031        | Recuperación automática de borrador    | Al volver a la app, cargar automáticamente los datos guardados                                  | 2                  | John Telesforo Arevalo Meza  | Done   |
+| US07       | Visualización de postulaciones               | TA032        | Lista de postulaciones                 | Mostrar en lista las postulaciones filtradas por estado                                         | 2                  | John Telesforo Arevalo Meza  | Done   |
+| US07       |                                              | TA033        | Detalles de postulación                | Diseñar modal para mostrar historial, comentarios y documentos de cada postulación              | 3                  | John Telesforo Arevalo Meza  | Done   |
+| US07       |                                              | TA034        | Endpoint de actualización              | Desarrollar endpoint PUT para editar postulaciones existentes                                   | 2                  | Diego Rosado                 | Done   |
+| US09       | Reenvío de postulación rechazada             | TA035        | Lógica de reenvío de documentos        | Permitir al apoderado corregir y reenviar la postulación                                        | 2                  | Diego Rosado                 | Done   |
+| US09       |                                              | TA036        | Validación de plazo de reenvío         | Verificar si el plazo de edición aún es válido                                                  | 2                  | Diego Rosado                 | Done   |
+| US09       |                                              | TA037        | Mensaje de error por vencimiento       | Mostrar mensaje si se intenta reenviar fuera del plazo establecido                              | 1                  | Diego Rosado                 | Done   |
+| US13       | Tutoriales en video                          | TA038        | Diseño de sección de ayuda             | Diseñar interfaz para mostrar video en ventana emergente                                        | 2                  | Sebastian Real               | Done   |
+| US13       |                                              | TA039        | Integración de reproductor de video    | Agregar soporte para video con controles (pausa, volumen, pantalla completa)                    | 2                  | Sebastian Real               | Done   |
+| US13       |                                              | TA040        | Pruebas de experiencia de usuario      | Verificar que el tutorial sea accesible y funcional en móviles                                  | 1                  | Sebastian Real               | Done   |
+| US14       | Acceso a cartilla de instrucciones           | TA041        | Botón de descarga de PDF               | Agregar botón en sección de ayuda para descargar cartilla                                       | 1                  | Sebastian Real               | Done   |
+| US14       |                                              | TA042        | Gestión del archivo PDF                | Generar archivo y guardarlo automáticamente en carpeta de descargas                             | 1                  | Sebastian Real               | Done   |
+| US14       |                                              | TA043        | Mensaje de confirmación de descarga    | Mostrar mensaje o abrir visor de PDF tras la descarga                                           | 1                  | Sebastian Real               | Done   |
+| US15       | Visualizar información de contacto de soporte| TA044        | Diseño del bloque de contacto          | Mostrar datos de contacto en un recuadro destacado                                              | 1                  | Sebastian Real               | Done   |
+| US15       |                                              | TA045        | Enlace clicable para teléfono          | Hacer número telefónico clicable en móviles                                                     | 1                  | Sebastian Real               | Done   |
+| US15       |                                              | TA046        | Pruebas de accesibilidad               | Revisar que el cuadro de contacto sea legible y esté visible en móviles                         | 1                  | Sebastian Real               | Done   |
+| US16       | Visualización de información clave           | TA047        | Tarjetas interactivas                  | Diseñar 3 tarjetas con íconos y texto explicativo                                               | 2                  | Sebastian Real               | Done   |
+| US16       |                                              | TA048        | Integración de video resumen           | Incluir video corto en autoplay sin audio                                                       | 2                  | Sebastian Real               | Done   |
+| US16       |                                              | TA049        | Estadísticas clave                     | Agregar métricas como '95% postulaciones procesadas en 72h'                                     | 1                  | Sebastian Real               | Done   |
+
 ### 6.2.2.3. Development Evidence for Sprint Review
+
+Backend:
+
+|Repository |Branch| Commit Id | Commit Message| Commit Message Body| Date|
+|----|-----|---------------------|----------------------------------------|---------------------------------------------------------|------------|
+|Aventis-Scholr/scholr-backend|master| 5e3g2t6t           | feat: Added endpoints Delete and update para el bounded context applications | se agregaron los metodos delte y update para el bc Applications| 05/06/2025 |
+
+
+Frontend-jetpack compose:
+
+|Repository |Branch| Commit Id | Commit Message| Commit Message Body| Date|
+|----|-----|---------------------|----------------------------------------|---------------------------------------------------------|------------|
+|Aventis-Scholr/scholr-mobile|develop| 344c549           | feat: added edit functionality |- | 07/06/2025 |
+|Aventis-Scholr/scholr-backend|develop| 75a858d          | feat: add seccion de help , cartilla de instrucciones, video , contacto de soporte tecnico|-|07/06/2025 |
+|Aventis-Scholr/scholr-backend|develop|6587db0           | feat: DataApoderado create, update.|- | 06/06/2025 |
+
+Frontend-flutter:
+|Repository |Branch| Commit Id | Commit Message| Commit Message Body| Date|
+|----|-----|---------------------|----------------------------------------|---------------------------------------------------------|------------|
+|Aventis-Scholr/scholr-mobile-flutter|develop| 37g20dr           | feat: Add bounded context IAM en flutter |- | 13/06/2025 |
 
 ### 6.2.2.4. Testing Suite Evidence for Sprint Review
 
 ### 6.2.2.5. Execution Evidence for Sprint Review
+
+En este Sprint 2 , los miembros del equipo de desarrollo de software de Aventis han completado el bounded context Applications tanto por parte del frontend como backend 
+
+[ACA PON TU PARTE JOHN]
+
+en segundo lugar se realizo el frontend en flutter de el bounded context IAM:
+
+* Seccion de sign-in:  
+![alt text](assets/tb2/signin.png)  
+
+* Seccion de eleccion de empresa para el sign-up:  
+
+![alt text](assets/tb2/selcompany.png)   
+
+  seleccionando la empresa para continuar    
+  ![alt text](assets/tb2/elegido.png)  
+
+* Seccion de sign-up:   
+![alt text](assets/tb2/signup.png)    
 
 ### 6.2.2.6. Services Documentation Evidence for Sprint Review
 
@@ -4325,6 +4419,10 @@ Si tuvieras acceso a esta herramienta de forma oficial, ¿la recomendarías a ot
 
 ### 6.4. Video About-the-Product
 
+A continuacion se presentara el avance hasta este punto de realizado el sprint 2
+
+LINK: (https://drive.google.com/file/d/1VRiXGqWR5hOUjiQ1H5ivFV51_EVyDi2r/view?usp=sharing)[https://drive.google.com/file/d/1VRiXGqWR5hOUjiQ1H5ivFV51_EVyDi2r/view?usp=sharing]
+
 ## Conclusiones
 
 TB1:
@@ -4333,6 +4431,9 @@ En esta entrega, aplicamos diversas técnicas de análisis y diseño como entrev
 
 TP:
 En esta entrega, implementamos con éxito los bounded contexts de IAM, Applications y Management, aplicando principios de Domain-Driven Design para definir una arquitectura modular y escalable. A través de la colaboración en equipo, logramos integrar frontend y backend para cada contexto, siguiendo estándares de código y documentación. El uso de herramientas como Swagger, JWT y CQRS nos permitió garantizar seguridad y mantenibilidad, mientras que el desarrollo de wireframes, mockups y prototipos reforzó nuestro enfoque en la experiencia de usuario. Esta experiencia consolidó nuestras habilidades técnicas y destacó la importancia de la planificación y coordinación en proyectos ágiles.  
+
+TB2:
+En esta entrega finalizamos el desarrollo del bounded context Applications, completando su frontend e integrando funcionalidades clave en el backend, como los endpoints de actualización y eliminación. Este módulo permite a los apoderados gestionar postulaciones a becas de forma intuitiva y completa. Además, se avanzó con el frontend del contexto IAM en Flutter, manteniendo la conexión con el backend ya implementado. Esta iteración consolidó nuestra capacidad para integrar componentes en una arquitectura modular, reforzando el enfoque en la experiencia de usuario y la colaboración efectiva en equipo.  
 
 ## Bibliografia
 
@@ -4375,3 +4476,4 @@ ANEXO M: Trello--> [https://trello.com/invite/b/6821617a3fd57ee9f724decf/ATTI533
 ANEXO N: Link deploy Landing page --> [https://aventis-scholr.github.io/landing-page/](https://aventis-scholr.github.io/landing-page/)
 
 ANEXO O: Link deploy backend --> [https://scholrapi.onrender.com/swagger-ui/index.html](https://scholrapi.onrender.com/swagger-ui/index.html) 
+
