@@ -4245,7 +4245,7 @@ En paralelo, se trabajó en el bounded context IAM, finalizando tanto el fronten
 Gracias a esta estructura, el equipo pudo mantener una colaboración efectiva, resolver bloqueos con agilidad y cumplir con los objetivos establecidos para este sprint.  
 
 
-[IMAGEN DE TRELLO]
+[alt text](/assets/images/trello-sprint2.png)
 
 
 | User Story | Title                                        | Work-Item ID | Task Title                             | Description                                                                                     | Estimation (Hours) | Assigned To                  | Status |
