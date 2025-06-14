@@ -4324,6 +4324,12 @@ en segundo lugar se realizo el frontend en flutter de el bounded context IAM:
 
 ### 6.2.2.7. Software Deployment Evidence for Sprint Review
 
+**Actividades Realizadas:**
+
+- Despliegue del backend
+
+![alt text](assets/images/swagger_sprint2.png)
+
 ### 6.2.2.8. Software Deployment Evidence for Sprint Review
 
 ### 6.3. Validation Interviews
