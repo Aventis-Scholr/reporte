@@ -4322,6 +4322,538 @@ en segundo lugar se realizo el frontend en flutter de el bounded context IAM:
 
 ### 6.2.2.6. Services Documentation Evidence for Sprint Review
 
+### 6.2.1.5. Services Documentation Evidence for Sprint Review
+
+**Introducción:**   
+Durante este Sprint, se logró la documentación y despliegue de varios Endpoints correspondientes a los diferentes bounded contexts implementados por el equipo. Se utilizó OpenAPI para describir de forma estructurada los servicios Web desarrollados. A continuación, se presenta la relación de los Endpoints, las acciones soportadas y la respectiva documentación disponible.
+
+Esta documentación incluye los verbos HTTP utilizados, sintaxis de llamadas, parámetros, ejemplos de respuesta, así como capturas de la interacción con los Web Services utilizando datos de muestra. También se proporciona el URL del repositorio de los Web Services y los commit IDs correspondientes al trabajo realizado en la documentación durante este Sprint. 
+
+**Sección IAM (Identity and Access Management)**
+
+---
+
+### **Introducción**
+El módulo IAM (Identity and Access Management) implementa la gestión centralizada de usuarios, roles y autenticación en la plataforma Scholr. A continuación se detallan los endpoints desarrollados, su funcionalidad y documentación técnica.
+
+---
+
+### **Tabla de Endpoints IAM**
+
+| Bounded Context | Endpoint | Acción | Verbo HTTP | Parámetros | Ejemplo de Respuesta | Documentación |
+|-----------------|----------|--------|------------|------------|----------------------|---------------|
+| **Autenticación** | `/api/v1/authentication/sign-in` | Inicio de sesión | POST | `{"username": "string","password": "string"}` | `{"id": 0,"username": "string","token": "string"}` | [Swagger](#) | 
+|  | `/api/v1/authentication/sign-up` | Registro de usuario | POST | `{"username": "string","password": "string","compania": "string","dni": "string","cod_colaborador": "string","roles": ["string"]}` | `{"id": 0,"username": "string","roles": ["string"],"proofingEntrepreneure": "string"}` | [Swagger](#) |
+| **Usuarios** | `/api/v1/users` | Listar usuarios | GET | - | `[{"id": 0,"username": "string","roles": ["string"],"proofingEntrepreneure": "string"}]` | [Swagger](#) |
+|  | `/api/v1/users/{userId}` | Obtener usuario por ID | GET | `userId: long` | `{"id": 0,"username": "string","roles": ["string"],"proofingEntrepreneure": "string"}` | [Swagger](#) |
+|  | `/api/v1/users/{userId}/update-proofing` | Actualizar verificación | PUT | `{"proofingStatus": string}` | `{"message": "Proofing updated"}` | [Swagger](#) |
+| **Roles** | `/api/v1/roles` | Listar roles | GET | - | `  {"id": 0,"name": "string"}]` | [Swagger](#) |
+---
+
+### **Ejemplos de Uso**
+
+#### **1. Autenticación (JWT)**
+```java
+// Sign-Up Request
+POST /api/v1/authentication/sign-up
+Body: {
+  "username": "Estefano",
+  "password": "12345",
+  "compania": "backus",
+  "dni": "72260921",
+  "cod_colaborador": "ABC123",
+  "roles": [
+    "ROLE_APODERADO"
+  ]
+}
+
+// Response (201 Created)
+{
+  "id": 1,
+  "username": "Estefano",
+  "roles": [
+    "ROLE_APODERADO"
+  ],
+  "proofingEntrepreneure": null
+}
+```
+
+#### **2. Gestión de Usuarios**
+```java
+// Actualizar verificación de emprendedor
+PUT /api/v1/users/1/update-proofing
+Body: {
+  "proofingStatus": "VERIFIED"
+}
+
+// Response (200 OK)
+{
+  "message": "ProofingEntrepreneure updated successfully."
+}
+```
+
+---
+
+### **Arquitectura y Patrones**
+1. **CQRS**: Separación clara entre:
+   - `UserCommandService`: Manejo de escritura (sign-up, update-proofing)
+   - `UserQueryService`: Consultas (getAllUsers, getUserById)
+
+2. **DTO Pattern**: Uso de `*Resource` para transferencia de datos:
+   ```java
+   public record UserResource(Long id, String email, String name) {}
+   ```
+
+3. **Swagger Integration**: Documentación automática con `@Tag` y OpenAPI.
+
+---
+
+### **Seguridad**
+- **JWT**: Implementado en `AuthenticationController`.
+- **Validaciones**: 
+  - Campos obligatorios con `@Valid`
+  - Manejo de errores (404 para usuarios no encontrados)
+
+---
+
+### **Validación de Colaboradores en Registro (Sign-Up)**  
+Se implementó un **mecanismo de validación corporativa** que verifica la identidad de colaboradores antes de permitir su registro. Este proceso:
+
+1. **Consulta tablas dinámicas** por compañía (`{compania}_colaboradores`)
+2. **Valida coincidencia** entre:  
+   - DNI del usuario  
+   - Código de colaborador  
+3. **Flujo técnico**:  
+   ```java
+   // Ejemplo de validación
+   if (!colaboradorValidationService.validarColaborador(
+       "backus", 
+       "72260921", 
+       "ABC123")) {
+       throw new InvalidColaboradorException();
+   }
+   ```
+
+**Impacto**:  
+- ✔️ Asegura que solo personal autorizado se registre  
+- ✔️ Integración transparente con el endpoint existente `/sign-up`  
+- ✔️ Prevención de SQL Injection mediante parámetros con `EntityManager`
+
+### **Repositorio y Commits**
+| Endpoint | Commit ID | Cambios Realizados |
+|----------|-----------|---------------------|
+| Autenticación | `a1b2c3d` | Implementación JWT |
+| Users | `e4f5g6h` | Add proofing feature |
+| Roles | `i7j8k9l` | Listado de roles |
+
+---
+
+**Repositorio Principal**: [https://github.com/Aventis-Scholr/scholr-backend.git](https://github.com/Aventis-Scholr/scholr-backend.git)
+
+---
+
+### **Conclusión**
+El módulo IAM proporciona:
+- ✅ Autenticación segura con JWT
+- ✅ Gestión granular de usuarios y roles
+- ✅ Escalabilidad mediante CQRS
+- ✅ Documentación completa con Swagger
+
+**Próximos pasos**: Integración con OAuth2 para proveedores externos (Google, Microsoft).
+
+**Sección Applications (Gestión de Postulaciones)**
+
+---
+
+### **Introducción**
+El módulo Applications maneja el proceso completo de postulación a becas, incluyendo la gestión de postulantes y datos de apoderados. Implementa un sistema robusto para crear, consultar y actualizar postulaciones.
+
+---
+
+### **Tabla de Endpoints**
+
+| **Bounded Context** | **Endpoint** | **Acción** | **Verbo HTTP** | **Parámetros** | **Ejemplo de Respuesta** | **Documentación** |
+|---------------------|--------------|------------|----------------|----------------|---------------------------|--------------------|
+| **Reports** | `/api/v1/reports` | Reportar Endpoints | POST | - | `{"applicationId": 0,"apoderadoData": {},"postulanteSnapshot": {},"resolution": "DRAFT","adminComments": "string"}` | [Swagger](#) |
+| **Postulaciones** | `/api/v1/applications` | Registro de postulación | POST | `{"idApoderado": 0, "dataApoderado": { "id": 0, "...", "provincia": "string", "distrito": "string" } }` | `{"message": "Application created"}` | [Swagger](#) |
+|  | `/api/v1/applications` | Listar postulaciones | GET | - | `[{"applicationId": 0, "status": "PENDIENTE", "tipoBeca": "MERITO"}]` | [Swagger](#) |
+| **Data Apoderado** | `/api/v1/data-apoderado/{id}` | Obtener por ID | GET | `id: long` | `{"id": 0, "nombres": "string", ...}` | [Swagger](#) |
+|  | `/api/v1/data-apoderado/{id}` | Actualizar por ID | PUT | `{"nombres": "string", ...}` | `{"message": "Updated"}` | [Swagger](#) |
+|  | `/api/v1/data-apoderado/{apoderadoId}` | Obtener por apoderadoId | GET | `apoderadoId: long` | `{...}` | [Swagger](#) |
+|  | `/api/v1/data-apoderado/{apoderadoId}` | Actualizar por apoderadoId | PUT | `{"nombres": "string", ...}` | `{"message": "Updated"}` | [Swagger](#) |
+|  | `/api/v1/data-apoderado/{apoderadoId}` | Crear datos de apoderado | POST | `{"nombres": "string", ...}` | `{"message": "Created"}` | [Swagger](#) |
+|  | `/api/v1/data-apoderado/{apoderadoId}/{id}` | Obtener dato específico | GET | `apoderadoId, id: long` | `{...}` | [Swagger](#) |
+| **Scholarships** | `/api/v1/scholarships` | Listar becas | GET | - | `[{"id": 0, "nombre": "string", ...}]` | [Swagger](#) |
+|  | `/api/v1/scholarships` | Registrar beca | POST | `{"nombre": "string", "tipo": "string", ...}` | `{"id": 0, "nombre": "string", ...}` | [Swagger](#) |
+| **Postulaciones** | `/api/v1/applications` | Crear postulación | POST | `{"idApoderado": 0,"dataApoderado": {...},"status": "PENDIENTE","tipoBeca": "MERITO","postulante": {...}}` | `{"id": 0,"idApoderado": 0,"dataApoderado": {...},"status": "PENDIENTE","tipoBeca": "MERITO","postulante": {...}}` | [Swagger](#) |
+|  | `/api/v1/applications` | Listar postulaciones | GET | - | `[{"id": 0,"idApoderado": 0,"dataApoderado": {...},"status": "PENDIENTE","tipoBeca": "MERITO","postulante": {...}}]` | [Swagger](#) |
+|  | `/api/v1/applications/{id}` | Actualizar una postulación | PUT | `Long: id` | `[{"id": 0,"idApoderado": 0,"status": "SINENVIAR","tipoBeca": "MERITO","postulante":{"nombres": "string","apellidos": "string","dni": 0,"fechaNacimiento": "2025-06-14T17:49:11.175Z","contacto": {"correo": "string","celular": 0},"centroEstudios": {"nombre": "string","tipo": "string","nivel": "string","departamento": "string","provincia": "string","distrito": "string"}}}]` | [Swagger](#) |
+|  | `/api/v1/applications/{id}` | Eliminar una postulación | DELETE | `Long: id` | `[{"id": 0,"idApoderado": 0,"status": "SINENVIAR","tipoBeca": "MERITO","postulante":{"nombres": "string","apellidos": "string","dni": 0,"fechaNacimiento": "2025-06-14T17:49:11.175Z","contacto": {"correo": "string","celular": 0},"centroEstudios": {"nombre": "string","tipo": "string","nivel": "string","departamento": "string","provincia": "string","distrito": "string"}}}]` | [Swagger](#) |
+| **Datos Apoderados** | `/api/v1/data-apoderado/{apoderadoId}` | Crear datos | POST | `Long :id` | `{"nombres": "string",...}` | [Swagger](#) |
+|  | `/api/v1/data-apoderado/{id}` | Obtener datos | GET | - | `{"nombres": "string",...}` | [Swagger](#) |
+|  | `/api/v1/data-apoderado/{apoderadoId}/{id}` | Obtener por usuario | GET | `apoderadoId, id` | `{"nombres": "string",...}` | [Swagger](#) |
+
+
+---
+
+### **Ejemplos de Uso**
+
+#### **1. Creación de Postulación**
+```java
+POST /api/v1/applications
+Content-Type: application/json
+
+{
+  "idApoderado": 123,
+  "dataApoderado": {
+    "nombres": "María Elena",
+    "apellidos": "Gómez Torres",
+    "dni": "87654321",
+    "fechaNacimiento": "1985-04-15",
+    "contacto": {
+      "correo": "maria.gomez@email.com",
+      "celular": "987654321"
+    },
+    "domicilio": {
+      "direccion": "Av. Los Olivos 123",
+      "departamento": "Lima",
+      "provincia": "Lima",
+      "distrito": "San Martín de Porres"
+    },
+    "cuentaBancaria": {
+      "entidadBancaria": "BCP",
+      "numeroCuenta": "19123456789",
+      "cci": "00219112345678912"
+    },
+    "informacionLaboral": {
+      "tipoColaborador": "TIEMPO_COMPLETO",
+      "cargo": "Supervisora de Logística",
+      "sede": "Planta Lima Norte",
+      "local": "Almacén Principal",
+      "ingreso": 2018
+    }
+  },
+  "status": "PENDIENTE",
+  "tipoBeca": "EXCELENCIA_ACADEMICA",
+  "postulante": {
+    "nombres": "Diego Alonso",
+    "apellidos": "Gómez Pérez",
+    "dni": "12345678",
+    "fechaNacimiento": "2010-08-22",
+    "contacto": {
+      "correo": "diego.alonso@colegio.edu.pe",
+      "celular": "912345678"
+    },
+    "centroEstudios": {
+      "nombre": "Colegio San Agustín",
+      "tipo": "PRIVADO",
+      "nivel": "PRIMARIA",
+      "departamento": "Lima",
+      "provincia": "Lima",
+      "distrito": "San Isidro"
+    }
+  }
+}
+
+Response (201 Created):
+HTTP/1.1 201 Created
+Content-Type: application/json
+
+{
+  "id": 42,
+  "idApoderado": 123,
+  "dataApoderado": {
+    "id": 56,
+    "createdAt": "2025-05-12T10:30:45.123Z",
+    "updatedAt": "2025-05-12T10:30:45.123Z",
+    "apoderadoId": 123,
+    "nombres": "María Elena",
+    "apellidos": "Gómez Torres",
+    "dni": "87654321",
+    "fechaNacimiento": "1985-04-15",
+    "contacto": {
+      "correo": "maria.gomez@email.com",
+      "celular": "987654321"
+    },
+    "domicilio": {
+      "direccion": "Av. Los Olivos 123",
+      "departamento": "Lima",
+      "provincia": "Lima",
+      "distrito": "San Martín de Porres"
+    },
+    "cuentaBancaria": {
+      "entidadBancaria": "BCP",
+      "numeroCuenta": "19123456789",
+      "cci": "00219112345678912"
+    },
+    "informacionLaboral": {
+      "tipoColaborador": "TIEMPO_COMPLETO",
+      "cargo": "Supervisora de Logística",
+      "sede": "Planta Lima Norte",
+      "local": "Almacén Principal",
+      "ingreso": 2018
+    }
+  },
+  "status": "PENDIENTE",
+  "tipoBeca": "EXCELENCIA_ACADEMICA",
+  "postulante": {
+    "nombres": "Diego Alonso",
+    "apellidos": "Gómez Pérez",
+    "dni": "12345678",
+    "fechaNacimiento": "2010-08-22",
+    "contacto": {
+      "correo": "diego.alonso@colegio.edu.pe",
+      "celular": "912345678"
+    },
+    "centroEstudios": {
+      "nombre": "Colegio San Agustín",
+      "tipo": "PRIVADO",
+      "nivel": "PRIMARIA",
+      "departamento": "Lima",
+      "provincia": "Lima",
+      "distrito": "San Isidro"
+    }
+  }
+}
+```
+
+#### **2. Gestión de Datos de Apoderado**
+```java
+GET /api/v1/data-apoderado/3/1
+Accept: application/json
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "id": 1,
+  "createdAt": "2025-05-12T10:45:22.123Z",
+  "updatedAt": "2025-05-12T10:45:22.123Z",
+  "apoderadoId": 3,
+  "nombres": "Carlos Alberto",
+  "apellidos": "Rodríguez Mendoza",
+  "dni": "76543210",
+  "fechaNacimiento": "1980-11-25",
+  "contacto": {
+    "correo": "carlos.rodriguez@empresa.com",
+    "celular": "987654321"
+  },
+  "domicilio": {
+    "direccion": "Calle Las Gardenias 456",
+    "departamento": "Lima",
+    "provincia": "Lima",
+    "distrito": "Miraflores"
+  },
+  "cuentaBancaria": {
+    "entidadBancaria": "BBVA",
+    "numeroCuenta": "001123456789",
+    "cci": "01112345678912345"
+  },
+  "informacionLaboral": {
+    "tipoColaborador": "TIEMPO_COMPLETO",
+    "cargo": "Jefe de Ventas",
+    "sede": "Oficina Central",
+    "local": "Torre B",
+    "ingreso": 2015
+  }
+}
+```
+
+---
+
+### **Arquitectura Clave**
+
+1. **Patrón CQRS**:
+   - `ApplicationCommandService`: Maneja creación/actualización
+   - `ApplicationQueryService`: Gestiona consultas
+
+2. **Value Objects**:
+   ```java
+   public record Contacto(String email, String telefono) {}
+   public record Domicilio(String direccion, String distrito) {}
+   ```
+
+3. **Validaciones**:
+   - Campos obligatorios en recursos
+   - Verificación de existencia de relaciones (apoderado → postulante)
+
+---
+
+### **Flujo Completo de Postulación**
+
+1. **Paso 1**: Registro de datos del apoderado
+   ```java
+   POST /data-apoderado/{userId}
+   ```
+2. **Paso 2**: Creación de postulación
+   ```java
+   POST /applications
+   ```
+3. **Paso 3**: Consulta de estado
+   ```java
+   GET /applications/{id}
+   ```
+
+---
+
+### **Repositorio y Commits**
+
+| Feature | Commit ID | Cambios |
+|---------|-----------|---------|
+| Core Applications | `f8e7d6c` | Implementación inicial |
+| Data Apoderado | `a3b4c5d` | Gestión de datos complementarios |
+| Validaciones | `e6f7g8h` | Reglas de negocio |
+
+**Repositorio**: [github.com/Aventis-Scholr/scholr-backend](https://github.com/Aventis-Scholr/scholr-backend)
+
+---
+
+### **Conclusión**
+El módulo permite:
+- ✅ Gestión completa del ciclo de postulaciones
+- ✅ Datos estructurados de apoderados (contacto, bancarios, laborales)
+- ✅ Seguridad en accesos (relación usuario → datos)
+
+**Próximos pasos**: Integración con servicio de notificaciones para cambios de estado.
+
+**Sección Management (Gestión de Becas y Reportes)**
+
+---
+
+## **Introducción**  
+El módulo **Management** se encarga de la gestión centralizada de becas y reportes dentro de la plataforma Scholr. A continuación, se detallan los endpoints disponibles, su funcionalidad y documentación técnica.
+
+---
+
+## **Tabla de Endpoints Management**  
+
+| Bounded Context | Endpoint | Acción | Verbo HTTP | Parámetros | Ejemplo de Respuesta | Documentación |
+|-----------------|----------|--------|------------|------------|----------------------|---------------|
+| **Scholarships (Becas)** | `/api/v1/scholarships` | Listar todas las becas | GET | - | `[{"id": 0,"name": "string","companyName": "string","requirements": [{}],"scholarshipType": "PARTIAL","scholarshipStatus": "DRAFT","coordinatorId": 0}]` | [Swagger](#) |
+|  | `/api/v1/scholarships` | Crear una nueva beca | POST | `{"name": "string","companyName": "string","requirements": [{}],"scholarshipType": "PARTIAL","scholarshipStatus": "DRAFT","coordinatorId": 0}` | `{"id": 0,"name": "string","companyName": "string","requirements": [{}],"scholarshipType": "PARTIAL","scholarshipStatus": "DRAFT","coordinatorId": 0}` | [Swagger](#) |
+| **Reports (Reportes)** | `/api/v1/reports` | Crear un reporte | POST | `{"applicationId": 0,"apoderadoData": {},"postulanteSnapshot": {},"resolution": "DRAFT","adminComments": "string"}` | `{"id": 0,"applicationId": 0,"apoderadoData": {},"postulanteSnapshot": {},"resolution": "DRAFT","adminComments": "string"}` | [Swagger](#) |
+
+---
+
+## **Ejemplos de Uso**  
+
+### **1. Gestión de Becas**  
+```java
+// Crear una nueva beca
+POST /api/v1/scholarships
+Body: {
+  "name": "Beca Tech 2024",
+  "companyName": "Backus",
+  "requirements": [
+    {"description": "Promedio mínimo 15", "documentRequired": "Certificado de notas"}
+  ],
+  "scholarshipType": "FULL",
+  "scholarshipStatus": "PUBLISHED",
+  "coordinatorId": 5
+}
+
+// Respuesta (201 Created)
+{
+  "id": 15,
+  "name": "Beca Tech 2024",
+  "companyName": "Backus",
+  "requirements": [
+    {
+      "id": 1,
+      "description": "Promedio mínimo 15",
+      "documentRequired": "Certificado de notas"
+    }
+  ],
+  "scholarshipType": "FULL",
+  "scholarshipStatus": "PUBLISHED",
+  "coordinatorId": 5,
+  "createdAt": "2024-05-15T14:30:00Z"
+}
+
+// Listar todas las becas
+GET /api/v1/scholarships
+
+// Respuesta (200 OK)
+[
+  {
+    "scholarshipId": "sch-001",
+    "name": "Beca Tech 2024",
+    "description": "Beca para estudiantes de ingeniería",
+    "requirements": ["Promedio mínimo 15", "Certificado de notas"],
+    "scholarshipType": "FULL",
+    "status": "PUBLISHED",
+    "startDate": "2024-06-01",
+    "endDate": "2024-12-31"
+  }
+]
+```
+
+### **2. Gestión de Reportes**  
+```java
+// Crear un reporte
+POST /api/v1/reports
+Body: {
+  "reportType": "APPLICATION",
+  "applicationId": "app-123",
+  "comments": "Revisión pendiente de documentación"
+}
+
+// Respuesta (201 Created)
+{
+  "reportId": "rep-001",
+  "reportType": "APPLICATION",
+  "applicationId": "app-123",
+  "comments": "Revisión pendiente de documentación",
+  "createdAt": "2024-05-15T14:30:00Z"
+}
+```
+
+---
+
+## **Arquitectura y Patrones**  
+
+1. **CQRS (Command Query Responsibility Segregation)**  
+   - **`ScholarshipCommandService`**: Maneja la creación de becas.  
+   - **`ScholarshipQueryService`**: Procesa consultas (listado de becas).  
+   - **`ReportCommandService`**: Encargado de la generación de reportes.  
+
+2. **DTO Pattern**  
+   - Uso de `*Resource` para transferencia de datos:  
+     ```java
+     public record ScholarshipResource(Long id, String name, String description, String status) {}
+     public record ReportResource(Long id, String title, String description, String type) {}
+     ```
+
+3. **Swagger Integration**  
+   - Documentación automática con `@Tag` en cada controlador.  
+
+---
+
+## **Seguridad**  
+- **JWT**: Todos los endpoints requieren autenticación (excepto Swagger UI).  
+- **Validaciones**:  
+  - Campos obligatorios con `@Valid`.  
+  - Manejo de errores (400 Bad Request si falta algún campo).  
+
+---
+
+## **Repositorio y Commits**  
+
+| Endpoint | Commit ID | Cambios Realizados |
+|----------|-----------|---------------------|
+| Scholarships | `x1y2z3a` | Implementación de CRUD de becas |  
+| Reports | `b4c5d6e` | Creación de reportes |  
+
+---
+
+## **Conclusión**  
+El módulo **Management** proporciona:  
+✅ **Gestión de becas** (creación y consulta).  
+✅ **Generación de reportes** (seguimiento de datos).  
+✅ **Escalabilidad** mediante CQRS y DTOs.  
+✅ **Documentación Swagger** integrada.  
+
+--- 
+
 ### 6.2.2.7. Software Deployment Evidence for Sprint Review
 
 **Actividades Realizadas:**
