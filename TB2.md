@@ -5053,6 +5053,25 @@ Si tuvieras acceso a esta herramienta de forma oficial, ¿la recomendarías a ot
 
 ### 6.3.2. Registro de Entrevistas
 
+**Segmento 1: Padres Trabajadores (Empleados/Colaboradores)**
+
+1.  Entrevista 1: <br>
+    Datos del entrevistado <br>
+    Nombre: Isabel<br>
+    Apellidos: Ríos<br>
+    Edad: 37 <br>
+    Distrito: Pueblo Libre <br>
+
+![Entrevista1](assets/images/interviews/entrevista)
+
+Link de entrevista : [Entrevista](https://drive.google.com/file/d/1ik6YJekV_ESf4EYik6W0SgLZOVAfbMYR/view?usp=sharing)
+
+Inicio: 00:00<br>
+Duracion: 00:00
+
+Resumen:<br>
+Isabel Ríos, asistente administrativa y madre trabajadora, evaluó el prototipo de Scholr tras una demo guiada. Destacó la organización general de la app y la utilidad del listado de postulaciones, pero señaló la necesidad de una guía inicial, confirmaciones más claras al enviar solicitudes y mayor visibilidad del tutorial. Recomendó incluir alertas sobre documentos necesarios y respaldos como correos automáticos. Considera que la app tiene potencial para facilitar el proceso de becas si se mejora la orientación y la confianza en cada paso. Está dispuesta a recomendarla si se pulen estos aspectos.
+
 **Segmento 2: Coordinadores de Bienestar Laboral/RSE**
 
 1.  Entrevista 1: <br>
