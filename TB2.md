@@ -4349,7 +4349,44 @@ Management Controller Test
 
 En este Sprint 2 , los miembros del equipo de desarrollo de software de Aventis han completado el bounded context Applications tanto por parte del frontend como backend 
 
-[ACA PON TU PARTE JOHN]
+**Tras haber iniciado sesión**
+<br>
+
+* Sección de selcción de formulario  
+![alt text](assets/tb2/applicationSeleccion.png)  
+<br>
+
+* Formulario sobre datos del apoderado:  
+![alt text](assets/tb2/datosApoderado.png)  
+<br>
+
+- En caso de haber sido llenado previamente
+![alt text](assets/tb2/datosApoderadoCargados.png)  
+<br>
+
+* Formulario para postulación (en caso de ser editado, se cargan los datos)
+![alt text](assets/tb2/formularioPostulacionCarga.png)  
+<br>
+
+* Al guardar una postulacion, esta no se envia y aún puede ser editada
+![alt text](assets/tb2/postulacionGuardada.png)  
+<br>
+
+* Al enviar una postulacion, esta ya no puede ser edita
+![alt text](assets/tb2/postulacionEnviada.png)  
+<br>
+
+* Drawer
+![alt text](assets/tb2/drawer.png)  
+<br>
+
+* Vista Tutorial
+![alt text](assets/tb2/seccionTutorial.png)  
+<br>
+
+* Cartilla de instrucciones
+![alt text](assets/tb2/cartillaDeInstrucciones.png)  
+<br>
 
 en segundo lugar se realizo el frontend en flutter de el bounded context IAM:
 
