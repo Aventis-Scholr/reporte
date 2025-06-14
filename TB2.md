@@ -56,7 +56,7 @@ Product: "Scholr"
 | TB2      | 13/05/2025 | Estefano Jaque    | COMPLETAR |
 | TB2      | 13/05/2025 | John Arévalo      | COMPLETAR |
 | TB2     | 14/06/2025  | Diego Rosado | Desarrolle la entrevista para el segundo segmento objetivo coordinadora de RSE y las heurísticas según el análisis de las entrevista. |
-| TB2      | 13/05/2025 | Sebastian Real    | COMPLETAR |
+| TB2      | 13/05/2025 | Sebastian Real    | Desarrollé una entrevista para el segundo segmento objetivo. Realicé el registro de evidencias de servicios y despliegue del sprint 2. |
 
 
 ## Project Report Collaboration Insights
