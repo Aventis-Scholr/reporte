@@ -4405,8 +4405,6 @@ en segundo lugar se realizo el frontend en flutter de el bounded context IAM:
 
 ### 6.2.2.6. Services Documentation Evidence for Sprint Review
 
-### 6.2.1.5. Services Documentation Evidence for Sprint Review
-
 **Introducción:**   
 Durante este Sprint, se logró la documentación y despliegue de varios Endpoints correspondientes a los diferentes bounded contexts implementados por el equipo. Se utilizó OpenAPI para describir de forma estructurada los servicios Web desarrollados. A continuación, se presenta la relación de los Endpoints, las acciones soportadas y la respectiva documentación disponible.
 
