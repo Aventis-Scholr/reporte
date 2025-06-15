@@ -5060,12 +5060,12 @@ Si tuvieras acceso a esta herramienta de forma oficial, ¿la recomendarías a ot
     Edad: 37 <br>
     Distrito: Pueblo Libre <br>
 
-![Entrevista1](assets/images/interviews/entrevista)
+![Entrevista1](assets/images/interviews/entrevista_isabel.png)
 
-Link de entrevista : [Entrevista](https://drive.google.com/file/d/1ik6YJekV_ESf4EYik6W0SgLZOVAfbMYR/view?usp=sharing)
+Link de entrevista : [Entrevista](https://drive.google.com/file/d/1NSQV5fmvrmviUK_HzI5NfeYLHggWL17r/view?usp=sharing)
 
-Inicio: 00:00<br>
-Duracion: 00:00
+Inicio: 2:19<br>
+Duracion: 7:22
 
 Resumen:<br>
 Isabel Ríos, asistente administrativa y madre trabajadora, evaluó el prototipo de Scholr tras una demo guiada. Destacó la organización general de la app y la utilidad del listado de postulaciones, pero señaló la necesidad de una guía inicial, confirmaciones más claras al enviar solicitudes y mayor visibilidad del tutorial. Recomendó incluir alertas sobre documentos necesarios y respaldos como correos automáticos. Considera que la app tiene potencial para facilitar el proceso de becas si se mejora la orientación y la confianza en cada paso. Está dispuesta a recomendarla si se pulen estos aspectos.
