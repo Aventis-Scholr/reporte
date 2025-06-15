@@ -4245,7 +4245,7 @@ En paralelo, se trabajó en el bounded context IAM, finalizando tanto el fronten
 Gracias a esta estructura, el equipo pudo mantener una colaboración efectiva, resolver bloqueos con agilidad y cumplir con los objetivos establecidos para este sprint.  
 
 
-[alt text](/assets/images/trello-sprint2.png)
+[alt text](/assets/images/trellosprint2.png)
 
 
 | User Story | Title                                        | Work-Item ID | Task Title                             | Description                                                                                     | Estimation (Hours) | Assigned To                  | Status |
@@ -4941,7 +4941,7 @@ El módulo **Management** proporciona:
 
 - Despliegue del backend
 
-![alt text](assets/images/swagger_sprint2.png)
+![alt text](assets/images/swaggersprint2.png)
 
 ### 6.2.2.8. Software Deployment Evidence for Sprint Review
 
