@@ -53,7 +53,7 @@ Product: "Scholr"
 
 | Version | Fecha      | Autor             | Descripcion |
 | ------- | ---------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| TB2      | 13/05/2025 | Estefano Jaque    | COMPLETAR |
+| TB2      | 13/05/2025 | Estefano Jaque    | Realice el codigo del bounded context IAM en flutter , como team leade delegeue el trabajo respectivo a cada miembro , ademas realice sprint backlog 2 , sprint 2 , team collaboration insisgths , etc |
 | TB2      | 13/05/2025 | John Arévalo      | Desarrollé una entrevista para el primer segmento objetivo. Adicioné las pruebas para el backend del proyecto y documené estas, así como la evidencia de ejecución del sprint 2. |
 | TB2     | 14/06/2025  | Diego Rosado | Desarrolle la entrevista para el segundo segmento objetivo coordinadora de RSE y las heurísticas según el análisis de las entrevista. |
 | TB2      | 13/05/2025 | Sebastian Real    | Desarrollé una entrevista para el segundo segmento objetivo. Realicé el registro de evidencias de servicios y despliegue del sprint 2. |
@@ -69,9 +69,9 @@ Product: "Scholr"
 | :-----------------------------------: | :-----------------------------------------------: |
 |https://github.com/Aventis-Scholr/landing-page | https://github.com/Aventis-Scholr/scholr-mobile |
 
-|  URL del backend  |
-| :-----------------------------------: |
-|https://github.com/Aventis-Scholr/scholr-backend | 
+|  URL del backend  |       URL del repositorio del frontend mobile en flutter      |
+| :-----------------------------------: | :-----------------------------------------------: |
+|https://github.com/Aventis-Scholr/scholr-backend | https://github.com/Aventis-Scholr/scholr-mobile-flutter.git |
 
 
 
@@ -101,6 +101,14 @@ Product: "Scholr"
 - John Telesforo Arevalo Meza: 3
 - Diego Alonso Rosado Iporre: 1
 
+<br>**Frontend-flutter:**  
+
+![alt text](assets/tb2/flut.png)    
+
+![alt text](assets/tb2/fluter.png)  
+
+- Estefano Oscar Jaque Peña: 1  
+
 TB1:<br>
 |Integrante|Tarea Asignada|
 |-|-|
@@ -121,7 +129,7 @@ TP:<br>
 TB2:<br>
 |Integrante|Tarea Asignada|
 |-|-|
-|Jaque Peña, Estefano Oscar|COMPLETAR|
+|Jaque Peña, Estefano Oscar|Realice el codigo del bounded context IAM en flutter , como team leade delegeue el trabajo respectivo a cada miembro , ademas realice sprint backlog 2 , sprint 2 , team collaboration insisgths , etc |
 | Sebastian Omar Real Calderón | Entrevista a coordinadora, evidencias de servicios y de despliegue |
 | Arévalo Meza John | Entrevista a colaboradora, evidencia de pruebas y ejecución. |
 | Rosado Iporre, Diego | Entrevista al coordinadora y heurísticas de cada entrevista. |
@@ -224,7 +232,7 @@ TB2:<br>
       - [6.1.1. Software Development Environment Configuration](#611-software-development-environment-configuration)
       - [6.1.2. Source Code Management](#612-source-code-management)
       - [6.1.3. Source Code Style Guide & Conventions](#613-source-code-style-guide--conventions)
-      - [6.1.4. Software Deployment Configuration.](#614-software-deployment-condiguration)
+      - [6.1.4. Software Deployment Configuration.](#614-software-deployment-configuration)
     - [6.2. Landing Page, Services & Applications Implementation.](#62-landing-page--mobile-application-implementation)
       - [6.2.1. Sprint 1](#621-sprint-1)
         - [6.2.1.1. Sprint Planning 1.](#6211-sprint-planning-1)
@@ -234,6 +242,21 @@ TB2:<br>
         - [6.2.1.5. Services Documentation Evidence for Sprint Review.](#6215-services-documentation-evidence-for-sprint-review)
         - [6.2.1.6. Software Deployment Evidence for Sprint Review.](#6216-software-deployment-evidence-for-sprint-review)
         - [6.2.1.7. Team Collaboration Insights during Sprint.](#6217-team-collaboration-insights-during-sprint-1)
+      [6.2.2. Sprint 2](#622-sprint-2)
+        - [6.2.2.1. Sprint Planning 2.](#6221-sprint-planning-2)
+        - [6.2.2.2. Sprint Backlog 2.](#6222-sprint-backlog-2)
+        - [6.2.2.3. Development Evidence for Sprint Review.](#6223-development-evidence-for-sprint-review)
+        - [6.2.2.4. Testing Suite Evidence for Sprint Review.](#6224-testing-suite-evidence-for-sprint-review)
+        -[6.2.2.5. Execution Evidence for Sprint Review.](#6225-execution-evidence-for-sprint-review)
+        - [6.2.2.6. Services Documentation Evidence for Sprint Review.](#6226-services-documentation-evidence-for-sprint-review)
+        - [6.2.2.7. Software Deployment Evidence for Sprint Review.](#6227-software-deployment-evidence-for-sprint-review)
+        - [6.2.2.8. Team Collaboration Insights during Sprint 2.](#6228-team-collaboration-insights-during-sprint-2)
+    - [6.3. Validation Interviews. ](#63-validation-interviews)
+        -[6.3.1. Diseño de Entrevistas.](#631-diseño-de-entrevistas)
+        - [6.3.1. Diseño de Entrevistas.](#631-diseño-de-entrevistas)
+        - [6.3.2. Registro de Entrevistas.](#632-registro-de-entrevistas)
+        - [6.3.3. Evaluaciones según heurísticas.](#63-validation-interviews)
+    - [6.4. Video About-the-Product.](#64-video-about-the-product)
   - [Conclusiones](#conclusiones)
   - [Bibliografia](#bibliografia)
   - [Anexos](#anexos)
@@ -247,8 +270,8 @@ En el siguiente cuadro se describen las acciones realizadas y enunciados de conc
 
 | Criterio especifico | Acciones Realizadas| Conclusiones|
 | :-- | :-- | -- |
-| 1. Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | <br>**Estefano Oscar Jaque Peña**<br>**TB1:** Al desarrollar las user stories comprendí mejor la funcionalidad futura del aplicativo. Las entrevistas y la creación del user persona me permitieron conocer más a fondo los segmentos objetivos. Además, con el proceso Lean UX identifiqué necesidades clave y beneficios potenciales del producto.<br>**TP:** Desarrollé el bounded context IAM (frontend y backend), aplicando tácticas de DDD. Esto me permitió actualizar conocimientos en arquitectura de software, seguridad y gestión de usuarios, además de emplear herramientas de desarrollo profesional en la sección de *Software Development* del informe.<br>**TB2:** COMPLETAR<br><br>**Diego Alonso Rosado Iporre**<br>**TB1:** Apliqué herramientas como entrevistas, wireframes y escenarios para identificar oportunidades clave del proyecto. Contribuí al diseño de la solución desde la comprensión del dominio hasta la arquitectura del software.<br>**TP:** Desarrollé el bounded context Management junto a mi compañero. Aplicamos patrones tácticos de DDD y reforcé mis conocimientos en diseño de producto y wireframes, elementos clave para definir flujos de interacción.<br>**TB2:** Durante TB2, al realizar entrevistas y análisis heurístico, actualicé y reforcé mis conocimientos en principios de usabilidad, experiencia de usuario y evaluación de interfaces. Estos aprendizajes fueron fundamentales para identificar mejoras en el prototipo y asegurar que la solución responda a necesidades reales.<br><br>**John Arévalo Meza**<br>**TB1:** Realicé el registro de entrevistas, *empathy mapping*, *user journey mapping*, *event storming* y *bounded context canvases*, lo que permitió identificar claramente los *bounded contexts* y profundizar en la comprensión del dominio.<br>**TP:** Desarrollé el bounded context Applications, lo que fortaleció mis habilidades en desarrollo backend y parcialmente en frontend, así como en diseño táctico DDD. Además, elaboré la landing page, aplicando conocimientos actualizados de UI/UX.<br>**TB2:** Al realizar la entrevista, comprendí el valor de escuchar activamente al usuario para tomar decisiones informadas. Esta experiencia me permitió afianzar mis habilidades en evaluación de interfaces y asegurar que las soluciones propuestas respondan de manera efectiva a las necesidades de quienes las utilizarán.<br><br>**Sebastián Omar Real Calderón**<br>**TB1:** Apliqué análisis de entrevistas y modelado de dominios para entender las necesidades reales del proyecto. Mi contribución ayudó a traducir problemas complejos en requisitos claros para la solución de software.<br>**TP:** Desarrollé parcialmente el frontend y backend del bounded context Management. Implementé prototipos, wireframes, userflows y mockups, integrando herramientas actualizadas de diseño y análisis de usuario.<br>**TB2:** Al realizar mi entrevista, obtuve conocimientos sobre como se relaciona el feedback del usuario con los cambios a implementar, asegurándome que esas mejoras permitan optimizar la experiencia según las necesidades reales del usuario. | **TB1:** El equipo demostró capacidad para integrar aprendizajes técnicos y metodologías ágiles en el desarrollo del proyecto. A través de la investigación y colaboración, se identificaron oportunidades clave para optimizar procesos mediante tecnología, reforzando la importancia de adaptarse continuamente a los requerimientos del contexto profesional.<br>**TP:** El equipo demostró la capacidad de aplicar conceptos técnicos avanzados como el diseño táctico de DDD y arquitectura por bounded contexts. Además, se utilizaron herramientas modernas para gestión de usuarios, diseño UI/UX y desarrollo frontend/backend, evidenciando una actualización profesional efectiva y aplicada.|
-| 2. Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software. | <br>**Estefano Oscar Jaque Peña**<br>**TB1:** Al realizar las user stories comprendí en profundidad la funcionalidad futura del aplicativo. Las entrevistas y la creación del user persona me permitieron conocer mejor a los segmentos objetivos. Además, con el proceso Lean UX pude identificar necesidades clave y beneficios del producto.<br>**TP:** El desarrollo completo del bounded context IAM me permitió reconocer la necesidad de seguir aprendiendo sobre patrones de seguridad, arquitectura modular y organización de sprints, fundamentales para liderar proyectos escalables.<br>**TB2:** COMPLETAR<br><br>**Diego Alonso Rosado Iporre**<br>**TB1:** Entendí que el aprendizaje constante es esencial para enfrentar retos cambiantes. Este proyecto fortaleció mi motivación por seguir explorando enfoques modernos en desarrollo de software.<br>**TP:** Participar en el diseño del producto, mockups y desarrollo me mostró que el aprendizaje constante en herramientas visuales y estructuración de información es vital para soluciones centradas en el usuario.<br>**TB2:** Desarrollar la entrevista y el análisis heurístico en TB2 me permitió identificar nuevas perspectivas de mejora en la experiencia de usuario. Este proceso reforzó la importancia de actualizar constantemente mis habilidades en investigación, usabilidad y análisis, elementos clave para el desarrollo de soluciones de software efectivas.<br><br>**Sebastián Omar Real Calderón**<br>**TB1:** Reconozco que mantenerme actualizado con metodologías ágiles y técnicas de análisis es clave para desarrollar soluciones efectivas. Este proyecto reforzó mi compromiso con el aprendizaje continuo para abordar desafíos técnicos y de negocio.<br>**TP:** Reconocí que aplicar herramientas como Figma, userflows y la estructuración del bounded context me obliga a mantenerme al día en diseño de interacción, flujos administrativos y análisis UX.<br>**TB2:** El proceso de entrevista y análisis en TB2 me ayudó a descubrir nuevas oportunidades para mejorar la experiencia de usuario. Esta experiencia destacó la necesidad de mantenerme actualizado en investigación de usuarios, usabilidad y evaluación, aspectos fundamentales para crear soluciones de software más efectivas.<br><br>**John Arévalo Meza**<br>**TB1:** Comprendí que mantenerse a la vanguardia con metodologías y flujos de trabajo es importante, ya que nos permite eliminar posibles retrasos y aplicar conocimientos previos para mejorar el proyecto.<br>**TP:** Comprendí que al implementar múltiples capas (backend, frontend, diseño) debía reforzar constantemente mis conocimientos y adaptarme a tecnologías como frameworks modernos y buenas prácticas de UI.<br>**TB2:** Realizar la entrevista y el análisis de esta me permitió detectar oportunidades valiosas para optimizar la experiencia de usuario. Esta actividad reafirmó la importancia de seguir fortaleciendo mis competencias en investigación, usabilidad y evaluación, pilares esenciales para diseñar soluciones más acertadas y centradas en el usuario. | **TB1:** El equipo evidenció la importancia de la formación continua en el ámbito profesional, aplicando nuevos conocimientos directamente al desarrollo del proyecto. Esta experiencia destacó cómo la adaptabilidad y la mejora constante son esenciales para entregar soluciones de software alineadas con las necesidades reales del mercado.<br>**TP:** El equipo valoró el aprendizaje continuo como parte esencial del crecimiento profesional. Cada estudiante identificó áreas en las que necesitaba mejorar y lo hizo en el transcurso del proyecto, integrando nuevos conocimientos en seguridad, diseño, arquitectura de software y metodologías ágiles. |
+| 1. Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | <br>**Estefano Oscar Jaque Peña**<br>**TB1:** Al desarrollar las user stories comprendí mejor la funcionalidad futura del aplicativo. Las entrevistas y la creación del user persona me permitieron conocer más a fondo los segmentos objetivos. Además, con el proceso Lean UX identifiqué necesidades clave y beneficios potenciales del producto.<br>**TP:** Desarrollé el bounded context IAM (frontend y backend), aplicando tácticas de DDD. Esto me permitió actualizar conocimientos en arquitectura de software, seguridad y gestión de usuarios, además de emplear herramientas de desarrollo profesional en la sección de *Software Development* del informe.<br>**TB2:** Durante TB2, desarrollé el Sprint Backlog 2, consolidando mi entendimiento sobre planificación ágil y gestión de tareas en entornos colaborativos. Además, completé el Execution Evidence, lo cual me permitió reflejar de forma clara y estructurada los avances del proyecto. Finalmente, implementé el código en Flutter para el bounded context IAM, lo que me permitió afianzar mis conocimientos en integración de interfaces personalizadas con la lógica de negocio, usando herramientas modernas como Provider y prácticas de arquitectura limpia.<br><br>**Diego Alonso Rosado Iporre**<br>**TB1:** Apliqué herramientas como entrevistas, wireframes y escenarios para identificar oportunidades clave del proyecto. Contribuí al diseño de la solución desde la comprensión del dominio hasta la arquitectura del software.<br>**TP:** Desarrollé el bounded context Management junto a mi compañero. Aplicamos patrones tácticos de DDD y reforcé mis conocimientos en diseño de producto y wireframes, elementos clave para definir flujos de interacción.<br>**TB2:** Durante TB2, al realizar entrevistas y análisis heurístico, actualicé y reforcé mis conocimientos en principios de usabilidad, experiencia de usuario y evaluación de interfaces. Estos aprendizajes fueron fundamentales para identificar mejoras en el prototipo y asegurar que la solución responda a necesidades reales.<br><br>**John Arévalo Meza**<br>**TB1:** Realicé el registro de entrevistas, *empathy mapping*, *user journey mapping*, *event storming* y *bounded context canvases*, lo que permitió identificar claramente los *bounded contexts* y profundizar en la comprensión del dominio.<br>**TP:** Desarrollé el bounded context Applications, lo que fortaleció mis habilidades en desarrollo backend y parcialmente en frontend, así como en diseño táctico DDD. Además, elaboré la landing page, aplicando conocimientos actualizados de UI/UX.<br>**TB2:** Al realizar la entrevista, comprendí el valor de escuchar activamente al usuario para tomar decisiones informadas. Esta experiencia me permitió afianzar mis habilidades en evaluación de interfaces y asegurar que las soluciones propuestas respondan de manera efectiva a las necesidades de quienes las utilizarán.<br><br>**Sebastián Omar Real Calderón**<br>**TB1:** Apliqué análisis de entrevistas y modelado de dominios para entender las necesidades reales del proyecto. Mi contribución ayudó a traducir problemas complejos en requisitos claros para la solución de software.<br>**TP:** Desarrollé parcialmente el frontend y backend del bounded context Management. Implementé prototipos, wireframes, userflows y mockups, integrando herramientas actualizadas de diseño y análisis de usuario.<br>**TB2:** Al realizar mi entrevista, obtuve conocimientos sobre como se relaciona el feedback del usuario con los cambios a implementar, asegurándome que esas mejoras permitan optimizar la experiencia según las necesidades reales del usuario. | **TB1:** El equipo demostró capacidad para integrar aprendizajes técnicos y metodologías ágiles en el desarrollo del proyecto. A través de la investigación y colaboración, se identificaron oportunidades clave para optimizar procesos mediante tecnología, reforzando la importancia de adaptarse continuamente a los requerimientos del contexto profesional.<br>**TP:** El equipo demostró la capacidad de aplicar conceptos técnicos avanzados como el diseño táctico de DDD y arquitectura por bounded contexts. Además, se utilizaron herramientas modernas para gestión de usuarios, diseño UI/UX y desarrollo frontend/backend, evidenciando una actualización profesional efectiva y aplicada.<br>**TB2:** El equipo continuó con una actualización constante de habilidades, aplicando conocimientos avanzados en frameworks modernos como Flutter, prácticas ágiles y herramientas de documentación y validación. La integración entre planificación, desarrollo e implementación demuestra un enfoque profesional y articulado hacia la resolución de problemas reales, evidenciando una evolución técnica sólida y aplicable a futuros entornos laborales.|
+| 2. Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software.| <br>**Estefano Oscar Jaque Peña**<br>**TB1:** Al realizar las user stories comprendí en profundidad la funcionalidad futura del aplicativo. Las entrevistas y la creación del user persona me permitieron conocer mejor a los segmentos objetivos. Además, con el proceso Lean UX pude identificar necesidades clave y beneficios del producto.<br>**TP:** El desarrollo completo del bounded context IAM me permitió reconocer la necesidad de seguir aprendiendo sobre patrones de seguridad, arquitectura modular y organización de sprints, fundamentales para liderar proyectos escalables.<br>**TB2:** En TB2, reconocí la importancia de seguir aprendiendo continuamente al enfrentarme con retos en la implementación de interfaces en Flutter, que exigieron revisar documentación oficial y aplicar buenas prácticas. La construcción del Execution Evidence me ayudó a reflexionar sobre los procesos aplicados y sus resultados, destacando la necesidad de mantener una mentalidad crítica y de mejora constante. El trabajo en el Sprint Backlog 2 fortaleció mi compromiso con la organización eficiente del trabajo y con la adaptación a nuevas herramientas que potencien el rendimiento del equipo.<br><br>**Diego Alonso Rosado Iporre**<br>**TB1:** Entendí que el aprendizaje constante es esencial para enfrentar retos cambiantes. Este proyecto fortaleció mi motivación por seguir explorando enfoques modernos en desarrollo de software.<br>**TP:** Participar en el diseño del producto, mockups y desarrollo me mostró que el aprendizaje constante en herramientas visuales y estructuración de información es vital para soluciones centradas en el usuario.<br>**TB2:** Desarrollar la entrevista y el análisis heurístico en TB2 me permitió identificar nuevas perspectivas de mejora en la experiencia de usuario. Este proceso reforzó la importancia de actualizar constantemente mis habilidades en investigación, usabilidad y análisis, elementos clave para el desarrollo de soluciones de software efectivas.<br><br>**Sebastián Omar Real Calderón**<br>**TB1:** Reconozco que mantenerme actualizado con metodologías ágiles y técnicas de análisis es clave para desarrollar soluciones efectivas. Este proyecto reforzó mi compromiso con el aprendizaje continuo para abordar desafíos técnicos y de negocio.<br>**TP:** Reconocí que aplicar herramientas como Figma, userflows y la estructuración del bounded context me obliga a mantenerme al día en diseño de interacción, flujos administrativos y análisis UX.<br>**TB2:** El proceso de entrevista y análisis en TB2 me ayudó a descubrir nuevas oportunidades para mejorar la experiencia de usuario. Esta experiencia destacó la necesidad de mantenerme actualizado en investigación de usuarios, usabilidad y evaluación, aspectos fundamentales para crear soluciones de software más efectivas.<br><br>**John Arévalo Meza**<br>**TB1:** Comprendí que mantenerse a la vanguardia con metodologías y flujos de trabajo es importante, ya que nos permite eliminar posibles retrasos y aplicar conocimientos previos para mejorar el proyecto.<br>**TP:** Comprendí que al implementar múltiples capas (backend, frontend, diseño) debía reforzar constantemente mis conocimientos y adaptarme a tecnologías como frameworks modernos y buenas prácticas de UI.<br>**TB2:** Realizar la entrevista y el análisis de esta me permitió detectar oportunidades valiosas para optimizar la experiencia de usuario. Esta actividad reafirmó la importancia de seguir fortaleciendo mis competencias en investigación, usabilidad y evaluación, pilares esenciales para diseñar soluciones más acertadas y centradas en el usuario. | **TB1:** El equipo evidenció la importancia de la formación continua en el ámbito profesional, aplicando nuevos conocimientos directamente al desarrollo del proyecto. Esta experiencia destacó cómo la adaptabilidad y la mejora constante son esenciales para entregar soluciones de software alineadas con las necesidades reales del mercado.<br>**TP:** El equipo valoró el aprendizaje continuo como parte esencial del crecimiento profesional. Cada estudiante identificó áreas en las que necesitaba mejorar y lo hizo en el transcurso del proyecto, integrando nuevos conocimientos en seguridad, diseño, arquitectura de software y metodologías ágiles. <br>**TB2:** A lo largo del segundo tramo del proyecto, el equipo reafirmó que el aprendizaje permanente es clave para afrontar retos técnicos y de gestión. Los estudiantes mostraron una actitud proactiva al investigar nuevas herramientas, adaptar tecnologías emergentes y aplicar mejoras basadas en el feedback de usuarios y resultados de evaluación. Esta disposición a seguir aprendiendo asegura una base sólida para el crecimiento profesional y la resolución de desafíos en escenarios reales de desarrollo de software.|
 
 ## Capítulo I: Presentación
 
@@ -272,17 +295,17 @@ Visión: Aspiramos a ser la principal plataforma de conexión entre apoderados y
 
 - John Telésforo Arévalo Meza - U202117377
 
-| <p align="center"><img width="300" src="assets/images/johnprofile.jpg"> </p> | Soy John Arévalo, tengo 20 años y soy estudiante de la carrera de Ingeniería de Software. Tengo conocimiento en lenguajes de programación como python y c++, y bases de datos como SQLServer y MongoDB. Desde pequeño me sentí atraído por la tecnología, por lo que me decidí a estudiar la carrera, además disfruto de jugar videojuegos con amigos en mi tiempo libre. |
+| <p align="center"><img width="340" height="180" src="assets/images/johnprofile.jpg"> </p> | Soy John Arévalo, tengo 20 años y soy estudiante de la carrera de Ingeniería de Software. Tengo conocimiento en lenguajes de programación como python y c++, y bases de datos como SQLServer y MongoDB. Desde pequeño me sentí atraído por la tecnología, por lo que me decidí a estudiar la carrera, además disfruto de jugar videojuegos con amigos en mi tiempo libre. |
 |:-|-|
 
 - Sebastián Omar Real Calderón - U20221D964
 
-| <p align="center"><img width="300" src="assets/images/sebastianprofile.jpg"> </p> | Soy Sebastián Real Calderón, tengo 19 años y soy estudiante de la carrera de Ingeniería de Software. Tengo conocimientos sobre lenguajes de programación como C++, C# y Java. Principalmente me dedico al desarrollo de proyectos que me permitan desarrollar mis habilidades de programación, tales como videojuegos o programas sencillos, ya que apunto a volverme desarrollador. Dentro de mis hobbies están los videojuegos, las series, el baile y el fútbol.
+| <p align="center"><img width="370" height="210" src="assets/images/sebastianprofile.jpg"> </p> | Soy Sebastián Real Calderón, tengo 19 años y soy estudiante de la carrera de Ingeniería de Software. Tengo conocimientos sobre lenguajes de programación como C++, C# y Java. Principalmente me dedico al desarrollo de proyectos que me permitan desarrollar mis habilidades de programación, tales como videojuegos o programas sencillos, ya que apunto a volverme desarrollador. Dentro de mis hobbies están los videojuegos, las series, el baile y el fútbol.
 |-|:-|
 
 - Diego Alonso Rosado Iporre - U201620127
 
-| <p align="center"><img width="auto" height="auto" src="assets/images/Diegoprofile.jpg"> </p> | Mi nombre es Diego Rosado, tengo 25 años. Mi interés en las base de datos y arquitectura de páginas web me impulsó a estudiar Ingeniería de Software. Tengo conocimiento de lenguajes como C#, C++, JavaScript, Python, base de datos como MySQL y me atrae el diseño de páginas web con HTML y CSS. Me considero una persona positiva, tolerante y creativa. Mi aporte al grupo es mi total compromiso, apoyo mutuo y el esfuerzo por asegurar que todos tengamos una visión compartida del proyecto a elaborar. Mis habilidades son resolución de problemas, adaptabilidad, trabajo en equipo y toma de decisiones. |
+| <p align="center"><img width="550" height="210" src="assets/images/Diegoprofile.jpg"> </p> | Mi nombre es Diego Rosado, tengo 25 años. Mi interés en las base de datos y arquitectura de páginas web me impulsó a estudiar Ingeniería de Software. Tengo conocimiento de lenguajes como C#, C++, JavaScript, Python, base de datos como MySQL y me atrae el diseño de páginas web con HTML y CSS. Me considero una persona positiva, tolerante y creativa. Mi aporte al grupo es mi total compromiso, apoyo mutuo y el esfuerzo por asegurar que todos tengamos una visión compartida del proyecto a elaborar. Mis habilidades son resolución de problemas, adaptabilidad, trabajo en equipo y toma de decisiones. |
 |-|:-|
 
 
@@ -2961,193 +2984,193 @@ Link de los Wireframes y Mockups en Figma: ANEXO J
 
 ##### 5.1.3.1. Landing Page Wireframe
 
-![Container-diagram](assets/images/landing-page/wireframe-landing-page.png)
+![Container-diagram](assets/images/landing-page/wireframe-landing-page.png)  
 
 <br>
 
-Vista móvil
+Vista móvil  
 
 <br>
 
-![Container-diagram](assets/images/landing-page/wireframe-vista-movil.png)
+![Container-diagram](assets/images/landing-page/wireframe-vista-movil.png)  
 
 <br>
 
-Menu hamburguesa
+Menu hamburguesa  
 
 <br>
 
-![Container-diagram](assets/images/landing-page/wireframe-menu.png)
+![Container-diagram](assets/images/landing-page/wireframe-menu.png)  
 
 <br>
 
-##### 5.1.3.2. Landing Page Mock-up
+##### 5.1.3.2. Landing Page Mock-up  
 
 
-![Container-diagram](assets/images/landing-page/mockup.png)
+![Container-diagram](assets/images/landing-page/mockup.png)  
 
-<br>
+<br>  
 
-Vista móvil
-
-<br>
-
-![Container-diagram](assets/images/landing-page/mockup-vista-movil.png)
+Vista móvil  
 
 <br>
 
-Menu hamburguesa
+![Container-diagram](assets/images/landing-page/mockup-vista-movil.png)  
 
 <br>
 
-![Container-diagram](assets/images/landing-page/mockup-menu.png)
+Menu hamburguesa  
+
+<br>
+
+![Container-diagram](assets/images/landing-page/mockup-menu.png)  
 
 <br>
 
 #### 5.1.4. Mobile Applications UX/UI Design
 ##### 5.1.4.1. Mobile Applications Wireframes
 
-###### Vista de colaborador
+###### Vista de colaborador  
 ---
 
-- Login
-  ![alt text](assets/images/wireframes-mobile-app/login.png)
+- Login  
+  ![alt text](assets/images/wireframes-mobile-app/login.png)  
 
-- Registro
-  ![alt text](assets/images/wireframes-mobile-app/register.png)
+- Registro  
+  ![alt text](assets/images/wireframes-mobile-app/register.png)  
 
 - Confirmación de Registro  
-  ![alt text](assets/images/wireframes-mobile-app/registerconf.png)
+  ![alt text](assets/images/wireframes-mobile-app/registerconf.png)  
 
-- Selección de Compañía
-  ![alt text](assets/images/wireframes-mobile-app/cs.png)
+- Selección de Compañía  
+![alt text](assets/images/wireframes-mobile-app/asdq.png)
 
-- Drawer
-  ![alt text](assets/images/wireframes-mobile-app/drawer.png)
+- Drawer  
+  ![alt text](assets/images/wireframes-mobile-app/drawer.png)  
 
-- Bandeja Vacía
-  ![alt text](assets/images/wireframes-mobile-app/bs.png)
+- Bandeja Vacía  
+![alt text](assets/images/wireframes-mobile-app/daw.png)
 
-- Bandeja con Postulación
-  ![alt text](assets/images/wireframes-mobile-app/bsd.png)
+- Bandeja con Postulación    
+  ![alt text](assets/images/wireframes-mobile-app/bsd.png)    
 
-- Mensaje de Administrador
-  ![alt text](assets/images/wireframes-mobile-app/msa.png)
+- Mensaje de Administrador   
+  ![alt text](assets/images/wireframes-mobile-app/msa.png)  
 
-- Tutorial
-  ![alt text](assets/images/wireframes-mobile-app/t.png)
+- Tutorial  
+  ![alt text](assets/images/wireframes-mobile-app/t.png)  
 
-- Postulación
-  ![alt text](assets/images/wireframes-mobile-app/p.png)
+- Postulación  
+  ![alt text](assets/images/wireframes-mobile-app/p.png)  
 
-- Formulario datos del Colaborador
-  ![alt text](assets/images/wireframes-mobile-app/dc.png)
+- Formulario datos del Colaborador   
+  ![alt text](assets/images/wireframes-mobile-app/dc.png)   
 
-- Lista de Postulantes Vacía
+- Lista de Postulantes Vacía  
   ![alt text](assets/images/wireframes-mobile-app/lpv.png)
 
-- Formulario datos del Postulante
-  ![alt text](assets/images/wireframes-mobile-app/ddp.png)
+- Formulario datos del Postulante  
+  ![alt text](assets/images/wireframes-mobile-app/ddp.png)  
 
-- Formulario Editar Postulante
-  ![alt text](assets/images/wireframes-mobile-app/eps.png)
+- Formulario Editar Postulante  
+  ![alt text](assets/images/wireframes-mobile-app/eps.png)  
 
 ###### Vista de Administrador
 ---
 
-- Drawer Administrador
-  ![alt text](assets/images/wireframes-mobile-app/dacs.png)
+- Drawer Administrador  
+  ![alt text](assets/images/wireframes-mobile-app/dacs.png)  
 
-- Bandeja Administrador
-  ![alt text](assets/images/wireframes-mobile-app/bas.png)
+- Bandeja Administrador  
+  ![alt text](assets/images/wireframes-mobile-app/bas.png)  
+ 
+- Vista de Beca Administrador  
+  ![alt text](assets/images/wireframes-mobile-app/vdb.png)  
 
-- Vista de Beca Administrador
-  ![alt text](assets/images/wireframes-mobile-app/vdb.png)
+- Vista de Colaborador Administrador  
+  ![alt text](assets/images/wireframes-mobile-app/vsc.png)  
 
-- Vista de Colaborador Administrador
-  ![alt text](assets/images/wireframes-mobile-app/vsc.png)
+- Lista de Postulantes de Colaborador Administrador  
+  ![alt text](assets/images/wireframes-mobile-app/ldp.png)  
 
-- Lista de Postulantes de Colaborador Administrador
-  ![alt text](assets/images/wireframes-mobile-app/ldp.png)
+- Vista de Postulante Administrador   
+  ![alt text](assets/images/wireframes-mobile-app/asd.png)  
 
-- Vista de Postulante Administrador
-  ![alt text](assets/images/wireframes-mobile-app/asd.png)
+- Rechazo de Solicitud  
+  ![alt text](assets/images/wireframes-mobile-app/r.png)  
 
-- Rechazo de Solicitud
-  ![alt text](assets/images/wireframes-mobile-app/r.png)
-
-- Rechazo Enviado
-  ![alt text](assets/images/wireframes-mobile-app/re.png)
+- Rechazo Enviado  
+  ![alt text](assets/images/wireframes-mobile-app/re.png)  
 
 ##### 5.1.4.2. Mobile Applications Wireflow Diagrams
 
-- User Goal: Registrarse
-  ![alt text](assets/images/wireflows-mobile-application/reg.png)
+- User Goal: Registrarse  
+  ![alt text](assets/images/wireflows-mobile-application/reg.png)  
+ 
+- User Goal: Iniciar Sesión  
+  ![alt text](assets/images/wireflows-mobile-application/is.png)  
+  
+- User Goal: Ver Tutoriales  
+  ![alt text](assets/images/wireflows-mobile-application/vte.png)  
 
-- User Goal: Iniciar Sesión
-  ![alt text](assets/images/wireflows-mobile-application/is.png)
+- User Goal: Crear Postulación  
+  ![alt text](assets/images/wireflows-mobile-application/csp.png)  
 
-- User Goal: Ver Tutoriales
-  ![alt text](assets/images/wireflows-mobile-application/vte.png)
+- User Goal: Editar Postulación Rechazada  
+  ![alt text](assets/images/wireflows-mobile-application/rps.png)   
 
-- User Goal: Crear Postulación
-  ![alt text](assets/images/wireflows-mobile-application/csp.png)
+- User Goal: Ver Postulación como Administrador  
+  ![alt text](assets/images/wireflows-mobile-application/asda.png)  
 
-- User Goal: Editar Postulación Rechazada
-  ![alt text](assets/images/wireflows-mobile-application/rps.png)
-
-- User Goal: Ver Postulación como Administrador
-  ![alt text](assets/images/wireflows-mobile-application/asda.png)
-
-- User Goal: Rechazar postulación como Administrador
-  ![alt text](assets/images/wireflows-mobile-application/asdqe.png)
+- User Goal: Rechazar postulación como Administrador  
+  ![alt text](assets/images/wireflows-mobile-application/asdqe.png)  
 
 ##### 5.1.4.3. Mobile Applications Mock-ups
 
-- Login
-  ![alt text](assets/images/mockups-mobile-application/l.png)
+- Login  
+  ![alt text](assets/images/mockups-mobile-application/l.png)  
 
-- Selección de Empresa
-  ![alt text](assets/images/mockups-mobile-application/csal.png)
+- Selección de Empresa  
+  ![alt text](assets/images/mockups-mobile-application/csal.png)  
 
-- Registro
-  ![alt text](assets/images/mockups-mobile-application/asdaw.png)
+- Registro  
+  ![alt text](assets/images/mockups-mobile-application/asdaw.png)  
 
-- Bandeja Vacía - Colaborador
-  ![alt text](assets/images/mockups-mobile-application/asdqksdc.png)
+- Bandeja Vacía - Colaborador  
+  ![alt text](assets/images/mockups-mobile-application/asdqksdc.png)  
 
-- Bandeja con Postulación - Colaborador
-  ![alt text](assets/images/mockups-mobile-application/asdq.png)
+- Bandeja con Postulación - Colaborador  
+  ![alt text](assets/images/mockups-mobile-application/asdq.png)  
   
-- Drawer
-  ![alt text](assets/images/mockups-mobile-application/poe.png)
+- Drawer  
+  ![alt text](assets/images/mockups-mobile-application/poe.png)  
+ 
+- Menu Postulación  
+  ![alt text](assets/images/mockups-mobile-application/ascz.png)  
 
-- Menu Postulación
-  ![alt text](assets/images/mockups-mobile-application/ascz.png)
+- Formulario Datos del Colaborador  
+  ![alt text](assets/images/mockups-mobile-application/dscl.png)  
 
-- Formulario Datos del Colaborador
-  ![alt text](assets/images/mockups-mobile-application/dscl.png)
+- Formulario Datos del Postulante  
+  ![alt text](assets/images/mockups-mobile-application/kpa.png)  
 
-- Formulario Datos del Postulante
-  ![alt text](assets/images/mockups-mobile-application/kpa.png)
+- Confirmación de Formulario Postulante  
+  ![alt text](assets/images/mockups-mobile-application/cmla.png)  
+  
+- Bandeja - Administrador  
+  ![alt text](assets/images/mockups-mobile-application/weqwe.png)  
+  
+- Vista de Beca - Administrador  
+  ![alt text](assets/images/mockups-mobile-application/askid.png)  
 
-- Confirmación de Formulario Postulante
-  ![alt text](assets/images/mockups-mobile-application/cmla.png)
-
-- Bandeja - Administrador
-  ![alt text](assets/images/mockups-mobile-application/weqwe.png)
-
-- Vista de Beca - Administrador
-  ![alt text](assets/images/mockups-mobile-application/askid.png)
-
-- Vista de Colaborador - Administrador
-  ![alt text](assets/images/mockups-mobile-application/asdwq.png)
-
-- Lista de Postulantes - Administrador
-  ![alt text](assets/images/mockups-mobile-application/lasoq.png)
-
-- Vista de Postulante - Administrador
-  ![alt text](assets/images/mockups-mobile-application/asdqwd.png)
+- Vista de Colaborador - Administrador  
+  ![alt text](assets/images/mockups-mobile-application/asdwq.png)  
+     
+- Lista de Postulantes - Administrador  
+  ![alt text](assets/images/mockups-mobile-application/lasoq.png)  
+  
+- Vista de Postulante - Administrador  
+  ![alt text](assets/images/mockups-mobile-application/asdqwd.png)  
 
 ##### 5.1.4.4. Mobile Applications User Flow Diagrams
 
@@ -3428,10 +3451,28 @@ git commit -m “<type>[optional scope]: <title>“ -m “<description”
         When they click on the logout button
         Then they should be redirected to the login page      
       ~~~
-### 6.1.4 Software Deployment Condiguration
+### 6.1.4 Software Deployment Configuration  
 
-### 6.2 Landing Page & Mobile Application Implementation
+En los siguientes pasos se explicará cómo llevar a cabo la implementación de nuestro sitio web utilizando GitHub Pages
 
+Deploy con GitHub Pages: En primer lugar, accedemos al repositorio de GitHub donde se encuentra nuestro proyecto y luego navegamos hacia la configuración del repositorio.
+
+![alt text](assets/tb2/lpdgp.png) 
+
+Dentro del menú de ajustes, elegimos la opción "Pages".  
+
+![alt text](assets/tb2/deploylp.png)  
+
+**Control de Versiones**
+
+- **Uso de Git:** Mantén un historial completo de cambios y facilita el manejo de diferentes versiones del código.
+
+En la sección de GitHub Pages, escogemos la rama principal (main) en el menú desplegable de la sección "Branch" y guardamos la configuración presionando el botón "Save".
+Después de unos momentos, recibiremos el enlace a nuestro sitio web publicado en GitHub Pages.
+
+### 6.2 Landing Page & Mobile Application Implementation  
+
+El desarrollo, testeo y despliegue de nuestra landing page es importante para que nuestros clientes puedan acceder a la información sobre nuestra empresa y producto a través de una interfaz con diseño responsivo, navegación intuitiva y solo con información relevante. Esta primera etapa nos permite crear un diseño conceptual sobre la estética que nuestra aplicación completa y lista para su uso. Estas etapas nos ayudaran a dar una primera impresión a los clientes para validar ideas e identificar problemas que se deben solucionar.  
 ### 6.2.1. Sprint 1
 
 El primer sprint es una etapa importante en nuestro marco de gestión de proyectos de metodología ágil Scrum. En este periodo, agendamos reuniones con el objetivo de conocer mejor las características de cada integrante, y delegamos tareas para materializar el diseño y funcionalidades ya establecidas, para transformarlos en un landing page funcional y que cumple las heurísticas.  
@@ -4274,16 +4315,17 @@ Gracias a esta estructura, el equipo pudo mantener una colaboración efectiva, r
 | US16       |                                              | TA048        | Integración de video resumen           | Incluir video corto en autoplay sin audio                                                       | 2                  | Sebastian Real               | Done   |
 | US16       |                                              | TA049        | Estadísticas clave                     | Agregar métricas como '95% postulaciones procesadas en 72h'                                     | 1                  | Sebastian Real               | Done   |
 
+Link de Trello: ANEXO M  
+
 ### 6.2.2.3. Development Evidence for Sprint Review
 
-Backend:
+Backend:  
 
 |Repository |Branch| Commit Id | Commit Message| Commit Message Body| Date|
 |----|-----|---------------------|----------------------------------------|---------------------------------------------------------|------------|
 |Aventis-Scholr/scholr-backend|master| 5e3g2t6t           | feat: Added endpoints Delete and update para el bounded context applications | se agregaron los metodos delte y update para el bc Applications| 05/06/2025 |
 
-
-Frontend-jetpack compose:
+Frontend-jetpack compose:  
 
 |Repository |Branch| Commit Id | Commit Message| Commit Message Body| Date|
 |----|-----|---------------------|----------------------------------------|---------------------------------------------------------|------------|
@@ -4291,10 +4333,11 @@ Frontend-jetpack compose:
 |Aventis-Scholr/scholr-backend|develop| 75a858d          | feat: add seccion de help , cartilla de instrucciones, video , contacto de soporte tecnico|-|07/06/2025 |
 |Aventis-Scholr/scholr-backend|develop|6587db0           | feat: DataApoderado create, update.|- | 06/06/2025 |
 
-Frontend-flutter:
+Frontend-flutter:  
+
 |Repository |Branch| Commit Id | Commit Message| Commit Message Body| Date|
 |----|-----|---------------------|----------------------------------------|---------------------------------------------------------|------------|
-|Aventis-Scholr/scholr-mobile-flutter|develop| 37g20dr           | feat: Add bounded context IAM en flutter |- | 13/06/2025 |
+|Aventis-Scholr/scholr-mobile-flutter|origin| c9224a1 | feat: Add bounded context IAM en flutter |- | 15/06/2025 |
 
 ### 6.2.2.4. Testing Suite Evidence for Sprint Review
 
@@ -4355,36 +4398,36 @@ En este Sprint 2 , los miembros del equipo de desarrollo de software de Aventis 
 ![alt text](assets/tb2/applicationSeleccion.png)  
 <br>
 
-* Formulario sobre datos del apoderado:  
-![alt text](assets/tb2/datosApoderado.png)  
+* Formulario sobre datos del apoderado:    
+![alt text](assets/tb2/datosApoderado.png)    
 <br>
 
-- En caso de haber sido llenado previamente
-![alt text](assets/tb2/datosApoderadoCargados.png)  
+- En caso de haber sido llenado previamente  
+![alt text](assets/tb2/datosApoderadoCargados.png)    
 <br>
 
-* Formulario para postulación (en caso de ser editado, se cargan los datos)
+* Formulario para postulación (en caso de ser editado, se cargan los datos)  
 ![alt text](assets/tb2/formularioPostulacionCarga.png)  
 <br>
 
-* Al guardar una postulacion, esta no se envia y aún puede ser editada
-![alt text](assets/tb2/postulacionGuardada.png)  
+* Al guardar una postulacion, esta no se envia y aún puede ser editada  
+![alt text](assets/tb2/postulacionGuardada.png)    
 <br>
 
-* Al enviar una postulacion, esta ya no puede ser edita
+* Al enviar una postulacion, esta ya no puede ser edita  
 ![alt text](assets/tb2/postulacionEnviada.png)  
 <br>
 
-* Drawer
-![alt text](assets/tb2/drawer.png)  
+* Drawer  
+![alt text](assets/tb2/drawer.png)   
 <br>
 
-* Vista Tutorial
-![alt text](assets/tb2/seccionTutorial.png)  
+* Vista Tutorial  
+![alt text](assets/tb2/seccionTutorial.png)   
 <br>
 
-* Cartilla de instrucciones
-![alt text](assets/tb2/cartillaDeInstrucciones.png)  
+* Cartilla de instrucciones  
+![alt text](assets/tb2/cartillaDeInstrucciones.png)    
 <br>
 
 en segundo lugar se realizo el frontend en flutter de el bounded context IAM:
@@ -4938,11 +4981,63 @@ El módulo **Management** proporciona:
 
 **Actividades Realizadas:**
 
-- Despliegue del backend
+- Despliegue del backend en Azure:
 
 ![alt text](assets/images/swaggersprint2.png)
 
-### 6.2.2.8. Software Deployment Evidence for Sprint Review
+### 6.2.2.8. Team Collaboration Insights during Sprint 2.
+
+En esta sección, se presenta un análisis detallado de la colaboración del equipo durante el Sprint 2. Durante este Sprint 2, las actividades se organizaron siguiendo una metodología ágil, lo que permitió una coordinación efectiva entre los miembros del equipo. Se incluyen capturas de los analíticos de colaboración y de los commits realizados en GitHub, evidenciando la contribución individual.
+
+Diseño y Desarrollo:
+
+- Frontend: Desarrollo y diseño del bounded context Applications.
+
+- Backend: Implementación de funcionalidades básicas y configuración inicial del servidor y servicios necesarios.
+
+- Codificación: Ejecución de tareas de programación, pruebas funcionales y ajustes iterativos.
+
+Documentación y Despliegue:
+
+- Documentación: Elaboración de documentación técnica y visual, incluyendo descripciones y capturas de pantalla del proceso.
+
+- Despliegue: Configuración del entorno y despliegue del backend en un entorno de pruebas, asegurando la operatividad conjunta.
+
+**Report:**  
+
+![alt text](assets/tb2/repo.png)  
+
+- Estefano Oscar Jaque Peña: 14  
+- John Telesforo Arevalo Meza: 13  
+- Sebastian Real Calderon: 16  
+- Diego Alonso Rosado Iporre: 11  
+
+<br>**Backend:**  
+
+![alt text](assets/tb2/back.png)
+
+- Estefano Oscar Jaque Peña: 1  
+- Sebastian Omar Real Calderón: 2  
+- John Telesforo Arevalo Meza: 15  
+- Diego Alonso Rosado Iporre: 2  
+
+<br>**Frontend:**  
+
+![alt text](assets/tb2/fron.png)    
+
+- Estefano Oscar Jaque Peña: 1  
+- Sebastian Omar Real Calderón: 9  
+- John Telesforo Arevalo Meza: 5  
+- Diego Alonso Rosado Iporre: 2  
+
+<br>**Frontend-flutter:**  
+
+![alt text](assets/tb2/flut.png)    
+
+![alt text](assets/tb2/fluter.png)  
+
+- Estefano Oscar Jaque Peña: 1  
+
 
 ### 6.3. Validation Interviews
 
@@ -5061,13 +5156,30 @@ Si tuvieras acceso a esta herramienta de forma oficial, ¿la recomendarías a ot
 
 ![Entrevista1](assets/images/interviews/entrevista_isabel.png)
 
-Link de entrevista : [Entrevista](https://drive.google.com/file/d/1NSQV5fmvrmviUK_HzI5NfeYLHggWL17r/view?usp=sharing)
+Link de entrevista : [https://drive.google.com/file/d/1NSQV5fmvrmviUK_HzI5NfeYLHggWL17r/view?usp=sharing](https://drive.google.com/file/d/1NSQV5fmvrmviUK_HzI5NfeYLHggWL17r/view?usp=sharing)
 
 Inicio: 2:19<br>
 Duracion: 7:22
 
 Resumen:<br>
 Isabel Ríos, asistente administrativa y madre trabajadora, evaluó el prototipo de Scholr tras una demo guiada. Destacó la organización general de la app y la utilidad del listado de postulaciones, pero señaló la necesidad de una guía inicial, confirmaciones más claras al enviar solicitudes y mayor visibilidad del tutorial. Recomendó incluir alertas sobre documentos necesarios y respaldos como correos automáticos. Considera que la app tiene potencial para facilitar el proceso de becas si se mejora la orientación y la confianza en cada paso. Está dispuesta a recomendarla si se pulen estos aspectos.
+
+2.  Entrevista 2: <br>
+    Datos del entrevistado <br>
+    Nombre: Yahaira<br>
+    Apellidos: Quevedo<br>
+    Edad: 37 <br>
+    Distrito: Los Olivos<br>
+
+![alt text](assets/tb2/entreyah.png)
+
+Link de entrevista : [https://drive.google.com/file/d/1fCjdWOWQWRhleLKyjLOPBnT8u3xw81a_/view?usp=sharing](https://drive.google.com/file/d/1fCjdWOWQWRhleLKyjLOPBnT8u3xw81a_/view?usp=sharing)
+
+Inicio: 2:19<br>
+Duracion: 7:22
+
+Resumen:<br>
+Yahaira Quevedo, operaria de Backus encargada del área de embotellamiento, evaluó el prototipo de Scholr luego de una demo guiada. Con experiencia previa utilizando plataformas para postular a becas ofrecidas por su empresa, recomendó que, tras iniciar sesión, la pantalla principal sea una vista de ayuda que lleve directamente a la cartilla de instrucciones. También sugirió incluir un apartado específico donde se muestren las becas disponibles, para poder informarse con claridad antes de postular. Valoró positivamente el diseño general de la app, destacando la rapidez al eliminar una postulación o al ingresar los datos tanto personales como de sus hijos, sin demoras de carga. En general, consideró que la aplicación está bien estructurada y facilita el proceso si se mejora el acceso a la información desde el inicio.
 
 **Segmento 2: Coordinadores de Bienestar Laboral/RSE**
 
@@ -5268,7 +5380,7 @@ Permitir al sistema enviar un mensaje automático al confirmar la postulación c
 
 A continuacion se presentara el avance hasta este punto de realizado el sprint 2
 
-LINK: (https://drive.google.com/file/d/1VRiXGqWR5hOUjiQ1H5ivFV51_EVyDi2r/view?usp=sharing)[https://drive.google.com/file/d/1VRiXGqWR5hOUjiQ1H5ivFV51_EVyDi2r/view?usp=sharing]
+LINK: [https://drive.google.com/file/d/1VRiXGqWR5hOUjiQ1H5ivFV51_EVyDi2r/view?usp=sharing](https://drive.google.com/file/d/1VRiXGqWR5hOUjiQ1H5ivFV51_EVyDi2r/view?usp=sharing)
 
 ## Conclusiones
 
