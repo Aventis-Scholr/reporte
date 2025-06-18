@@ -77,7 +77,7 @@ Product: "Scholr"
 
 <br>**Report:**
 
-![alt text](assets/images/contributors.png)
+<img src="assets/images/contributors.png" alt="alt text" width="500"/>
 
 - Estefano Oscar Jaque Peña: 14
 - Sebastian Omar Real Calderón:16
@@ -103,9 +103,9 @@ Product: "Scholr"
 
 <br>**Frontend-flutter:**  
 
-![alt text](assets/tb2/flut.png)    
+<img src="assets/tb2/flut.png" alt="alt text" width="500"/>
 
-![alt text](assets/tb2/fluter.png)  
+<img src="assets/tb2/fluter.png" alt="alt text" width="500"/>
 
 - Estefano Oscar Jaque Peña: 1  
 
@@ -242,7 +242,7 @@ TB2:<br>
         - [6.2.1.5. Services Documentation Evidence for Sprint Review.](#6215-services-documentation-evidence-for-sprint-review)
         - [6.2.1.6. Software Deployment Evidence for Sprint Review.](#6216-software-deployment-evidence-for-sprint-review)
         - [6.2.1.7. Team Collaboration Insights during Sprint.](#6217-team-collaboration-insights-during-sprint-1)
-      [6.2.2. Sprint 2](#622-sprint-2)
+      - [6.2.2. Sprint 2](#622-sprint-2)
         - [6.2.2.1. Sprint Planning 2.](#6221-sprint-planning-2)
         - [6.2.2.2. Sprint Backlog 2.](#6222-sprint-backlog-2)
         - [6.2.2.3. Development Evidence for Sprint Review.](#6223-development-evidence-for-sprint-review)
@@ -1361,9 +1361,9 @@ La capa de infraestructura gestiona la comunicación con sistemas externos, incl
 ### 4.2.1.5. Bounded Context Software Architecture Component Level Diagrams
 El diagrama representa el módulo de Identity and Access Management (IAM) del sistema "BecasMobile" del aplicativo Scholr, diseñado con una arquitectura modular basada en Spring Boot. El AuthController expone endpoints para autenticación (login/registro), delegando la lógica al UserService (gestión de usuarios) y RoleService (gestión de roles). Estos servicios interactúan con sus respectivos repositorios (UserRepository y RoleRepository) para persistir datos en la base de datos, mientras que el componente Security se encarga del hashing y generación de tokens JWT.
 
-El IAM se integra con otros módulos: el UserService sincroniza datos con el Backend API, y el RoleService provee verificación de permisos para el sistema. Además, los actores (Apoderado , Gestionador y Administrador) interactúan directamente con el AuthController para autenticarse, estableciendo un flujo centralizado y seguro para la gestión de identidad.
+El IAM se integra con otros módulos: el UserService sincroniza datos con el Backend API, y el RoleService provee verificación de permisos para el sistema. Además, los actores (Apoderado , Gestionador y Administrador) interactúan directamente con el AuthController para autenticarse, estableciendo un flujo centralizado y seguro para la gestión de identidad.  
 
-![alt text](assets/images/structIAM.png)
+<img src="assets/images/structIAM.png" alt="alt text" width="800"/>
 
 ANEXO F
 
@@ -2566,17 +2566,16 @@ interactuar directamente con la base de datos. Este layer asegura que los datos 
     </tr>
 </table>
 
-### 4.2.2.5. Bounded Context Software Architecture Component Level Diagrams
+### 4.2.2.5. Bounded Context Software Architecture Component Level Diagrams  
 
-![Container-diagram-ddd-application](assets/images/structurizr-ddd-application.png)
+<img src="assets/images/structurizr-ddd-application.png" alt="alt text" width="800"/>
 
-ANEXO F
+ANEXO F  
 
 ### 4.2.2.6. Bounded Context Software Architecture Code Level Diagrams
 
-#### 4.2.2.6.1. Bounded Context Domain Layer Class Diagrams
-
-![class-diagram-application](assets/images/applications-ddd.png)
+#### 4.2.2.6.1. Bounded Context Domain Layer Class Diagrams  
+<img src="assets/images/applications-ddd.png" alt="alt text" width="800"/>
 
 ANEXO G 
 
@@ -2739,19 +2738,21 @@ ANEXO H
 
 ### 4.2.3.5. Bounded Context Software Architecture Component Level Diagrams
 
-Este diagrama de contenedores refleja la estructura y componentes clave de nuestro Sistema de Gestión de Becas y Reportes. En él, mostramos cómo interactúan los distintos actores, sistemas y servicios dentro de la plataforma para gestionar y procesar becas y reportes. El coordinador es el principal usuario del sistema, encargado de gestionar las convocatorias y los reportes, mientras que los diversos componentes y servicios como las APIs, servicios de comandos, repositorios y herramientas externas trabajan juntos para facilitar la creación, publicación, almacenamiento y notificación de información clave. Este diagrama nos ayuda a visualizar cómo cada parte del sistema contribuye a una experiencia fluida y eficiente para nuestros usuarios.
+Este diagrama de contenedores refleja la estructura y componentes clave de nuestro Sistema de Gestión de Becas y Reportes. En él, mostramos cómo interactúan los distintos actores, sistemas y servicios dentro de la plataforma para gestionar y procesar becas y reportes. El coordinador es el principal usuario del sistema, encargado de gestionar las convocatorias y los reportes, mientras que los diversos componentes y servicios como las APIs, servicios de comandos, repositorios y herramientas externas trabajan juntos para facilitar la creación, publicación, almacenamiento y notificación de información clave. Este diagrama nos ayuda a visualizar cómo cada parte del sistema contribuye a una experiencia fluida y eficiente para nuestros usuarios.  
 
-![alt text](assets/images/structurizr-Container-001.png) 
 
-ANEXO F
+<img src="assets/images/structurizr-Container-001.png" alt="alt text" width="800"/>  
+
+ANEXO F  
 
 ### 4.2.3.6. Bounded Context Software Architecture Code Level Diagrams
 #### 4.2.3.6.1. Bounded Context Domain Layer Class Diagrams
 Este diagrama de clases representa el modelo de dominio para un sistema de gestión de becas, mostrando los elementos principales con detalle. La estructura se organiza en objetos de valor como Requirement, ApoderadoSnapshot y PostulanteSnapshot, que capturan datos inmutables, junto con enumeraciones como ScholarshipStatus y ResolutionStatus para definir estados. Los agregados Scholarship (como raíz) y Report gestionan la lógica central, con métodos como publish(), close() y generate() para operaciones clave. Las interfaces ReportCommandService y ScholarshipCommandService manejan comandos complejos, mientras que las secciones Queries y Commands separan las operaciones de lectura y escritura.
 
-El diseño sigue principios de Domain-Driven Design, destacando la inmutabilidad de los objetos de valor y la consistencia transaccional de los agregados. Scholarship controla el ciclo de vida de las becas, mientras que Report gestiona los datos de postulantes y apoderados mediante snapshots. Los servicios de comandos coordinan acciones que afectan múltiples agregados, y las enumeraciones definen los flujos de trabajo posibles. La estructura refleja un modelo bien delimitado, con clara separación entre consultas, comandos y la lógica de dominio central.
+El diseño sigue principios de Domain-Driven Design, destacando la inmutabilidad de los objetos de valor y la consistencia transaccional de los agregados. Scholarship controla el ciclo de vida de las becas, mientras que Report gestiona los datos de postulantes y apoderados mediante snapshots. Los servicios de comandos coordinan acciones que afectan múltiples agregados, y las enumeraciones definen los flujos de trabajo posibles. La estructura refleja un modelo bien delimitado, con clara separación entre consultas, comandos y la lógica de dominio central.  
 
-![alt text](assets/images/diagclassmanagement.png) 
+<img src="assets/images/diagclassmanagement.png" alt="alt text" width="800"/>  
+
 
 #### 4.2.3.6.2. Bounded Context Database Design Diagram
 Este diagrama de base de datos para el Bounded Context de Gestión de Becas define el esquema relacional que persiste el modelo de dominio. La tabla principal Scholarship contiene columnas como id (PK, autoincremental), name (VARCHAR), status (ENUM con estados DRAFT/PUBLISHED/CLOSED), coordinator_id (BIGINT) y campos implícitos de auditoría. La tabla Report almacena id (PK), application_id (BIGINT), resolution (ENUM con estados DRAFT/APPROVED/DENIED) y admin_comments (TEXT), estableciendo una relación implícita con solicitudes de beca.
@@ -3204,7 +3205,7 @@ Link a los User Flow Diagrams en Lucidchart: ANEXO K
 
 ##### 5.1.4.5. Mobile Applications Prototyping
 
-![Screenshot Prototype Video](/assets/images/screenshot_prototype_scholr.png)
+![Screenshot Prototype Video](assets/images/acdf.png)
 
 Link al video en Microsoft Stream: ANEXO L
 
