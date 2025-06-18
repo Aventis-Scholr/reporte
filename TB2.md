@@ -4982,7 +4982,7 @@ El módulo **Management** proporciona:
 
 **Actividades Realizadas:**
 
-- Despliegue del backend en Render:
+- Despliegue de la base de datos en Render:
 
 ![alt text](assets/tb2/renderbddeploy.png)
 
