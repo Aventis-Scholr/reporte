@@ -4982,9 +4982,14 @@ El módulo **Management** proporciona:
 
 **Actividades Realizadas:**
 
-- Despliegue del backend en Azure:
+- Despliegue del backend en Render:
 
-![alt text](assets/images/swaggersprint2.png)
+![alt text](assets/tb2/renderbddeploy.png)
+
+
+- Despliegue del backend en Render:
+
+![alt text](assets/tb2/deploybackrender.png)
 
 ### 6.2.2.8. Team Collaboration Insights during Sprint 2.
 
@@ -5435,5 +5440,5 @@ ANEXO M: Trello--> [https://trello.com/invite/b/6821617a3fd57ee9f724decf/ATTI533
 
 ANEXO N: Link deploy Landing page --> [https://aventis-scholr.github.io/landing-page/](https://aventis-scholr.github.io/landing-page/)
 
-ANEXO O: Link deploy backend --> [https://scholrapi.onrender.com/swagger-ui/index.html](https://scholrapi.onrender.com/swagger-ui/index.html) 
+ANEXO O: Link deploy backend --> [https://scholr-backend.onrender.com/swagger-ui/index.html#/](https://scholr-backend.onrender.com/swagger-ui/index.html#/) 
 
