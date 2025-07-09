@@ -5357,7 +5357,38 @@ Y visualizar cuando haya llegado nuestro email
 ![distribution4](assets/tf/AppDistribution6.png)
 
 ### 6.2.3.5. Execution Evidence for Sprint Review   
-[Aca pones flutter y jetpack compose Sebas, foto con explicacion ] 
+
+#### Flutter: 
+
+- Login: Pantalla de login
+![](/assets/tf/executionevidences/flutterlogin.png)
+
+
+- Signup: Creación de cuenta
+![](/assets/tf/executionevidences/fluttersignup.png)
+
+- Becas: Lista de becas de la empresa
+![](/assets/tf/executionevidences/fluttermenubecas.png)
+
+- Detalle de beca: Presenta una lista de los apoderados que tienen postulaciones para la beca, así como una lista de requerimientos.
+![](/assets/tf/executionevidences/flutterlistaapoderados.png)
+
+- Datos de colaborador: Presenta los datos del colaborador, así como las opciones de aceptar sus datos o rechazarlos.
+![](/assets/tf/executionevidences/flutterdatoscolaborador.png)
+![](/assets/tf/executionevidences/flutterdatoscolaborador2.png)
+
+- Rechazo en masa: Permite rechazar todas las postulaciones del colaborador.
+![](/assets/tf/executionevidences/flutterrechazomasivo.png)
+
+- Postulaciones de colaborador: Muestra las postulaciones de un colaborador
+![](/assets/tf/executionevidences/flutterpostulaciones.png)
+
+- Detalles de postulación: Permite ver los datos del postulante, descargar archivos adjuntos y tanto aceptar como rechazar una postulación
+![](/assets/tf/executionevidences/flutterdetallespostulacion.png)
+
+- Rechazo de postulación: Permite rechazar una postulación.
+![](/assets/tf/executionevidences/flutterrechazoindividual.png)
+
 ### 6.2.3.6. Services Documentation Evidence for Sprint Review  
 
 ## Sección **Applications** (Gestión de Postulaciones)
