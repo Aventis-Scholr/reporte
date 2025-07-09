@@ -5228,7 +5228,7 @@ Se creó un proyecto llamado **Scholr** en la consola de Firebase. Se añadió u
 ``com.example.aventurape_androidmobile``
 
 
-![Creación del proyecto en Firebase](assets/tf/creacion.png)
+![Creación del proyecto en Firebase](assets/tf/Creacion.png)
 
 ---
 
@@ -5290,7 +5290,7 @@ Podemos agregar un tester para enviarle nuestro apk
 
 Y visualizar cuando haya llegado nuestro email
 
-![distribution4](assets/tf/AppDistribution4.png)
+![distribution4](assets/tf/AppDistribution6.png)
 
 ### 6.2.3.5. Execution Evidence for Sprint Review   
 
