@@ -58,6 +58,13 @@ Product: "Scholr"
 | TB2     | 14/06/2025  | Diego Rosado | Desarrolle la entrevista para el segundo segmento objetivo coordinadora de RSE y las heurísticas según el análisis de las entrevista. |
 | TB2      | 13/05/2025 | Sebastian Real    | Desarrollé una entrevista para el segundo segmento objetivo. Realicé el registro de evidencias de servicios y despliegue del sprint 2. |
 
+| Versión | Fecha      | Autor             | Descripción                                                                                                                                                        |
+|---------|------------|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| TF      | 05/07/2025 | Estefano Jaque    | Repartición de tareas, corrección del front, backend y database, revisión del informe final.                                                                                           |
+| TF      | 05/07/2025 | John Arévalo      | Adición de funcionalidad para subir PDFs a la app, revisión de backend y frontend.                                                                                 |
+| TF      | 05/07/2025 | Diego Rosado      | Conexión a Firebase, desarrollo de heurísticas y testing relacionado con Firebase.             |
+| TF      | 05/07/2025 | Sebastian Real    | Desarrollo en Flutter, revisión de la lógica del proyecto.                                                                                                         |
+
 
 ## Project Report Collaboration Insights
 
@@ -133,6 +140,14 @@ TB2:<br>
 | Sebastian Omar Real Calderón | Entrevista a coordinadora, evidencias de servicios y de despliegue |
 | Arévalo Meza John | Entrevista a colaboradora, evidencia de pruebas y ejecución. |
 | Rosado Iporre, Diego | Entrevista al coordinadora y heurísticas de cada entrevista. |
+
+TF:<br>
+| Integrante                         | Tarea Asignada                                                                                             |
+|-----------------------------------|------------------------------------------------------------------------------------------------------------|
+| Jaque Peña, Estefano Oscar        | Repartición de tareas, corrección del front, revisión del informe final.                                   |
+| Sebastian Omar Real Calderón      | Desarrollo en Flutter, revisión de la lógica del proyecto.                                                 |
+| Arévalo Meza John                 | Adición de funcionalidad para subir PDFs a la app, revisión de backend y frontend.                         |
+| Rosado Iporre, Diego              | Conexión a Firebase, heurísticas y testing. |
 
 ## Contenido
 
@@ -238,7 +253,7 @@ TB2:<br>
         - [6.2.1.1. Sprint Planning 1.](#6211-sprint-planning-1)
         - [6.2.1.2. Sprint Backlog 1.](#6212-sprint-backlog-1)
         - [6.2.1.3. Development Evidence for Sprint Review.](#6213-development-evidence-for-sprint-review)
-        -[6.2.1.4. Execution Evidence for Sprint Review.](#6214-execution-evidence-for-sprint-review)
+        - [6.2.1.4. Execution Evidence for Sprint Review.](#6214-execution-evidence-for-sprint-review)
         - [6.2.1.5. Services Documentation Evidence for Sprint Review.](#6215-services-documentation-evidence-for-sprint-review)
         - [6.2.1.6. Software Deployment Evidence for Sprint Review.](#6216-software-deployment-evidence-for-sprint-review)
         - [6.2.1.7. Team Collaboration Insights during Sprint.](#6217-team-collaboration-insights-during-sprint-1)
@@ -261,7 +276,6 @@ TB2:<br>
         - [6.2.3.7. Software Deployment Evidence for Sprint Review.](#6237-software-deployment-evidence-for-sprint-review)
         - [6.2.3.8. Team Collaboration Insights during Sprint 3.](#6238-team-collaboration-insights-during-sprint-3)
     - [6.3. Validation Interviews. ](#63-validation-interviews)
-        -[6.3.1. Diseño de Entrevistas.](#631-diseño-de-entrevistas)
         - [6.3.1. Diseño de Entrevistas.](#631-diseño-de-entrevistas)
         - [6.3.2. Registro de Entrevistas.](#632-registro-de-entrevistas)
         - [6.3.3. Evaluaciones según heurísticas.](#63-validation-interviews)
@@ -279,8 +293,8 @@ En el siguiente cuadro se describen las acciones realizadas y enunciados de conc
 
 | Criterio especifico | Acciones Realizadas| Conclusiones|
 | :-- | :-- | -- |
-| 1. Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | <br>**Estefano Oscar Jaque Peña**<br>**TB1:** Al desarrollar las user stories comprendí mejor la funcionalidad futura del aplicativo. Las entrevistas y la creación del user persona me permitieron conocer más a fondo los segmentos objetivos. Además, con el proceso Lean UX identifiqué necesidades clave y beneficios potenciales del producto.<br>**TP:** Desarrollé el bounded context IAM (frontend y backend), aplicando tácticas de DDD. Esto me permitió actualizar conocimientos en arquitectura de software, seguridad y gestión de usuarios, además de emplear herramientas de desarrollo profesional en la sección de *Software Development* del informe.<br>**TB2:** Durante TB2, desarrollé el Sprint Backlog 2, consolidando mi entendimiento sobre planificación ágil y gestión de tareas en entornos colaborativos. Además, completé el Execution Evidence, lo cual me permitió reflejar de forma clara y estructurada los avances del proyecto. Finalmente, implementé el código en Flutter para el bounded context IAM, lo que me permitió afianzar mis conocimientos en integración de interfaces personalizadas con la lógica de negocio, usando herramientas modernas como Provider y prácticas de arquitectura limpia.<br><br>**Diego Alonso Rosado Iporre**<br>**TB1:** Apliqué herramientas como entrevistas, wireframes y escenarios para identificar oportunidades clave del proyecto. Contribuí al diseño de la solución desde la comprensión del dominio hasta la arquitectura del software.<br>**TP:** Desarrollé el bounded context Management junto a mi compañero. Aplicamos patrones tácticos de DDD y reforcé mis conocimientos en diseño de producto y wireframes, elementos clave para definir flujos de interacción.<br>**TB2:** Durante TB2, al realizar entrevistas y análisis heurístico, actualicé y reforcé mis conocimientos en principios de usabilidad, experiencia de usuario y evaluación de interfaces. Estos aprendizajes fueron fundamentales para identificar mejoras en el prototipo y asegurar que la solución responda a necesidades reales.<br><br>**John Arévalo Meza**<br>**TB1:** Realicé el registro de entrevistas, *empathy mapping*, *user journey mapping*, *event storming* y *bounded context canvases*, lo que permitió identificar claramente los *bounded contexts* y profundizar en la comprensión del dominio.<br>**TP:** Desarrollé el bounded context Applications, lo que fortaleció mis habilidades en desarrollo backend y parcialmente en frontend, así como en diseño táctico DDD. Además, elaboré la landing page, aplicando conocimientos actualizados de UI/UX.<br>**TB2:** Al realizar la entrevista, comprendí el valor de escuchar activamente al usuario para tomar decisiones informadas. Esta experiencia me permitió afianzar mis habilidades en evaluación de interfaces y asegurar que las soluciones propuestas respondan de manera efectiva a las necesidades de quienes las utilizarán.<br><br>**Sebastián Omar Real Calderón**<br>**TB1:** Apliqué análisis de entrevistas y modelado de dominios para entender las necesidades reales del proyecto. Mi contribución ayudó a traducir problemas complejos en requisitos claros para la solución de software.<br>**TP:** Desarrollé parcialmente el frontend y backend del bounded context Management. Implementé prototipos, wireframes, userflows y mockups, integrando herramientas actualizadas de diseño y análisis de usuario.<br>**TB2:** Al realizar mi entrevista, obtuve conocimientos sobre como se relaciona el feedback del usuario con los cambios a implementar, asegurándome que esas mejoras permitan optimizar la experiencia según las necesidades reales del usuario. | **TB1:** El equipo demostró capacidad para integrar aprendizajes técnicos y metodologías ágiles en el desarrollo del proyecto. A través de la investigación y colaboración, se identificaron oportunidades clave para optimizar procesos mediante tecnología, reforzando la importancia de adaptarse continuamente a los requerimientos del contexto profesional.<br>**TP:** El equipo demostró la capacidad de aplicar conceptos técnicos avanzados como el diseño táctico de DDD y arquitectura por bounded contexts. Además, se utilizaron herramientas modernas para gestión de usuarios, diseño UI/UX y desarrollo frontend/backend, evidenciando una actualización profesional efectiva y aplicada.<br>**TB2:** El equipo continuó con una actualización constante de habilidades, aplicando conocimientos avanzados en frameworks modernos como Flutter, prácticas ágiles y herramientas de documentación y validación. La integración entre planificación, desarrollo e implementación demuestra un enfoque profesional y articulado hacia la resolución de problemas reales, evidenciando una evolución técnica sólida y aplicable a futuros entornos laborales.|
-| 2. Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software.| <br>**Estefano Oscar Jaque Peña**<br>**TB1:** Al realizar las user stories comprendí en profundidad la funcionalidad futura del aplicativo. Las entrevistas y la creación del user persona me permitieron conocer mejor a los segmentos objetivos. Además, con el proceso Lean UX pude identificar necesidades clave y beneficios del producto.<br>**TP:** El desarrollo completo del bounded context IAM me permitió reconocer la necesidad de seguir aprendiendo sobre patrones de seguridad, arquitectura modular y organización de sprints, fundamentales para liderar proyectos escalables.<br>**TB2:** En TB2, reconocí la importancia de seguir aprendiendo continuamente al enfrentarme con retos en la implementación de interfaces en Flutter, que exigieron revisar documentación oficial y aplicar buenas prácticas. La construcción del Execution Evidence me ayudó a reflexionar sobre los procesos aplicados y sus resultados, destacando la necesidad de mantener una mentalidad crítica y de mejora constante. El trabajo en el Sprint Backlog 2 fortaleció mi compromiso con la organización eficiente del trabajo y con la adaptación a nuevas herramientas que potencien el rendimiento del equipo.<br><br>**Diego Alonso Rosado Iporre**<br>**TB1:** Entendí que el aprendizaje constante es esencial para enfrentar retos cambiantes. Este proyecto fortaleció mi motivación por seguir explorando enfoques modernos en desarrollo de software.<br>**TP:** Participar en el diseño del producto, mockups y desarrollo me mostró que el aprendizaje constante en herramientas visuales y estructuración de información es vital para soluciones centradas en el usuario.<br>**TB2:** Desarrollar la entrevista y el análisis heurístico en TB2 me permitió identificar nuevas perspectivas de mejora en la experiencia de usuario. Este proceso reforzó la importancia de actualizar constantemente mis habilidades en investigación, usabilidad y análisis, elementos clave para el desarrollo de soluciones de software efectivas.<br><br>**Sebastián Omar Real Calderón**<br>**TB1:** Reconozco que mantenerme actualizado con metodologías ágiles y técnicas de análisis es clave para desarrollar soluciones efectivas. Este proyecto reforzó mi compromiso con el aprendizaje continuo para abordar desafíos técnicos y de negocio.<br>**TP:** Reconocí que aplicar herramientas como Figma, userflows y la estructuración del bounded context me obliga a mantenerme al día en diseño de interacción, flujos administrativos y análisis UX.<br>**TB2:** El proceso de entrevista y análisis en TB2 me ayudó a descubrir nuevas oportunidades para mejorar la experiencia de usuario. Esta experiencia destacó la necesidad de mantenerme actualizado en investigación de usuarios, usabilidad y evaluación, aspectos fundamentales para crear soluciones de software más efectivas.<br><br>**John Arévalo Meza**<br>**TB1:** Comprendí que mantenerse a la vanguardia con metodologías y flujos de trabajo es importante, ya que nos permite eliminar posibles retrasos y aplicar conocimientos previos para mejorar el proyecto.<br>**TP:** Comprendí que al implementar múltiples capas (backend, frontend, diseño) debía reforzar constantemente mis conocimientos y adaptarme a tecnologías como frameworks modernos y buenas prácticas de UI.<br>**TB2:** Realizar la entrevista y el análisis de esta me permitió detectar oportunidades valiosas para optimizar la experiencia de usuario. Esta actividad reafirmó la importancia de seguir fortaleciendo mis competencias en investigación, usabilidad y evaluación, pilares esenciales para diseñar soluciones más acertadas y centradas en el usuario. | **TB1:** El equipo evidenció la importancia de la formación continua en el ámbito profesional, aplicando nuevos conocimientos directamente al desarrollo del proyecto. Esta experiencia destacó cómo la adaptabilidad y la mejora constante son esenciales para entregar soluciones de software alineadas con las necesidades reales del mercado.<br>**TP:** El equipo valoró el aprendizaje continuo como parte esencial del crecimiento profesional. Cada estudiante identificó áreas en las que necesitaba mejorar y lo hizo en el transcurso del proyecto, integrando nuevos conocimientos en seguridad, diseño, arquitectura de software y metodologías ágiles. <br>**TB2:** A lo largo del segundo tramo del proyecto, el equipo reafirmó que el aprendizaje permanente es clave para afrontar retos técnicos y de gestión. Los estudiantes mostraron una actitud proactiva al investigar nuevas herramientas, adaptar tecnologías emergentes y aplicar mejoras basadas en el feedback de usuarios y resultados de evaluación. Esta disposición a seguir aprendiendo asegura una base sólida para el crecimiento profesional y la resolución de desafíos en escenarios reales de desarrollo de software.|
+| 1. Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software. | <br>**Estefano Oscar Jaque Peña**<br>**TB1:** Al desarrollar las user stories comprendí mejor la funcionalidad futura del aplicativo. Las entrevistas y la creación del user persona me permitieron conocer más a fondo los segmentos objetivos. Además, con el proceso Lean UX identifiqué necesidades clave y beneficios potenciales del producto.<br>**TP:** Desarrollé el bounded context IAM (frontend y backend), aplicando tácticas de DDD. Esto me permitió actualizar conocimientos en arquitectura de software, seguridad y gestión de usuarios, además de emplear herramientas de desarrollo profesional en la sección de *Software Development* del informe.<br>**TB2:** Durante TB2, desarrollé el Sprint Backlog 2, consolidando mi entendimiento sobre planificación ágil y gestión de tareas en entornos colaborativos. Además, completé el Execution Evidence, lo cual me permitió reflejar de forma clara y estructurada los avances del proyecto. Finalmente, implementé el código en Flutter para el bounded context IAM, lo que me permitió afianzar mis conocimientos en integración de interfaces personalizadas con la lógica de negocio, usando herramientas modernas como Provider y prácticas de arquitectura limpia.<br>**TF:** Se fortalecieron conocimientos en la conexión entre interfaces de usuario (frontend) y lógica de negocio (backend), integrando Firebase como base de datos en tiempo real. Esta experiencia permitió desarrollar flujos completos de datos, desde la interacción del usuario hasta el almacenamiento en la nube, consolidando habilidades clave en arquitectura de software y liderazgo técnico.<br><br>**Diego Alonso Rosado Iporre**<br>**TB1:** Apliqué herramientas como entrevistas, wireframes y escenarios para identificar oportunidades clave del proyecto. Contribuí al diseño de la solución desde la comprensión del dominio hasta la arquitectura del software.<br>**TP:** Desarrollé el bounded context Management junto a mi compañero. Aplicamos patrones tácticos de DDD y reforcé mis conocimientos en diseño de producto y wireframes, elementos clave para definir flujos de interacción.<br>**TB2:** Durante TB2, al realizar entrevistas y análisis heurístico, actualicé y reforcé mis conocimientos en principios de usabilidad, experiencia de usuario y evaluación de interfaces. Estos aprendizajes fueron fundamentales para identificar mejoras en el prototipo y asegurar que la solución responda a necesidades reales.<br>**TF:** Se profundizó en el uso de Firebase como plataforma backend, permitiendo la autenticación de usuarios, almacenamiento en la nube y pruebas de funcionalidad. Este conocimiento resulta clave para el desarrollo de soluciones escalables en tiempo real y fortalece las habilidades en la arquitectura de software moderna. <br><br>**John Arévalo Meza**<br>**TB1:** Realicé el registro de entrevistas, *empathy mapping*, *user journey mapping*, *event storming* y *bounded context canvases*, lo que permitió identificar claramente los *bounded contexts* y profundizar en la comprensión del dominio.<br>**TP:** Desarrollé el bounded context Applications, lo que fortaleció mis habilidades en desarrollo backend y parcialmente en frontend, así como en diseño táctico DDD. Además, elaboré la landing page, aplicando conocimientos actualizados de UI/UX.<br>**TB2:** Al realizar la entrevista, comprendí el valor de escuchar activamente al usuario para tomar decisiones informadas. Esta experiencia me permitió afianzar mis habilidades en evaluación de interfaces y asegurar que las soluciones propuestas respondan de manera efectiva a las necesidades de quienes las utilizarán.<br>**TF:** Se adquirieron habilidades en la integración de funcionalidades para gestionar archivos PDF en aplicaciones móviles, incluyendo su subida, almacenamiento y visualización. Esta experiencia refuerza el dominio de la interacción entre frontend y servicios en la nube. <br><br>**Sebastián Omar Real Calderón**<br>**TB1:** Apliqué análisis de entrevistas y modelado de dominios para entender las necesidades reales del proyecto. Mi contribución ayudó a traducir problemas complejos en requisitos claros para la solución de software.<br>**TP:** Desarrollé parcialmente el frontend y backend del bounded context Management. Implementé prototipos, wireframes, userflows y mockups, integrando herramientas actualizadas de diseño y análisis de usuario.<br>**TB2:** Al realizar mi entrevista, obtuve conocimientos sobre como se relaciona el feedback del usuario con los cambios a implementar, asegurándome que esas mejoras permitan optimizar la experiencia según las necesidades reales del usuario.<br>**TF:** Se consolidaron conocimientos en Flutter como framework de desarrollo móvil, permitiendo construir interfaces responsivas y eficientes para Android e iOS desde una sola base de código. Esta competencia es fundamental en entornos laborales donde se prioriza la productividad y la portabilidad del software. | **TB1:** El equipo demostró capacidad para integrar aprendizajes técnicos y metodologías ágiles en el desarrollo del proyecto. A través de la investigación y colaboración, se identificaron oportunidades clave para optimizar procesos mediante tecnología, reforzando la importancia de adaptarse continuamente a los requerimientos del contexto profesional.<br>**TP:** El equipo demostró la capacidad de aplicar conceptos técnicos avanzados como el diseño táctico de DDD y arquitectura por bounded contexts. Además, se utilizaron herramientas modernas para gestión de usuarios, diseño UI/UX y desarrollo frontend/backend, evidenciando una actualización profesional efectiva y aplicada.<br>**TB2:** El equipo continuó con una actualización constante de habilidades, aplicando conocimientos avanzados en frameworks modernos como Flutter, prácticas ágiles y herramientas de documentación y validación. La integración entre planificación, desarrollo e implementación demuestra un enfoque profesional y articulado hacia la resolución de problemas reales, evidenciando una evolución técnica sólida y aplicable a futuros entornos laborales.<br>**TF:** El equipo consolidó su desarrollo profesional mediante la integración de tecnologías modernas como Flutter y Firebase, abordando desafíos reales con un enfoque técnico y colaborativo. La implementación de funcionalidades como la carga de archivos, conexión a bases de datos en tiempo real y validaciones de usabilidad demuestra una madurez en el ciclo completo de desarrollo de software. Además, el liderazgo, la distribución efectiva de tareas y la aplicación de buenas prácticas fortalecieron la experiencia de trabajo en equipo, reflejando una preparación sólida para entornos profesionales. |
+| 2. Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software.| <br>**Estefano Oscar Jaque Peña**<br>**TB1:** Al realizar las user stories comprendí en profundidad la funcionalidad futura del aplicativo. Las entrevistas y la creación del user persona me permitieron conocer mejor a los segmentos objetivos. Además, con el proceso Lean UX pude identificar necesidades clave y beneficios del producto.<br>**TP:** El desarrollo completo del bounded context IAM me permitió reconocer la necesidad de seguir aprendiendo sobre patrones de seguridad, arquitectura modular y organización de sprints, fundamentales para liderar proyectos escalables.<br>**TB2:** En TB2, reconocí la importancia de seguir aprendiendo continuamente al enfrentarme con retos en la implementación de interfaces en Flutter, que exigieron revisar documentación oficial y aplicar buenas prácticas. La construcción del Execution Evidence me ayudó a reflexionar sobre los procesos aplicados y sus resultados, destacando la necesidad de mantener una mentalidad crítica y de mejora constante. El trabajo en el Sprint Backlog 2 fortaleció mi compromiso con la organización eficiente del trabajo y con la adaptación a nuevas herramientas que potencien el rendimiento del equipo.<br>**TF:** El rol de liderazgo asumido en el proyecto implicó no solo coordinar tareas y gestionar al equipo, sino también adquirir nuevos conocimientos técnicos para guiar eficazmente el desarrollo del sistema. La necesidad de comprender tanto el frontend como el backend, así como las integraciones con Firebase, impulsó una búsqueda activa de recursos, documentación oficial y prácticas recomendadas. Además, se promovió un ambiente de mejora constante mediante retroalimentación, toma de decisiones informadas y resolución de problemas. Esta experiencia refuerza el compromiso del líder con el aprendizaje permanente como una herramienta esencial para acompañar procesos técnicos, facilitar el trabajo en equipo y asegurar el éxito de proyectos reales en el ámbito profesional. <br><br>**Diego Alonso Rosado Iporre**<br>**TB1:** Entendí que el aprendizaje constante es esencial para enfrentar retos cambiantes. Este proyecto fortaleció mi motivación por seguir explorando enfoques modernos en desarrollo de software.<br>**TP:** Participar en el diseño del producto, mockups y desarrollo me mostró que el aprendizaje constante en herramientas visuales y estructuración de información es vital para soluciones centradas en el usuario.<br>**TB2:** Desarrollar la entrevista y el análisis heurístico en TB2 me permitió identificar nuevas perspectivas de mejora en la experiencia de usuario. Este proceso reforzó la importancia de actualizar constantemente mis habilidades en investigación, usabilidad y análisis, elementos clave para el desarrollo de soluciones de software efectivas.<br>**TF:** El equipo reconoció la importancia de mantenerse actualizado explorando herramientas como Flutter y Firebase, lo que implicó investigar documentación, ejemplos prácticos y buenas prácticas. Esta actitud evidencia una mentalidad de aprendizaje continuo fundamental para enfrentar los cambios constantes en el sector tecnológico. <br><br>**Sebastián Omar Real Calderón**<br>**TB1:** Reconozco que mantenerme actualizado con metodologías ágiles y técnicas de análisis es clave para desarrollar soluciones efectivas. Este proyecto reforzó mi compromiso con el aprendizaje continuo para abordar desafíos técnicos y de negocio.<br>**TP:** Reconocí que aplicar herramientas como Figma, userflows y la estructuración del bounded context me obliga a mantenerme al día en diseño de interacción, flujos administrativos y análisis UX.<br>**TB2:** El proceso de entrevista y análisis en TB2 me ayudó a descubrir nuevas oportunidades para mejorar la experiencia de usuario. Esta experiencia destacó la necesidad de mantenerme actualizado en investigación de usuarios, usabilidad y evaluación, aspectos fundamentales para crear soluciones de software más efectivas.<br>**TF:** Durante el proceso del proyecto, se promovió la revisión cruzada del trabajo, permitiendo detectar errores, optimizar código y mejorar funcionalidades. Esta práctica fomenta un entorno de aprendizaje colaborativo y constante refinamiento de habilidades técnicas. <br><br>**John Arévalo Meza**<br>**TB1:** Comprendí que mantenerse a la vanguardia con metodologías y flujos de trabajo es importante, ya que nos permite eliminar posibles retrasos y aplicar conocimientos previos para mejorar el proyecto.<br>**TP:** Comprendí que al implementar múltiples capas (backend, frontend, diseño) debía reforzar constantemente mis conocimientos y adaptarme a tecnologías como frameworks modernos y buenas prácticas de UI.<br>**TB2:** Realizar la entrevista y el análisis de esta me permitió detectar oportunidades valiosas para optimizar la experiencia de usuario. Esta actividad reafirmó la importancia de seguir fortaleciendo mis competencias en investigación, usabilidad y evaluación, pilares esenciales para diseñar soluciones más acertadas y centradas en el usuario. <br>**TF:** Al enfrentar desafíos como la integración de la funcionalidad de subida de archivos PDF y la sincronización de datos en tiempo real, los integrantes desarrollaron habilidades de búsqueda autónoma de soluciones, lo cual es clave para el desarrollo profesional en proyectos reales. | **TB1:** El equipo evidenció la importancia de la formación continua en el ámbito profesional, aplicando nuevos conocimientos directamente al desarrollo del proyecto. Esta experiencia destacó cómo la adaptabilidad y la mejora constante son esenciales para entregar soluciones de software alineadas con las necesidades reales del mercado.<br>**TP:** El equipo valoró el aprendizaje continuo como parte esencial del crecimiento profesional. Cada estudiante identificó áreas en las que necesitaba mejorar y lo hizo en el transcurso del proyecto, integrando nuevos conocimientos en seguridad, diseño, arquitectura de software y metodologías ágiles. <br>**TB2:** A lo largo del segundo tramo del proyecto, el equipo reafirmó que el aprendizaje permanente es clave para afrontar retos técnicos y de gestión. Los estudiantes mostraron una actitud proactiva al investigar nuevas herramientas, adaptar tecnologías emergentes y aplicar mejoras basadas en el feedback de usuarios y resultados de evaluación. Esta disposición a seguir aprendiendo asegura una base sólida para el crecimiento profesional y la resolución de desafíos en escenarios reales de desarrollo de software. <br>**TF:** El equipo consolidó su compromiso con el aprendizaje permanente, enfrentando desafíos técnicos que exigieron salir de su zona de confort y adquirir conocimientos en tiempo real. La integración de nuevas tecnologías como Flutter y Firebase, el diseño de funcionalidades completas y la necesidad de entregar un producto funcional reforzaron la importancia de mantenerse actualizado y proactivo. Esta experiencia final no solo fortaleció competencias técnicas, sino también habilidades de gestión, colaboración y liderazgo, preparando a los estudiantes para entornos profesionales en constante evolución. |
 
 ## Capítulo I: Presentación
 
@@ -5090,7 +5104,7 @@ Asimismo, se finalizó la implementación del módulo **IAM**, tanto en frontend
 | US23 |  | TA052 | Verificación global y preservación de estado | Mantener postulaciones si se validan los datos del colaborador | 1 | Sebastián Real Calderón | Done |
 
 ### 6.2.3.3. Development Evidence for Sprint Review  
-
+  
 Backend:  
 
 |Repository |Branch| Commit Id | Commit Message| Commit Message Body| Date|
@@ -5111,11 +5125,236 @@ Frontend-flutter:
 |----|-----|---------------------|----------------------------------------|---------------------------------------------------------|------------|
 |Aventis-Scholr/scholr-mobile-flutter|origin| c9224a1 | feat: Add bounded context IAM en flutter |- | 15/06/2025 |
 
+### 6.2.3.4. Testing Suite Evidence for Sprint Review
+
+## Heurística Resuelta #1: Falta de guías iniciales para nuevos usuarios
+
+**Escala de severidad:** 2  
+**Heurística violada:** Ayuda y documentación (Nielsen)
+
+### Descripción del problema
+
+Durante las sesiones de evaluación con usuarios, se identificó que los nuevos usuarios no contaban con una guía clara sobre cómo empezar a utilizar la plataforma. Esto generaba incertidumbre respecto al proceso de postulación a becas, los requisitos necesarios, y los pasos a seguir.
+
+### Solución implementada
+
+Se agregó una nueva sección en el **sidebar principal**, accesible después del inicio de sesión, titulada **"Tutorial"**. Dentro de esta sección, los usuarios pueden acceder a la opción **"Ver Cartilla de Instrucciones"**, que proporciona orientación paso a paso sobre:
+
+- Cómo completar correctamente los requisitos para una postulación.
+- Qué documentos son necesarios y cómo subirlos.
+- Fechas clave y cronograma de las próximas convocatorias de becas.
+- Buenas prácticas para asegurar que la postulación no sea rechazada.
+
+Esta mejora guía al usuario desde su primer ingreso y reduce las dudas sobre el proceso de postulación.
+
+### Captura de pantalla
+
+> Sección "Tutorial" con acceso a la **Cartilla de Instrucciones**, ofreciendo guía completa para nuevos usuarios.
+
+![Cartilla de instrucciones](assets/tf/heuristic1.png)
+
+### Impacto
+
+- Mejora la tasa de finalización de postulaciones.
+- Reduce errores comunes por falta de conocimiento del proceso.
+- Aumenta la confianza del usuario desde su primer ingreso a la plataforma.
+
+## Heurística resuelta #2: Filtros por número de postulaciones y avance de procesamiento
+
+**Escala de severidad:** 2  
+**Heurística violada:** Arquitectura de Información: *Is it findable?*
+
+### Descripción del problema
+
+Los entrevistados indicaron que no existía una forma clara de identificar cuáles postulaciones estaban en estado pendiente, aprobado o rechazado, dificultando el seguimiento del proceso por parte de los apoderados.
+
+### Solución implementada
+
+Se creó un endpoint específico que devuelve únicamente las postulaciones en estado **pendiente** para un apoderado:
+
+``GET /api/v1/applications/pendingapplications/{apoderadoId}``
+
+Este endpoint permite filtrar las aplicaciones por su estado (`Status.PENDIENTE`), mejorando la **localización de información relevante** y facilitando la carga de trabajo de los responsables del seguimiento.
+
+### Evidencia funcional
+
+> Test automatizado validando que el endpoint devuelve únicamente las postulaciones pendientes:
+
+![Test pasando de filtro por postulaciones pendientes](assets/tf/heuristic2.png)
+
+### Impacto
+
+- Mejora la visibilidad del estado actual de las solicitudes.
+- Permite a los apoderados enfocarse en las postulaciones aún en proceso.
+- Reduce errores y tiempos de revisión en tareas administrativas.
+
+## Heurística Resuelta #3: Cambiar el estado de una postulación resulta confuso
+
+**Escala de severidad:** 3  
+**Heurística violada:** Claridad del sistema / Prevención de errores (Nielsen)
+
+### Descripción del problema
+
+Durante las entrevistas se identificó que los usuarios (evaluadores) no sabían si al seleccionar un estado como **Aprobado**, **Rechazado** o **Pendiente**, este cambio se realizaba correctamente. Tampoco se mostraba una confirmación visual clara, lo que generaba dudas e intentos múltiples que podían causar errores.
+
+### Solución implementada
+
+Se implementó una mejora en el flujo de cambio de estado desde el panel de administración:
+
+- Se habilitó una acción clara para cambiar el estado (menú desplegable o botón).
+- Al hacer el cambio, el sistema muestra una confirmación visual (mensaje de éxito).
+- Se restringieron las acciones inválidas o redundantes.
+- Se utilizó el endpoint:
+  
+``PUT /api/v1/applications/{id}/status``
+
+### Validación por prueba unitaria
+
+Se implementó un test automatizado que valida que, al cambiar el estado de una postulación, la aplicación responde correctamente con código `200 OK` y actualiza el estado esperado.
+
+![Test cambio de estado](assets/tf/heuristic3.png)
+
+### Impacto
+
+- Disminuye errores al cambiar el estado de postulaciones.
+- Mejora la transparencia del sistema para evaluadores.
+- Refuerza la confianza del usuario en que su acción fue registrada correctamente.
+
+## Heurística resuelta #4: No se pueden previsualizar archivos sin descargarlos
+
+**Escala de severidad:** 3  
+**Heurística violada:** Flexibilidad y eficiencia de uso (Nielsen)
+
+### Descripción del problema
+
+Durante las sesiones de evaluación, los entrevistados indicaron que al revisar los documentos subidos (como el DNI, libreta de notas o constancia de logros), era necesario descargarlos para poder visualizarlos. Esto ralentizaba la validación de postulaciones, especialmente en dispositivos móviles o con conectividad limitada.
+
+### Solución implementada
+
+Se modificó la plataforma para que, una vez subidos los archivos, estos se guarden como URLs accesibles desde el frontend. Ahora, en la interfaz, los documentos se muestran como enlaces visualizables en una nueva pestaña del navegador, sin necesidad de descarga manual.
+
+Esto se logró utilizando el siguiente endpoint:
+
+``POST /api/v1/applications/{applicationId}/files``
+
+Este endpoint almacena los archivos y retorna sus URLs, las cuales son utilizadas para mostrar vistas previas directamente desde la interfaz.
+
+### Prueba unitaria que valida la carga y visualización de archivos
+
+> El siguiente test asegura que los archivos subidos retornan sus URLs correctamente, lo cual permite su visualización sin necesidad de descarga:
+
+![Visualización directa de archivos](assets/tf/heuristic4.png)
+
+### Impacto
+
+- Mejora la experiencia en dispositivos móviles.
+- Facilita la revisión de múltiples postulaciones en menos tiempo.
+
+## Heurística Resuelta #5: Mejorar mensajes de rechazo con orientación para corrección
+
+**Escala de severidad:** 1  
+**Heurística violada:** Usabilidad - Feedback del sistema / Ayuda para corrección (Nielsen)
+
+### Descripción del problema
+
+El sistema actual de mensajes de rechazo para postulaciones es útil, pero los usuarios manifestaron que podría ser más claro y brindar indicaciones específicas sobre cómo corregir los errores para volver a postular.
+
+### Solución implementada
+
+Se aprovechó el endpoint existente para reportes de postulación:
+
+``PUT /api/v1/applications/{id}/reporte``
+
+Este endpoint permite enviar mensajes detallados de rechazo que se muestran a los postulantes, orientándolos claramente sobre los errores a corregir y los pasos a seguir para mejorar su postulación.
+
+### Prueba unitaria que valida la actualización del reporte con mensajes personalizados
+
+> El siguiente test asegura que el sistema actualiza correctamente el mensaje de rechazo y retorna una respuesta exitosa:
+
+![Test actualización de reporte](assets/tf/heuristic7.png)
+
+### Impacto
+
+- Aumenta la claridad sobre las causas del rechazo.
+- Facilita la corrección de errores por parte del postulante.
+- Reduce tiempo perdido en envíos repetidos sin cambios.
+- Mejora la comunicación entre evaluadores y postulantes.
+
+# Documentación del uso de Firebase App Distribution y Firebase Analytics
+
+Este documento describe el proceso seguido para integrar **Firebase** en la aplicación Android `com.example.aventurape_androidmobile`, incluyendo el uso de **Firebase App Distribution** y **Firebase Analytics** con DebugView.
+
+## 1. Creación del proyecto en Firebase
+
+Se creó un proyecto llamado **Scholr** en la consola de Firebase. Se añadió una app Android con el nombre de paquete:
+
+``com.example.aventurape_androidmobile``
 
 
-### 6.2.3.4. Testing Suite Evidence for Sprint Review  
-[Aca pones tus tests Diego]
+![Creación del proyecto en Firebase](assets/tf/Creacion.png)
 
+---
+
+## 2. Descarga e integración de `google-services.json`
+
+Se descargó el archivo de configuración `google-services.json` desde la consola de Firebase y se colocó en el directorio:
+
+``app/google-services.json``
+
+
+Este archivo contiene la configuración necesaria para que Firebase funcione correctamente con nuestra app.
+
+![Integración de google-services.json](assets/tf/CambiosFront.png)
+
+## 3. Configuración del SDK de Firebase
+
+Se agregaron las dependencias necesarias al archivo `build.gradle.kts`:
+
+```kotlin
+// Plugin
+id("com.google.gms.google-services")
+
+// Firebase Analytics
+implementation(platform("com.google.firebase:firebase-bom:33.16.0"))
+implementation("com.google.firebase:firebase-analytics")
+```
+
+Esto permite la recolección de datos analíticos desde la app.
+
+## 4. Generación e instalación del APK en el emulador
+
+Generamos el APK 
+
+![APK](assets/tf/APK.png)
+
+Lo que seguiría es arrastrar el APK generado al emulador del Android Studio para que Firebase pueda analizar la app
+
+![APK2](assets/tf/apk2.png)
+
+## 5. Visualización de eventos en Firebase DebugView
+
+Una vez iniciada la app, los eventos comenzaron a reflejarse en la sección DebugView de Firebase Analytics.
+
+![analytics](assets/tf/analytics.png)
+
+## 6. Publicación del APK en App Distribution
+
+Se subió el archivo APK directamente desde Firebase App Distribution.
+
+![distribution1](assets/tf/AppDistribution.png)
+
+Visualizamos el APK agregado al firebase
+
+![distribution2](assets/tf/AppDistribution2.png)
+
+Podemos agregar un tester para enviarle nuestro apk
+
+![distribution3](assets/tf/AppDistribution3.png)
+
+Y visualizar cuando haya llegado nuestro email
+
+
+![distribution4](assets/tf/AppDistribution6.png)
 
 ### 6.2.3.5. Execution Evidence for Sprint Review   
 [Aca pones flutter y jetpack compose Sebas, foto con explicacion ] 
