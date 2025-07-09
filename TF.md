@@ -275,7 +275,6 @@ TF:<br>
         - [6.2.3.7. Software Deployment Evidence for Sprint Review.](#6237-software-deployment-evidence-for-sprint-review)
         - [6.2.3.8. Team Collaboration Insights during Sprint 3.](#6238-team-collaboration-insights-during-sprint-3)
     - [6.3. Validation Interviews. ](#63-validation-interviews)
-        -[6.3.1. Diseño de Entrevistas.](#631-diseño-de-entrevistas)
         - [6.3.1. Diseño de Entrevistas.](#631-diseño-de-entrevistas)
         - [6.3.2. Registro de Entrevistas.](#632-registro-de-entrevistas)
         - [6.3.3. Evaluaciones según heurísticas.](#63-validation-interviews)
