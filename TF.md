@@ -5358,11 +5358,15 @@ Y visualizar cuando haya llegado nuestro email
 
 ### 6.2.3.5. Execution Evidence for Sprint Review   
 
+#### Jetpack
+
+- Subida de archivos: Permite subir los archivos necesarios para la postulación
+![](/assets/tf/executionevidences/jetpacksubidadearchivos.png)
+
 #### Flutter: 
 
 - Login: Pantalla de login
 ![](/assets/tf/executionevidences/flutterlogin.png)
-
 
 - Signup: Creación de cuenta
 ![](/assets/tf/executionevidences/fluttersignup.png)
