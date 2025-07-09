@@ -82,39 +82,40 @@ Product: "Scholr"
 
 
 
-<br>**Report:**
+**Report:**  
 
-<img src="assets/images/contributors.png" alt="alt text" width="500"/>
+![alt text](assets/tf-estefano/reportinsig.png)  
 
-- Estefano Oscar Jaque Peña: 14
-- Sebastian Omar Real Calderón:16
-- John Telesforo Arevalo Meza: 13
-- Diego Alonso Rosado Iporre: 11
+- Estefano Oscar Jaque Peña: 34  
+- John Telesforo Arevalo Meza: 28  
+- Sebastian Real Calderon: 30  
+- Diego Alonso Rosado Iporre: 27  
 
-<br>**Backend:**
+<br>**Backend:**  
 
-![alt text](assets/images/commits_backend.png) 
+![alt text](assets/tf-estefano/backinsi.png)  
 
-- Estefano Oscar Jaque Peña: 1
-- Sebastian Omar Real Calderón: 2
-- John Telesforo Arevalo Meza: 8
-- Diego Alonso Rosado Iporre: 2
+- Estefano Oscar Jaque Peña: 4  
+- Sebastian Omar Real Calderón: 2  
+- John Telesforo Arevalo Meza: 21  
+- Diego Alonso Rosado Iporre: 2  
 
-<br>**Frontend:**
+<br>**Frontend:**  
 
-![alt text](assets/images/commits_frontend.png) 
+![alt text](assets/tf-estefano/jcinsi.png)    
 
-- Sebastian Omar Real Calderón: 3
-- John Telesforo Arevalo Meza: 3
-- Diego Alonso Rosado Iporre: 1
+- Estefano Oscar Jaque Peña: 1  
+- Sebastian Omar Real Calderón: 9  
+- John Telesforo Arevalo Meza: 9  
+- Diego Alonso Rosado Iporre: 2  
 
 <br>**Frontend-flutter:**  
 
-<img src="assets/tb2/flut.png" alt="alt text" width="500"/>
-
-<img src="assets/tb2/fluter.png" alt="alt text" width="500"/>
+![alt text](assets/tf-estefano/flutinsi.png)  
 
 - Estefano Oscar Jaque Peña: 1  
+- Diego Alonso Rosado Iporre: 1  
+- Sebastian Omar Real Calderón: 11 
 
 TB1:<br>
 |Integrante|Tarea Asignada|
@@ -5104,7 +5105,7 @@ Asimismo, se finalizó la implementación del módulo **IAM**, tanto en frontend
 | US23 |  | TA052 | Verificación global y preservación de estado | Mantener postulaciones si se validan los datos del colaborador | 1 | Sebastián Real Calderón | Done |
 
 ### 6.2.3.3. Development Evidence for Sprint Review  
-  
+
 Backend:  
 
 |Repository |Branch| Commit Id | Commit Message| Commit Message Body| Date|
