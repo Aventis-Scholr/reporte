@@ -60,9 +60,9 @@ Product: "Scholr"
 
 | Versión | Fecha      | Autor             | Descripción                                                                                                                                                        |
 |---------|------------|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| TF      | 05/07/2025 | Estefano Jaque    | Repartición de tareas, corrección del front, revisión del informe final.                                                                                           |
+| TF      | 05/07/2025 | Estefano Jaque    | Repartición de tareas, corrección del front, backend y database, revisión del informe final.                                                                                           |
 | TF      | 05/07/2025 | John Arévalo      | Adición de funcionalidad para subir PDFs a la app, revisión de backend y frontend.                                                                                 |
-| TF      | 05/07/2025 | Diego Rosado      | Conexión a Firebase, revisión de funcionalidad para subir PDFs, realización del informe, desarrollo de heurísticas y testing relacionado con Firebase.             |
+| TF      | 05/07/2025 | Diego Rosado      | Conexión a Firebase, desarrollo de heurísticas y testing relacionado con Firebase.             |
 | TF      | 05/07/2025 | Sebastian Real    | Desarrollo en Flutter, revisión de la lógica del proyecto.                                                                                                         |
 
 
@@ -147,7 +147,7 @@ TF:<br>
 | Jaque Peña, Estefano Oscar        | Repartición de tareas, corrección del front, revisión del informe final.                                   |
 | Sebastian Omar Real Calderón      | Desarrollo en Flutter, revisión de la lógica del proyecto.                                                 |
 | Arévalo Meza John                 | Adición de funcionalidad para subir PDFs a la app, revisión de backend y frontend.                         |
-| Rosado Iporre, Diego              | Conexión a Firebase, revisión de funcionalidad para subir PDFs, realización del informe, heurísticas y testing. |
+| Rosado Iporre, Diego              | Conexión a Firebase, heurísticas y testing. |
 
 ## Contenido
 
