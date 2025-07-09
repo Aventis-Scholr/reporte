@@ -1,66 +1,230 @@
 ### 6.2.2.4. Testing Suite Evidence for Sprint Review
 
-**Core Entities Unit Tests**
+## Heurística Resuelta #1: Falta de guías iniciales para nuevos usuarios
 
-Los Core Entities Unit Tests son esenciales en el desarrollo de software, ya que garantizan la calidad y correcto funcionamiento de las entidades centrales, previniendo errores y facilitando el mantenimiento del código.
+**Escala de severidad:** 2  
+**Heurística violada:** Ayuda y documentación (Nielsen)
 
-Applications Service Test  
-![alt text](assets/tb2/applicationServiceTest.png)    
+### Descripción del problema
 
-IAM Service Test  
-![alt text](assets/tb2/iamServiceTest.png)    
+Durante las sesiones de evaluación con usuarios, se identificó que los nuevos usuarios no contaban con una guía clara sobre cómo empezar a utilizar la plataforma. Esto generaba incertidumbre respecto al proceso de postulación a becas, los requisitos necesarios, y los pasos a seguir.
 
-Management Service Test  
-![alt text](assets/tb2/managementServiceTest.png)    
+### Solución implementada
 
-Scholarships Service Test  
-![alt text](assets/tf/scholarshipsServiceTest.png)    
+Se agregó una nueva sección en el **sidebar principal**, accesible después del inicio de sesión, titulada **"Tutorial"**. Dentro de esta sección, los usuarios pueden acceder a la opción **"Ver Cartilla de Instrucciones"**, que proporciona orientación paso a paso sobre:
 
-Data Apoderado Service Test  
-![alt text](assets/tf/dataApoderadoServiceTest.png)    
+- Cómo completar correctamente los requisitos para una postulación.
+- Qué documentos son necesarios y cómo subirlos.
+- Fechas clave y cronograma de las próximas convocatorias de becas.
+- Buenas prácticas para asegurar que la postulación no sea rechazada.
 
-**Core Integration Tests**
+Esta mejora guía al usuario desde su primer ingreso y reduce las dudas sobre el proceso de postulación.
 
-Las Core Integration Tests son fundamentales para asegurar que los controladores interactúen correctamente con otros componentes del sistema, como servicios y bases de datos. Al evaluar escenarios de error, estas pruebas garantizan que el sistema maneje adecuadamente situaciones inesperadas y responda con los códigos de estado correctos. Esto mejora la experiencia del usuario, facilita la depuración y contribuye a desarrollar un software confiable y de alta calidad.
+### Captura de pantalla
 
-Applications Controller Test Actualizado
-![alt text](assets/tf/applicationControllereTest.png)    
+> Sección "Tutorial" con acceso a la **Cartilla de Instrucciones**, ofreciendo guía completa para nuevos usuarios.
 
-IAM Controller Test  
-![alt text](assets/tb2/iamControllerTest.png)    
+![Cartilla de instrucciones](assets/tf/heuristic1.png)
 
-Management Controller Test  
-![alt text](assets/tb2/managementControllerTest.png)    
+### Impacto
 
-Scholarships Controller Test  
-![alt text](assets/tf/scholarshipsControllerTest.png)    
+- Mejora la tasa de finalización de postulaciones.
+- Reduce errores comunes por falta de conocimiento del proceso.
+- Aumenta la confianza del usuario desde su primer ingreso a la plataforma.
 
-Data Apoderado Controller Test  
-![alt text](assets/tf/dataApoderadoControllerTest.png)    
+## Heurística resuelta #2: Filtros por número de postulaciones y avance de procesamiento
 
-**Core Behavior-Driven Development (BDD)**
+**Escala de severidad:** 2  
+**Heurística violada:** Arquitectura de Información: *Is it findable?*
 
-Las pruebas BDD aseguran que el comportamiento del sistema esté alineado con las historias de usuario priorizadas, simulando flujos de uso reales desde la perspectiva del usuario final.
+### Descripción del problema
 
-![alt text](assets/tf/features.png)    
+Los entrevistados indicaron que no existía una forma clara de identificar cuáles postulaciones estaban en estado pendiente, aprobado o rechazado, dificultando el seguimiento del proceso por parte de los apoderados.
 
-#### US03 Confirmación de verificación exitosa
-![alt text](assets/tf/featureUs3.png)   
+### Solución implementada
 
-#### US04 Subir documentos de postulación
-![alt text](assets/tf/featureUs4.png)   
+Se creó un endpoint específico que devuelve únicamente las postulaciones en estado **pendiente** para un apoderado:
 
-#### US10 Listado de postulaciones para coordinador
-![alt text](assets/tf/featureUs10.png)   
+``GET /api/v1/applications/pendingapplications/{apoderadoId}``
 
-#### US11 Aprobar/rechazar con comentarios
-![alt text](assets/tf/featureUs11.png)   
+Este endpoint permite filtrar las aplicaciones por su estado (`Status.PENDIENTE`), mejorando la **localización de información relevante** y facilitando la carga de trabajo de los responsables del seguimiento.
 
-#### US12 Publicacion de nuevas becas
-![alt text](assets/tf/featureUs12.png)
+### Evidencia funcional
 
-#### US20 Vista de becas disponibles de la empresa
-![alt text](assets/tf/featureUs20.png)
+> Test automatizado validando que el endpoint devuelve únicamente las postulaciones pendientes:
 
-#### US22 Vista de postulaciones por colaborador
-![alt text](assets/tf/featureUs22.png)
+![Test pasando de filtro por postulaciones pendientes](assets/tf/heuristic2.png)
+
+### Impacto
+
+- Mejora la visibilidad del estado actual de las solicitudes.
+- Permite a los apoderados enfocarse en las postulaciones aún en proceso.
+- Reduce errores y tiempos de revisión en tareas administrativas.
+
+## Heurística Resuelta #3: Cambiar el estado de una postulación resulta confuso
+
+**Escala de severidad:** 3  
+**Heurística violada:** Claridad del sistema / Prevención de errores (Nielsen)
+
+### Descripción del problema
+
+Durante las entrevistas se identificó que los usuarios (evaluadores) no sabían si al seleccionar un estado como **Aprobado**, **Rechazado** o **Pendiente**, este cambio se realizaba correctamente. Tampoco se mostraba una confirmación visual clara, lo que generaba dudas e intentos múltiples que podían causar errores.
+
+### Solución implementada
+
+Se implementó una mejora en el flujo de cambio de estado desde el panel de administración:
+
+- Se habilitó una acción clara para cambiar el estado (menú desplegable o botón).
+- Al hacer el cambio, el sistema muestra una confirmación visual (mensaje de éxito).
+- Se restringieron las acciones inválidas o redundantes.
+- Se utilizó el endpoint:
+  
+``PUT /api/v1/applications/{id}/status``
+
+### Validación por prueba unitaria
+
+Se implementó un test automatizado que valida que, al cambiar el estado de una postulación, la aplicación responde correctamente con código `200 OK` y actualiza el estado esperado.
+
+![Test cambio de estado](assets/tf/heuristic3.png)
+
+### Impacto
+
+- Disminuye errores al cambiar el estado de postulaciones.
+- Mejora la transparencia del sistema para evaluadores.
+- Refuerza la confianza del usuario en que su acción fue registrada correctamente.
+
+## Heurística resuelta #4: No se pueden previsualizar archivos sin descargarlos
+
+**Escala de severidad:** 3  
+**Heurística violada:** Flexibilidad y eficiencia de uso (Nielsen)
+
+### Descripción del problema
+
+Durante las sesiones de evaluación, los entrevistados indicaron que al revisar los documentos subidos (como el DNI, libreta de notas o constancia de logros), era necesario descargarlos para poder visualizarlos. Esto ralentizaba la validación de postulaciones, especialmente en dispositivos móviles o con conectividad limitada.
+
+### Solución implementada
+
+Se modificó la plataforma para que, una vez subidos los archivos, estos se guarden como URLs accesibles desde el frontend. Ahora, en la interfaz, los documentos se muestran como enlaces visualizables en una nueva pestaña del navegador, sin necesidad de descarga manual.
+
+Esto se logró utilizando el siguiente endpoint:
+
+``POST /api/v1/applications/{applicationId}/files``
+
+Este endpoint almacena los archivos y retorna sus URLs, las cuales son utilizadas para mostrar vistas previas directamente desde la interfaz.
+
+### Prueba unitaria que valida la carga y visualización de archivos
+
+> El siguiente test asegura que los archivos subidos retornan sus URLs correctamente, lo cual permite su visualización sin necesidad de descarga:
+
+![Visualización directa de archivos](assets/tf/heuristic4.png)
+
+### Impacto
+
+- Mejora la experiencia en dispositivos móviles.
+- Facilita la revisión de múltiples postulaciones en menos tiempo.
+
+## Heurística Resuelta #5: Mejorar mensajes de rechazo con orientación para corrección
+
+**Escala de severidad:** 1  
+**Heurística violada:** Usabilidad - Feedback del sistema / Ayuda para corrección (Nielsen)
+
+### Descripción del problema
+
+El sistema actual de mensajes de rechazo para postulaciones es útil, pero los usuarios manifestaron que podría ser más claro y brindar indicaciones específicas sobre cómo corregir los errores para volver a postular.
+
+### Solución implementada
+
+Se aprovechó el endpoint existente para reportes de postulación:
+
+``PUT /api/v1/applications/{id}/reporte``
+
+Este endpoint permite enviar mensajes detallados de rechazo que se muestran a los postulantes, orientándolos claramente sobre los errores a corregir y los pasos a seguir para mejorar su postulación.
+
+### Prueba unitaria que valida la actualización del reporte con mensajes personalizados
+
+> El siguiente test asegura que el sistema actualiza correctamente el mensaje de rechazo y retorna una respuesta exitosa:
+
+![Test actualización de reporte](assets/tf/heuristic7.png)
+
+### Impacto
+
+- Aumenta la claridad sobre las causas del rechazo.
+- Facilita la corrección de errores por parte del postulante.
+- Reduce tiempo perdido en envíos repetidos sin cambios.
+- Mejora la comunicación entre evaluadores y postulantes.
+
+# Documentación del uso de Firebase App Distribution y Firebase Analytics
+
+Este documento describe el proceso seguido para integrar **Firebase** en la aplicación Android `com.example.aventurape_androidmobile`, incluyendo el uso de **Firebase App Distribution** y **Firebase Analytics** con DebugView.
+
+## 1. Creación del proyecto en Firebase
+
+Se creó un proyecto llamado **Scholr** en la consola de Firebase. Se añadió una app Android con el nombre de paquete:
+
+``com.example.aventurape_androidmobile``
+
+
+![Creación del proyecto en Firebase](assets/tf/creacion.png)
+
+---
+
+## 2. Descarga e integración de `google-services.json`
+
+Se descargó el archivo de configuración `google-services.json` desde la consola de Firebase y se colocó en el directorio:
+
+``app/google-services.json``
+
+
+Este archivo contiene la configuración necesaria para que Firebase funcione correctamente con nuestra app.
+
+![Integración de google-services.json](assets/tf/CambiosFront.png)
+
+## 3. Configuración del SDK de Firebase
+
+Se agregaron las dependencias necesarias al archivo `build.gradle.kts`:
+
+```kotlin
+// Plugin
+id("com.google.gms.google-services")
+
+// Firebase Analytics
+implementation(platform("com.google.firebase:firebase-bom:33.16.0"))
+implementation("com.google.firebase:firebase-analytics")
+```
+
+Esto permite la recolección de datos analíticos desde la app.
+
+## 4. Generación e instalación del APK en el emulador
+
+Generamos el APK 
+
+![APK](assets/tf/APK.png)
+
+Lo que seguiría es arrastrar el APK generado al emulador del Android Studio para que Firebase pueda analizar la app
+
+![APK2](assets/tf/apk2.png)
+
+## 5. Visualización de eventos en Firebase DebugView
+
+Una vez iniciada la app, los eventos comenzaron a reflejarse en la sección DebugView de Firebase Analytics.
+
+![analytics](assets/tf/analytics.png)
+
+## 6. Publicación del APK en App Distribution
+
+Se subió el archivo APK directamente desde Firebase App Distribution.
+
+![distribution1](assets/tf/AppDistribution.png)
+
+Visualizamos el APK agregado al firebase
+
+![distribution2](assets/tf/AppDistribution2.png)
+
+Podemos agregar un tester para enviarle nuestro apk
+
+![distribution3](assets/tf/AppDistribution3.png)
+
+Y visualizar cuando haya llegado nuestro email
+
+![distribution4](assets/tf/AppDistribution4.png)
+
