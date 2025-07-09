@@ -907,9 +907,7 @@ EPICS:
 | US02| Validación automática de datos laborales|Como trabajador, quiero que el sistema verifique automáticamente mi código de colaborador con la base de datos de mi empresa, para confirmar mi elegibilidad en 24 horas.| Escenario: Dado que el usuario ingresó su código de colaborador de su empresa.Cuando la API de Backus confirma que el código existe, entonces el sistema envía un correo al correo del usuario con el asunto "¡Cuenta verificada! ingresa a tu cuenta scholr", con su usuario y contraseña.| EP01|
 | US04|Subir documentos de postulación|Como padre/trabajador,quiero subir documentos (credencial laboral, notas de mi hijo) directamente en la app,para evitar trámites presenciales y acelerar mi postulación.| Escenario: El usuario potencial visita la página principal.<br>Dado que el usuario potencial ha accedido a la página de inicio, Cuando navega hacia la sección de beneficios y funcionalidades, Entonces puede ver una descripción clara y visualmente destacada de las características clave de la plataforma.| EP02|
 | US05| Guardar postulación como borrador| Como padre/trabajador,quiero guardar una postulación como borrador antes de enviarla,para completar los requisitos más tarde sin perder el progreso.| Escenario: El usuario potencial busca información sobre la plataforma en redes sociales.<br>Dado que el usuario potencial navega a la página de inicio,Cuando se desplaza hasta el pie de página o la sección de contacto,Entonces puede hacer clic en enlaces directos a las redes sociales de la plataforma.| EP2|
-| US06| Confirmación con código único| Como padre/trabajador,quiero recibir confirmación con un código único al enviar mi postulación,para tener un comprobante digital de mi solicitud.| Escenario: Un nuevo usuario desea registrarse.<br>Dado que el usuario nuevo accede a la página de registro,Cuando completa el formulario con los datos básicos,Entonces puede finalizar el registro sin complicaciones ni pasos adicionales innecesarios.| EP02|
 | US07| Visualizacion de postulaciones| Como padre/trabajador,quiero ver todas mis postulaciones (enviadas, en revisión, aprobadas, rechazadas),para poder gestionarlas desde un solo lugar.| Escenario 1, Título: Filtrado de postulaciones por estado <br>Dado que el usuario accede a la sección "Mis Postulaciones".Cuando selecciona un filtro (ej. "En revisión").Entonces el Sistema muestra solo las postulaciones con ese estado.<br>Escenario 2, Título: Detalle de postulación específica. Dado que el usuario selecciona una postulación de la lista.Cuando hace clic en "Ver Detalles".Entonces el Sistema muestra información completa: documentos adjuntos, comentarios del evaluador (si aplica) y fecha de última actualización.| EP03|
-| US08| Notificaciones de cambios de estado| Como padre/trabajador,quiero recibir notificaciones push cuando mi postulación cambie de estado,para actuar rápidamente en caso de requerirse más información.| Escenario 1,Título: Alerta de postulación aprobada.<br>Dado que el sistema actualiza el estado de una postulación a "Aprobado" Cuando el usuario tiene activadas las notificaciones push.Entonces el Sistema envía una notificación con el mensaje: "¡Felicidades! Tu postulación al programa [X] ha sido aprobada. Revisa tu correo para más detalles".<br>Escenario 2,Título: Alerta de postulación rechazada con comentarios.Dado que el sistema actualiza el estado a "Rechazado" y el evaluador ingresa comentarios.Cuando el usuario recibe la notificación.Entonces el Sistema incluye un botón "Ver Motivos" que redirige a los comentarios del evaluador.| EP03|
 | US09| Reenvío de postulación rechazada| Como padre/trabajador,quiero reenviar una postulación rechazada (si el plazo lo permite),para corregir errores sin empezar desde cero.| Escenario 1,Título: Reenvío exitoso de postulación corregida.<br>Dado que el usuario selecciona una postulación rechazada con estado "Editable".Cuando sube los documentos corregidos y hace clic en "Reenviar".Entonces el Sistema valida que estén completos y cambia el estado a "En revisión".Y envía un correo de confirmación al usuario.<br>Escenario 2,Título: Bloqueo de reenvío por plazo vencido.<br>Dado que el usuario intenta reenviar una postulación rechazada.Cuando el plazo de corrección ha expirado.Entonces el Sistema muestra el mensaje: "El plazo para reenviar esta postulación ha finalizado. Por favor, inicia una nueva".| EP03|
 | US10|Listado de postulaciones para coordinador | Como coordinador de bienestar,quiero ver un listado de todas las postulaciones recibidas filtradas por tipo de beca,para priorizar revisiones según urgencia.| Escenario 1,Título: Priorización de becas urgentes.<br>Dado que el coordinador accede al módulo "Postulaciones".Cuando selecciona el filtro por tipo de beca.Entonces el Sistema muestra solo postulaciones de ese tipo, ordenadas por fecha de solicitud (más antiguas primero).Y cada registro incluye: nombre del colaborador , postulaciones dependiendo de la cantidad de hijos y fecha de envio <br>Escenario 2,Título: Generación de reporte filtrado.<br>Dado que el coordinador visauliza una postulacion.Cuando hace clic en "Exportar".Entonces el Sistema genera un archivo para su visualizacion| EP04|
 | US11| Aprobar/rechazar con comentarios|Como coordinador de bienestar,quiero aprobar/rechazar postulaciones con comentarios personalizados,para mantener informados a los padres/trabajadores.|Escenario 1,Título: Rechazo con comentarios obligatorios.<br>Dado que el coordinador selecciona "Rechazar" en una postulación.Cuando intenta guardar sin ingresar comentarios.Entonces el Sistema muestra el error: "Debe agregar comentarios para notificar al solicitante".Y al ingresar comentarios y guardar, envía un correo automático al usuario con los detalles.<br>Escenario 2, Título: Aprobación con documentos adicionales.<br>Dado que el coordinador aprueba una postulación.Cuando adjunta un PDF con instrucciones para el beneficiario.Entonces el Sistema registra el estado como "Aprobado" y vincula el PDF al correo de notificación.Y este se envia a un excel con todos los aprobados para el conocimiento de la empresa| EP04|
@@ -927,10 +925,9 @@ EPICS:
 | US23|Rechazo de datos colaborador|Como administrador,quiero revisar y aceptar/rechazar los datos laborales de un colaborador,para validar o invalidar todas sus postulaciones asociadas.|Escenario 1: Rechazo global por datos inválidos<br>Dado que el administrador verifica los datos laborales de un colaborador.Cuando marca "Datos incorrectos" y especifica el motivo,Entonces el sistema rechaza automáticamente todas sus postulaciones activas y notifica al usuario.<br>Escenario 2: Aprobación global<br>Dado que el administrador valida los datos del colaborador.Cuando marca "Datos verificados",Entonces el sistema mantiene el estado actual de sus postulaciones y registra la verificación.|EP04|
 | TS01 | API de Verificación de Código de Colaborador | Como desarrollador, necesito una API REST que valide el código de colaborador con la base de datos de la empresa (Backus). | Escenario 1: Validación exitosa de código.<br>Dado que se recibe una solicitud POST a /api/verify-employee con { "codigo": "EMP123", "empresa": "Backus" }.Cuando el código existe en la base de datos de Backus.Entonces la API responde con 200 OK y { "valido": true, "nombre": "Juan Pérez" }.Escenario 2: Código inválido o empresa no soportada.Dado que se recibe una solicitud con { "codigo": "INVALIDO", "empresa": "Backus" }.Cuando el código no existe.Entonces la API responde con 404 Not Found y { "valido": false, "error": "Código no registrado" }.| EP-TECH-01 |
 | TS02 | Sincronización de Documentos con Google Cloud Storage | Como desarrollador, necesito que los documentos subidos se almacenen en Google Cloud Storage con encriptación AES-256. | Escenario 1: Subida exitosa de documento.<br>Dado que un usuario sube un archivo credencial.pdf (≤5MB).Cuando el sistema valida que es un PDF.Entonces se guarda en gs://scholr-docs/[user_id]/[timestamp].pdf con metadatos { "hash_sha256": "abc123", "empresa": "Backus" }.<br>Escenario 2: Intento de subida con formato no permitido.<br>Dado que un usuario sube virus.exe.Cuando el sistema detecta la extensión .exe.,entonces rechaza la operación con error 415 Unsupported Media Type.| EP-TECH-02 |
-| TS03 | Notificaciones Push con Firebase Cloud Messaging | Como desarrollador, necesito integrar FCM para enviar notificaciones push cuando una postulación cambia de estado. | Escenario 1: Notificación de cambio de estado.<br>Dado que una postulación pasa a "Aprobado",cuando FCM recibe la solicitud con { "token": "device123", "estado": "Aprobado" }.Entonces el dispositivo recibe la notificación en ≤2 segundos.<br>Escenario 2: Caída de conexión del dispositivo.<br>Dado que el dispositivo está offline por >1 hora,cuando FCM intenta enviar la notificación,entonces el mensaje se encola y se reenvía al reconectar.| EP-TECH-01 |
 | TS04 | Generación de Reportes en Excel para Empresas | Como desarrollador, necesito un endpoint que genere reportes en Excel con postulaciones filtradas por empresa. | Escenario 1: Descarga de reporte básico.<br>Dado que un coordinador solicita /api/report?empresa=Backus&formato=excel.Cuando hay 50 postulaciones en la BBDD.Entonces la API responde con un archivo .xlsx que contiene las columnas: ID, Nombre, Hijos, Estado.Escenario 2: Filtrado por fecha.<br>Dado que se agrega el parámetro ?fecha_inicio=2024-01-01.Cuando solo 10 postulaciones coinciden.Entonces el Excel generado tiene exactamente 10 filas.| EP-TECH-01 |
-| TS05 | Cacheo de Landing Page con Cloudflare | Como desarrollador, necesito configurar Cloudflare para cachear la landing page por 24 horas. |Escenario 1: Primera visita sin cache.<br>Dado que un usuario accede a scholr.com.Cuando es la primera visita en 48 horas.Entonces el TTFB (Time To First Byte) es ≤600ms.<br>Escenario 2: Visita recurrente.<br>Dado que el usuario recarga la página.Cuando Cloudflare sirve la versión cacheada.Entonces el TTFB es ≤100ms.| EP-TECH-03 |
-| TS06 | Migración de Datos desde Legacy System | Como desarrollador, necesito un script ETL que migre postulaciones antiguas desde SQL Server a Firestore. | Escenario 1: Dado 1000 registros, entonces loguea errores y migra 800 limpios.<br>Escenario 2, Titulo:Validación de integridad.<br> Dado que la migración finaliza.Cuando se compara COUNT(*) entre SQL Server y Firestore.Entonces las diferencias son ≤1% (tolerancia para registros corruptos). | EP-TECH-01 |
+
+
 
 ### 3.3. Impact Mapping
 
@@ -945,9 +942,7 @@ EPICS:
 |3| US03| Notificación de verificación exitosa| Como padre/trabajador,quiero recibir confirmación con un código único al enviar mi postulación,para tener un comprobante digital de mi solicitud.| 3|
 |4| US04|Subir documentos de postulación|Como padre/trabajador,quiero subir documentos (credencial laboral, notas de mi hijo) directamente en la app,para evitar trámites presenciales y acelerar mi postulación.| 3|
 |5| US05| Guardar postulación como borrador| Como padre/trabajador,quiero guardar una postulación como borrador antes de enviarla,para completar los requisitos más tarde sin perder el progreso.| 3|
-|6| US06| Confirmación con código único| Como padre/trabajador,quiero recibir confirmación con un código único al enviar mi postulación,para tener un comprobante digital de mi solicitud.| 3|
 |7| US07| Visualizacion de postulaciones| Como padre/trabajador,quiero ver todas mis postulaciones (enviadas, en revisión, aprobadas, rechazadas),para poder gestionarlas desde un solo lugar.|5|
-|8| US08| Notificaciones de cambios de estado| Como padre/trabajador,quiero recibir notificaciones push cuando mi postulación cambie de estado,para actuar rápidamente en caso de requerirse más información.| 5|
 |9| US09| Reenvío de postulación rechazada| Como padre/trabajador,quiero reenviar una postulación rechazada (si el plazo lo permite),para corregir errores sin empezar desde cero.|5|
 |10| US10|Listado de postulaciones para coordinador | Como coordinador de bienestar,quiero ver un listado de todas las postulaciones recibidas filtradas por tipo de beca,para priorizar revisiones según urgencia.|5|
 |11| US11| Aprobar/rechazar con comentarios|Como coordinador de bienestar,quiero aprobar/rechazar postulaciones con comentarios personalizados,para mantener informados a los padres/trabajadores.|3|
@@ -965,10 +960,7 @@ EPICS:
 |23| US23|Rechazo de datos colaborador|Como administrador,quiero revisar y aceptar/rechazar los datos laborales de un colaborador,para validar o invalidar todas sus postulaciones asociadas.|5|
 |24| TS01 | API de Verificación de Código de Colaborador | Como desarrollador, necesito una API REST que valide el código de colaborador con la base de datos de la empresa (Backus). |5|
 |25| TS02 | Sincronización de Documentos con Google Cloud Storage | Como desarrollador, necesito que los documentos subidos se almacenen en Google Cloud Storage con encriptación AES-256. |5 |
-|26| TS03 | Notificaciones Push con Firebase Cloud Messaging | Como desarrollador, necesito integrar FCM para enviar notificaciones push cuando una postulación cambia de estado. |5|
 |27| TS04 | Generación de Reportes en Excel para Empresas | Como desarrollador, necesito un endpoint que genere reportes en Excel con postulaciones filtradas por empresa. | 5|
-|28| TS05 | Cacheo de Landing Page con Cloudflare | Como desarrollador, necesito configurar Cloudflare para cachear la landing page por 24 horas. |5|
-|29| TS06 | Migración de Datos desde Legacy System | Como desarrollador, necesito un script ETL que migre postulaciones antiguas desde SQL Server a Firestore. |5|
 
 Pivotal Tracker:
 
@@ -4354,8 +4346,8 @@ Frontend-jetpack compose:
 |Repository |Branch| Commit Id | Commit Message| Commit Message Body| Date|
 |----|-----|---------------------|----------------------------------------|---------------------------------------------------------|------------|
 |Aventis-Scholr/scholr-mobile|develop| 344c549           | feat: added edit functionality |- | 07/06/2025 |
-|Aventis-Scholr/scholr-backend|develop| 75a858d          | feat: add seccion de help , cartilla de instrucciones, video , contacto de soporte tecnico|-|07/06/2025 |
-|Aventis-Scholr/scholr-backend|develop|6587db0           | feat: DataApoderado create, update.|- | 06/06/2025 |
+|Aventis-Scholr/scholr-mobile|develop| 75a858d          | feat: add seccion de help , cartilla de instrucciones, video , contacto de soporte tecnico|-|07/06/2025 |
+|Aventis-Scholr/scholr-mobile|develop|6587db0           | feat: DataApoderado create, update.|- | 06/06/2025 |
 
 Frontend-flutter:  
 
@@ -5069,12 +5061,69 @@ Documentación y Despliegue:
 
 
 ### 6.2.3. Sprint 3  
+Durante este tercer sprint se avanzó significativamente en el desarrollo del sistema dentro del marco ágil de Scrum. El foco principal estuvo en la implementación del frontend del bounded context “Management”, orientado al perfil del Gestionador de postulaciones, y en la mejora continua del bounded context “Applications”. Asimismo, se trabajó en el despliegue tanto del frontend como del backend, y en la consolidación del informe final del proyecto.
+
+Se desarrollaron tareas vinculadas a la construcción visual y lógica del aplicativo, asegurando que cada módulo cumpla con los requerimientos funcionales definidos, las necesidades del usuario y las heurísticas de usabilidad.  
 
 ### 6.2.3.1. Sprint Planning 3  
+Como parte de la planificación del sprint, se definieron las User Stories prioritarias centradas en la visualización y gestión de postulaciones. El equipo identificó los componentes técnicos necesarios, asignó responsabilidades, y acordó una visión compartida del producto final.
+
+
+| Sprint #| Sprint 3|
+| -- | -- |
+| **Sprint Planning Background**||
+| **Date**| 25/07/2025|
+| **Time**| 12:00 AM|
+| **Location**| Discord (Reunión virtual)|
+| **Prepared By**| Jaque Peña, Estefano Oscar|
+| **Attendees (to planning meeting)** | John Telesforo Arevalo Meza ,Diego Alonso Rosado Iporre,Sebastian Omar Real Calderón, Estefano Oscar Jaque Peña|
+| **Sprint Goal & User Stories**||
+| **Sprint 3 Goal**| 	Implementar el frontend y backend del bounded context “Management” para el perfil del Gestionador, mejorar el módulo “Applications” con funcionalidades para carga/descarga de archivos PDF, desplegar la aplicación y consolidar el informe final del proyecto. El sprint se considerará exitoso al completar todas las tareas marcadas como "Done" en Trello.|
+| **Sprint 3 Velocity**| 19 |
+| **Sum of Story Points**|  |  
 
 ### 6.2.3.2. Sprint Backlog 3   
 
+Durante el tercer sprint, el equipo centró sus esfuerzos en el desarrollo completo del bounded context **Management**, principalmente su interfaz en Flutter con patrones BloC, y en la mejora del módulo **Applications**, incluyendo funcionalidades clave como la carga y descarga de documentos PDF. Esto permitió cerrar el desarrollo del frontend de Applications en Jetpack Compose y avanzar de forma significativa en la integración entre front y back de ambos módulos.
+
+Asimismo, se finalizó la implementación del módulo **IAM**, tanto en frontend como backend, y se habilitó la **sincronización de archivos con Google Cloud Storage**, asegurando el almacenamiento seguro con encriptación AES-256. Gracias al uso de **Trello**, se mantuvo una organización clara del trabajo, permitiendo a cada integrante seguir el estado de sus tareas y resolver bloqueos con agilidad, logrando cumplir los objetivos trazados.
+
+![alt text](/assets/images/trellosprint2.png)
+
+| User Story | Title | Work-Item ID | Task Title | Description | Estimation (Hours) | Assigned To | Status |
+|------------|-------|--------------|-------------|-------------| ---------------------|--------------|--------|
+| US04 | Subir documentos de postulación | TA043 | Pantalla de carga de documentos (Flutter) | Diseño e implementación de interfaz Flutter para que el padre pueda subir PDF de notas o credencial laboral | 3 | Estefano Oscar Jaque Peña | Done |
+| US04 |  | TA044 | Validación y restricción de tipos de archivo | Asegurar que solo se acepten archivos PDF ≤ 5MB antes de enviarlos al backend | 2 | Estefano Oscar Jaque Peña | Done |
+| TS02 | Sincronización con Google Cloud Storage | TA045 | Configuración de bucket GCS y lógica de subida | Configurar almacenamiento en Google Cloud y subir archivo con metadatos y hash | 3 | Diego Rosado | Done |
+| US10 | Listado de postulaciones para coordinador | TA046 | Implementación de vista filtrada | Mostrar postulaciones por tipo de beca y ordenarlas por antigüedad | 2 | John Telesforo Arévalo Meza | Done |
+| US10 |  | TA047 | Exportación de postulaciones a archivo | Generar archivo con listado filtrado y detalles para revisión | 2 | John Telesforo Arévalo Meza | Done |
+| US11 | Aprobar/rechazar con comentarios | TA048 | Lógica de rechazo obligatorio con comentarios | Validar ingreso de comentarios antes de rechazar, y envío automático de notificación | 2 | Estefano Oscar Jaque Peña | Done |
+| US11 |  | TA049 | Aprobación con PDF adjunto | Permitir adjuntar instrucciones en PDF al aprobar, y enviarlo por correo | 2 | Estefano Oscar Jaque Peña | Done |
+| US22 | Vista por colaborador | TA050 | Agrupación visual de postulaciones | Mostrar tarjetas agrupadas por colaborador validado | 2 | Sebastián Real Calderón | Done |
+| US23 | Rechazo de datos colaborador | TA051 | Validación y rechazo global | Permitir al administrador rechazar todos los registros si hay datos inválidos y notificar | 2 | Sebastián Real Calderón | Done |
+| US23 |  | TA052 | Verificación global y preservación de estado | Mantener postulaciones si se validan los datos del colaborador | 1 | Sebastián Real Calderón | Done |
+
 ### 6.2.3.3. Development Evidence for Sprint Review  
+  
+Backend:  
+
+|Repository |Branch| Commit Id | Commit Message| Commit Message Body| Date|
+|----|-----|---------------------|----------------------------------------|---------------------------------------------------------|------------|
+|Aventis-Scholr/scholr-backend|master| 5e3g2t6t           | feat: Added endpoints Delete and update para el bounded context applications | se agregaron los metodos delte y update para el bc Applications| 05/06/2025 |
+
+Frontend-jetpack compose:  
+
+|Repository |Branch| Commit Id | Commit Message| Commit Message Body| Date|
+|----|-----|---------------------|----------------------------------------|---------------------------------------------------------|------------|
+|Aventis-Scholr/scholr-mobile|develop| 344c549           | feat: added edit functionality |- | 07/06/2025 |
+|Aventis-Scholr/scholr-mobile|develop| 75a858d          | feat: add seccion de help , cartilla de instrucciones, video , contacto de soporte tecnico|-|07/06/2025 |
+|Aventis-Scholr/scholr-mobile|develop|6587db0           | feat: DataApoderado create, update.|- | 06/06/2025 |
+
+Frontend-flutter:  
+
+|Repository |Branch| Commit Id | Commit Message| Commit Message Body| Date|
+|----|-----|---------------------|----------------------------------------|---------------------------------------------------------|------------|
+|Aventis-Scholr/scholr-mobile-flutter|origin| c9224a1 | feat: Add bounded context IAM en flutter |- | 15/06/2025 |
 
 ### 6.2.3.4. Testing Suite Evidence for Sprint Review
 
@@ -5304,16 +5353,240 @@ Podemos agregar un tester para enviarle nuestro apk
 
 Y visualizar cuando haya llegado nuestro email
 
+
 ![distribution4](assets/tf/AppDistribution6.png)
 
 ### 6.2.3.5. Execution Evidence for Sprint Review   
-
+[Aca pones flutter y jetpack compose Sebas, foto con explicacion ] 
 ### 6.2.3.6. Services Documentation Evidence for Sprint Review  
+
+## Sección **Applications** (Gestión de Postulaciones)
+
+### Introducción
+
+Durante este Sprint se añadieron nuevas funcionalidades al módulo **Applications**, permitiendo una mayor flexibilidad en la administración y seguimiento de postulaciones. Los endpoints implementados abarcan desde la **actualización del estado de la solicitud**, el **registro de reportes por denegación**, hasta la **carga de archivos PDF requeridos para la evaluación**.
+
+---
+
+### Tabla de Endpoints Applications
+
+| Bounded Context  | Endpoint                                     | Acción                           | Verbo HTTP | Parámetros                                                         | Ejemplo de Respuesta                                                         | Documentación  |                                                          |              |
+| ---------------- | -------------------------------------------- | -------------------------------- | ---------- | ------------------------------------------------------------------ | ---------------------------------------------------------------------------- | -------------- | -------------------------------------------------------- | ------------ |
+| **Applications** | `/api/v1/applications/{id}/status`           | Actualizar estado de postulación | PUT        | `id: long` + Body \`{status: "ACEPTADO"                            | "DENEGADO"                                                                   | "SINENVIAR"}\` | Objeto completo de la postulación con estado actualizado | [Swagger](#) |
+|                  | `/api/v1/applications/{id}/reporte`          | Registrar motivo de denegación   | PUT        | `id: long` + Body `{reporte: "string"}`                            | Objeto completo de la postulación con campo `reporte` actualizado            | [Swagger](#)   |                                                          |              |
+|                  | `/api/v1/applications/{applicationId}/files` | Subida de archivos PDF           | POST       | `applicationId: long` + Multipart Form (`5 archivos obligatorios`) | `{ "dni": "...", "libreta_notas": "...", "const_logro_aprendizaje": "..." }` | [Swagger](#)   |                                                          |              |
+
+---
+
+### Ejemplos de Uso
+
+#### 1. Actualizar estado de una postulación
+
+```http
+PUT /api/v1/applications/12/status
+Content-Type: application/json
+
+{
+  "status": "DENEGADO"
+}
+
+Response 200 OK
+{
+  "id": 12,
+  "status": "DENEGADO",
+  ...
+}
+```
+
+#### 2. Registrar un reporte con motivo de rechazo
+
+```http
+PUT /api/v1/applications/12/reporte
+Content-Type: application/json
+
+{
+  "reporte": "No se adjuntaron todos los documentos requeridos"
+}
+
+Response 200 OK
+{
+  "id": 12,
+  "status": "DENEGADO",
+  "reporte": "No se adjuntaron todos los documentos requeridos",
+  ...
+}
+```
+
+#### 3. Subida de archivos obligatorios en PDF
+
+```http
+POST /api/v1/applications/12/files
+Content-Type: multipart/form-data
+
+Files:
+- postulante_dni: file.pdf
+- postulante_libreta_notas: file.pdf
+- postulante_const_logro_aprendizaje: file.pdf
+- apoderado_dni: file.pdf
+- apoderado_declaracion_jurada: file.pdf
+
+Response 200 OK
+{
+  "dni": "url_del_dni.pdf",
+  "libreta_notas": "url_de_libreta.pdf",
+  "const_logro_aprendizaje": "url_de_constancia.pdf"
+}
+```
+
+---
+
+### Arquitectura y Patrones
+
+* **CQRS**
+
+  * `applicationsCommandService`: Maneja actualizaciones (`status`, `reporte`, `archivos`)
+  * `applicationsQueryService`: Consultas de postulaciones existentes
+
+* **Multipart Handling**
+
+  * Uso de `MultipartFile` para carga de documentos
+  * Cada archivo es procesado y persistido en la entidad `Application`
+
+---
+
+## Sección **Management** (Gestión de Becas)
+
+### Introducción
+
+Se amplió la funcionalidad del módulo de **Management** con un nuevo endpoint para **filtrar becas por nombre de empresa**, permitiendo así una gestión más eficiente por parte de las compañías colaboradoras.
+
+---
+
+### Tabla de Endpoints Management
+
+| Bounded Context  | Endpoint                                     | Acción                    | Verbo HTTP | Parámetros            | Ejemplo de Respuesta                                                | Documentación |
+| ---------------- | -------------------------------------------- | ------------------------- | ---------- | --------------------- | ------------------------------------------------------------------- | ------------- |
+| **Scholarships** | `/api/v1/scholarships/company/{companyName}` | Listar becas por compañía | GET        | `companyName: string` | `[{"id": 1, "name": "Beca Talento", "companyName": "Backus", ...}]` | [Swagger](#)  |
+
+---
+
+### Ejemplo de Uso
+
+```http
+GET /api/v1/scholarships/company/Backus
+
+Response 200 OK
+[
+  {
+    "id": 1,
+    "name": "Beca Talento",
+    "companyName": "Backus",
+    "requirements": [
+      {
+        "name": "Promedio mínimo 14",
+        "description": "Promedio ponderado anual",
+        "isMandatory": true
+      }
+    ],
+    "scholarshipType": "PARTIAL",
+    "scholarshipStatus": "PUBLISHED",
+    "coordinatorId": 2
+  }
+]
+```
+
+---
+
+## Repositorio y Commits
+
+| Feature                               | Commit ID | Cambios Realizados                       |
+| ------------------------------------- | --------- | ---------------------------------------- |
+| `/applications/{id}/status`           | `xxxx123` | Actualización de estado de postulaciones |
+| `/applications/{id}/reporte`          | `xxxx124` | Registro del motivo de denegación        |
+| `/applications/{id}/files`            | `xxxx125` | Subida de archivos PDF requeridos        |
+| `/scholarships/company/{companyName}` | `xxxx126` | Filtro de becas por empresa              |
+
+---
+
+## Conclusión
+
+Los nuevos endpoints implementados permiten:
+
+* Carga documental completa para cada postulación
+* Registro de motivos de denegación
+* Consulta eficiente de becas por compañía
+* Flujo de postulación más completo y controlado
+
+**Próximos pasos:**
+
+* Notificaciones automáticas para cambios de estado
+* Consola de descarga de archivos por cada postulación
 
 ### 6.2.3.7. Software Deployment Evidence for Sprint Review  
 
+**Actividades Realizadas:**  
+
+- Despliegue de la base de datos en Render:  
+
+![alt text](assets/tb2/renderbddeploy.png)  
+
+
+- Despliegue del backend en Render:  
+
+![alt text](assets/tb2/deploybackrender.png)  
+
 ### 6.2.3.8. Team Collaboration Insights during Sprint 3.  
 
+En esta sección, se presenta un análisis detallado de la colaboración del equipo durante el Sprint 3. Durante este Sprint 2, las actividades se organizaron siguiendo una metodología ágil, lo que permitió una coordinación efectiva entre los miembros del equipo. Se incluyen capturas de los analíticos de colaboración y de los commits realizados en GitHub, evidenciando la contribución individual.
+
+Diseño y Desarrollo:
+
+- Frontend: Desarrollo y diseño del bounded context Applications.
+
+- Backend: Implementación de funcionalidades básicas y configuración inicial del servidor y servicios necesarios.
+
+- Codificación: Ejecución de tareas de programación, pruebas funcionales y ajustes iterativos.
+
+Documentación y Despliegue:
+
+- Documentación: Elaboración de documentación técnica y visual, incluyendo descripciones y capturas de pantalla del proceso.
+
+- Despliegue: Configuración del entorno y despliegue del backend en un entorno de pruebas, asegurando la operatividad conjunta.
+
+**Report:**  
+
+![alt text](assets/tf-estefano/reportinsig.png)  
+
+- Estefano Oscar Jaque Peña: 34  
+- John Telesforo Arevalo Meza: 28  
+- Sebastian Real Calderon: 30  
+- Diego Alonso Rosado Iporre: 27  
+
+<br>**Backend:**  
+
+![alt text](assets/tf-estefano/backinsi.png)  
+
+- Estefano Oscar Jaque Peña: 4  
+- Sebastian Omar Real Calderón: 2  
+- John Telesforo Arevalo Meza: 21  
+- Diego Alonso Rosado Iporre: 2  
+
+<br>**Frontend:**  
+
+![alt text](assets/tf-estefano/jcinsi.png)    
+
+- Estefano Oscar Jaque Peña: 1  
+- Sebastian Omar Real Calderón: 9  
+- John Telesforo Arevalo Meza: 9  
+- Diego Alonso Rosado Iporre: 2  
+
+<br>**Frontend-flutter:**  
+
+![alt text](assets/tf-estefano/flutinsi.png)  
+
+- Estefano Oscar Jaque Peña: 1  
+- Diego Alonso Rosado Iporre: 1  
+- Sebastian Omar Real Calderón: 11 
 
 ### 6.3. Validation Interviews
 
